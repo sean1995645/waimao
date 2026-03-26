@@ -111,7 +111,7 @@ export default {
   'inquiry.removeItem': 'Retirer l\'article',
   'inquiry.viewAll': 'Voir tout',
   'inquiry.clear': 'Effacer',
-  'inquiry.whatsapp': 'WhatsApp',
+  'inquiry.whatsapp': 'Chat WhatsApp',
   'inquiry.inquiryNow': 'Demander maintenant',
   'inquiry.close': 'Fermer',
   'inquiry.whatsappIntro': 'Bonjour, je suis intéressé par ces produits :',
