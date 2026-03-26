@@ -99,7 +99,7 @@ export default {
   'products.allProducts': 'Alle Producten',
   'products.showing': 'Weergave',
   'products.productsCount': 'producten',
-  'footer.description': 'Wij ontwerpen vloerverwarmingsthermostaten, bekabelingscentra, netwerkgateways en accessoires voor distributeurs, eigen merken en HVAC-projecten.',
+  'footer.description': 'We ontwerpen vloerverwarmingsthermostaten, bedradingscentra, netwerkgateways en accessoires voor distributeurs, eigen merken en HVAC-projecten.',
   'footer.contactInfo': 'Contactgegevens',
   'footer.followUs': 'Volg ons',
   'footer.facebook': 'Facebook-pagina',

@@ -99,7 +99,7 @@ export default {
   'products.allProducts': 'Svi Proizvodi',
   'products.showing': 'Prikazivanje',
   'products.productsCount': 'proizvodi',
-  'footer.description': 'Dizajniramo termostate za podno grijanje, centre za ožičenje, pristupnike i dodatnu opremu za distributere, privatne brendove i HVAC projekte.',
+  'footer.description': 'Dizajniramo termostate za podno grijanje, centare za ožičenje, pristupnike i dodatnu opremu za distributere, privatne brendove i HVAC projekte.',
   'footer.contactInfo': 'Kontakt podaci',
   'footer.followUs': 'Pratite nas',
   'footer.facebook': 'Facebook stranica',

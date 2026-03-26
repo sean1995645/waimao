@@ -99,7 +99,7 @@ export default {
   'products.allProducts': 'Все Продукты',
   'products.showing': 'Показано',
   'products.productsCount': 'продукты',
-  'footer.description': 'Мы разрабатываем термостаты для теплого пола, коммутационные центры, шлюзы и аксессуары для дистрибьюторов, частных брендов и HVAC-проектов.',
+  'footer.description': 'Мы разрабатываем термостаты для теплого пола, центры проводки, шлюзы и аксессуары для дистрибьюторов, частных брендов и проектов HVAC.',
   'footer.contactInfo': 'Контактная информация',
   'footer.followUs': 'Следите за нами',
   'footer.facebook': 'Страница Facebook',
