@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import { useForm, ValidationError } from '@formspree/react';
 import PageHero from '@/components/PageHero';
+import Seo, { SITE_URL } from '@/components/Seo';
 
 type ContactFormFields = {
   name: string;
@@ -66,9 +67,52 @@ const ContactPage: React.FC = () => {
     .map((item) => item.img)
     .filter((img): img is string => Boolean(img))
     .join('\n');
+  const contactTitle = `${intl.formatMessage({ id: 'contact.hero.title' })} | HeatNexis`;
+  const contactDescription = intl.formatMessage({ id: 'contact.hero.description' });
+  const contactStructuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: contactTitle,
+      description: contactDescription,
+      url: `${SITE_URL}/contact`,
+      about: {
+        '@type': 'Organization',
+        name: 'HeatNexis',
+        email: 'sales@heatnexis.com',
+        telephone: '+86 138 0010 2400',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: SITE_URL,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: intl.formatMessage({ id: 'contact.hero.title' }),
+          item: `${SITE_URL}/contact`,
+        },
+      ],
+    },
+  ];
 
   return (
     <div className="w-full">
+      <Seo
+        title={contactTitle}
+        description={contactDescription}
+        path="/contact"
+        image="/page-hero-contact-photo.jpg"
+        keywords={['contact thermostat supplier', 'request thermostat quote', 'underfloor heating inquiry']}
+        structuredData={contactStructuredData}
+      />
       <PageHero
         bgImage="/page-hero-contact-photo.jpg"
         bgImageMobile="/page-hero-contact-photo-mobile.jpg"
@@ -89,7 +133,7 @@ const ContactPage: React.FC = () => {
       <section className="bg-white py-24 max-md:py-8">
         <div className="mx-auto max-w-[1200px] px-5 max-md:px-4">
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_440px] lg:gap-12">
-            <div>
+            <div className="motion-fade-right">
               <h2 className="mb-6 text-[clamp(1.75rem,3vw,2.5rem)] font-bold tracking-[-0.02em] text-hn-primary max-md:mb-3 max-md:text-[1.5rem]">
                 {intl.formatMessage({ id: 'contact.form.title' })}
               </h2>
@@ -129,10 +173,10 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="w-full max-w-[440px] justify-self-start rounded-2xl border border-gray-100 bg-gradient-to-br from-hn-surface to-white p-6 shadow-sm lg:justify-self-end max-md:rounded-xl max-md:p-5">
+            <div className="motion-fade-left w-full max-w-[440px] justify-self-start rounded-2xl border border-gray-100 bg-gradient-to-br from-hn-surface to-white p-6 shadow-sm lg:justify-self-end max-md:rounded-xl max-md:p-5">
               {state.succeeded ? (
-                <div className="flex flex-col gap-4">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                <div className="motion-pop flex flex-col gap-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 motion-safe:animate-pulseGlow">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M20 6 9 17l-5-5" />
                     </svg>
@@ -156,7 +200,7 @@ const ContactPage: React.FC = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-md:gap-3.5">
                   {selectedItems.length > 0 && (
-                    <div className="rounded-xl border border-[#d8e4ef] bg-white/80 p-4">
+                    <div className="motion-card rounded-xl border border-[#d8e4ef] bg-white/80 p-4">
                       <div className="mb-3">
                         <h3 className="text-[0.92rem] font-semibold text-hn-primary">
                           {getMessage('contact.form.selectedProductsTitle', 'Selected products')}

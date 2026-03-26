@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import PageHero from '@/components/PageHero';
 import ProductCard from '@/components/ProductCard';
+import Seo, { SITE_URL, toAbsoluteUrl } from '@/components/Seo';
 import { products, categories } from '@/data/products';
 
 const ProductsPage: React.FC = () => {
@@ -30,9 +31,57 @@ const ProductsPage: React.FC = () => {
     name: category,
     count: getCategoryProducts(category).length,
   }));
+  const productsTitle = `${intl.formatMessage({ id: 'products.hero.title' })} | HeatNexis`;
+  const productsDescription = intl.formatMessage({ id: 'products.hero.description' });
+  const productsStructuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: productsTitle,
+      description: productsDescription,
+      url: `${SITE_URL}/products`,
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: products.length,
+        itemListElement: products.map((product, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `${SITE_URL}/products/${product.slug}`,
+          name: product.title,
+          image: toAbsoluteUrl(product.image),
+        })),
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: SITE_URL,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: intl.formatMessage({ id: 'products.hero.title' }),
+          item: `${SITE_URL}/products`,
+        },
+      ],
+    },
+  ];
 
   return (
     <div className="w-full">
+      <Seo
+        title={productsTitle}
+        description={productsDescription}
+        path="/products"
+        image="/page-hero-products-photo.jpg"
+        keywords={['product catalog', 'floor heating thermostat catalog', 'smart thermostat supplier', 'heating control products']}
+        structuredData={productsStructuredData}
+      />
       <PageHero
         bgImage="/page-hero-products-photo.jpg"
         bgImageMobile="/page-hero-products-photo-mobile.jpg"
@@ -51,9 +100,10 @@ const ProductsPage: React.FC = () => {
       />
 
       <div className="relative bg-hn-surface py-2 lg:py-8 overflow-hidden">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_right,rgba(95,167,212,0.16),transparent_42%)] motion-safe:animate-floatSoft" />
         <div className="max-w-[1200px] mx-auto px-4 lg:px-5">
           {/* Mobile Accordion */}
-          <div className="flex flex-col gap-1.5 lg:hidden" data-product-accordion>
+          <div className="motion-fade-up flex flex-col gap-1.5 lg:hidden" data-product-accordion>
             {categories.map((category) => {
               const categoryProducts = getCategoryProducts(category);
               const isOpen = openAccordion === category;
@@ -96,7 +146,7 @@ const ProductsPage: React.FC = () => {
 
           {/* Desktop Layout */}
           <div className="hidden lg:grid lg:grid-cols-[228px_minmax(0,1fr)] lg:gap-6">
-            <aside className="sticky top-24 self-start">
+            <aside className="motion-fade-right sticky top-24 self-start">
               <div className="rounded-2xl border border-[#e4eaf3] bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.04)]">
                 <h2 className="mb-3 border-b border-[#edf2f7] pb-2.5 text-[0.95rem] font-bold text-hn-primary">{intl.formatMessage({ id: 'products.categories' })}</h2>
                 <div className="flex flex-col gap-1">
@@ -155,7 +205,7 @@ const ProductsPage: React.FC = () => {
               </div>
             </aside>
 
-            <div className="flex-1">
+            <div className="motion-fade-left flex-1">
               <div className="flex items-center justify-between mb-3">
                 <p className="text-[0.9rem] text-[#5f7088]">
                   {intl.formatMessage({ id: 'products.showing' })} <strong className="text-hn-primary font-semibold">{filteredProducts.length}</strong> {intl.formatMessage({ id: 'products.productsCount' })}

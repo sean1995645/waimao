@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   esbuildMinifyIIFE: true,
   npmClient: 'pnpm',
-  title: 'HeatNexis - Floor Heating Thermostats',
+  title: 'HeatNexis | OEM Underfloor Heating Thermostats & Heating Controls',
   favicons: ['/heatnexis-icon.png'],
   headScripts: [
     {

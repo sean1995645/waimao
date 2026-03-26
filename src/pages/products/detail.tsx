@@ -3,6 +3,7 @@ import { useIntl } from 'react-intl';
 import { Link, useParams } from 'umi';
 import ProductCard from '@/components/ProductCard';
 import { addToInquiry, isInInquiry, removeFromInquiry } from '@/components/BulkInquiry';
+import Seo, { SITE_URL, toAbsoluteUrl } from '@/components/Seo';
 import { getProductBySlug, products } from '@/data/products';
 
 const ProductDetailPage: React.FC = () => {
@@ -35,36 +36,44 @@ const ProductDetailPage: React.FC = () => {
 
   if (!product) {
     return (
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f6f9fc_0%,#ffffff_100%)] py-20 max-md:py-12">
-        <div className="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top_left,rgba(95,167,212,0.18),transparent_45%)]" />
-        <div className="relative mx-auto max-w-[920px] px-5 max-md:px-4">
-          <div className="rounded-[2rem] border border-[#dbe6f0] bg-white/90 p-10 shadow-[0_24px_80px_rgba(13,34,60,0.08)] backdrop-blur max-md:rounded-[1.5rem] max-md:p-6">
-            <span className="inline-flex rounded-full border border-[#d8e4ef] bg-[#f5f8fc] px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#5a7289]">
-              {getMessage('product.detail.notFoundTag', 'Catalog')}
-            </span>
-            <h1 className="mt-5 text-[clamp(2rem,4vw,3.4rem)] font-bold leading-[1.05] tracking-[-0.03em] text-hn-primary">
-              {getMessage('product.detail.notFoundTitle', 'Product not found')}
-            </h1>
-            <p className="mt-4 max-w-[44rem] text-[1rem] leading-8 text-[#5d7186]">
-              {getMessage('product.detail.notFoundDescription', 'The product you requested is not available in the current catalog. Return to the product list to continue browsing available heating control models.')}
-            </p>
-            <div className="mt-8 flex gap-3 max-md:flex-col">
-              <Link
-                to="/products"
-                className="inline-flex items-center justify-center rounded-xl bg-hn-primary px-6 py-3 text-[0.92rem] font-semibold text-white no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(12,25,45,0.18)]"
-              >
-                {getMessage('product.detail.backToCatalog', 'Back to catalog')}
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center rounded-xl border border-[#d8e4ef] bg-white px-6 py-3 text-[0.92rem] font-semibold text-hn-primary no-underline transition-all duration-200 hover:border-hn-accent hover:text-hn-accent"
-              >
-                {getMessage('product.detail.contactTeam', 'Contact team')}
-              </Link>
+      <div>
+        <Seo
+          title="Product Not Found | HeatNexis"
+          description="The requested underfloor heating control product could not be found in the HeatNexis catalog."
+          path={`/products/${slug}`}
+          noIndex
+        />
+        <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f6f9fc_0%,#ffffff_100%)] py-20 max-md:py-12">
+          <div className="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top_left,rgba(95,167,212,0.18),transparent_45%)]" />
+          <div className="relative mx-auto max-w-[920px] px-5 max-md:px-4">
+            <div className="rounded-[2rem] border border-[#dbe6f0] bg-white/90 p-10 shadow-[0_24px_80px_rgba(13,34,60,0.08)] backdrop-blur max-md:rounded-[1.5rem] max-md:p-6">
+              <span className="inline-flex rounded-full border border-[#d8e4ef] bg-[#f5f8fc] px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#5a7289]">
+                {getMessage('product.detail.notFoundTag', 'Catalog')}
+              </span>
+              <h1 className="mt-5 text-[clamp(2rem,4vw,3.4rem)] font-bold leading-[1.05] tracking-[-0.03em] text-hn-primary">
+                {getMessage('product.detail.notFoundTitle', 'Product not found')}
+              </h1>
+              <p className="mt-4 max-w-[44rem] text-[1rem] leading-8 text-[#5d7186]">
+                {getMessage('product.detail.notFoundDescription', 'The product you requested is not available in the current catalog. Return to the product list to continue browsing available heating control models.')}
+              </p>
+              <div className="mt-8 flex gap-3 max-md:flex-col">
+                <Link
+                  to="/products"
+                  className="inline-flex items-center justify-center rounded-xl bg-hn-primary px-6 py-3 text-[0.92rem] font-semibold text-white no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(12,25,45,0.18)]"
+                >
+                  {getMessage('product.detail.backToCatalog', 'Back to catalog')}
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center rounded-xl border border-[#d8e4ef] bg-white px-6 py-3 text-[0.92rem] font-semibold text-hn-primary no-underline transition-all duration-200 hover:border-hn-accent hover:text-hn-accent"
+                >
+                  {getMessage('product.detail.contactTeam', 'Contact team')}
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     );
   }
 
@@ -121,9 +130,70 @@ const ProductDetailPage: React.FC = () => {
 
     window.location.href = '/contact';
   };
+  const productTitle = `${product.title} | HeatNexis`;
+  const productDescription = `${product.description || getMessage('product.detail.defaultDescription', 'Heating control model built for stable performance, clear specification matching and efficient project quoting.')} ${product.specs?.control ? `Control: ${product.specs.control}.` : ''} ${product.specs?.voltage ? `Voltage: ${product.specs.voltage}.` : ''}`.trim();
+  const productStructuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: product.title,
+      description: product.description || productTitle,
+      image: [toAbsoluteUrl(product.image)],
+      sku: product.id,
+      brand: {
+        '@type': 'Brand',
+        name: 'HeatNexis',
+      },
+      manufacturer: {
+        '@type': 'Organization',
+        name: 'HeatNexis',
+        url: SITE_URL,
+      },
+      category: product.category,
+      url: `${SITE_URL}/products/${product.slug}`,
+      additionalProperty: Object.entries(product.specs || {}).map(([name, value]) => ({
+        '@type': 'PropertyValue',
+        name,
+        value,
+      })),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: SITE_URL,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Products',
+          item: `${SITE_URL}/products`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: product.title,
+          item: `${SITE_URL}/products/${product.slug}`,
+        },
+      ],
+    },
+  ];
 
   return (
     <div className="w-full bg-[linear-gradient(180deg,#eff5fa_0%,#ffffff_28%,#f6f9fc_100%)]">
+      <Seo
+        title={productTitle}
+        description={productDescription}
+        path={`/products/${product.slug}`}
+        image={product.image}
+        keywords={[product.category, product.id, product.specs?.control || 'thermostat']}
+        type="product"
+        structuredData={productStructuredData}
+      />
       <section className="relative overflow-hidden border-b border-[#e1e9f1] bg-[radial-gradient(circle_at_top_left,rgba(95,167,212,0.22),transparent_34%),linear-gradient(135deg,#081a2d_0%,#102b49_58%,#17395e_100%)] text-white">
         <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: 'url(/pattern.svg)' }} />
         <div className="absolute -right-20 top-14 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.22),transparent_65%)] blur-[30px]" />
@@ -142,7 +212,7 @@ const ProductDetailPage: React.FC = () => {
               <span className="text-white">{product.title}</span>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className="motion-fade-up animation-delay-100 mt-6 flex flex-wrap items-center gap-3">
               <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c8dbeb]">
                 {product.category}
               </span>
@@ -158,14 +228,14 @@ const ProductDetailPage: React.FC = () => {
               )}
             </div>
 
-            <h1 className="mt-5 max-w-[13ch] text-[clamp(2.4rem,5vw,4.6rem)] font-bold leading-[0.98] tracking-[-0.04em]">
+            <h1 className="motion-fade-up animation-delay-150 mt-5 max-w-[13ch] text-[clamp(2.4rem,5vw,4.6rem)] font-bold leading-[0.98] tracking-[-0.04em]">
               {product.title}
             </h1>
-            <p className="mt-5 max-w-[42rem] text-[1rem] leading-8 text-white/78 max-md:text-[0.95rem] max-md:leading-7">
+            <p className="motion-fade-up animation-delay-200 mt-5 max-w-[42rem] text-[1rem] leading-8 text-white/78 max-md:text-[0.95rem] max-md:leading-7">
               {product.description || getMessage('product.detail.defaultDescription', 'Heating control model built for stable performance, clear specification matching and efficient project quoting.')}
             </p>
 
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="motion-fade-up animation-delay-300 mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {productStats.map((item) => (
                 <div key={item.label} className="rounded-2xl border border-white/12 bg-white/8 px-4 py-4 backdrop-blur-sm">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c1d5e6]">{item.label}</p>
@@ -174,7 +244,7 @@ const ProductDetailPage: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3 max-md:flex-col">
+            <div className="motion-fade-up animation-delay-500 mt-8 flex flex-wrap gap-3 max-md:flex-col">
               <button
                 type="button"
                 onClick={handleToggleInquiry}
@@ -196,7 +266,7 @@ const ProductDetailPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="motion-fade-left relative">
             <div className="absolute -inset-5 rounded-[2.5rem] bg-[radial-gradient(circle_at_top,rgba(95,167,212,0.28),transparent_60%)] blur-[20px]" />
             <div className="relative overflow-hidden rounded-[2rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03))] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl max-md:rounded-[1.5rem]">
               <div className="absolute inset-x-0 top-0 h-28 bg-[linear-gradient(180deg,rgba(255,255,255,0.18),transparent)]" />
@@ -228,7 +298,7 @@ const ProductDetailPage: React.FC = () => {
 
       <section className="mx-auto grid max-w-[1200px] gap-8 px-5 py-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start max-md:px-4 max-md:py-8">
         <div className="space-y-8">
-          <div className="rounded-[2rem] border border-[#dde7f0] bg-white p-7 shadow-[0_16px_50px_rgba(13,34,60,0.05)] max-md:rounded-[1.5rem] max-md:p-5">
+          <div className="motion-fade-up rounded-[2rem] border border-[#dde7f0] bg-white p-7 shadow-[0_16px_50px_rgba(13,34,60,0.05)] max-md:rounded-[1.5rem] max-md:p-5">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <p className="text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-[#6d8298]">
@@ -253,7 +323,7 @@ const ProductDetailPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-[#dde7f0] bg-white p-7 shadow-[0_16px_50px_rgba(13,34,60,0.05)] max-md:rounded-[1.5rem] max-md:p-5">
+          <div className="motion-fade-up animation-delay-150 rounded-[2rem] border border-[#dde7f0] bg-white p-7 shadow-[0_16px_50px_rgba(13,34,60,0.05)] max-md:rounded-[1.5rem] max-md:p-5">
             <p className="text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-[#6d8298]">
               {getMessage('product.detail.valueTag', 'Project value')}
             </p>
@@ -272,7 +342,7 @@ const ProductDetailPage: React.FC = () => {
           </div>
         </div>
 
-        <aside className="space-y-5 lg:sticky lg:top-24">
+        <aside className="motion-fade-left space-y-5 lg:sticky lg:top-24">
           <div className="overflow-hidden rounded-[1.8rem] border border-[#dbe6f0] bg-[linear-gradient(180deg,#f8fbfe_0%,#eef5fa_100%)] p-6 shadow-[0_16px_40px_rgba(13,34,60,0.05)] max-md:rounded-[1.4rem] max-md:p-5">
             <p className="text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-[#6d8298]">
               {getMessage('product.detail.quoteTag', 'Quick action')}
@@ -305,7 +375,7 @@ const ProductDetailPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="rounded-[1.8rem] border border-[#dbe6f0] bg-white p-6 shadow-[0_16px_40px_rgba(13,34,60,0.05)] max-md:rounded-[1.4rem] max-md:p-5">
+          <div className="motion-fade-left animation-delay-200 rounded-[1.8rem] border border-[#dbe6f0] bg-white p-6 shadow-[0_16px_40px_rgba(13,34,60,0.05)] max-md:rounded-[1.4rem] max-md:p-5">
             <p className="text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-[#6d8298]">
               {getMessage('product.detail.supportTag', 'Support scope')}
             </p>
@@ -339,7 +409,7 @@ const ProductDetailPage: React.FC = () => {
                 {getMessage('product.detail.viewAll', 'View all products')}
               </Link>
             </div>
-            <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="motion-fade-up mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {relatedProducts.map((item) => (
                 <ProductCard key={item.slug} product={item} />
               ))}

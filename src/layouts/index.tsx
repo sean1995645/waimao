@@ -10,7 +10,7 @@ export default function Layout() {
   return (
     <>
       <Header />
-      <main>
+      <main className="min-h-screen motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500">
         <Outlet />
       </main>
       <Footer />

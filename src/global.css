@@ -70,6 +70,34 @@
 }
 
 @layer components {
+  .motion-fade-up {
+    @apply motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-6 motion-safe:duration-700;
+  }
+
+  .motion-fade-down {
+    @apply motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-top-6 motion-safe:duration-700;
+  }
+
+  .motion-fade-left {
+    @apply motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-right-8 motion-safe:duration-700;
+  }
+
+  .motion-fade-right {
+    @apply motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-left-8 motion-safe:duration-700;
+  }
+
+  .motion-pop {
+    @apply motion-safe:animate-in motion-safe:fade-in motion-safe:zoom-in-95 motion-safe:duration-500;
+  }
+
+  .motion-card {
+    @apply motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:duration-700;
+  }
+
+  .interactive-lift {
+    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(16,35,63,0.12)];
+  }
+
   .reveal-up {
     opacity: 0;
     transform: translateY(1.5rem);
@@ -96,6 +124,26 @@
 }
 
 @layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-150 {
+    animation-delay: 150ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;

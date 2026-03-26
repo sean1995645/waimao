@@ -95,6 +95,15 @@ export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     return 'en-US';
   });
 
+  useEffect(() => {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
+    document.documentElement.lang = locale;
+    document.documentElement.dir = ['ar-SA', 'he-IL'].includes(locale) ? 'rtl' : 'ltr';
+  }, [locale]);
+
   const setLocale = (newLocale: string) => {
     if (messages[newLocale]) {
       setLocaleState(newLocale);

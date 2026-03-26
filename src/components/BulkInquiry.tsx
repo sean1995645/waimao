@@ -72,8 +72,7 @@ const BulkInquiry: React.FC = () => {
   };
 
   const handleInquiry = () => {
-    const productNames = items.map(i => i.name).join(', ');
-    window.location.href = '/contact?products=' + encodeURIComponent(productNames);
+    window.location.href = '/contact';
   };
 
   if (items.length === 0) return null;
@@ -81,13 +80,13 @@ const BulkInquiry: React.FC = () => {
   return (
     <>
       {/* Bulk Inquiry Bar - Always visible when items exist */}
-      <div className={`fixed bottom-0 left-0 right-0 z-[500] bg-hn-primary text-white transition-transform duration-[350ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] shadow-[0_-4px_24px_rgba(0,0,0,0.2)] ${items.length > 0 ? 'translate-y-0' : 'translate-y-full'}`}>
+      <div className={`fixed bottom-0 left-0 right-0 z-[500] bg-hn-primary text-white transition-transform duration-300 ease-out shadow-[0_-4px_24px_rgba(0,0,0,0.2)] motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-6 motion-safe:duration-500 ${items.length > 0 ? 'translate-y-0' : 'translate-y-full'}`}>
         <div className="max-w-[1200px] mx-auto px-5 max-md:px-4 py-4 max-md:py-3 flex max-md:flex-col items-center justify-between gap-4 max-md:gap-2">
           <div className="flex items-center gap-3 max-md:gap-2 flex-1 min-w-0 max-md:w-full">
             <span className="inline-flex items-center justify-center min-w-[28px] max-md:min-w-[24px] h-7 max-md:h-6 px-1.5 bg-white text-hn-primary font-bold text-sm max-md:text-xs rounded-full flex-shrink-0">{items.length}</span>
             <div className="flex items-center gap-2 max-md:gap-1.5 overflow-x-auto max-md:flex-1">
               {items.slice(0, 5).map((item, index) => (
-                <div key={index} className="relative group flex-shrink-0">
+                <div key={index} className="relative group flex-shrink-0 motion-safe:animate-in motion-safe:fade-in motion-safe:zoom-in-95 motion-safe:duration-500" style={{ animationDelay: `${index * 70}ms` }}>
                   {item.img ? (
                     <img src={item.img} alt={item.name} className="w-20 h-20 max-md:w-14 max-md:h-14 rounded-lg object-cover border-2 border-white/20" />
                   ) : (
@@ -137,7 +136,7 @@ const BulkInquiry: React.FC = () => {
 
       {/* Bulk Inquiry Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-[1000] flex items-end justify-center bg-black/50 opacity-100 transition-opacity duration-[250ms]" onClick={closeModal}>
+        <div className="fixed inset-0 z-[1000] flex items-end justify-center bg-black/50 opacity-100 transition-opacity duration-300 motion-safe:animate-in motion-safe:fade-in motion-safe:duration-200" onClick={closeModal}>
           <div className="relative bg-white rounded-t-3xl max-md:rounded-t-2xl w-full max-w-[960px] max-md:max-w-full max-h-[86vh] max-md:max-h-[68vh] overflow-y-auto px-10 max-md:px-4 pt-8 max-md:pt-4 pb-10 max-md:pb-6 shadow-[0_-12px_40px_rgba(0,0,0,0.18)] animate-modalSlideIn" onClick={(e) => e.stopPropagation()}>
             <div className="mx-auto mb-5 max-md:mb-3 h-1.5 w-14 rounded-full bg-hn-border"></div>
             <button className="absolute top-5 max-md:top-3 right-5 max-md:right-3 w-9 max-md:w-7 h-9 max-md:h-7 rounded-lg border-none bg-gray-100 text-gray-500 cursor-pointer flex items-center justify-center transition-all duration-200 hover:bg-hn-primary hover:text-white" onClick={closeModal}>

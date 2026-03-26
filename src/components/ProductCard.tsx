@@ -44,24 +44,25 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <div
-      className={`flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(0,0,0,0.08)] ${isSelected ? '[&>a]:shadow-[0_16px_36px_rgba(13,111,184,0.2)]' : ''}`}
+      className={`motion-card group flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(0,0,0,0.1)] ${isSelected ? '[&>a]:shadow-[0_16px_36px_rgba(13,111,184,0.2)] ring-1 ring-hn-accent/20' : ''}`}
       data-category={product.category}
       data-featured={product.featured}
       data-title={product.title}
     >
       <Link to={`/products/${product.slug}`} className="flex flex-1 flex-col no-underline text-inherit">
-        <div className="relative h-[140px] lg:h-[152px] bg-[#e9eef5] overflow-hidden group">
+        <div className="relative h-[140px] lg:h-[152px] bg-[#e9eef5] overflow-hidden">
           {product.image ? (
             <img
               src={product.image}
               alt={product.title}
               loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-[400ms] ease-out group-hover:scale-[1.06] group-focus-visible:scale-[1.06]"
+              className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.06] group-focus-visible:scale-[1.06]"
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-[#e4e9f2] to-[#cad3e1]"></div>
           )}
-          <div className="absolute inset-0 hidden lg:flex items-center justify-start w-[min(72%,220px)] right-0 px-4 pl-6 opacity-0 translate-x-full transition-[transform,opacity] duration-[280ms] ease-out bg-gradient-to-l from-[rgba(4,8,16,1)] via-[rgba(5,10,20,0.96)_58%] to-[rgba(5,10,20,0.16)] pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0 [@media(hover:none)]:!hidden">
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[rgba(6,12,24,0.45)] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+          <div className="absolute inset-0 hidden lg:flex items-center justify-start w-[min(72%,220px)] right-0 px-4 pl-6 opacity-0 translate-x-full transition-[transform,opacity] duration-300 ease-out bg-gradient-to-l from-[rgba(4,8,16,1)] via-[rgba(5,10,20,0.96)_58%] to-[rgba(5,10,20,0.16)] pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0 [@media(hover:none)]:!hidden">
             <h3 className="text-[0.82rem] lg:text-[0.86rem] font-normal leading-[1.4] text-white">{product.title}</h3>
           </div>
         </div>

@@ -64,10 +64,10 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white/95 shadow-[0_2px_8px_rgba(0,0,0,0.05)] sticky top-0 z-50 backdrop-blur-[10px] border-b border-hn-primary/[0.08]">
       <div className="max-w-[1200px] mx-auto px-5 max-md:px-4">
-        <div className="flex items-center justify-between flex-wrap gap-3 max-md:gap-2 py-4 max-md:py-3">
+        <div className="motion-fade-down flex items-center justify-between flex-wrap gap-3 max-md:gap-2 py-4 max-md:py-3">
           {/* Logo */}
           <div className="flex-1 min-w-0">
-            <Link to="/">
+            <Link to="/" className="inline-flex transition-transform duration-300 hover:translate-y-[-1px] hover:scale-[1.01]">
               <img src="/heatnexis-logo.png" alt="HeatNexis" className="h-10 max-md:h-7 w-auto" />
             </Link>
           </div>
@@ -102,13 +102,13 @@ const Header: React.FC = () => {
                 <span className="text-xl max-md:text-sm leading-none">{currentLanguage.flag}</span>
                 <span className="font-medium max-md:hidden">{currentLanguage.name}</span>
                 <span className="font-medium md:hidden">{currentLanguage.code.split('-')[0].toUpperCase()}</span>
-                <svg className="transition-transform duration-300 max-md:w-2.5 max-md:h-2.5" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <svg className={`transition-transform duration-300 max-md:w-2.5 max-md:h-2.5 ${langMenuOpen ? 'rotate-180' : ''}`} width="12" height="8" viewBox="0 0 12 8" fill="none">
                   <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                 </svg>
               </button>
 
               {langMenuOpen && (
-                <div className="absolute top-[calc(100%+0.5rem)] right-0 w-[360px] max-md:w-[280px] max-h-[400px] overflow-y-auto bg-white border border-gray-300 rounded-lg shadow-[0_8px_24px_rgba(0,0,0,0.15)] z-[9999]">
+                <div className="absolute top-[calc(100%+0.5rem)] right-0 z-[9999] max-h-[400px] w-[360px] overflow-y-auto rounded-lg border border-gray-300 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] motion-safe:animate-in motion-safe:fade-in motion-safe:zoom-in-95 motion-safe:slide-in-from-top-2 motion-safe:duration-200 max-md:w-[280px]">
                   <div className="grid grid-cols-2 gap-1 p-2">
                     {languages.map((lang) => (
                       <button
@@ -129,7 +129,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Navigation Menu */}
-          <nav className={`order-4 md:order-2 flex-[0_0_100%] md:flex-[0_0_auto] w-full md:w-auto md:ml-auto ${mobileMenuOpen ? 'block' : 'hidden'} md:block`} id="mainNav">
+          <nav className={`order-4 md:order-2 flex-[0_0_100%] md:flex-[0_0_auto] w-full md:w-auto md:ml-auto ${mobileMenuOpen ? 'block motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-top-3 motion-safe:duration-200' : 'hidden'} md:block`} id="mainNav">
             <ul className="flex list-none flex-col md:flex-row md:items-center gap-1 md:gap-8 py-2 md:py-0 pb-4 max-md:pb-3 md:pb-0">
               <li><Link to="/" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.home' })}</Link></li>
               <li><Link to="/products" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.products' })}</Link></li>
