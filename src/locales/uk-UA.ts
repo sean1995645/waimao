@@ -99,7 +99,7 @@ export default {
   'products.allProducts': 'Всі Продукти',
   'products.showing': 'Показано',
   'products.productsCount': 'продукти',
-  'footer.description': 'Ми розробляємо термостати для теплої підлоги, центри проводки, шлюзи та аксесуари для дистриб\'юторів, private label брендів і HVAC-проєктів.',
+  'footer.description': 'Ми розробляємо термостати для теплої підлоги, центри проводки, шлюзи та аксесуари для дистриб\'юторів, приватних брендів і HVAC-проєктів.',
   'footer.contactInfo': 'Контактна інформація',
   'footer.followUs': 'Слідкуйте за нами',
   'footer.facebook': 'Сторінка Facebook',
