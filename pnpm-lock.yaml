@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@formspree/react':
+        specifier: ^3.0.0
+        version: 3.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-intl:
         specifier: ^10.1.0
         version: 10.1.0(@types/react@18.3.28)(react@18.3.1)(typescript@5.9.3)
@@ -659,6 +662,15 @@ packages:
       typescript:
         optional: true
 
+  '@formspree/core@4.0.0':
+    resolution: {integrity: sha512-geNlUut5nME1Ztej5Pzx1BrlQ1fFIcJYIqmF+Vm0jaUbpZxjXvt7SDOGeQVkuxn80QJiIHlwBGGjSBFjPX/KDw==, tarball: https://registry.npmjs.org/@formspree/core/-/core-4.0.0.tgz}
+
+  '@formspree/react@3.0.0':
+    resolution: {integrity: sha512-8PufBZ4l13VmCp9xTGQXwyF6mZtYSecqgTlFuMo5Fbe4Q6zUk7PMU2uKOwIaytZyTyJgFVCvdbpQElPPBKYNLw==, tarball: https://registry.npmjs.org/@formspree/react/-/react-3.0.0.tgz}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0
+
   '@hono/node-server@1.19.11':
     resolution: {integrity: sha512-dr8/3zEaB+p0D2n/IUrlPF1HZm586qgJNXK1a9fhg/PzdtkK7Ksd5l312tJX2yBuALqDYBlG20QEbayqPyxn+g==, tarball: https://registry.npmjs.org/@hono/node-server/-/node-server-1.19.11.tgz}
     engines: {node: '>=18.14.1'}
@@ -898,6 +910,17 @@ packages:
   '@stagewise/toolbar@0.6.2':
     resolution: {integrity: sha512-WN7PWaOT6YQKjJYL4/85V5UU0eZEws+/UBT/J4wJOEbFxoluLuchqh7xVTmUZTtw0q0xpzlgX8Vb0kAZf/pjmw==, tarball: https://registry.npmjs.org/@stagewise/toolbar/-/toolbar-0.6.2.tgz}
     deprecated: 'This package is deprecated and has been replaced by the stagewise CLI. Get started with the CLI here: https://stagewise.io/docs'
+
+  '@stripe/react-stripe-js@3.10.0':
+    resolution: {integrity: sha512-UPqHZwMwDzGSax0ZI7XlxR3tZSpgIiZdk3CiwjbTK978phwR/fFXeAXQcN/h8wTAjR4ZIAzdlI9DbOqJhuJdeg==, tarball: https://registry.npmjs.org/@stripe/react-stripe-js/-/react-stripe-js-3.10.0.tgz}
+    peerDependencies:
+      '@stripe/stripe-js': '>=1.44.1 <8.0.0'
+      react: '>=16.8.0 <20.0.0'
+      react-dom: '>=16.8.0 <20.0.0'
+
+  '@stripe/stripe-js@5.10.0':
+    resolution: {integrity: sha512-PTigkxMdMUP6B5ISS7jMqJAKhgrhZwjprDqR1eATtFfh0OpKVNp110xiH+goeVdrJ29/4LeZJR4FaHHWstsu0A==, tarball: https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-5.10.0.tgz}
+    engines: {node: '>=12.16'}
 
   '@stylelint/postcss-css-in-js@0.38.0':
     resolution: {integrity: sha512-XOz5CAe49kS95p5yRd+DAIWDojTjfmyAQ4bbDlXMdbZTQ5t0ThjSLvWI6JI2uiS7MFurVBkZ6zUqcimzcLTBoQ==, tarball: https://registry.npmjs.org/@stylelint/postcss-css-in-js/-/postcss-css-in-js-0.38.0.tgz}
@@ -5800,6 +5823,18 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
+  '@formspree/core@4.0.0':
+    dependencies:
+      '@stripe/stripe-js': 5.10.0
+
+  '@formspree/react@3.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@formspree/core': 4.0.0
+      '@stripe/react-stripe-js': 3.10.0(@stripe/stripe-js@5.10.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@stripe/stripe-js': 5.10.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
   '@hono/node-server@1.19.11(hono@4.12.9)':
     dependencies:
       hono: 4.12.9
@@ -6060,6 +6095,15 @@ snapshots:
   '@sinclair/typebox@0.27.10': {}
 
   '@stagewise/toolbar@0.6.2': {}
+
+  '@stripe/react-stripe-js@3.10.0(@stripe/stripe-js@5.10.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@stripe/stripe-js': 5.10.0
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@stripe/stripe-js@5.10.0': {}
 
   '@stylelint/postcss-css-in-js@0.38.0(postcss-syntax@0.36.2(postcss@8.5.8))(postcss@8.5.8)':
     dependencies:

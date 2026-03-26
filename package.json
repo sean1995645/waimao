@@ -9,6 +9,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "react-intl": "^10.1.0",
     "umi": "^4.6.35"
   },

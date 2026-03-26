@@ -3,10 +3,12 @@ import { defineConfig } from "umi";
 export default defineConfig({
   routes: [
     { path: "/", component: "index" },
+    { path: "/products/:slug", component: "products/detail" },
     { path: "/products", component: "products" },
     { path: "/about", component: "about" },
     { path: "/contact", component: "contact" },
   ],
+  esbuildMinifyIIFE: true,
   npmClient: 'pnpm',
   title: 'HeatNexis - Floor Heating Thermostats',
   favicons: ['/heatnexis-icon.png'],

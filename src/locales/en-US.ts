@@ -74,6 +74,15 @@ export default {
   'contact.form.company': 'Company',
   'contact.form.message': 'Message',
   'contact.form.submit': 'Send Message',
+  'contact.form.submitting': 'Sending...',
+  'contact.form.nameError': 'Name',
+  'contact.form.emailError': 'Email',
+  'contact.form.messageError': 'Message',
+  'contact.form.emailDescription': 'This will help us respond to your inquiry by email.',
+  'contact.form.messageDescription': 'Tell us what you would like to discuss.',
+  'contact.form.successTitle': 'Thanks for reaching out',
+  'contact.form.successDescription': 'Your message has been sent. We will get back to you shortly.',
+  'contact.form.sendAnother': 'Send another message',
 
   // Products Page
   'products.hero.eyebrow': 'Products',
