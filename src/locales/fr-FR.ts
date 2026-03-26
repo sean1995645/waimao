@@ -99,7 +99,7 @@ export default {
   'products.allProducts': 'Tous les Produits',
   'products.showing': 'Affichage',
   'products.productsCount': 'produits',
-  'footer.description': 'Nous concevons des thermostats pour plancher chauffant, des centres de câblage, des passerelles et des accessoires pour les distributeurs, les marques privées et les projets CVC.',
+  'footer.description': 'Nous concevons des thermostats de chauffage au sol, des centres de câblage, des passerelles et des accessoires pour les distributeurs, les marques privées et les projets CVC.',
   'footer.contactInfo': 'Coordonnées',
   'footer.followUs': 'Suivez-nous',
   'footer.facebook': 'Page Facebook',

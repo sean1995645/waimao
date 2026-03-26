@@ -99,7 +99,7 @@ export default {
   'products.allProducts': 'すべての製品',
   'products.showing': '表示中',
   'products.productsCount': '製品',
-  'footer.description': 'HeatNexis は、販売代理店、プライベートブランド、HVAC プロジェクト向けに床暖房用サーモスタット、配線センター、ゲートウェイ、アクセサリーを設計しています。',
+  'footer.description': '販売代理店、プライベートブランド、HVAC案件向けに、床暖房用サーモスタット、配線センター、ゲートウェイ、アクセサリーを設計しています。',
   'footer.contactInfo': '連絡先情報',
   'footer.followUs': 'フォローする',
   'footer.facebook': 'Facebookページ',

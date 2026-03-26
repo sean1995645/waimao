@@ -99,7 +99,7 @@ export default {
   'products.allProducts': '모든 제품',
   'products.showing': '표시 중',
   'products.productsCount': '제품',
-  'footer.description': '당사는 유통업체, 자체 브랜드 및 HVAC 프로젝트를 위해 바닥난방 온도조절기, 배선 센터, 게이트웨이 및 액세서리를 설계합니다.',
+  'footer.description': '유통업체, 자체 브랜드 및 HVAC 프로젝트를 위한 바닥 난방 온도 조절기, 배선 센터, 게이트웨이 및 액세서리를 설계합니다.',
   'footer.contactInfo': '연락처 정보',
   'footer.followUs': '팔로우',
   'footer.facebook': 'Facebook 페이지',

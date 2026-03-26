@@ -99,7 +99,7 @@ export default {
   'products.allProducts': 'Alle Produkter',
   'products.showing': 'Viser',
   'products.productsCount': 'produkter',
-  'footer.description': 'Vi designer gulvvarmetermostater, koblingssentre, gatewayer og tilbehør for distributører, private merker og HVAC-prosjekter.',
+  'footer.description': 'Vi designer gulvvarmetermostater, kabelsentre, gatewayer og tilbehør for distributører, private merker og HVAC-prosjekter.',
   'footer.contactInfo': 'Kontaktinformasjon',
   'footer.followUs': 'Følg oss',
   'footer.facebook': 'Facebook-side',

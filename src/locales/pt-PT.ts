@@ -99,7 +99,7 @@ export default {
   'products.allProducts': 'Todos os Produtos',
   'products.showing': 'Mostrando',
   'products.productsCount': 'produtos',
-  'footer.description': 'Concebemos termóstatos de piso radiante, centros de cablagem, passarelas e acessórios para distribuidores, marcas próprias e projetos AVAC.',
+  'footer.description': 'Concebemos termostatos para aquecimento radiante, centros de cablagem, passarelas e acessórios para distribuidores, marcas próprias e projetos AVAC.',
   'footer.contactInfo': 'Informações de contacto',
   'footer.followUs': 'Siga-nos',
   'footer.facebook': 'Página de Facebook',
