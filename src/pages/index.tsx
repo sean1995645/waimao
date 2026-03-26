@@ -9,7 +9,12 @@ const HomePage: React.FC = () => {
   const intl = useIntl();
   const homeTitle = `${intl.formatMessage({ id: 'home.hero.title' })} ${intl.formatMessage({ id: 'home.hero.subtitle' })} | HeatNexis`;
   const homeDescription = intl.formatMessage({ id: 'home.hero.description' });
-  const globalMarkets = ['Europe', 'Middle East', 'Southeast Asia', 'North America'];
+  const globalMarkets = [
+    intl.formatMessage({ id: 'region.europe' }),
+    intl.formatMessage({ id: 'region.middleEast' }),
+    intl.formatMessage({ id: 'region.southeastAsia' }),
+    intl.formatMessage({ id: 'region.northAmerica' }),
+  ];
   const homeStructuredData = [
     {
       '@context': 'https://schema.org',
@@ -35,7 +40,7 @@ const HomePage: React.FC = () => {
       name: 'HeatNexis',
       url: SITE_URL,
       description: homeDescription,
-      inLanguage: 'en',
+      inLanguage: intl.locale,
     },
   ];
 
@@ -216,26 +221,26 @@ const HomePage: React.FC = () => {
         <div className="mx-auto grid max-w-[1200px] items-start gap-8 px-6 lg:grid-cols-[340px_minmax(0,1fr)] max-md:px-4">
           <div className="motion-fade-right">
             <p className="inline-flex rounded-full bg-hn-accent/8 px-3.5 py-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-hn-accent">
-              Global Delivery
+              {intl.formatMessage({ id: 'home.shipping.eyebrow' })}
             </p>
             <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.4rem)] font-bold tracking-[-0.03em] text-hn-primary">
-              Shipping From Shanghai
+              {intl.formatMessage({ id: 'home.shipping.title' })}
             </h2>
             <p className="mt-4 text-[0.98rem] leading-8 text-[#5d7186] max-md:text-[0.9rem] max-md:leading-7">
-              HeatNexis supports export supply for underfloor heating thermostats, controllers and accessories from Shanghai to distributors, OEM brands and HVAC project buyers.
+              {intl.formatMessage({ id: 'home.shipping.description' })}
             </p>
 
             <div className="mt-6 space-y-4 text-[0.92rem] text-[#5d7186]">
               <div>
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#6d8298]">Location</p>
-                <p className="mt-1 font-semibold text-hn-primary">Shanghai, China</p>
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#6d8298]">{intl.formatMessage({ id: 'home.shipping.locationLabel' })}</p>
+                <p className="mt-1 font-semibold text-hn-primary">{intl.formatMessage({ id: 'home.shipping.locationValue' })}</p>
               </div>
               <div>
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#6d8298]">Email</p>
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#6d8298]">{intl.formatMessage({ id: 'home.shipping.emailLabel' })}</p>
                 <p className="mt-1 font-semibold text-hn-primary">sales@heatnexis.com</p>
               </div>
               <div>
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#6d8298]">Phone</p>
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#6d8298]">{intl.formatMessage({ id: 'home.shipping.phoneLabel' })}</p>
                 <p className="mt-1 font-semibold text-hn-primary">+86 138 0010 2400</p>
               </div>
             </div>
@@ -278,14 +283,14 @@ const HomePage: React.FC = () => {
               </g>
 
               <g fill="#10233f" fontWeight="700">
-                <text x="468" y="172" fontSize="18">Shanghai</text>
+                <text x="468" y="172" fontSize="18">{intl.formatMessage({ id: 'home.shipping.map.shanghai' })}</text>
               </g>
 
               <g fill="#60758e" fontSize="14" fontWeight="600">
-                <text x="118" y="104">Europe</text>
-                <text x="610" y="106">North America</text>
-                <text x="634" y="302">Oceania</text>
-                <text x="214" y="274">Middle East</text>
+                <text x="118" y="104">{intl.formatMessage({ id: 'region.europe' })}</text>
+                <text x="610" y="106">{intl.formatMessage({ id: 'region.northAmerica' })}</text>
+                <text x="634" y="302">{intl.formatMessage({ id: 'region.oceania' })}</text>
+                <text x="214" y="274">{intl.formatMessage({ id: 'region.middleEast' })}</text>
               </g>
             </svg>
 

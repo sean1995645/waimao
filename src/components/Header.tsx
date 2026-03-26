@@ -78,7 +78,7 @@ const Header: React.FC = () => {
             <button
               id="navToggle"
               className={`md:hidden flex flex-col justify-center gap-[5px] max-md:gap-[4px] w-11 h-11 max-md:w-9 max-md:h-9 bg-transparent border border-gray-200 rounded-xl max-md:rounded-lg p-2 max-md:p-1.5 cursor-pointer ${mobileMenuOpen ? '[&>span:nth-child(1)]:translate-y-[7px] max-md:[&>span:nth-child(1)]:translate-y-[6px] [&>span:nth-child(1)]:rotate-45 [&>span:nth-child(2)]:opacity-0 [&>span:nth-child(3)]:-translate-y-[7px] max-md:[&>span:nth-child(3)]:-translate-y-[6px] [&>span:nth-child(3)]:-rotate-45' : ''}`}
-              aria-label="Toggle navigation menu"
+              aria-label={intl.formatMessage({ id: 'nav.toggle' })}
               aria-controls="mainNav"
               aria-expanded={mobileMenuOpen}
               type="button"
@@ -95,7 +95,7 @@ const Header: React.FC = () => {
                 id="langToggle"
                 className="flex items-center gap-2 max-md:gap-1.5 px-4 py-2 max-md:px-3 max-md:py-1.5 bg-gray-50 border border-gray-300 rounded-md max-md:rounded text-base max-md:text-xs text-gray-800 transition-all duration-300 cursor-pointer hover:bg-gray-100 hover:border-hn-accent"
                 type="button"
-                aria-label="Select language"
+                aria-label={intl.formatMessage({ id: 'nav.selectLanguage' })}
                 aria-expanded={langMenuOpen}
                 onClick={toggleLangMenu}
               >

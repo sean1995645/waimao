@@ -26,7 +26,7 @@ const AboutPage: React.FC = () => {
         {
           '@type': 'ListItem',
           position: 1,
-          name: 'Home',
+          name: intl.formatMessage({ id: 'nav.home' }),
           item: SITE_URL,
         },
         {

@@ -3,19 +3,20 @@ import { useIntl } from 'react-intl';
 import PageHero from '@/components/PageHero';
 import ProductCard from '@/components/ProductCard';
 import Seo, { SITE_URL, toAbsoluteUrl } from '@/components/Seo';
-import { products, categories } from '@/data/products';
+import { categoryIds, getLocalizedCategoryName, localizeProducts, products } from '@/data/products';
 
 const ProductsPage: React.FC = () => {
   const intl = useIntl();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+  const localizedProducts = localizeProducts(products, intl.formatMessage);
 
   useEffect(() => {
     if (selectedCategory === 'all') {
       setFilteredProducts(products);
     } else {
-      setFilteredProducts(products.filter(p => p.category === selectedCategory));
+      setFilteredProducts(products.filter((product) => product.categoryId === selectedCategory));
     }
   }, [selectedCategory]);
 
@@ -24,12 +25,13 @@ const ProductsPage: React.FC = () => {
   };
 
   const getCategoryProducts = (category: string) => {
-    return products.filter(p => p.category === category);
+    return products.filter((product) => product.categoryId === category);
   };
 
-  const categoryItems = categories.map((category) => ({
-    name: category,
-    count: getCategoryProducts(category).length,
+  const categoryItems = categoryIds.map((categoryId) => ({
+    id: categoryId,
+    name: getLocalizedCategoryName(categoryId, intl.formatMessage),
+    count: getCategoryProducts(categoryId).length,
   }));
   const productsTitle = `${intl.formatMessage({ id: 'products.hero.title' })} | HeatNexis`;
   const productsDescription = intl.formatMessage({ id: 'products.hero.description' });
@@ -43,7 +45,7 @@ const ProductsPage: React.FC = () => {
       mainEntity: {
         '@type': 'ItemList',
         numberOfItems: products.length,
-        itemListElement: products.map((product, index) => ({
+        itemListElement: localizedProducts.map((product, index) => ({
           '@type': 'ListItem',
           position: index + 1,
           url: `${SITE_URL}/products/${product.slug}`,
@@ -59,7 +61,7 @@ const ProductsPage: React.FC = () => {
         {
           '@type': 'ListItem',
           position: 1,
-          name: 'Home',
+          name: intl.formatMessage({ id: 'nav.home' }),
           item: SITE_URL,
         },
         {
@@ -94,7 +96,7 @@ const ProductsPage: React.FC = () => {
         panelText={intl.formatMessage({ id: 'products.hero.panelText' })}
         stats={[
           { value: `${products.length}+`, label: intl.formatMessage({ id: 'products.hero.browsableModels' }) },
-          { value: `${categories.length}`, label: intl.formatMessage({ id: 'products.hero.categories' }) },
+          { value: `${categoryIds.length}`, label: intl.formatMessage({ id: 'products.hero.categories' }) },
           { value: 'OEM', label: intl.formatMessage({ id: 'products.hero.privateLabelReady' }) },
         ]}
       />
@@ -104,20 +106,21 @@ const ProductsPage: React.FC = () => {
         <div className="max-w-[1200px] mx-auto px-4 lg:px-5">
           {/* Mobile Accordion */}
           <div className="motion-fade-up flex flex-col gap-1.5 lg:hidden" data-product-accordion>
-            {categories.map((category) => {
-              const categoryProducts = getCategoryProducts(category);
-              const isOpen = openAccordion === category;
+            {categoryIds.map((categoryId) => {
+              const categoryProducts = getCategoryProducts(categoryId);
+              const isOpen = openAccordion === categoryId;
+              const categoryLabel = getLocalizedCategoryName(categoryId, intl.formatMessage);
 
               return (
-                <div key={category} className="overflow-hidden rounded-xl border border-[#e4eaf3] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]" data-product-accordion-item>
+                <div key={categoryId} className="overflow-hidden rounded-xl border border-[#e4eaf3] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]" data-product-accordion-item>
                   <button
                     type="button"
                     className="flex w-full cursor-pointer items-center justify-between gap-3 px-3 py-2 text-left text-[0.8rem] text-hn-primary bg-transparent border-0"
-                    onClick={() => toggleAccordion(category)}
+                    onClick={() => toggleAccordion(categoryId)}
                     aria-expanded={isOpen}
                     data-product-accordion-trigger
                   >
-                    <span>{category}</span>
+                    <span>{categoryLabel}</span>
                     <span className="ml-auto inline-flex min-w-[1.5rem] items-center justify-center rounded-full bg-[#f5f8fc] px-2 py-0.5 text-[0.7rem] font-semibold text-[#60758e]">{categoryProducts.length}</span>
                     <svg
                       className={`h-4 w-4 text-[#60758e] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
@@ -174,28 +177,28 @@ const ProductsPage: React.FC = () => {
                         : 'bg-[#f3f6fb] text-[#60758e]'
                     }`}>{products.length}</span>
                   </button>
-                  {categoryItems.map(({ name, count }) => (
+                  {categoryItems.map(({ id, name, count }) => (
                     <button
-                      key={name}
+                      key={id}
                       type="button"
-                      aria-pressed={selectedCategory === name}
+                      aria-pressed={selectedCategory === id}
                       className={`relative flex w-full items-start justify-start gap-2 rounded-lg border px-3 py-2.5 text-left text-[0.82rem] transition-colors duration-200 ${
-                        selectedCategory === name
+                        selectedCategory === id
                           ? 'border-[#d8e4ef] bg-[#f5f8fc] text-hn-primary'
                           : 'border-transparent bg-transparent text-[#445468] hover:border-[#e2eaf2] hover:bg-[#f8fafc] hover:text-hn-primary'
                       }`}
-                      onClick={() => setSelectedCategory(name)}
-                      data-category={name}
+                      onClick={() => setSelectedCategory(id)}
+                      data-category={id}
                     >
                       <span
                         className={`absolute left-0 top-2.5 bottom-2.5 w-0.5 rounded-full ${
-                          selectedCategory === name ? 'bg-hn-accent' : 'bg-transparent'
+                          selectedCategory === id ? 'bg-hn-accent' : 'bg-transparent'
                         }`}
                         aria-hidden="true"
                       />
                       <span className="min-w-0 flex-1 pl-1.5 font-medium leading-5 text-current">{name}</span>
                       <span className={`mt-0.5 inline-flex h-6 min-w-[1.8rem] shrink-0 items-center justify-center self-start rounded-full px-1.5 text-[0.68rem] font-semibold ${
-                        selectedCategory === name
+                        selectedCategory === id
                           ? 'bg-white text-hn-primary ring-1 ring-[#d8e4ef]'
                           : 'bg-[#f3f6fb] text-[#60758e]'
                       }`}>{count}</span>

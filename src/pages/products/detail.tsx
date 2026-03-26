@@ -4,7 +4,7 @@ import { Link, useParams } from 'umi';
 import ProductCard from '@/components/ProductCard';
 import { addToInquiry, isInInquiry, removeFromInquiry } from '@/components/BulkInquiry';
 import Seo, { SITE_URL, toAbsoluteUrl } from '@/components/Seo';
-import { getProductBySlug, products } from '@/data/products';
+import { getProductBySlug, localizeProduct, products } from '@/data/products';
 
 const ProductDetailPage: React.FC = () => {
   const intl = useIntl();
@@ -13,9 +13,9 @@ const ProductDetailPage: React.FC = () => {
   const product = getProductBySlug(slug);
   const [isSelected, setIsSelected] = useState(false);
   const getMessage = (id: string, fallback: string) => {
-    const message = intl.messages?.[id];
-    return typeof message === 'string' && message ? message : fallback;
+    return intl.formatMessage({ id, defaultMessage: fallback });
   };
+  const localizedProduct = product ? localizeProduct(product, intl.formatMessage) : null;
 
   useEffect(() => {
     if (!product) {
@@ -23,7 +23,7 @@ const ProductDetailPage: React.FC = () => {
     }
 
     const syncSelectedState = () => {
-      setIsSelected(isInInquiry(product.title));
+      setIsSelected(isInInquiry(product.id));
     };
 
     syncSelectedState();
@@ -38,8 +38,8 @@ const ProductDetailPage: React.FC = () => {
     return (
       <div>
         <Seo
-          title="Product Not Found | HeatNexis"
-          description="The requested underfloor heating control product could not be found in the HeatNexis catalog."
+          title={`${getMessage('product.detail.notFoundTitle', 'Product not found')} | HeatNexis`}
+          description={getMessage('product.detail.notFoundDescription', 'The product you requested is not available in the current catalog. Return to the product list to continue browsing available heating control models.')}
           path={`/products/${slug}`}
           noIndex
         />
@@ -78,14 +78,14 @@ const ProductDetailPage: React.FC = () => {
   }
 
   const productStats = [
-    { label: getMessage('product.detail.category', 'Category'), value: product.category },
-    { label: getMessage('product.detail.voltage', 'Voltage'), value: product.specs?.voltage || 'N/A' },
-    { label: getMessage('product.detail.control', 'Control'), value: product.specs?.control || 'N/A' },
-    { label: getMessage('product.detail.display', 'Display'), value: product.specs?.display || 'N/A' },
+    { label: getMessage('product.detail.category', 'Category'), value: localizedProduct?.category || '' },
+    { label: getMessage('product.detail.voltage', 'Voltage'), value: localizedProduct?.specs?.voltage || getMessage('product.spec.na', 'N/A') },
+    { label: getMessage('product.detail.control', 'Control'), value: localizedProduct?.specs?.control || getMessage('product.spec.na', 'N/A') },
+    { label: getMessage('product.detail.display', 'Display'), value: localizedProduct?.specs?.display || getMessage('product.spec.na', 'N/A') },
   ];
 
   const relatedProducts = products
-    .filter((item) => item.slug !== product.slug && item.category === product.category)
+    .filter((item) => item.slug !== product.slug && item.categoryId === product.categoryId)
     .slice(0, 3);
 
   const capabilityCards = [
@@ -105,13 +105,14 @@ const ProductDetailPage: React.FC = () => {
 
   const handleToggleInquiry = () => {
     if (isSelected) {
-      removeFromInquiry(product.title);
+      removeFromInquiry(product.id);
       setIsSelected(false);
       return;
     }
 
     addToInquiry({
-      name: product.title,
+      id: product.id,
+      name: localizedProduct?.title,
       url: `/products/${product.slug}`,
       img: product.image,
     });
@@ -121,7 +122,8 @@ const ProductDetailPage: React.FC = () => {
   const handleContact = () => {
     if (!isSelected) {
       addToInquiry({
-        name: product.title,
+        id: product.id,
+        name: localizedProduct?.title,
         url: `/products/${product.slug}`,
         img: product.image,
       });
@@ -130,14 +132,14 @@ const ProductDetailPage: React.FC = () => {
 
     window.location.href = '/contact';
   };
-  const productTitle = `${product.title} | HeatNexis`;
-  const productDescription = `${product.description || getMessage('product.detail.defaultDescription', 'Heating control model built for stable performance, clear specification matching and efficient project quoting.')} ${product.specs?.control ? `Control: ${product.specs.control}.` : ''} ${product.specs?.voltage ? `Voltage: ${product.specs.voltage}.` : ''}`.trim();
+  const productTitle = `${localizedProduct?.title || product.id} | HeatNexis`;
+  const productDescription = `${localizedProduct?.description || getMessage('product.detail.defaultDescription', 'Heating control model built for stable performance, clear specification matching and efficient project quoting.')} ${localizedProduct?.specs?.control ? `${getMessage('product.detail.control', 'Control')}: ${localizedProduct.specs.control}.` : ''} ${localizedProduct?.specs?.voltage ? `${getMessage('product.detail.voltage', 'Voltage')}: ${localizedProduct.specs.voltage}.` : ''}`.trim();
   const productStructuredData = [
     {
       '@context': 'https://schema.org',
       '@type': 'Product',
-      name: product.title,
-      description: product.description || productTitle,
+      name: localizedProduct?.title,
+      description: localizedProduct?.description || productTitle,
       image: [toAbsoluteUrl(product.image)],
       sku: product.id,
       brand: {
@@ -149,9 +151,9 @@ const ProductDetailPage: React.FC = () => {
         name: 'HeatNexis',
         url: SITE_URL,
       },
-      category: product.category,
+      category: localizedProduct?.category,
       url: `${SITE_URL}/products/${product.slug}`,
-      additionalProperty: Object.entries(product.specs || {}).map(([name, value]) => ({
+      additionalProperty: Object.entries(localizedProduct?.specs || {}).map(([name, value]) => ({
         '@type': 'PropertyValue',
         name,
         value,
@@ -164,19 +166,19 @@ const ProductDetailPage: React.FC = () => {
         {
           '@type': 'ListItem',
           position: 1,
-          name: 'Home',
+          name: intl.formatMessage({ id: 'nav.home' }),
           item: SITE_URL,
         },
         {
           '@type': 'ListItem',
           position: 2,
-          name: 'Products',
+          name: intl.formatMessage({ id: 'nav.products' }),
           item: `${SITE_URL}/products`,
         },
         {
           '@type': 'ListItem',
           position: 3,
-          name: product.title,
+          name: localizedProduct?.title,
           item: `${SITE_URL}/products/${product.slug}`,
         },
       ],
@@ -190,7 +192,7 @@ const ProductDetailPage: React.FC = () => {
         description={productDescription}
         path={`/products/${product.slug}`}
         image={product.image}
-        keywords={[product.category, product.id, product.specs?.control || 'thermostat']}
+        keywords={[localizedProduct?.category || product.categoryId, product.id, localizedProduct?.specs?.control || 'thermostat']}
         type="product"
         structuredData={productStructuredData}
       />
@@ -202,19 +204,19 @@ const ProductDetailPage: React.FC = () => {
           <div>
             <div className="flex flex-wrap items-center gap-3 text-[0.78rem] font-semibold tracking-[0.12em] text-white/70">
               <Link to="/" className="no-underline transition-colors duration-200 hover:text-white">
-                {getMessage('product.detail.home', 'Home')}
+                {intl.formatMessage({ id: 'nav.home' })}
               </Link>
               <span>/</span>
               <Link to="/products" className="no-underline transition-colors duration-200 hover:text-white">
-                {getMessage('product.detail.catalog', 'Products')}
+                {intl.formatMessage({ id: 'nav.products' })}
               </Link>
               <span>/</span>
-              <span className="text-white">{product.title}</span>
+              <span className="text-white">{localizedProduct?.title}</span>
             </div>
 
             <div className="motion-fade-up animation-delay-100 mt-6 flex flex-wrap items-center gap-3">
               <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c8dbeb]">
-                {product.category}
+                {localizedProduct?.category}
               </span>
               {product.featured && (
                 <span className="inline-flex rounded-full border border-[#93d4b7]/40 bg-[#93d4b7]/12 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c5f0da]">
@@ -229,10 +231,10 @@ const ProductDetailPage: React.FC = () => {
             </div>
 
             <h1 className="motion-fade-up animation-delay-150 mt-5 max-w-[13ch] text-[clamp(2.4rem,5vw,4.6rem)] font-bold leading-[0.98] tracking-[-0.04em]">
-              {product.title}
+              {localizedProduct?.title}
             </h1>
             <p className="motion-fade-up animation-delay-200 mt-5 max-w-[42rem] text-[1rem] leading-8 text-white/78 max-md:text-[0.95rem] max-md:leading-7">
-              {product.description || getMessage('product.detail.defaultDescription', 'Heating control model built for stable performance, clear specification matching and efficient project quoting.')}
+              {localizedProduct?.description || getMessage('product.detail.defaultDescription', 'Heating control model built for stable performance, clear specification matching and efficient project quoting.')}
             </p>
 
             <div className="motion-fade-up animation-delay-300 mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -273,7 +275,7 @@ const ProductDetailPage: React.FC = () => {
               <div className="relative overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#0d2036] p-4">
                 <img
                   src={product.image}
-                  alt={product.title}
+                  alt={localizedProduct?.title}
                   className="aspect-square w-full rounded-[1rem] object-cover"
                 />
               </div>
@@ -288,7 +290,7 @@ const ProductDetailPage: React.FC = () => {
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c1d5e6]">
                     {getMessage('product.detail.modelType', 'Model type')}
                   </p>
-                  <p className="mt-2 text-[1rem] font-semibold text-white">{product.specs?.control || product.category}</p>
+                  <p className="mt-2 text-[1rem] font-semibold text-white">{localizedProduct?.specs?.control || localizedProduct?.category}</p>
                 </div>
               </div>
             </div>

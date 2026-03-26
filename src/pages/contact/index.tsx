@@ -3,6 +3,7 @@ import { useIntl } from 'react-intl';
 import { useForm, ValidationError } from '@formspree/react';
 import PageHero from '@/components/PageHero';
 import Seo, { SITE_URL } from '@/components/Seo';
+import { getProductById, localizeProduct } from '@/data/products';
 
 type ContactFormFields = {
   name: string;
@@ -15,7 +16,8 @@ type ContactFormFields = {
 };
 
 type InquiryItem = {
-  name: string;
+  id: string;
+  name?: string;
   url?: string;
   img?: string;
 };
@@ -28,8 +30,7 @@ const ContactPage: React.FC = () => {
   const [state, handleSubmit, reset] = useForm<ContactFormFields>(FORMSPREE_FORM_ID);
   const [selectedItems, setSelectedItems] = useState<InquiryItem[]>([]);
   const getMessage = (id: string, fallback: string) => {
-    const message = intl.messages?.[id];
-    return typeof message === 'string' && message ? message : fallback;
+    return intl.formatMessage({ id, defaultMessage: fallback });
   };
 
   useEffect(() => {
@@ -40,8 +41,34 @@ const ContactPage: React.FC = () => {
     const loadSelectedItems = () => {
       try {
         const stored = localStorage.getItem(INQUIRY_STORAGE_KEY);
-        const storedItems: InquiryItem[] = stored ? JSON.parse(stored) : [];
-        setSelectedItems(storedItems);
+        const storedItems = stored ? JSON.parse(stored) : [];
+        const normalizedItems = Array.isArray(storedItems)
+          ? storedItems.reduce<InquiryItem[]>((accumulator, item) => {
+              if (!item || typeof item !== 'object') {
+                return accumulator;
+              }
+
+              const candidate = item as Record<string, unknown>;
+              const id =
+                (typeof candidate.id === 'string' && candidate.id) ||
+                (typeof candidate.url === 'string' && candidate.url) ||
+                (typeof candidate.name === 'string' && candidate.name);
+
+              if (!id) {
+                return accumulator;
+              }
+
+              accumulator.push({
+                id,
+                name: typeof candidate.name === 'string' ? candidate.name : undefined,
+                url: typeof candidate.url === 'string' ? candidate.url : undefined,
+                img: typeof candidate.img === 'string' ? candidate.img : undefined,
+              });
+
+              return accumulator;
+            }, [])
+          : [];
+        setSelectedItems(normalizedItems);
       } catch (error) {
         setSelectedItems([]);
       }
@@ -58,7 +85,15 @@ const ContactPage: React.FC = () => {
   const submitLabel = state.submitting
     ? getMessage('contact.form.submitting', 'Sending...')
     : intl.formatMessage({ id: 'contact.form.submit' });
-  const selectedProductNames = selectedItems.map((item) => item.name).join('\n');
+  const getDisplayName = (item: InquiryItem) => {
+    const product = getProductById(item.id);
+    if (product) {
+      return localizeProduct(product, intl.formatMessage).title;
+    }
+
+    return item.name || item.id;
+  };
+  const selectedProductNames = selectedItems.map((item) => getDisplayName(item)).join('\n');
   const selectedProductUrls = selectedItems
     .map((item) => item.url)
     .filter((url): url is string => Boolean(url))
@@ -90,7 +125,7 @@ const ContactPage: React.FC = () => {
         {
           '@type': 'ListItem',
           position: 1,
-          name: 'Home',
+          name: intl.formatMessage({ id: 'nav.home' }),
           item: SITE_URL,
         },
         {
@@ -126,7 +161,7 @@ const ContactPage: React.FC = () => {
         stats={[
           { value: '24h', label: intl.formatMessage({ id: 'contact.hero.responseTime' }) },
           { value: '5', label: intl.formatMessage({ id: 'contact.hero.languages' }) },
-          { value: 'Global', label: intl.formatMessage({ id: 'contact.hero.support' }) },
+          { value: intl.formatMessage({ id: 'contact.hero.supportValue' }), label: intl.formatMessage({ id: 'contact.hero.support' }) },
         ]}
       />
 
@@ -211,16 +246,16 @@ const ContactPage: React.FC = () => {
                       </div>
                       <div className="flex flex-col gap-2.5">
                         {selectedItems.map((item) => (
-                          <div key={item.name} className="flex items-center gap-3 rounded-lg border border-[#e8eef5] bg-white px-3 py-2.5">
+                          <div key={item.id} className="flex items-center gap-3 rounded-lg border border-[#e8eef5] bg-white px-3 py-2.5">
                             {item.img ? (
-                              <img src={item.img} alt={item.name} className="h-12 w-12 rounded-lg object-cover" />
+                              <img src={item.img} alt={getDisplayName(item)} className="h-12 w-12 rounded-lg object-cover" />
                             ) : (
                               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#eef3f8] text-[0.95rem] font-semibold text-hn-primary">
-                                {item.name.charAt(0)}
+                                {getDisplayName(item).charAt(0)}
                               </div>
                             )}
                             <div className="min-w-0">
-                              <p className="truncate text-[0.84rem] font-semibold text-hn-primary">{item.name}</p>
+                              <p className="truncate text-[0.84rem] font-semibold text-hn-primary">{getDisplayName(item)}</p>
                               {item.img && <p className="truncate text-[0.74rem] text-gray-500">{item.img}</p>}
                             </div>
                           </div>

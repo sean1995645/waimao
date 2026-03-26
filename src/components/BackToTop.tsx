@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useIntl } from 'react-intl';
 
 const BackToTop: React.FC = () => {
+  const intl = useIntl();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -27,8 +29,8 @@ const BackToTop: React.FC = () => {
     <button
       className={`fixed  w-12 h-12 md:w-10 md:h-10 bg-hn-primary text-white border-none rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.15)] z-[100] ${isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} hover:bg-hn-accent hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.2)]`}
       onClick={scrollToTop}
-      aria-label="Back to top"
-      style={{ bottom: 50, right: 16 }}
+      aria-label={intl.formatMessage({ id: 'common.backToTop' })}
+      style={{ bottom: 100, right: 16 }}
     >
       <svg className="md:w-5 md:h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <polyline points="18 15 12 9 6 15" />

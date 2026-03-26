@@ -33,7 +33,7 @@ import hiIN from './locales/hi-IN';
 import skSK from './locales/sk-SK';
 import hrHR from './locales/hr-HR';
 
-const messages: Record<string, any> = {
+const baseMessages: Record<string, Record<string, string>> = {
   'en-US': enUS,
   'zh-CN': zhCN,
   'es-ES': esES,
@@ -66,13 +66,22 @@ const messages: Record<string, any> = {
   'hr-HR': hrHR,
 };
 
+const defaultLocale = 'en-US';
+
+const messages = Object.fromEntries(
+  Object.entries(baseMessages).map(([locale, localeMessages]) => [
+    locale,
+    locale === defaultLocale ? baseMessages[defaultLocale] : { ...baseMessages[defaultLocale], ...localeMessages },
+  ]),
+);
+
 interface LocaleContextType {
   locale: string;
   setLocale: (locale: string) => void;
 }
 
 const LocaleContext = createContext<LocaleContextType>({
-  locale: 'en-US',
+  locale: defaultLocale,
   setLocale: () => {},
 });
 
@@ -92,7 +101,7 @@ export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         return browserLang;
       }
     }
-    return 'en-US';
+    return defaultLocale;
   });
 
   useEffect(() => {
@@ -115,7 +124,7 @@ export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale }}>
-      <IntlProvider locale={locale} messages={messages[locale]}>
+      <IntlProvider locale={locale} defaultLocale={defaultLocale} messages={messages[locale] || messages[defaultLocale]}>
         {children}
       </IntlProvider>
     </LocaleContext.Provider>
@@ -129,5 +138,5 @@ export const getLocale = () => {
       return saved;
     }
   }
-  return 'en-US';
+  return defaultLocale;
 };
