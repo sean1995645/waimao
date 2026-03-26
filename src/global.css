@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: #0f172a;
+    font-family: "Source Sans 3", "Noto Sans SC", "Noto Sans Arabic", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fbfd 100%);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lexend", "Noto Sans SC", "Noto Sans Arabic", "Source Sans 3", sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  header {
+    border-bottom: 1px solid rgba(16, 35, 63, 0.08);
+    box-shadow: 0 8px 24px rgba(16, 35, 63, 0.06);
+  }
+
+  footer {
+    background: linear-gradient(145deg, #0c192d 0%, #10233f 52%, #163154 100%);
+  }
+
+  a,
+  button,
+  .product-card-wrap,
+  .category-item {
+    transition-duration: 220ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #0d6fb8;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  .reveal-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hero-scroll-hint span::after {
+    content: '';
+    position: absolute;
+    top: 0.375rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.25rem;
+    height: 0.5rem;
+    border-radius: 0.125rem;
+    background: rgba(255, 255, 255, 0.7);
+    animation: scrollDot 1.8s ease infinite;
+  }
+}
+
+@layer utilities {
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    .reveal-up,
+    .reveal-in {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  }
+}

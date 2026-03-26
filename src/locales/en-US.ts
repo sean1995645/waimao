@@ -1,0 +1,91 @@
+export default {
+  // Navigation
+  'nav.home': 'Home',
+  'nav.products': 'Products',
+  'nav.about': 'About',
+  'nav.contact': 'Contact',
+  'nav.language': 'English',
+
+  // Home Page
+  'home.hero.eyebrow': 'Underfloor Heating Controls',
+  'home.hero.title': 'HeatNexis Thermostats',
+  'home.hero.subtitle': 'Built for OEM Growth',
+  'home.hero.description': 'We design floor heating thermostats, wiring centers, gateways and accessories for distributors, private-label brands and HVAC projects.',
+  'home.hero.viewProducts': 'View Products',
+  'home.hero.getInTouch': 'Get in Touch',
+
+  // Stats
+  'stats.yearsExperience': 'Years Experience',
+  'stats.controlSKUs': 'Control SKUs',
+  'stats.oemMarkets': 'OEM Markets',
+  'stats.qualityCompliance': 'Quality Compliance',
+
+  // Featured Products
+  'home.featured.eyebrow': 'Featured Products',
+  'home.featured.title': 'Our Best-Selling Solutions',
+  'home.featured.description': 'Discover our most popular thermostat models trusted by distributors worldwide',
+  'home.featured.viewAll': 'View All Products →',
+
+  // Why Section
+  'home.why.eyebrow': 'Why HeatNexis',
+  'home.why.title': 'Focused on Heating Control Projects',
+  'home.why.description': 'We build programmable thermostats, smart thermostats, manifold control centers and accessories around real underfloor heating use cases for OEM and project supply.',
+  'home.why.learnMore': 'Learn More →',
+  'home.why.stableControl.title': 'Stable Control',
+  'home.why.stableControl.description': 'Core models deliver +/-0.5°C control accuracy and full aging tests.',
+  'home.why.oemFlexibility.title': 'OEM Flexibility',
+  'home.why.oemFlexibility.description': 'Customize panel finish, UI language, packaging, logo and firmware packages.',
+  'home.why.hvacExpertise.title': 'HVAC Expertise',
+  'home.why.hvacExpertise.description': 'Practical experience across hydronic heating, electric heating, actuators and contractor workflows.',
+  'home.why.efficientDelivery.title': 'Efficient Delivery',
+  'home.why.efficientDelivery.description': 'Clear lead times for distributor stock planning and phased project supply.',
+
+  // CTA Section
+  'home.cta.title': 'Ready to Build Your Thermostat Line?',
+  'home.cta.description': 'Send your target market, control type and certification needs. HeatNexis will match the right model and quote path.',
+  'home.cta.button': 'Request a Quote →',
+
+  // About Page
+  'about.hero.eyebrow': 'About',
+  'about.hero.title': 'About HeatNexis',
+  'about.hero.description': 'Your trusted partner in floor heating control solutions',
+  'about.hero.panelTitle': 'Our Mission',
+  'about.hero.panelText': 'We build programmable thermostats, smart thermostats, manifold control centers and accessories around real underfloor heating use cases.',
+  'about.story.eyebrow': 'Our Story',
+  'about.story.title': 'Focused on Heating Control Projects',
+  'about.story.paragraph1': 'We build programmable thermostats, smart thermostats, manifold control centers and accessories around real underfloor heating use cases for OEM and project supply. With over 10 years of experience in the HVAC industry, we understand the unique challenges faced by distributors, private-label brands, and project contractors.',
+  'about.story.paragraph2': 'Our commitment to quality, flexibility, and efficient delivery has made us a trusted partner for heating control solutions across 40+ markets worldwide.',
+  'about.stats.certified': 'Certified',
+
+  // Contact Page
+  'contact.hero.eyebrow': 'Contact',
+  'contact.hero.title': 'Contact Us',
+  'contact.hero.description': 'Get in touch with our team for inquiries and support',
+  'contact.hero.panelTitle': 'Quick Response',
+  'contact.hero.panelText': 'Send your target market, control type and certification needs. HeatNexis will match the right model and quote path.',
+  'contact.hero.responseTime': 'Response Time',
+  'contact.hero.languages': 'Languages',
+  'contact.hero.support': 'Support',
+  'contact.form.title': 'Get in Touch',
+  'contact.form.description': 'Send your target market, control type and certification needs. HeatNexis will match the right model and quote path.',
+  'contact.form.email': 'Email',
+  'contact.form.phone': 'Phone',
+  'contact.form.name': 'Name',
+  'contact.form.company': 'Company',
+  'contact.form.message': 'Message',
+  'contact.form.submit': 'Send Message',
+
+  // Products Page
+  'products.hero.eyebrow': 'Products',
+  'products.hero.title': 'Product Catalog',
+  'products.hero.description': 'Browse programmable thermostats, WiFi and Zigbee models, actuators, sensors and control modules in one catalog.',
+  'products.hero.panelTitle': 'Catalog Snapshot',
+  'products.hero.panelText': 'Filter by category or send an inquiry and we can map the right model for your application.',
+  'products.hero.browsableModels': 'Browsable models',
+  'products.hero.categories': 'Categories',
+  'products.hero.privateLabelReady': 'Private-label ready',
+  'products.categories': 'Categories',
+  'products.allProducts': 'All Products',
+  'products.showing': 'Showing',
+  'products.productsCount': 'products',
+};

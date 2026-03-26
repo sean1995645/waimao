@@ -1,0 +1,17 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="960" height="720" rx="36" fill="url(#bg)"/>
+<rect x="92" y="92" width="776" height="536" rx="32" fill="#F7FAFB" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.16"/>
+<path d="M252 520C330 480 376 436 432 336C462 284 502 236 584 216" stroke="#F0A273" stroke-width="16" stroke-linecap="round"/>
+<path d="M584 216C638 204 682 222 706 250C726 274 726 316 694 344C654 378 592 372 552 342" stroke="#F7FAFB" stroke-width="16" stroke-linecap="round"/>
+<circle cx="236" cy="532" r="42" fill="#F7FAFB"/>
+<circle cx="236" cy="532" r="18" fill="#203542"/>
+<rect x="612" y="176" width="120" height="96" rx="20" fill="#203542"/>
+<rect x="632" y="194" width="80" height="26" rx="13" fill="#F08E5D"/>
+<text x="168" y="624" fill="#F7FAFB" font-family="Arial, sans-serif" font-size="34" font-weight="700">HN-FS100 floor sensor kit</text>
+<defs>
+<linearGradient id="bg" x1="104" y1="42" x2="904" y2="720" gradientUnits="userSpaceOnUse">
+<stop stop-color="#344A56"/>
+<stop offset="1" stop-color="#142530"/>
+</linearGradient>
+</defs>
+</svg>
