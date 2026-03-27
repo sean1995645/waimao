@@ -2,7 +2,7 @@ name = "waimao"
 compatibility_date = "2026-03-26"
 
 [build]
-command = "pnpm install && pnpm build"
+command = "pnpm install && UMI_APP_GA_MEASUREMENT_ID=G-QD7DS6Q89S pnpm build"
 
 [assets]
 directory = "dist"

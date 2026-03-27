@@ -386,10 +386,11 @@ __webpack_require__.d(__webpack_exports__, {
   Helmet: () => (/* reexport */ index_module/* Helmet */.ql),
   Outlet: () => (/* reexport */ react_router/* Outlet */.j3),
   PluginManager: () => (/* reexport */ PluginManager),
+  useLocation: () => (/* reexport */ react_router/* useLocation */.TH),
   useParams: () => (/* reexport */ react_router/* useParams */.UO)
 });
 
-// UNUSED EXPORTS: ApplyPluginsType, HelmetProvider, Link, NavLink, Navigate, __getRoot, __useFetcher, createBrowserHistory, createHashHistory, createHistory, createMemoryHistory, createSearchParams, defineApp, generatePath, history, matchPath, matchRoutes, renderClient, resolvePath, terminal, useAppData, useClientLoaderData, useLoaderData, useLocation, useMatch, useNavigate, useOutlet, useOutletContext, useResolvedPath, useRouteData, useRouteProps, useRoutes, useSearchParams, useSelectedRoutes, useServerInsertedHTML, useServerLoaderData, withRouter
+// UNUSED EXPORTS: ApplyPluginsType, HelmetProvider, Link, NavLink, Navigate, __getRoot, __useFetcher, createBrowserHistory, createHashHistory, createHistory, createMemoryHistory, createSearchParams, defineApp, generatePath, history, matchPath, matchRoutes, renderClient, resolvePath, terminal, useAppData, useClientLoaderData, useLoaderData, useMatch, useNavigate, useOutlet, useOutletContext, useResolvedPath, useRouteData, useRouteProps, useRoutes, useSearchParams, useSelectedRoutes, useServerInsertedHTML, useServerLoaderData, withRouter
 
 // EXTERNAL MODULE: ./node_modules/.pnpm/react-helmet-async@1.3.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-helmet-async/lib/index.module.js
 var index_module = __webpack_require__(3810);
@@ -2652,6 +2653,24 @@ const IntlProvider = IntlProviderImpl;
   'nav.toggle': 'Toggle navigation menu',
   'nav.selectLanguage': 'Select language',
   'common.backToTop': 'Back to top',
+  'cookie.badge': 'Cookies',
+  'cookie.title': 'Accept All Cookies for a Better Experience',
+  'cookie.description': 'We use essential cookies to keep the site working and optional cookies to improve support, analytics and user experience. You can accept all cookies or continue with only necessary cookies.',
+  'cookie.manage': 'Manage Preferences',
+  'cookie.necessaryOnly': 'Only Necessary',
+  'cookie.rejectOptional': 'Reject Optional Cookies',
+  'cookie.acceptAll': 'Accept All Cookies',
+  'cookie.categoryNecessaryTitle': 'Necessary cookies',
+  'cookie.categoryNecessaryDescription': 'Required for core site functions such as navigation, security and remembering your basic preferences.',
+  'cookie.categorySupportTitle': 'Support chat cookies',
+  'cookie.categorySupportDescription': 'Allow the support widget to load so visitors can start a live conversation with your team.',
+  'cookie.categoryAnalyticsTitle': 'Analytics cookies',
+  'cookie.categoryAnalyticsDescription': 'Help measure site usage and page performance so content and conversion paths can be improved over time.',
+  'cookie.alwaysOn': 'Always on',
+  'cookie.on': 'On',
+  'cookie.off': 'Off',
+  'cookie.cancel': 'Cancel',
+  'cookie.savePreferences': 'Save Preferences',
   'home.hero.eyebrow': 'Underfloor Heating Controls',
   'home.hero.title': 'HeatNexis Thermostats',
   'home.hero.subtitle': 'Built for OEM Growth',
@@ -2875,6 +2894,24 @@ const IntlProvider = IntlProviderImpl;
   'nav.toggle': '切换导航菜单',
   'nav.selectLanguage': '选择语言',
   'common.backToTop': '返回顶部',
+  'cookie.badge': 'Cookie',
+  'cookie.title': '接受全部 Cookie，获得更完整的浏览体验',
+  'cookie.description': '我们使用必要 Cookie 来保障网站正常运行，也会使用可选 Cookie 来优化支持服务、统计分析和整体体验。您可以接受全部 Cookie，或仅保留必要 Cookie。',
+  'cookie.manage': '管理偏好',
+  'cookie.necessaryOnly': '仅必要 Cookie',
+  'cookie.rejectOptional': '拒绝可选 Cookie',
+  'cookie.acceptAll': '接受全部 Cookie',
+  'cookie.categoryNecessaryTitle': '必要 Cookie',
+  'cookie.categoryNecessaryDescription': '用于网站基础功能，例如页面导航、安全保护以及保存您的基础偏好设置。',
+  'cookie.categorySupportTitle': '在线支持 Cookie',
+  'cookie.categorySupportDescription': '允许加载在线客服组件，方便访客与您的团队发起实时沟通。',
+  'cookie.categoryAnalyticsTitle': '统计分析 Cookie',
+  'cookie.categoryAnalyticsDescription': '帮助统计站点访问和页面表现，以便持续优化内容和转化路径。',
+  'cookie.alwaysOn': '始终开启',
+  'cookie.on': '开启',
+  'cookie.off': '关闭',
+  'cookie.cancel': '取消',
+  'cookie.savePreferences': '保存偏好',
   'home.hero.eyebrow': '地暖控制系统',
   'home.hero.title': 'HeatNexis 温控器',
   'home.hero.subtitle': '为 OEM 业务增长而打造',
@@ -9532,7 +9569,7 @@ var getLocale = function getLocale() {
 
 /***/ }),
 
-/***/ 4885:
+/***/ 6680:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9991,7 +10028,385 @@ var BackToTop = function BackToTop() {
 /* harmony default export */ const components_BackToTop = (BackToTop);
 // EXTERNAL MODULE: ./src/components/BulkInquiry.tsx
 var BulkInquiry = __webpack_require__(2503);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@babel+runtime@7.23.6/node_modules/@babel/runtime/helpers/defineProperty.js
+var defineProperty = __webpack_require__(2092);
+var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@babel+runtime@7.23.6/node_modules/@babel/runtime/helpers/objectSpread2.js
+var objectSpread2 = __webpack_require__(6068);
+var objectSpread2_default = /*#__PURE__*/__webpack_require__.n(objectSpread2);
+// EXTERNAL MODULE: ./node_modules/.pnpm/@babel+runtime@7.23.6/node_modules/@babel/runtime/helpers/typeof.js
+var helpers_typeof = __webpack_require__(1759);
+var typeof_default = /*#__PURE__*/__webpack_require__.n(helpers_typeof);
+;// CONCATENATED MODULE: ./src/utils/cookieConsent.ts
+
+
+var COOKIE_CONSENT_STORAGE_KEY = 'heatnexis_cookie_consent';
+var COOKIE_CONSENT_EVENT = 'heatnexis-cookie-consent-change';
+var ACCEPT_ALL_PREFERENCES = {
+  necessary: true,
+  analytics: true,
+  supportChat: true
+};
+var NECESSARY_ONLY_PREFERENCES = {
+  necessary: true,
+  analytics: false,
+  supportChat: false
+};
+var normalizeCookieConsent = function normalizeCookieConsent(value) {
+  if (value === 'accepted') {
+    return ACCEPT_ALL_PREFERENCES;
+  }
+  if (value === 'necessary') {
+    return NECESSARY_ONLY_PREFERENCES;
+  }
+  if (!value || typeof_default()(value) !== 'object') {
+    return null;
+  }
+  var candidate = value;
+  return {
+    necessary: true,
+    analytics: candidate.analytics === true,
+    supportChat: candidate.supportChat === true
+  };
+};
+var getCookieConsentPreferences = function getCookieConsentPreferences() {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+  var value = localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
+  if (!value) {
+    return null;
+  }
+  try {
+    return normalizeCookieConsent(JSON.parse(value));
+  } catch (error) {
+    return normalizeCookieConsent(value);
+  }
+};
+var hasCookieConsentFor = function hasCookieConsentFor(category) {
+  var preferences = getCookieConsentPreferences();
+  return preferences ? preferences[category] === true : false;
+};
+var createAcceptAllCookieConsent = function createAcceptAllCookieConsent() {
+  return objectSpread2_default()({}, ACCEPT_ALL_PREFERENCES);
+};
+var createNecessaryOnlyCookieConsent = function createNecessaryOnlyCookieConsent() {
+  return objectSpread2_default()({}, NECESSARY_ONLY_PREFERENCES);
+};
+var setCookieConsentPreferences = function setCookieConsentPreferences(value) {
+  if (typeof window === 'undefined') {
+    return;
+  }
+  localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, JSON.stringify(value));
+  window.dispatchEvent(new CustomEvent(COOKIE_CONSENT_EVENT, {
+    detail: value
+  }));
+};
+;// CONCATENATED MODULE: ./src/components/CookieConsent.tsx
+
+
+
+
+
+
+
+
+var CookieConsent = function CookieConsent() {
+  var intl = (0,useIntl/* default */.Z)();
+  var _useState = (0,react.useState)(false),
+    _useState2 = slicedToArray_default()(_useState, 2),
+    isVisible = _useState2[0],
+    setIsVisible = _useState2[1];
+  var _useState3 = (0,react.useState)(false),
+    _useState4 = slicedToArray_default()(_useState3, 2),
+    isReady = _useState4[0],
+    setIsReady = _useState4[1];
+  var _useState5 = (0,react.useState)(false),
+    _useState6 = slicedToArray_default()(_useState5, 2),
+    isPreferencesOpen = _useState6[0],
+    setIsPreferencesOpen = _useState6[1];
+  var _useState7 = (0,react.useState)(createNecessaryOnlyCookieConsent()),
+    _useState8 = slicedToArray_default()(_useState7, 2),
+    preferences = _useState8[0],
+    setPreferences = _useState8[1];
+  (0,react.useEffect)(function () {
+    var savedPreferences = getCookieConsentPreferences();
+    if (savedPreferences) {
+      setPreferences(savedPreferences);
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+    setIsReady(true);
+  }, []);
+  var handleSave = function handleSave(value) {
+    setCookieConsentPreferences(value);
+    setPreferences(value);
+    setIsVisible(false);
+    setIsPreferencesOpen(false);
+  };
+  var togglePreference = function togglePreference(key) {
+    setPreferences(function (current) {
+      return objectSpread2_default()(objectSpread2_default()({}, current), {}, defineProperty_default()({}, key, !current[key]));
+    });
+  };
+  if (!isReady || !isVisible) {
+    return null;
+  }
+  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+    className: "fixed inset-x-4 bottom-4 z-[650] mx-auto max-w-[1080px] motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-5 motion-safe:duration-300",
+    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      className: "overflow-hidden rounded-[1.75rem] border border-[#d9e4ef] bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(244,248,252,0.96))] shadow-[0_22px_60px_rgba(12,25,45,0.16)] backdrop-blur-xl",
+      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+        className: "grid gap-5 px-5 py-5 md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:px-6 md:py-5",
+        children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+          className: "min-w-0",
+          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+            className: "inline-flex items-center rounded-full bg-hn-accent/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-hn-accent",
+            children: intl.formatMessage({
+              id: 'cookie.badge'
+            })
+          }), /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
+            className: "mt-3 text-[1.1rem] font-bold tracking-[-0.02em] text-hn-primary md:text-[1.2rem]",
+            children: intl.formatMessage({
+              id: 'cookie.title'
+            })
+          }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+            className: "mt-2 max-w-[52rem] text-[0.92rem] leading-7 text-[#5d7186] md:text-[0.95rem]",
+            children: intl.formatMessage({
+              id: 'cookie.description'
+            })
+          })]
+        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+          className: "flex flex-col gap-2 sm:flex-row md:justify-end",
+          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+            type: "button",
+            onClick: function onClick() {
+              return setIsPreferencesOpen(function (current) {
+                return !current;
+              });
+            },
+            className: "inline-flex min-h-[46px] items-center justify-center rounded-xl border border-[#d8e4ef] bg-white px-5 py-3 text-[0.9rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent",
+            children: intl.formatMessage({
+              id: 'cookie.manage'
+            })
+          }), /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+            type: "button",
+            onClick: function onClick() {
+              return handleSave(createNecessaryOnlyCookieConsent());
+            },
+            className: "inline-flex min-h-[46px] items-center justify-center rounded-xl border border-[#d8e4ef] bg-white px-5 py-3 text-[0.9rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent",
+            children: intl.formatMessage({
+              id: 'cookie.rejectOptional'
+            })
+          }), /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+            type: "button",
+            onClick: function onClick() {
+              return handleSave(createAcceptAllCookieConsent());
+            },
+            className: "inline-flex min-h-[46px] items-center justify-center rounded-xl bg-hn-primary px-5 py-3 text-[0.9rem] font-semibold text-white shadow-[0_14px_30px_rgba(16,35,63,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0b2138] hover:shadow-[0_18px_36px_rgba(16,35,63,0.22)]",
+            children: intl.formatMessage({
+              id: 'cookie.acceptAll'
+            })
+          })]
+        })]
+      }), isPreferencesOpen && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
+        className: "border-t border-[#e2ebf3] bg-white/70 px-5 py-5 md:px-6",
+        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+          className: "grid gap-3",
+          children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+            className: "flex items-start justify-between gap-4 rounded-2xl border border-[#dfe8f1] bg-white px-4 py-4",
+            children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+              children: [/*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+                className: "text-[0.92rem] font-semibold text-hn-primary",
+                children: intl.formatMessage({
+                  id: 'cookie.categoryNecessaryTitle'
+                })
+              }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+                className: "mt-1 text-[0.84rem] leading-6 text-[#5d7186]",
+                children: intl.formatMessage({
+                  id: 'cookie.categoryNecessaryDescription'
+                })
+              })]
+            }), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+              className: "inline-flex min-w-[4.8rem] items-center justify-center rounded-full bg-[#eef4f9] px-3 py-1 text-[0.78rem] font-semibold text-hn-primary",
+              children: intl.formatMessage({
+                id: 'cookie.alwaysOn'
+              })
+            })]
+          }), /*#__PURE__*/(0,jsx_runtime.jsxs)("button", {
+            type: "button",
+            onClick: function onClick() {
+              return togglePreference('supportChat');
+            },
+            className: "flex items-start justify-between gap-4 rounded-2xl border border-[#dfe8f1] bg-white px-4 py-4 text-left transition-all duration-200 hover:border-hn-accent/40",
+            children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+              children: [/*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+                className: "text-[0.92rem] font-semibold text-hn-primary",
+                children: intl.formatMessage({
+                  id: 'cookie.categorySupportTitle'
+                })
+              }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+                className: "mt-1 text-[0.84rem] leading-6 text-[#5d7186]",
+                children: intl.formatMessage({
+                  id: 'cookie.categorySupportDescription'
+                })
+              })]
+            }), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+              className: "inline-flex min-w-[4.8rem] items-center justify-center rounded-full px-3 py-1 text-[0.78rem] font-semibold ".concat(preferences.supportChat ? 'bg-hn-primary text-white' : 'bg-[#eef4f9] text-[#60758e]'),
+              children: preferences.supportChat ? intl.formatMessage({
+                id: 'cookie.on'
+              }) : intl.formatMessage({
+                id: 'cookie.off'
+              })
+            })]
+          }), /*#__PURE__*/(0,jsx_runtime.jsxs)("button", {
+            type: "button",
+            onClick: function onClick() {
+              return togglePreference('analytics');
+            },
+            className: "flex items-start justify-between gap-4 rounded-2xl border border-[#dfe8f1] bg-white px-4 py-4 text-left transition-all duration-200 hover:border-hn-accent/40",
+            children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+              children: [/*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+                className: "text-[0.92rem] font-semibold text-hn-primary",
+                children: intl.formatMessage({
+                  id: 'cookie.categoryAnalyticsTitle'
+                })
+              }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
+                className: "mt-1 text-[0.84rem] leading-6 text-[#5d7186]",
+                children: intl.formatMessage({
+                  id: 'cookie.categoryAnalyticsDescription'
+                })
+              })]
+            }), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
+              className: "inline-flex min-w-[4.8rem] items-center justify-center rounded-full px-3 py-1 text-[0.78rem] font-semibold ".concat(preferences.analytics ? 'bg-hn-primary text-white' : 'bg-[#eef4f9] text-[#60758e]'),
+              children: preferences.analytics ? intl.formatMessage({
+                id: 'cookie.on'
+              }) : intl.formatMessage({
+                id: 'cookie.off'
+              })
+            })]
+          }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+            className: "flex flex-col gap-2 pt-1 sm:flex-row sm:justify-end",
+            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+              type: "button",
+              onClick: function onClick() {
+                return setIsPreferencesOpen(false);
+              },
+              className: "inline-flex min-h-[44px] items-center justify-center rounded-xl border border-[#d8e4ef] bg-white px-5 py-3 text-[0.88rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent",
+              children: intl.formatMessage({
+                id: 'cookie.cancel'
+              })
+            }), /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
+              type: "button",
+              onClick: function onClick() {
+                return handleSave(preferences);
+              },
+              className: "inline-flex min-h-[44px] items-center justify-center rounded-xl bg-hn-primary px-5 py-3 text-[0.88rem] font-semibold text-white transition-all duration-200 hover:bg-[#0b2138]",
+              children: intl.formatMessage({
+                id: 'cookie.savePreferences'
+              })
+            })]
+          })]
+        })
+      })]
+    })
+  });
+};
+/* harmony default export */ const components_CookieConsent = (CookieConsent);
+;// CONCATENATED MODULE: ./src/components/Analytics.tsx
+
+
+
+var GA_MEASUREMENT_ID = "";
+var GA_SCRIPT_SELECTOR = 'script[data-ga-loader="true"]';
+var ensureAnalyticsLoaded = function ensureAnalyticsLoaded() {
+  if (typeof window === 'undefined' || !GA_MEASUREMENT_ID) {
+    return false;
+  }
+  var analyticsWindow = window;
+  analyticsWindow.dataLayer = analyticsWindow.dataLayer || [];
+  analyticsWindow.gtag = analyticsWindow.gtag || function gtag() {
+    var _analyticsWindow$data;
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    (_analyticsWindow$data = analyticsWindow.dataLayer) === null || _analyticsWindow$data === void 0 || _analyticsWindow$data.push(args);
+  };
+  var existingScript = document.querySelector(GA_SCRIPT_SELECTOR);
+  if (!existingScript) {
+    var script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=".concat(GA_MEASUREMENT_ID);
+    script.async = true;
+    script.dataset.gaLoader = 'true';
+    document.head.appendChild(script);
+  }
+  if (!analyticsWindow.__heatnexisGaInitialized) {
+    analyticsWindow.gtag('js', new Date());
+    analyticsWindow.gtag('consent', 'default', {
+      analytics_storage: 'denied'
+    });
+    analyticsWindow.gtag('config', GA_MEASUREMENT_ID, {
+      anonymize_ip: true,
+      send_page_view: false
+    });
+    analyticsWindow.__heatnexisGaInitialized = true;
+  }
+  analyticsWindow.gtag('consent', 'update', {
+    analytics_storage: 'granted'
+  });
+  return true;
+};
+var disableAnalytics = function disableAnalytics() {
+  var _analyticsWindow$gtag;
+  if (typeof window === 'undefined') {
+    return;
+  }
+  var analyticsWindow = window;
+  (_analyticsWindow$gtag = analyticsWindow.gtag) === null || _analyticsWindow$gtag === void 0 || _analyticsWindow$gtag.call(analyticsWindow, 'consent', 'update', {
+    analytics_storage: 'denied'
+  });
+};
+var Analytics = function Analytics() {
+  var location = (0,_umi_production_exports.useLocation)();
+  (0,react.useEffect)(function () {
+    if (!GA_MEASUREMENT_ID) {
+      return;
+    }
+    var syncAnalyticsConsent = function syncAnalyticsConsent() {
+      if (hasCookieConsentFor('analytics')) {
+        ensureAnalyticsLoaded();
+      } else {
+        disableAnalytics();
+      }
+    };
+    syncAnalyticsConsent();
+    window.addEventListener(COOKIE_CONSENT_EVENT, syncAnalyticsConsent);
+    return function () {
+      window.removeEventListener(COOKIE_CONSENT_EVENT, syncAnalyticsConsent);
+    };
+  }, []);
+  (0,react.useEffect)(function () {
+    var _analyticsWindow$gtag2;
+    if (!GA_MEASUREMENT_ID || !hasCookieConsentFor('analytics')) {
+      return;
+    }
+    var loaded = ensureAnalyticsLoaded();
+    if (!loaded) {
+      return;
+    }
+    var analyticsWindow = window;
+    (_analyticsWindow$gtag2 = analyticsWindow.gtag) === null || _analyticsWindow$gtag2 === void 0 || _analyticsWindow$gtag2.call(analyticsWindow, 'event', 'page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: "".concat(location.pathname).concat(location.search).concat(location.hash)
+    });
+  }, [location.hash, location.pathname, location.search]);
+  return null;
+};
+/* harmony default export */ const components_Analytics = (Analytics);
 ;// CONCATENATED MODULE: ./src/components/Crisp.tsx
+
 
 var CRISP_SCRIPT_SELECTOR = 'script[data-crisp-loader="true"]';
 var CRISP_WEBSITE_ID = 'ca9d8e2e-cc3a-409b-bf67-16e6778a2c1e';
@@ -10000,18 +10415,31 @@ var Crisp = function Crisp() {
     if (typeof window === 'undefined') {
       return;
     }
-    var crispWindow = window;
-    crispWindow.$crisp = crispWindow.$crisp || [];
-    crispWindow.CRISP_WEBSITE_ID = CRISP_WEBSITE_ID;
-    var existingScript = document.querySelector(CRISP_SCRIPT_SELECTOR);
-    if (existingScript) {
-      return;
-    }
-    var script = document.createElement('script');
-    script.src = 'https://client.crisp.chat/l.js';
-    script.async = true;
-    script.dataset.crispLoader = 'true';
-    document.head.appendChild(script);
+    var loadCrisp = function loadCrisp() {
+      if (!hasCookieConsentFor('supportChat')) {
+        return;
+      }
+      var crispWindow = window;
+      crispWindow.$crisp = crispWindow.$crisp || [];
+      crispWindow.CRISP_WEBSITE_ID = CRISP_WEBSITE_ID;
+      var existingScript = document.querySelector(CRISP_SCRIPT_SELECTOR);
+      if (existingScript) {
+        return;
+      }
+      var script = document.createElement('script');
+      script.src = 'https://client.crisp.chat/l.js';
+      script.async = true;
+      script.dataset.crispLoader = 'true';
+      document.head.appendChild(script);
+    };
+    loadCrisp();
+    var handleConsentChange = function handleConsentChange() {
+      loadCrisp();
+    };
+    window.addEventListener(COOKIE_CONSENT_EVENT, handleConsentChange);
+    return function () {
+      window.removeEventListener(COOKIE_CONSENT_EVENT, handleConsentChange);
+    };
   }, []);
   return null;
 };
@@ -10029,12 +10457,14 @@ var global = __webpack_require__(7134);
 
 
 
+
+
 function Layout() {
   return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components_Header, {}), /*#__PURE__*/(0,jsx_runtime.jsx)("main", {
       className: "min-h-screen motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500",
       children: /*#__PURE__*/(0,jsx_runtime.jsx)(_umi_production_exports.Outlet, {})
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Footer, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_BackToTop, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(BulkInquiry/* default */.ZP, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Crisp, {})]
+    }), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Footer, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_BackToTop, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(BulkInquiry/* default */.ZP, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_CookieConsent, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Analytics, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Crisp, {})]
   });
 }
 
@@ -23435,7 +23865,7 @@ function _getRoutes() {
               }),
               '@@/global-layout': /*#__PURE__*/react.lazy(function () {
                 return Promise.resolve().then(function () {
-                  return interopRequireWildcard_default()(__webpack_require__(4885));
+                  return interopRequireWildcard_default()(__webpack_require__(6680));
                 });
               })
             }
@@ -23625,7 +24055,7 @@ var createOpts = {
   },
   mountElementId: 'root',
   basename: '/',
-  useStream: false
+  useStream: true
 };
 var requestHandler = ssr_default()(createOpts);
 /**

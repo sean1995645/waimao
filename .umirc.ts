@@ -1,6 +1,9 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
+  define: {
+    'process.env.UMI_APP_GA_MEASUREMENT_ID': process.env.UMI_APP_GA_MEASUREMENT_ID || '',
+  },
   ssr: {
      // 更多配置
     forceInitial: true,

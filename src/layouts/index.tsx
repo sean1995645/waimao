@@ -3,6 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
 import BulkInquiry from '@/components/BulkInquiry';
+import CookieConsent from '@/components/CookieConsent';
+import Analytics from '@/components/Analytics';
 import Crisp from '@/components/Crisp';
 import '@/global.css';
 
@@ -16,6 +18,8 @@ export default function Layout() {
       <Footer />
       <BackToTop />
       <BulkInquiry />
+      <CookieConsent />
+      <Analytics />
       <Crisp />
     </>
   );
