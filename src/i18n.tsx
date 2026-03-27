@@ -67,6 +67,8 @@ const baseMessages: Record<string, Record<string, string>> = {
 };
 
 const defaultLocale = 'en-US';
+const localeStorageKey = 'umi_locale';
+const rtlLocales = new Set(['ar-SA', 'he-IL']);
 
 const messages = Object.fromEntries(
   Object.entries(baseMessages).map(([locale, localeMessages]) => [
@@ -74,6 +76,43 @@ const messages = Object.fromEntries(
     locale === defaultLocale ? baseMessages[defaultLocale] : { ...baseMessages[defaultLocale], ...localeMessages },
   ]),
 );
+const localeLookup = Object.fromEntries(Object.keys(messages).map((locale) => [locale.toLowerCase(), locale]));
+
+const resolveLocale = (value?: string | null) => {
+  if (!value) {
+    return null;
+  }
+
+  const normalized = value.trim().replace(/_/g, '-').toLowerCase();
+
+  if (localeLookup[normalized]) {
+    return localeLookup[normalized];
+  }
+
+  const language = normalized.split('-')[0];
+  return Object.keys(messages).find((locale) => locale.toLowerCase().startsWith(`${language}-`)) ?? null;
+};
+
+const getClientLocale = () => {
+  if (typeof window === 'undefined') {
+    return defaultLocale;
+  }
+
+  const savedLocale = resolveLocale(localStorage.getItem(localeStorageKey));
+  if (savedLocale) {
+    return savedLocale;
+  }
+
+  const browserLocales = navigator.languages?.length ? navigator.languages : [navigator.language];
+  for (const browserLocale of browserLocales) {
+    const resolvedLocale = resolveLocale(browserLocale);
+    if (resolvedLocale) {
+      return resolvedLocale;
+    }
+  }
+
+  return defaultLocale;
+};
 
 interface LocaleContextType {
   locale: string;
@@ -88,21 +127,17 @@ const LocaleContext = createContext<LocaleContextType>({
 export const useLocale = () => useContext(LocaleContext);
 
 export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [locale, setLocaleState] = useState<string>(() => {
-    // Try to get from localStorage first
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('umi_locale');
-      if (saved && messages[saved]) {
-        return saved;
-      }
-      // Try browser language
-      const browserLang = navigator.language;
-      if (messages[browserLang]) {
-        return browserLang;
-      }
+  const [locale, setLocaleState] = useState<string>(defaultLocale);
+
+  useEffect(() => {
+    const clientLocale = getClientLocale();
+
+    if (clientLocale !== defaultLocale) {
+      startTransition(() => {
+        setLocaleState(clientLocale);
+      });
     }
-    return defaultLocale;
-  });
+  }, []);
 
   useEffect(() => {
     if (typeof document === 'undefined') {
@@ -110,13 +145,13 @@ export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
 
     document.documentElement.lang = locale;
-    document.documentElement.dir = ['ar-SA', 'he-IL'].includes(locale) ? 'rtl' : 'ltr';
+    document.documentElement.dir = rtlLocales.has(locale) ? 'rtl' : 'ltr';
   }, [locale]);
 
   const setLocale = (newLocale: string) => {
     if (messages[newLocale] && newLocale !== locale) {
       if (typeof window !== 'undefined') {
-        localStorage.setItem('umi_locale', newLocale);
+        localStorage.setItem(localeStorageKey, newLocale);
       }
 
       startTransition(() => {
@@ -136,10 +171,7 @@ export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
 export const getLocale = () => {
   if (typeof window !== 'undefined') {
-    const saved = localStorage.getItem('umi_locale');
-    if (saved && messages[saved]) {
-      return saved;
-    }
+    return getClientLocale();
   }
   return defaultLocale;
 };
