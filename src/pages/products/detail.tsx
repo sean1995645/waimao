@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
-import { Link, useParams } from 'umi';
+import { useParams } from 'umi';
 import ProductCard from '@/components/ProductCard';
 import { addToInquiry, isInInquiry, removeFromInquiry } from '@/components/BulkInquiry';
 import Seo, { SITE_URL, toAbsoluteUrl } from '@/components/Seo';
+import TransitionLink from '@/components/TransitionLink';
 import { getProductBySlug, localizeProduct, products } from '@/data/products';
 
 const ProductDetailPage: React.FC = () => {
@@ -57,18 +58,18 @@ const ProductDetailPage: React.FC = () => {
                 {getMessage('product.detail.notFoundDescription', 'The product you requested is not available in the current catalog. Return to the product list to continue browsing available heating control models.')}
               </p>
               <div className="mt-8 flex gap-3 max-md:flex-col">
-                <Link
+                <TransitionLink
                   to="/products"
                   className="inline-flex items-center justify-center rounded-xl bg-hn-primary px-6 py-3 text-[0.92rem] font-semibold text-white no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(12,25,45,0.18)]"
                 >
                   {getMessage('product.detail.backToCatalog', 'Back to catalog')}
-                </Link>
-                <Link
+                </TransitionLink>
+                <TransitionLink
                   to="/contact"
                   className="inline-flex items-center justify-center rounded-xl border border-[#d8e4ef] bg-white px-6 py-3 text-[0.92rem] font-semibold text-hn-primary no-underline transition-all duration-200 hover:border-hn-accent hover:text-hn-accent"
                 >
                   {getMessage('product.detail.contactTeam', 'Contact team')}
-                </Link>
+                </TransitionLink>
               </div>
             </div>
           </div>
@@ -203,13 +204,13 @@ const ProductDetailPage: React.FC = () => {
         <div className="relative mx-auto grid max-w-[1200px] gap-10 px-5 py-10 lg:grid-cols-[minmax(0,1.05fr)_420px] lg:items-center lg:py-16 max-md:px-4 max-md:py-8">
           <div>
             <div className="flex flex-wrap items-center gap-3 text-[0.78rem] font-semibold tracking-[0.12em] text-white/70">
-              <Link to="/" className="no-underline transition-colors duration-200 hover:text-white">
+              <TransitionLink to="/" className="no-underline transition-colors duration-200 hover:text-white">
                 {intl.formatMessage({ id: 'nav.home' })}
-              </Link>
+              </TransitionLink>
               <span>/</span>
-              <Link to="/products" className="no-underline transition-colors duration-200 hover:text-white">
+              <TransitionLink to="/products" className="no-underline transition-colors duration-200 hover:text-white">
                 {intl.formatMessage({ id: 'nav.products' })}
-              </Link>
+              </TransitionLink>
               <span>/</span>
               <span className="text-white">{localizedProduct?.title}</span>
             </div>
@@ -310,9 +311,9 @@ const ProductDetailPage: React.FC = () => {
                   {getMessage('product.detail.specTitle', 'Technical details')}
                 </h2>
               </div>
-              <Link to="/contact" className="text-[0.86rem] font-semibold text-hn-accent no-underline transition-colors duration-200 hover:text-hn-accent-strong">
+              <TransitionLink to="/contact" className="text-[0.86rem] font-semibold text-hn-accent no-underline transition-colors duration-200 hover:text-hn-accent-strong">
                 {getMessage('product.detail.needVariant', 'Need another variant? Contact us')}
-              </Link>
+              </TransitionLink>
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -407,9 +408,9 @@ const ProductDetailPage: React.FC = () => {
                   {getMessage('product.detail.relatedTitle', 'Related models')}
                 </h2>
               </div>
-              <Link to="/products" className="text-[0.86rem] font-semibold text-hn-accent no-underline transition-colors duration-200 hover:text-hn-accent-strong">
+              <TransitionLink to="/products" className="text-[0.86rem] font-semibold text-hn-accent no-underline transition-colors duration-200 hover:text-hn-accent-strong">
                 {getMessage('product.detail.viewAll', 'View all products')}
-              </Link>
+              </TransitionLink>
             </div>
             <div className="motion-fade-up mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {relatedProducts.map((item) => (

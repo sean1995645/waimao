@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'umi';
+import React, { startTransition, useState } from 'react';
 import { useIntl } from 'react-intl';
+import TransitionLink from '@/components/TransitionLink';
 import { useLocale } from '../i18n';
 
 const Header: React.FC = () => {
@@ -22,8 +22,10 @@ const Header: React.FC = () => {
   };
 
   const changeLanguage = (locale: string) => {
-    setLocale(locale);
-    setLangMenuOpen(false);
+    startTransition(() => {
+      setLocale(locale);
+      setLangMenuOpen(false);
+    });
   };
 
   const languages = [
@@ -67,9 +69,9 @@ const Header: React.FC = () => {
         <div className="motion-fade-down flex items-center justify-between flex-wrap gap-3 max-md:gap-2 py-4 max-md:py-3">
           {/* Logo */}
           <div className="flex-1 min-w-0">
-            <Link to="/" className="inline-flex transition-transform duration-300 hover:translate-y-[-1px] hover:scale-[1.01]">
+            <TransitionLink to="/" className="inline-flex transition-transform duration-300 hover:translate-y-[-1px] hover:scale-[1.01]">
               <img src="/heatnexis-logo.png" alt="HeatNexis" className="h-10 max-md:h-7 w-auto" />
-            </Link>
+            </TransitionLink>
           </div>
 
           {/* Mobile Nav Toggle & Language Selector */}
@@ -131,10 +133,10 @@ const Header: React.FC = () => {
           {/* Navigation Menu */}
           <nav className={`order-4 md:order-2 flex-[0_0_100%] md:flex-[0_0_auto] w-full md:w-auto md:ml-auto ${mobileMenuOpen ? 'block motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-top-3 motion-safe:duration-200' : 'hidden'} md:block`} id="mainNav">
             <ul className="flex list-none flex-col md:flex-row md:items-center gap-1 md:gap-8 py-2 md:py-0 pb-4 max-md:pb-3 md:pb-0">
-              <li><Link to="/" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.home' })}</Link></li>
-              <li><Link to="/products" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.products' })}</Link></li>
-              <li><Link to="/about" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.about' })}</Link></li>
-              <li><Link to="/contact" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.contact' })}</Link></li>
+              <li><TransitionLink to="/" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.home' })}</TransitionLink></li>
+              <li><TransitionLink to="/products" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.products' })}</TransitionLink></li>
+              <li><TransitionLink to="/about" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.about' })}</TransitionLink></li>
+              <li><TransitionLink to="/contact" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.contact' })}</TransitionLink></li>
             </ul>
           </nav>
         </div>

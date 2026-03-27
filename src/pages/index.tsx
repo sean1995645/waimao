@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'umi';
 import { useIntl } from 'react-intl';
 import ProductCard from '@/components/ProductCard';
 import Seo, { SITE_URL, toAbsoluteUrl } from '@/components/Seo';
+import TransitionLink from '@/components/TransitionLink';
 import { featuredProducts } from '@/data/products';
 
 const HomePage: React.FC = () => {
@@ -69,8 +69,8 @@ const HomePage: React.FC = () => {
               {intl.formatMessage({ id: 'home.hero.description' })}
             </p>
             <div className="motion-fade-up animation-delay-300 flex max-md:flex-col gap-4 max-md:gap-3 flex-wrap">
-              <Link to="/products" className="inline-flex items-center px-9 max-md:px-6 py-4 max-md:py-3.5 bg-white text-hn-primary font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg no-underline transition-all duration-300 max-md:justify-center hover:bg-[#f0f4f8] hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.25)] shadow-xl">{intl.formatMessage({ id: 'home.hero.viewProducts' })}</Link>
-              <Link to="/contact" className="inline-flex items-center px-9 max-md:px-6 py-4 max-md:py-3.5 bg-white/10 text-white font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg border-2 border-white/40 no-underline transition-all duration-300 backdrop-blur-md max-md:justify-center hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(255,255,255,0.15)]">{intl.formatMessage({ id: 'home.hero.getInTouch' })}</Link>
+              <TransitionLink to="/products" className="inline-flex items-center px-9 max-md:px-6 py-4 max-md:py-3.5 bg-white text-hn-primary font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg no-underline transition-all duration-300 max-md:justify-center hover:bg-[#f0f4f8] hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.25)] shadow-xl">{intl.formatMessage({ id: 'home.hero.viewProducts' })}</TransitionLink>
+              <TransitionLink to="/contact" className="inline-flex items-center px-9 max-md:px-6 py-4 max-md:py-3.5 bg-white/10 text-white font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg border-2 border-white/40 no-underline transition-all duration-300 backdrop-blur-md max-md:justify-center hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(255,255,255,0.15)]">{intl.formatMessage({ id: 'home.hero.getInTouch' })}</TransitionLink>
             </div>
           </div>
         </div>
@@ -117,79 +117,102 @@ const HomePage: React.FC = () => {
             ))}
           </div>
           <div className="motion-fade-up animation-delay-200 text-center">
-            <Link to="/products" className="inline-flex items-center px-10 max-md:px-6 py-4 max-md:py-3.5 border-2 border-hn-primary text-hn-primary font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full max-md:justify-center hover:bg-hn-primary hover:text-white hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(16,35,63,0.2)]">{intl.formatMessage({ id: 'home.featured.viewAll' })}</Link>
+            <TransitionLink to="/products" className="inline-flex items-center px-10 max-md:px-6 py-4 max-md:py-3.5 border-2 border-hn-primary text-hn-primary font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full max-md:justify-center hover:bg-hn-primary hover:text-white hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(16,35,63,0.2)]">{intl.formatMessage({ id: 'home.featured.viewAll' })}</TransitionLink>
           </div>
         </div>
       </section>
 
       {/* Why Section */}
-      <section className="py-8 max-md:py-5 bg-white">
-        <div className="max-w-[1200px] mx-auto px-6 max-md:px-4">
-          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-24 max-md:gap-6 items-center">
-            <div className="motion-fade-right max-md:text-center">
-              <p className="inline-block text-[0.75rem] max-md:text-[0.68rem] font-bold tracking-[0.2em] max-md:tracking-[0.18em] uppercase text-hn-accent mb-4 max-md:mb-2 px-4 max-md:px-3.5 py-1.5 max-md:py-1 bg-hn-accent/10 rounded-full">{intl.formatMessage({ id: 'home.why.eyebrow' })}</p>
-              <h2 className="text-[clamp(2rem,3.5vw,2.8rem)] max-md:text-[1.6rem] font-bold text-hn-primary mb-7 max-md:mb-3 tracking-[-0.025em] leading-tight">
-                {intl.formatMessage({ id: 'home.why.title' })}
-              </h2>
-              <p className="text-gray-600 text-[1.05rem] max-md:text-[0.9rem] leading-[1.8] max-md:leading-[1.7] mb-10 max-md:mb-5">
-                {intl.formatMessage({ id: 'home.why.description' })}
-              </p>
-              <Link to="/about" className="inline-flex items-center px-10 max-md:px-6 py-4 max-md:py-3.5 border-2 border-hn-primary text-hn-primary font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full max-md:justify-center hover:bg-hn-primary hover:text-white hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(16,35,63,0.2)]">{intl.formatMessage({ id: 'home.why.learnMore' })}</Link>
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8fbfe_0%,#ffffff_45%,#f2f7fb_100%)] py-16 max-md:py-10">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_left,rgba(95,167,212,0.14),transparent_44%)]"></div>
+        <div className="max-w-[1200px] mx-auto px-6 max-md:px-4 relative">
+          <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-10">
+            <div className="motion-fade-right">
+              <div className="rounded-[1.75rem] border border-[#d9e4ef] bg-white p-8 shadow-[0_16px_46px_rgba(16,35,63,0.05)] max-md:rounded-[1.25rem] max-md:p-5 max-md:text-center">
+                <p className="inline-flex items-center rounded-full bg-hn-accent/10 px-3.5 py-1.5 text-[0.62rem] max-md:text-[0.58rem] font-bold uppercase tracking-[0.16em] max-md:tracking-[0.14em] text-hn-accent">
+                  {intl.formatMessage({ id: 'home.why.eyebrow' })}
+                </p>
+                <h2 className="mt-4 text-[clamp(1.48rem,2.35vw,2.05rem)] max-md:text-[1.28rem] font-bold tracking-[-0.03em] leading-[1.14] text-hn-primary">
+                  {intl.formatMessage({ id: 'home.why.title' })}
+                </h2>
+                <p className="mt-3.5 text-[0.86rem] max-md:text-[0.8rem] leading-[1.7] max-md:leading-[1.6] text-[#5a6c7e]">
+                  {intl.formatMessage({ id: 'home.why.description' })}
+                </p>
+                <TransitionLink to="/about" className="mt-6 inline-flex items-center justify-center px-7 max-md:px-5 py-3 max-md:py-2.5 rounded-xl bg-hn-primary text-white font-bold text-[0.82rem] max-md:text-[0.78rem] no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full hover:bg-[#0a2138] hover:-translate-y-1 hover:shadow-[0_14px_34px_rgba(16,35,63,0.16)]">
+                  {intl.formatMessage({ id: 'home.why.learnMore' })}
+                </TransitionLink>
+              </div>
             </div>
-            <div className="motion-fade-left grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:gap-3">
-              <div className="interactive-lift motion-card flex max-md:flex-row gap-5 max-md:gap-3 items-start p-6 max-md:p-3 rounded-2xl max-md:rounded-xl bg-gradient-to-br from-hn-surface to-white border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
-                <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-xl max-md:rounded-lg bg-gradient-to-br from-hn-primary to-hn-secondary text-white flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:w-5 max-md:h-5">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  </svg>
+            <div className="motion-fade-left grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div className="interactive-lift motion-card relative overflow-hidden rounded-[1.5rem] border border-[#dbe6f0] bg-white p-6 max-md:rounded-[1.15rem] max-md:p-4 transition-all duration-300 hover:border-hn-accent/30 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(16,35,63,0.08)]">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-hn-accent via-hn-secondary to-transparent"></div>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-xl max-md:rounded-lg bg-gradient-to-br from-hn-primary to-hn-secondary text-white flex items-center justify-center flex-shrink-0 shadow-lg shadow-hn-primary/20">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:w-5 max-md:h-5">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                  </div>
+                  <span className="text-[0.72rem] font-bold tracking-[0.16em] text-[#9aa9b9]">01</span>
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-[1rem] max-md:text-[0.9rem] font-bold text-hn-primary mb-2 max-md:mb-1.5">{intl.formatMessage({ id: 'home.why.stableControl.title' })}</h4>
-                  <p className="text-[0.9rem] max-md:text-[0.82rem] text-gray-600 leading-[1.6] max-md:leading-[1.55]">
+                <div className="mt-6">
+                  <h4 className="text-[1.04rem] max-md:text-[0.9rem] font-bold text-hn-primary mb-2">{intl.formatMessage({ id: 'home.why.stableControl.title' })}</h4>
+                  <p className="text-[0.92rem] max-md:text-[0.82rem] text-gray-600 leading-[1.7] max-md:leading-[1.55]">
                     {intl.formatMessage({ id: 'home.why.stableControl.description' })}
                   </p>
                 </div>
               </div>
-              <div className="interactive-lift motion-card animation-delay-100 flex max-md:flex-row gap-5 max-md:gap-3.5 items-start p-6 max-md:p-4 rounded-2xl max-md:rounded-xl bg-gradient-to-br from-hn-surface to-white border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
-                <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-xl max-md:rounded-lg bg-gradient-to-br from-hn-primary to-hn-secondary text-white flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:w-5 max-md:h-5">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
+              <div className="interactive-lift motion-card animation-delay-100 relative overflow-hidden rounded-[1.5rem] border border-[#dbe6f0] bg-white p-6 max-md:rounded-[1.15rem] max-md:p-4 transition-all duration-300 hover:border-hn-accent/30 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(16,35,63,0.08)]">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-hn-secondary via-hn-accent to-transparent"></div>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-xl max-md:rounded-lg bg-gradient-to-br from-hn-primary to-hn-secondary text-white flex items-center justify-center flex-shrink-0 shadow-lg shadow-hn-primary/20">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:w-5 max-md:h-5">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                  </div>
+                  <span className="text-[0.72rem] font-bold tracking-[0.16em] text-[#9aa9b9]">02</span>
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-[1rem] max-md:text-[0.9rem] font-bold text-hn-primary mb-2 max-md:mb-1.5">{intl.formatMessage({ id: 'home.why.oemFlexibility.title' })}</h4>
-                  <p className="text-[0.9rem] max-md:text-[0.82rem] text-gray-600 leading-[1.6] max-md:leading-[1.55]">
+                <div className="mt-6">
+                  <h4 className="text-[1.04rem] max-md:text-[0.9rem] font-bold text-hn-primary mb-2">{intl.formatMessage({ id: 'home.why.oemFlexibility.title' })}</h4>
+                  <p className="text-[0.92rem] max-md:text-[0.82rem] text-gray-600 leading-[1.7] max-md:leading-[1.55]">
                     {intl.formatMessage({ id: 'home.why.oemFlexibility.description' })}
                   </p>
                 </div>
               </div>
-              <div className="interactive-lift motion-card animation-delay-200 flex max-md:flex-row gap-5 max-md:gap-3.5 items-start p-6 max-md:p-4 rounded-2xl max-md:rounded-xl bg-gradient-to-br from-hn-surface to-white border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
-                <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-xl max-md:rounded-lg bg-gradient-to-br from-hn-primary to-hn-secondary text-white flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:w-5 max-md:h-5">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                  </svg>
+              <div className="interactive-lift motion-card animation-delay-200 relative overflow-hidden rounded-[1.5rem] border border-[#dbe6f0] bg-white p-6 max-md:rounded-[1.15rem] max-md:p-4 transition-all duration-300 hover:border-hn-accent/30 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(16,35,63,0.08)]">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-hn-accent via-[#7fb4d7] to-transparent"></div>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-xl max-md:rounded-lg bg-gradient-to-br from-hn-primary to-hn-secondary text-white flex items-center justify-center flex-shrink-0 shadow-lg shadow-hn-primary/20">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:w-5 max-md:h-5">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
+                  <span className="text-[0.72rem] font-bold tracking-[0.16em] text-[#9aa9b9]">03</span>
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-[1rem] max-md:text-[0.9rem] font-bold text-hn-primary mb-2 max-md:mb-1.5">{intl.formatMessage({ id: 'home.why.hvacExpertise.title' })}</h4>
-                  <p className="text-[0.9rem] max-md:text-[0.82rem] text-gray-600 leading-[1.6] max-md:leading-[1.55]">
+                <div className="mt-6">
+                  <h4 className="text-[1.04rem] max-md:text-[0.9rem] font-bold text-hn-primary mb-2">{intl.formatMessage({ id: 'home.why.hvacExpertise.title' })}</h4>
+                  <p className="text-[0.92rem] max-md:text-[0.82rem] text-gray-600 leading-[1.7] max-md:leading-[1.55]">
                     {intl.formatMessage({ id: 'home.why.hvacExpertise.description' })}
                   </p>
                 </div>
               </div>
-              <div className="interactive-lift motion-card animation-delay-300 flex max-md:flex-row gap-5 max-md:gap-3.5 items-start p-6 max-md:p-4 rounded-2xl max-md:rounded-xl bg-gradient-to-br from-hn-surface to-white border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
-                <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-xl max-md:rounded-lg bg-gradient-to-br from-hn-primary to-hn-secondary text-white flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:w-5 max-md:h-5">
-                    <line x1="12" y1="1" x2="12" y2="23"/>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                  </svg>
+              <div className="interactive-lift motion-card animation-delay-300 relative overflow-hidden rounded-[1.5rem] border border-[#dbe6f0] bg-white p-6 max-md:rounded-[1.15rem] max-md:p-4 transition-all duration-300 hover:border-hn-accent/30 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(16,35,63,0.08)]">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-hn-secondary via-hn-accent to-transparent"></div>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="w-14 h-14 max-md:w-12 max-md:h-12 rounded-xl max-md:rounded-lg bg-gradient-to-br from-hn-primary to-hn-secondary text-white flex items-center justify-center flex-shrink-0 shadow-lg shadow-hn-primary/20">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:w-5 max-md:h-5">
+                      <line x1="12" y1="1" x2="12" y2="23"/>
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                  </div>
+                  <span className="text-[0.72rem] font-bold tracking-[0.16em] text-[#9aa9b9]">04</span>
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-[1rem] max-md:text-[0.9rem] font-bold text-hn-primary mb-2 max-md:mb-1.5">{intl.formatMessage({ id: 'home.why.efficientDelivery.title' })}</h4>
-                  <p className="text-[0.9rem] max-md:text-[0.82rem] text-gray-600 leading-[1.6] max-md:leading-[1.55]">
+                <div className="mt-6">
+                  <h4 className="text-[1.04rem] max-md:text-[0.9rem] font-bold text-hn-primary mb-2">{intl.formatMessage({ id: 'home.why.efficientDelivery.title' })}</h4>
+                  <p className="text-[0.92rem] max-md:text-[0.82rem] text-gray-600 leading-[1.7] max-md:leading-[1.55]">
                     {intl.formatMessage({ id: 'home.why.efficientDelivery.description' })}
                   </p>
                 </div>
@@ -211,7 +234,7 @@ const HomePage: React.FC = () => {
             <p className="motion-fade-up animation-delay-150 text-white/85 text-[1.1rem] max-md:text-[0.95rem] mb-12 max-md:mb-6 leading-[1.75] max-md:leading-[1.7] drop-shadow-md px-4 max-md:px-0">
               {intl.formatMessage({ id: 'home.cta.description' })}
             </p>
-            <Link to="/contact" className="motion-fade-up animation-delay-300 inline-flex items-center px-12 max-md:px-8 py-5 max-md:py-4 bg-white text-hn-primary font-bold text-[1.05rem] max-md:text-[0.92rem] rounded-xl no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full max-md:justify-center hover:bg-[#f0f4f8] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] shadow-2xl">{intl.formatMessage({ id: 'home.cta.button' })}</Link>
+            <TransitionLink to="/contact" className="motion-fade-up animation-delay-300 inline-flex items-center px-12 max-md:px-8 py-5 max-md:py-4 bg-white text-hn-primary font-bold text-[1.05rem] max-md:text-[0.92rem] rounded-xl no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full max-md:justify-center hover:bg-[#f0f4f8] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] shadow-2xl">{intl.formatMessage({ id: 'home.cta.button' })}</TransitionLink>
           </div>
         </div>
       </section>

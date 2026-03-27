@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useEffect, useState, startTransition } from 'react';
 import { IntlProvider } from 'react-intl';
 
 // Import all locale files
@@ -114,11 +114,14 @@ export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   }, [locale]);
 
   const setLocale = (newLocale: string) => {
-    if (messages[newLocale]) {
-      setLocaleState(newLocale);
+    if (messages[newLocale] && newLocale !== locale) {
       if (typeof window !== 'undefined') {
         localStorage.setItem('umi_locale', newLocale);
       }
+
+      startTransition(() => {
+        setLocaleState(newLocale);
+      });
     }
   };
 
