@@ -12537,6 +12537,10 @@ var HomePage = function HomePage() {
     setDragOffset(0);
   };
   var handleHeroPointerDown = function handleHeroPointerDown(event) {
+    var target = event.target;
+    if (target.closest('a, button')) {
+      return;
+    }
     heroDragStartXRef.current = event.clientX;
     heroDragDeltaXRef.current = 0;
     heroPointerIdRef.current = event.pointerId;
@@ -12552,7 +12556,7 @@ var HomePage = function HomePage() {
     setDragOffset(deltaX);
   };
   var handleHeroPointerEnd = function handleHeroPointerEnd(event) {
-    if (heroPointerIdRef.current !== event.pointerId) {
+    if (heroPointerIdRef.current !== event.pointerId || heroDragStartXRef.current === null) {
       return;
     }
     var dragThreshold = 70;
@@ -12561,6 +12565,14 @@ var HomePage = function HomePage() {
       goToNextHeroSlide();
     } else if (deltaX >= dragThreshold) {
       goToPreviousHeroSlide();
+    } else if (Math.abs(deltaX) < 10) {
+      var rect = event.currentTarget.getBoundingClientRect();
+      var clickX = event.clientX - rect.left;
+      if (clickX >= rect.width / 2) {
+        goToNextHeroSlide();
+      } else {
+        goToPreviousHeroSlide();
+      }
     }
     if (event.currentTarget.hasPointerCapture(event.pointerId)) {
       event.currentTarget.releasePointerCapture(event.pointerId);

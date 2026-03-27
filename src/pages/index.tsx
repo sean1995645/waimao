@@ -140,6 +140,11 @@ const HomePage: React.FC = () => {
   };
 
   const handleHeroPointerDown = (event: React.PointerEvent<HTMLElement>) => {
+    const target = event.target as HTMLElement;
+    if (target.closest('a, button')) {
+      return;
+    }
+
     heroDragStartXRef.current = event.clientX;
     heroDragDeltaXRef.current = 0;
     heroPointerIdRef.current = event.pointerId;
@@ -158,7 +163,7 @@ const HomePage: React.FC = () => {
   };
 
   const handleHeroPointerEnd = (event: React.PointerEvent<HTMLElement>) => {
-    if (heroPointerIdRef.current !== event.pointerId) {
+    if (heroPointerIdRef.current !== event.pointerId || heroDragStartXRef.current === null) {
       return;
     }
 
@@ -169,6 +174,15 @@ const HomePage: React.FC = () => {
       goToNextHeroSlide();
     } else if (deltaX >= dragThreshold) {
       goToPreviousHeroSlide();
+    } else if (Math.abs(deltaX) < 10) {
+      const rect = event.currentTarget.getBoundingClientRect();
+      const clickX = event.clientX - rect.left;
+
+      if (clickX >= rect.width / 2) {
+        goToNextHeroSlide();
+      } else {
+        goToPreviousHeroSlide();
+      }
     }
 
     if (event.currentTarget.hasPointerCapture(event.pointerId)) {
@@ -240,29 +254,6 @@ const HomePage: React.FC = () => {
 
         <div className="absolute inset-y-0 right-0 z-[2] hidden w-[132px] items-center justify-center pr-6 lg:flex">
           <div className="flex w-full flex-col items-center gap-3 rounded-[1.8rem] border border-white/12 bg-[rgba(8,17,30,0.34)] px-3 py-4 backdrop-blur-xl shadow-[0_18px_40px_rgba(0,0,0,0.16)]">
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={goToPreviousHeroSlide}
-                aria-label="Previous hero background"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/16 bg-white/10 text-white transition-all duration-200 hover:-translate-x-0.5 hover:bg-white/18"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="15 18 9 12 15 6" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={goToNextHeroSlide}
-                aria-label="Next hero background"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/16 bg-white/10 text-white transition-all duration-200 hover:translate-x-0.5 hover:bg-white/18"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </button>
-            </div>
-
             <div className="flex w-full flex-col gap-2">
               {heroSlides.map((slide, index) => {
                 const isActive = index === activeHeroSlide;
