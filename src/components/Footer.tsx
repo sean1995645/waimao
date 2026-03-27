@@ -3,7 +3,6 @@ import { useIntl } from 'react-intl';
 
 const Footer: React.FC = () => {
   const intl = useIntl();
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gradient-to-br from-[#0c192d] via-hn-primary to-[#163154] text-white py-12 md:py-8 mt-16 md:mt-10">
@@ -30,7 +29,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="motion-fade-up animation-delay-300 text-center pt-8 md:pt-6 border-t border-white/10">
           <p className="text-gray-400 text-base md:text-sm">
-            &copy; {currentYear} HeatNexis. {intl.formatMessage({ id: 'footer.rights' })}
+            &copy; HeatNexis. {intl.formatMessage({ id: 'footer.rights' })}
           </p>
         </div>
       </div>

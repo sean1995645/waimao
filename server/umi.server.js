@@ -1314,15 +1314,20 @@ var PageHero = function PageHero(_ref) {
     panelTitle = _ref.panelTitle,
     panelText = _ref.panelText,
     stats = _ref.stats;
-  var heroCss = "\n    .page-hero-bg {\n      background-image: url(".concat(bgImage, ");\n      background-position: ").concat(bgPosition, ";\n    }\n    @media (max-width: 767px) {\n      .page-hero-bg {\n        background-image: url(").concat(bgImageMobile || bgImage, ");\n        background-position: center center !important;\n        background-size: cover;\n      }\n    }\n  ");
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
     className: "relative isolate overflow-hidden bg-[#0c192d] text-white",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("style", {
-      dangerouslySetInnerHTML: {
-        __html: heroCss
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "absolute inset-0 hidden bg-cover bg-no-repeat md:block",
+      style: {
+        backgroundImage: "url(".concat(bgImage, ")"),
+        backgroundPosition: bgPosition
       }
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "page-hero-bg absolute inset-0 bg-cover bg-no-repeat"
+      className: "absolute inset-0 bg-cover bg-no-repeat md:hidden",
+      style: {
+        backgroundImage: "url(".concat(bgImageMobile || bgImage, ")"),
+        backgroundPosition: 'center center'
+      }
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "absolute inset-0 bg-[rgba(12,25,45,0.55)]"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -1579,15 +1584,11 @@ var Seo = function Seo(_ref) {
   var imageUrl = toAbsoluteUrl(image);
   var robots = noIndex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
   var localeTag = locale.replace('-', '_');
-  var direction = ['ar-SA', 'he-IL'].includes(locale) ? 'rtl' : 'ltr';
   var keywordContent = [].concat(DEFAULT_KEYWORDS, _Users_sean_Code_web_waimao_node_modules_pnpm_babel_runtime_7_23_6_node_modules_babel_runtime_helpers_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0___default()(keywords || [])).join(', ');
   var structuredDataItems = structuredData ? Array.isArray(structuredData) ? structuredData : [structuredData] : [];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(umi__WEBPACK_IMPORTED_MODULE_2__.Helmet, {
     prioritizeSeoTags: true,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("html", {
-      lang: locale,
-      dir: direction
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("title", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("title", {
       children: title
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("meta", {
       name: "description",
@@ -9849,7 +9850,6 @@ var Header = function Header() {
 
 var Footer = function Footer() {
   var intl = (0,useIntl/* default */.Z)();
-  var currentYear = new Date().getFullYear();
   return /*#__PURE__*/(0,jsx_runtime.jsx)("footer", {
     className: "bg-gradient-to-br from-[#0c192d] via-hn-primary to-[#163154] text-white py-12 md:py-8 mt-16 md:mt-10",
     children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
@@ -9909,7 +9909,7 @@ var Footer = function Footer() {
         className: "motion-fade-up animation-delay-300 text-center pt-8 md:pt-6 border-t border-white/10",
         children: /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
           className: "text-gray-400 text-base md:text-sm",
-          children: ["\xA9 ", currentYear, " HeatNexis. ", intl.formatMessage({
+          children: ["\xA9 HeatNexis. ", intl.formatMessage({
             id: 'footer.rights'
           })]
         })

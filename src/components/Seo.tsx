@@ -58,13 +58,11 @@ const Seo: React.FC<SeoProps> = ({
   const imageUrl = toAbsoluteUrl(image);
   const robots = noIndex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
   const localeTag = locale.replace('-', '_');
-  const direction = ['ar-SA', 'he-IL'].includes(locale) ? 'rtl' : 'ltr';
   const keywordContent = [...DEFAULT_KEYWORDS, ...(keywords || [])].join(', ');
   const structuredDataItems = structuredData ? (Array.isArray(structuredData) ? structuredData : [structuredData]) : [];
 
   return (
     <Helmet prioritizeSeoTags>
-      <html lang={locale} dir={direction} />
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywordContent} />

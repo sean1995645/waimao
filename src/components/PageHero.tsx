@@ -28,24 +28,16 @@ const PageHero: React.FC<PageHeroProps> = ({
   panelText,
   stats,
 }) => {
-  const heroCss = `
-    .page-hero-bg {
-      background-image: url(${bgImage});
-      background-position: ${bgPosition};
-    }
-    @media (max-width: 767px) {
-      .page-hero-bg {
-        background-image: url(${bgImageMobile || bgImage});
-        background-position: center center !important;
-        background-size: cover;
-      }
-    }
-  `;
-
   return (
     <section className="relative isolate overflow-hidden bg-[#0c192d] text-white">
-      <style dangerouslySetInnerHTML={{ __html: heroCss }} />
-      <div className="page-hero-bg absolute inset-0 bg-cover bg-no-repeat"></div>
+      <div
+        className="absolute inset-0 hidden bg-cover bg-no-repeat md:block"
+        style={{ backgroundImage: `url(${bgImage})`, backgroundPosition: bgPosition }}
+      ></div>
+      <div
+        className="absolute inset-0 bg-cover bg-no-repeat md:hidden"
+        style={{ backgroundImage: `url(${bgImageMobile || bgImage})`, backgroundPosition: 'center center' }}
+      ></div>
       <div className="absolute inset-0 bg-[rgba(12,25,45,0.55)]"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-[rgba(7,17,30,0.92)] via-[rgba(7,17,30,0.8)_48%] to-[rgba(7,17,30,0.5)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_38%)] opacity-60"></div>
