@@ -1,21 +1,20 @@
 import { defineConfig } from 'umi';
-import { products } from './src/data/products';
-
-const productDetailRoutes = products.map((product) => `/products/${product.slug}`);
 
 export default defineConfig({
   ssr: {
-    useStream: false,
+     // 更多配置
+    forceInitial: true,
+    devServerRender: true,
+    mode: 'stream',
+    staticMarkup: true,
   },
-  exportStatic: {
-    extraRoutePaths: productDetailRoutes,
-  },
+  exportStatic: { htmlSuffix: true },
   routes: [
-    { path: '/', component: 'index' },
-    { path: '/products/:slug', component: 'products/detail' },
-    { path: '/products', component: 'products' },
-    { path: '/about', component: 'about' },
-    { path: '/contact', component: 'contact' },
+    { path: '/', component: '@/pages/index' },
+    { path: '/products/:slug', component: '@/pages/products/detail' },
+    { path: '/products', component: '@/pages/products' },
+    { path: '/about', component: '@/pages/about' },
+    { path: '/contact', component: '@/pages/contact' },
   ],
   esbuildMinifyIIFE: true,
   npmClient: 'pnpm',
