@@ -1,5 +1,6 @@
 export const COOKIE_CONSENT_STORAGE_KEY = 'heatnexis_cookie_consent';
 export const COOKIE_CONSENT_EVENT = 'heatnexis-cookie-consent-change';
+export const COOKIE_CONSENT_OPEN_EVENT = 'heatnexis-cookie-consent-open';
 
 export interface CookieConsentPreferences {
   necessary: true;
@@ -74,4 +75,12 @@ export const setCookieConsentPreferences = (value: CookieConsentPreferences) => 
 
   localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, JSON.stringify(value));
   window.dispatchEvent(new CustomEvent<CookieConsentPreferences>(COOKIE_CONSENT_EVENT, { detail: value }));
+};
+
+export const openCookieConsentPreferences = () => {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  window.dispatchEvent(new Event(COOKIE_CONSENT_OPEN_EVENT));
 };

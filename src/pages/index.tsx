@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { startTransition, useEffect, useRef, useState } from 'react';
 import { useIntl } from 'react-intl';
 import ProductCard from '@/components/ProductCard';
 import Seo, { SITE_URL, toAbsoluteUrl } from '@/components/Seo';
@@ -7,6 +7,79 @@ import { featuredProducts } from '@/data/products';
 
 const HomePage: React.FC = () => {
   const intl = useIntl();
+  const heroSlides = [
+    {
+      id: 'home',
+      desktopImage: '/home-hero-thermostat.jpg',
+      mobileImage: '/home-hero-thermostat-mobile.jpg',
+      position: '70% center',
+      label: intl.formatMessage({ id: 'nav.home' }),
+      eyebrow: intl.formatMessage({ id: 'home.hero.eyebrow' }),
+      title: intl.formatMessage({ id: 'home.hero.title' }),
+      subtitle: intl.formatMessage({ id: 'home.hero.subtitle' }),
+      description: intl.formatMessage({ id: 'home.hero.description' }),
+      primaryTo: '/products',
+      primaryLabel: intl.formatMessage({ id: 'home.hero.viewProducts' }),
+      secondaryTo: '/contact',
+      secondaryLabel: intl.formatMessage({ id: 'home.hero.getInTouch' }),
+      accentClass: 'from-[rgba(10,20,40,0.82)] via-[rgba(10,20,40,0.65)] to-[rgba(10,20,40,0.45)]',
+    },
+    {
+      id: 'products',
+      desktopImage: '/page-hero-products-photo.jpg',
+      mobileImage: '/page-hero-products-photo-mobile.jpg',
+      position: 'center center',
+      label: intl.formatMessage({ id: 'nav.products' }),
+      eyebrow: intl.formatMessage({ id: 'products.hero.eyebrow' }),
+      title: intl.formatMessage({ id: 'products.hero.title' }),
+      subtitle: intl.formatMessage({ id: 'products.hero.panelTitle' }),
+      description: intl.formatMessage({ id: 'products.hero.description' }),
+      primaryTo: '/products',
+      primaryLabel: intl.formatMessage({ id: 'home.hero.viewProducts' }),
+      secondaryTo: '/contact',
+      secondaryLabel: intl.formatMessage({ id: 'product.detail.requestQuote', defaultMessage: 'Request quote for this model' }),
+      accentClass: 'from-[rgba(5,16,32,0.86)] via-[rgba(7,23,44,0.64)] to-[rgba(8,31,54,0.34)]',
+    },
+    {
+      id: 'about',
+      desktopImage: '/page-hero-about-photo.jpg',
+      mobileImage: '/page-hero-about-photo-mobile.jpg',
+      position: 'center center',
+      label: intl.formatMessage({ id: 'nav.about' }),
+      eyebrow: intl.formatMessage({ id: 'about.hero.eyebrow' }),
+      title: intl.formatMessage({ id: 'about.hero.title' }),
+      subtitle: intl.formatMessage({ id: 'about.hero.panelTitle' }),
+      description: intl.formatMessage({ id: 'about.hero.description' }),
+      primaryTo: '/about',
+      primaryLabel: intl.formatMessage({ id: 'home.why.learnMore' }),
+      secondaryTo: '/contact',
+      secondaryLabel: intl.formatMessage({ id: 'home.hero.getInTouch' }),
+      accentClass: 'from-[rgba(9,18,34,0.84)] via-[rgba(11,30,52,0.62)] to-[rgba(19,57,94,0.3)]',
+    },
+    {
+      id: 'contact',
+      desktopImage: '/page-hero-contact-photo.jpg',
+      mobileImage: '/page-hero-contact-photo-mobile.jpg',
+      position: 'center center',
+      label: intl.formatMessage({ id: 'nav.contact' }),
+      eyebrow: intl.formatMessage({ id: 'contact.hero.eyebrow' }),
+      title: intl.formatMessage({ id: 'contact.hero.title' }),
+      subtitle: intl.formatMessage({ id: 'contact.hero.panelTitle' }),
+      description: intl.formatMessage({ id: 'contact.hero.description' }),
+      primaryTo: '/contact',
+      primaryLabel: intl.formatMessage({ id: 'home.cta.button' }),
+      secondaryTo: '/products',
+      secondaryLabel: intl.formatMessage({ id: 'home.hero.viewProducts' }),
+      accentClass: 'from-[rgba(7,16,30,0.9)] via-[rgba(10,28,50,0.68)] to-[rgba(18,48,76,0.3)]',
+    },
+  ];
+  const [activeHeroSlide, setActiveHeroSlide] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+  const currentHeroSlide = heroSlides[activeHeroSlide];
+  const heroDragStartXRef = useRef<number | null>(null);
+  const heroDragDeltaXRef = useRef(0);
+  const heroPointerIdRef = useRef<number | null>(null);
+  const isHeroDraggingRef = useRef(false);
   const homeTitle = `${intl.formatMessage({ id: 'home.hero.title' })} ${intl.formatMessage({ id: 'home.hero.subtitle' })} | HeatNexis`;
   const homeDescription = intl.formatMessage({ id: 'home.hero.description' });
   const globalMarkets = [
@@ -44,6 +117,78 @@ const HomePage: React.FC = () => {
     },
   ];
 
+  const setHeroSlide = (index: number) => {
+    startTransition(() => {
+      setActiveHeroSlide((index + heroSlides.length) % heroSlides.length);
+    });
+  };
+
+  const goToPreviousHeroSlide = () => {
+    setHeroSlide(activeHeroSlide - 1);
+  };
+
+  const goToNextHeroSlide = () => {
+    setHeroSlide(activeHeroSlide + 1);
+  };
+
+  const resetHeroDrag = () => {
+    heroDragStartXRef.current = null;
+    heroDragDeltaXRef.current = 0;
+    heroPointerIdRef.current = null;
+    isHeroDraggingRef.current = false;
+    setDragOffset(0);
+  };
+
+  const handleHeroPointerDown = (event: React.PointerEvent<HTMLElement>) => {
+    heroDragStartXRef.current = event.clientX;
+    heroDragDeltaXRef.current = 0;
+    heroPointerIdRef.current = event.pointerId;
+    isHeroDraggingRef.current = true;
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const handleHeroPointerMove = (event: React.PointerEvent<HTMLElement>) => {
+    if (!isHeroDraggingRef.current || heroPointerIdRef.current !== event.pointerId || heroDragStartXRef.current === null) {
+      return;
+    }
+
+    const deltaX = event.clientX - heroDragStartXRef.current;
+    heroDragDeltaXRef.current = deltaX;
+    setDragOffset(deltaX);
+  };
+
+  const handleHeroPointerEnd = (event: React.PointerEvent<HTMLElement>) => {
+    if (heroPointerIdRef.current !== event.pointerId) {
+      return;
+    }
+
+    const dragThreshold = 70;
+    const deltaX = heroDragDeltaXRef.current;
+
+    if (deltaX <= -dragThreshold) {
+      goToNextHeroSlide();
+    } else if (deltaX >= dragThreshold) {
+      goToPreviousHeroSlide();
+    }
+
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+
+    resetHeroDrag();
+  };
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveHeroSlide((currentIndex) => (currentIndex + 1) % heroSlides.length);
+    }, 6000);
+
+    return () => {
+      window.clearInterval(interval);
+      resetHeroDrag();
+    };
+  }, [heroSlides.length]);
+
   return (
     <div className="w-full">
       <Seo
@@ -55,22 +200,161 @@ const HomePage: React.FC = () => {
         structuredData={homeStructuredData}
       />
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[650px] max-md:min-h-[600px] flex items-center overflow-hidden text-white">
-        <div className="absolute inset-0 bg-[url('/home-hero-thermostat.jpg')] max-md:bg-[url('/home-hero-thermostat-mobile.jpg')] bg-cover bg-[70%_center] max-md:bg-center animate-kenburns"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-[rgba(10,20,40,0.82)] via-[rgba(10,20,40,0.65)] to-[rgba(10,20,40,0.45)]"></div>
-        <div className="absolute right-[8%] top-[18%] h-48 w-48 rounded-full bg-[radial-gradient(circle,rgba(95,167,212,0.28),transparent_68%)] blur-[24px] motion-safe:animate-floatSoft"></div>
-        <div className="max-w-[1200px] mx-auto px-6 max-md:px-5 relative z-[2] pt-20 max-md:pt-16 w-full">
+      <section
+        className="relative h-screen min-h-[650px] max-md:min-h-[600px] flex items-center overflow-hidden text-white touch-pan-y select-none"
+        onPointerDown={handleHeroPointerDown}
+        onPointerMove={handleHeroPointerMove}
+        onPointerUp={handleHeroPointerEnd}
+        onPointerCancel={handleHeroPointerEnd}
+        onPointerLeave={handleHeroPointerEnd}
+      >
+        <div className="absolute inset-0 overflow-hidden">
+          <div
+            className="flex h-full w-full transition-transform"
+            style={{
+              transform: `translateX(calc(-${activeHeroSlide * 100}% + ${dragOffset}px))`,
+              transitionDuration: isHeroDraggingRef.current ? '0ms' : '1200ms',
+              transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)',
+              willChange: 'transform',
+            }}
+          >
+            {heroSlides.map((slide, index) => (
+              <div key={slide.id} className="relative h-full w-full flex-shrink-0">
+                <div
+                  className="absolute inset-0 hidden bg-cover bg-no-repeat motion-safe:animate-kenburns md:block"
+                  style={{ backgroundImage: `url('${slide.desktopImage}')`, backgroundPosition: slide.position }}
+                ></div>
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat motion-safe:animate-kenburns md:hidden"
+                  style={{ backgroundImage: `url('${slide.mobileImage}')` }}
+                ></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${slide.accentClass}`}></div>
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,13,24,0.48)_0%,rgba(7,18,34,0.22)_48%,rgba(7,18,34,0.1)_100%)]"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_36%)]"></div>
+                <div className={`absolute right-[10%] top-[14%] h-48 w-48 rounded-full blur-[28px] transition-all duration-700 ${index === activeHeroSlide ? 'opacity-100 scale-100' : 'opacity-30 scale-90'} bg-[radial-gradient(circle,rgba(95,167,212,0.28),transparent_68%)] motion-safe:animate-floatSoft`}></div>
+                <div className={`absolute left-[8%] bottom-[12%] h-40 w-40 rounded-full blur-[34px] transition-all duration-700 ${index === activeHeroSlide ? 'opacity-80' : 'opacity-25'} bg-[radial-gradient(circle,rgba(255,255,255,0.16),transparent_70%)] motion-safe:animate-driftX`}></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="absolute inset-y-0 right-0 z-[2] hidden w-[132px] items-center justify-center pr-6 lg:flex">
+          <div className="flex w-full flex-col items-center gap-3 rounded-[1.8rem] border border-white/12 bg-[rgba(8,17,30,0.34)] px-3 py-4 backdrop-blur-xl shadow-[0_18px_40px_rgba(0,0,0,0.16)]">
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={goToPreviousHeroSlide}
+                aria-label="Previous hero background"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/16 bg-white/10 text-white transition-all duration-200 hover:-translate-x-0.5 hover:bg-white/18"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={goToNextHeroSlide}
+                aria-label="Next hero background"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/16 bg-white/10 text-white transition-all duration-200 hover:translate-x-0.5 hover:bg-white/18"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="flex w-full flex-col gap-2">
+              {heroSlides.map((slide, index) => {
+                const isActive = index === activeHeroSlide;
+
+                return (
+                  <button
+                    key={slide.id}
+                    type="button"
+                    onClick={() => setHeroSlide(index)}
+                    className={`overflow-hidden rounded-2xl border text-left transition-all duration-300 ${
+                      isActive
+                        ? 'border-white/18 bg-white/14 text-white shadow-[0_10px_24px_rgba(0,0,0,0.16)]'
+                        : 'border-transparent bg-white/[0.05] text-white/58 hover:border-white/10 hover:text-white/88'
+                    }`}
+                  >
+                    <div className="relative h-16 w-full overflow-hidden">
+                      <img
+                        src={slide.desktopImage}
+                        alt={slide.label}
+                        className={`h-full w-full object-cover transition-transform duration-500 ${isActive ? 'scale-105' : 'scale-100'}`}
+                      />
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,13,24,0.08),rgba(5,13,24,0.46))]"></div>
+                      <div className="absolute left-2 top-2 inline-flex rounded-full bg-[rgba(8,17,30,0.62)] px-2 py-1 text-[0.56rem] font-semibold uppercase tracking-[0.18em] text-white/86 backdrop-blur-sm">
+                        {`${String(index + 1).padStart(2, '0')}`}
+                      </div>
+                    </div>
+                    <div className="px-3 py-2.5">
+                      <p className="text-[0.76rem] font-semibold leading-tight">{slide.label}</p>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-[1200px] mx-auto px-6 max-md:px-5 relative z-[2] pt-20 max-md:pt-16 w-full lg:pr-28">
           <div className="max-w-[720px]">
-            <p className="motion-pop inline-block text-[0.8rem] max-md:text-[0.7rem] font-bold tracking-[0.18em] max-md:tracking-[0.15em] uppercase text-white/90 mb-6 max-md:mb-4 px-5 max-md:px-4 py-2 max-md:py-1.5 border border-white/30 rounded-full backdrop-blur-md bg-white/5 shadow-lg motion-safe:animate-pulseGlow">{intl.formatMessage({ id: 'home.hero.eyebrow' })}</p>
+            <div className="motion-pop mb-6 flex flex-wrap items-center gap-3 max-md:mb-4">
+              <p className="inline-block text-[0.8rem] max-md:text-[0.7rem] font-bold tracking-[0.18em] max-md:tracking-[0.15em] uppercase text-white/90 px-5 max-md:px-4 py-2 max-md:py-1.5 border border-white/30 rounded-full backdrop-blur-md bg-white/5 shadow-lg motion-safe:animate-pulseGlow">{currentHeroSlide.eyebrow}</p>
+              <div className="hidden items-center gap-2 rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/72 backdrop-blur-md md:inline-flex">
+                <span>{currentHeroSlide.label}</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-white/50"></span>
+                <span>{`${String(activeHeroSlide + 1).padStart(2, '0')}/${String(heroSlides.length).padStart(2, '0')}`}</span>
+              </div>
+            </div>
             <h1 className="motion-fade-up animation-delay-100 text-[clamp(2.8rem,5.5vw,4.5rem)] max-md:text-[2rem] font-bold leading-[1.12] max-md:leading-[1.15] mb-7 max-md:mb-5 tracking-[-0.025em] drop-shadow-2xl">
-              {intl.formatMessage({ id: 'home.hero.title' })}<br />{intl.formatMessage({ id: 'home.hero.subtitle' })}
+              {currentHeroSlide.title}
+              {currentHeroSlide.subtitle && (
+                <>
+                  <br />
+                  {currentHeroSlide.subtitle}
+                </>
+              )}
             </h1>
             <p className="motion-fade-up animation-delay-200 text-[1.15rem] max-md:text-[0.95rem] leading-[1.75] max-md:leading-[1.65] text-white/85 mb-12 max-md:mb-8 max-w-[560px] drop-shadow-lg">
-              {intl.formatMessage({ id: 'home.hero.description' })}
+              {currentHeroSlide.description}
             </p>
             <div className="motion-fade-up animation-delay-300 flex max-md:flex-col gap-4 max-md:gap-3 flex-wrap">
-              <TransitionLink to="/products" className="inline-flex items-center px-9 max-md:px-6 py-4 max-md:py-3.5 bg-white text-hn-primary font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg no-underline transition-all duration-300 max-md:justify-center hover:bg-[#f0f4f8] hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.25)] shadow-xl">{intl.formatMessage({ id: 'home.hero.viewProducts' })}</TransitionLink>
-              <TransitionLink to="/contact" className="inline-flex items-center px-9 max-md:px-6 py-4 max-md:py-3.5 bg-white/10 text-white font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg border-2 border-white/40 no-underline transition-all duration-300 backdrop-blur-md max-md:justify-center hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(255,255,255,0.15)]">{intl.formatMessage({ id: 'home.hero.getInTouch' })}</TransitionLink>
+              <TransitionLink to={currentHeroSlide.primaryTo} className="inline-flex items-center px-9 max-md:px-6 py-4 max-md:py-3.5 bg-white text-hn-primary font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg no-underline transition-all duration-300 max-md:justify-center hover:bg-[#f0f4f8] hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.25)] shadow-xl">{currentHeroSlide.primaryLabel}</TransitionLink>
+              <TransitionLink to={currentHeroSlide.secondaryTo} className="inline-flex items-center px-9 max-md:px-6 py-4 max-md:py-3.5 bg-white/10 text-white font-bold text-[0.95rem] max-md:text-[0.88rem] rounded-lg border-2 border-white/40 no-underline transition-all duration-300 backdrop-blur-md max-md:justify-center hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(255,255,255,0.15)]">{currentHeroSlide.secondaryLabel}</TransitionLink>
+            </div>
+
+            <div className="motion-fade-up animation-delay-300 mt-6 flex items-center justify-between gap-3 rounded-[1.2rem] border border-white/12 bg-[rgba(8,18,32,0.26)] px-4 py-3 backdrop-blur-md lg:hidden">
+              <div>
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/62">
+                  {currentHeroSlide.label}
+                </p>
+                <p className="mt-1 text-[0.9rem] font-semibold text-white/92">{currentHeroSlide.title}</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={goToPreviousHeroSlide}
+                  aria-label="Previous hero background"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/14 bg-white/8 text-white"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  onClick={goToNextHeroSlide}
+                  aria-label="Next hero background"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/14 bg-white/8 text-white"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -122,6 +122,7 @@ export default {
   'footer.followUs': '关注我们',
   'footer.facebook': 'Facebook 页面',
   'footer.linkedin': 'LinkedIn 页面',
+  'footer.cookieSettings': 'Cookie 设置',
   'footer.rights': '保留所有权利。',
   'inquiry.add': '加入询盘',
   'inquiry.added': '已加入',

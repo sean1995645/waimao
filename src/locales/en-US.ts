@@ -135,6 +135,7 @@ export default {
   'footer.followUs': 'Follow Us',
   'footer.facebook': 'Facebook',
   'footer.linkedin': 'LinkedIn',
+  'footer.cookieSettings': 'Cookie Settings',
   'footer.rights': 'All rights reserved.',
 
   'inquiry.add': 'Add to Inquiry',

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
+import { openCookieConsentPreferences } from '@/utils/cookieConsent';
 
 const Footer: React.FC = () => {
   const intl = useIntl();
@@ -28,6 +29,13 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="motion-fade-up animation-delay-300 text-center pt-8 md:pt-6 border-t border-white/10">
+          <button
+            type="button"
+            onClick={openCookieConsentPreferences}
+            className="mb-3 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[0.78rem] font-semibold text-white/80 transition-all duration-200 hover:border-white/30 hover:bg-white/10 hover:text-white"
+          >
+            {intl.formatMessage({ id: 'footer.cookieSettings' })}
+          </button>
           <p className="text-gray-400 text-base md:text-sm">
             &copy; HeatNexis. {intl.formatMessage({ id: 'footer.rights' })}
           </p>
