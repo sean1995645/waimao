@@ -1,0 +1,32 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="960" height="720" rx="36" fill="url(#bg)"/>
+<rect x="88" y="88" width="784" height="544" rx="34" fill="#F7FAFB" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.16"/>
+<g filter="url(#shadow)">
+<rect x="196" y="176" width="308" height="360" rx="34" fill="#F7FAFB"/>
+<rect x="456" y="246" width="246" height="220" rx="30" fill="#F7FAFB"/>
+<rect x="228" y="208" width="244" height="178" rx="22" fill="#EEF4F7"/>
+<text x="256" y="254" fill="#213845" font-family="Arial, sans-serif" font-size="22" font-weight="700">HN-RF611</text>
+<text x="258" y="336" fill="#213845" font-family="Arial, sans-serif" font-size="66" font-weight="700">21.5°</text>
+<path d="M534 320C566 288 618 288 650 320" stroke="#203542" stroke-width="6" stroke-linecap="round"/>
+<path d="M556 346C576 326 608 326 628 346" stroke="#F59E6B" stroke-width="6" stroke-linecap="round"/>
+<path d="M578 372C586 364 598 364 606 372" stroke="#34D399" stroke-width="6" stroke-linecap="round"/>
+<circle cx="582" cy="406" r="10" fill="#34D399"/>
+<circle cx="616" cy="406" r="10" fill="#60A5FA"/>
+<text x="242" y="578" fill="#F7FAFB" font-family="Arial, sans-serif" font-size="34" font-weight="700">Wireless thermostat and receiver kit</text>
+</g>
+<defs>
+<linearGradient id="bg" x1="82" y1="54" x2="902" y2="720" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1E3640"/>
+<stop offset="1" stop-color="#5D7884"/>
+</linearGradient>
+<filter id="shadow" x="156" y="136" width="586" height="440" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="20"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.0901961 0 0 0 0 0.12549 0 0 0 0.22 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+</filter>
+</defs>
+</svg>

@@ -1,0 +1,35 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="960" height="720" rx="36" fill="url(#bg)"/>
+<rect x="86" y="88" width="788" height="544" rx="34" fill="#F7FAFB" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.16"/>
+<g filter="url(#shadow)">
+<rect x="286" y="118" width="388" height="484" rx="40" fill="#F7FAFB"/>
+<rect x="318" y="152" width="324" height="418" rx="30" fill="#101D26"/>
+<rect x="354" y="188" width="252" height="188" rx="26" fill="url(#screen)"/>
+<text x="386" y="236" fill="#D7F3F8" font-family="Arial, sans-serif" font-size="24" font-weight="700">HN-TS900</text>
+<text x="386" y="328" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="76" font-weight="700">24.0°</text>
+<rect x="354" y="404" width="72" height="72" rx="18" fill="#1E3340"/>
+<rect x="444" y="404" width="72" height="72" rx="18" fill="#1E3340"/>
+<rect x="534" y="404" width="72" height="72" rx="18" fill="#F59E6B"/>
+<rect x="354" y="492" width="252" height="18" rx="9" fill="#334E5C"/>
+<text x="372" y="544" fill="#7D91A3" font-family="Arial, sans-serif" font-size="22">Premium touchscreen thermostat</text>
+</g>
+<defs>
+<linearGradient id="bg" x1="82" y1="56" x2="890" y2="720" gradientUnits="userSpaceOnUse">
+<stop stop-color="#173441"/>
+<stop offset="1" stop-color="#285D6A"/>
+</linearGradient>
+<linearGradient id="screen" x1="354" y1="188" x2="606" y2="376" gradientUnits="userSpaceOnUse">
+<stop stop-color="#297286"/>
+<stop offset="1" stop-color="#1D3E4A"/>
+</linearGradient>
+<filter id="shadow" x="246" y="78" width="468" height="564" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="20"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.0901961 0 0 0 0 0.12549 0 0 0 0.28 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+</filter>
+</defs>
+</svg>

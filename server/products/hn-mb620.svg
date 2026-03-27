@@ -1,0 +1,32 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="960" height="720" rx="36" fill="url(#bg)"/>
+<rect x="84" y="86" width="792" height="548" rx="34" fill="#F7FAFB" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.18"/>
+<g filter="url(#shadow)">
+<rect x="254" y="150" width="452" height="420" rx="34" fill="#F7FAFB"/>
+<rect x="290" y="190" width="380" height="148" rx="24" fill="#EEF4F7"/>
+<text x="324" y="238" fill="#213845" font-family="Arial, sans-serif" font-size="24" font-weight="700">HN-MB620</text>
+<text x="320" y="320" fill="#213845" font-family="Arial, sans-serif" font-size="72" font-weight="700">24.5°</text>
+<rect x="304" y="390" width="116" height="90" rx="18" fill="#E5EDF2"/>
+<rect x="434" y="390" width="116" height="90" rx="18" fill="#E5EDF2"/>
+<rect x="564" y="390" width="116" height="90" rx="18" fill="#0E1D28"/>
+<text x="330" y="446" fill="#213845" font-family="Arial, sans-serif" font-size="24" font-weight="700">M</text>
+<text x="460" y="446" fill="#213845" font-family="Arial, sans-serif" font-size="24" font-weight="700">V</text>
+<text x="592" y="446" fill="#F7FAFB" font-family="Arial, sans-serif" font-size="24" font-weight="700">485</text>
+<text x="322" y="530" fill="#73879B" font-family="Arial, sans-serif" font-size="22">Modbus fan coil thermostat</text>
+</g>
+<defs>
+<linearGradient id="bg" x1="76" y1="56" x2="900" y2="720" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1D313D"/>
+<stop offset="1" stop-color="#45616E"/>
+</linearGradient>
+<filter id="shadow" x="214" y="110" width="532" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="20"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.0901961 0 0 0 0 0.12549 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+</filter>
+</defs>
+</svg>

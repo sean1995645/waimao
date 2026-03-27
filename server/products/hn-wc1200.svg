@@ -1,0 +1,45 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="960" height="720" rx="36" fill="url(#bg)"/>
+<rect x="88" y="88" width="784" height="544" rx="34" fill="#F7FAFB" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.16"/>
+<g filter="url(#shadow)">
+<rect x="164" y="176" width="632" height="372" rx="34" fill="#F7FAFB"/>
+<rect x="212" y="226" width="536" height="58" rx="18" fill="#12202A"/>
+<text x="246" y="264" fill="#F7FAFB" font-family="Arial, sans-serif" font-size="28" font-weight="700">HN-WC1200 12-Zone Wiring Center</text>
+<g fill="#EEF4F7">
+<rect x="226" y="318" width="54" height="142" rx="14"/>
+<rect x="290" y="318" width="54" height="142" rx="14"/>
+<rect x="354" y="318" width="54" height="142" rx="14"/>
+<rect x="418" y="318" width="54" height="142" rx="14"/>
+<rect x="482" y="318" width="54" height="142" rx="14"/>
+<rect x="546" y="318" width="54" height="142" rx="14"/>
+<rect x="610" y="318" width="54" height="142" rx="14"/>
+<rect x="674" y="318" width="54" height="142" rx="14"/>
+</g>
+<g fill="#F59E6B">
+<circle cx="253" cy="348" r="7"/>
+<circle cx="317" cy="348" r="7"/>
+<circle cx="381" cy="348" r="7"/>
+<circle cx="445" cy="348" r="7"/>
+<circle cx="509" cy="348" r="7"/>
+<circle cx="573" cy="348" r="7"/>
+<circle cx="637" cy="348" r="7"/>
+<circle cx="701" cy="348" r="7"/>
+</g>
+<text x="236" y="506" fill="#73879B" font-family="Arial, sans-serif" font-size="22">Expanded manifold control for larger projects</text>
+</g>
+<defs>
+<linearGradient id="bg" x1="84" y1="52" x2="900" y2="720" gradientUnits="userSpaceOnUse">
+<stop stop-color="#162A37"/>
+<stop offset="1" stop-color="#335C66"/>
+</linearGradient>
+<filter id="shadow" x="124" y="136" width="712" height="452" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="20"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.0901961 0 0 0 0 0.12549 0 0 0 0.22 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+</filter>
+</defs>
+</svg>

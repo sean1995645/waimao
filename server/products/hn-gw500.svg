@@ -1,0 +1,31 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="960" height="720" rx="36" fill="url(#bg)"/>
+<rect x="88" y="88" width="784" height="544" rx="34" fill="#F7FAFB" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.16"/>
+<g filter="url(#shadow)">
+<rect x="212" y="246" width="536" height="234" rx="34" fill="#F7FAFB"/>
+<rect x="246" y="280" width="468" height="166" rx="28" fill="#11202A"/>
+<circle cx="318" cy="364" r="14" fill="#34D399"/>
+<circle cx="360" cy="364" r="14" fill="#60A5FA"/>
+<circle cx="402" cy="364" r="14" fill="#F59E6B"/>
+<path d="M526 334C558 302 610 302 642 334" stroke="#F7FAFB" stroke-width="6" stroke-linecap="round"/>
+<path d="M548 356C568 336 600 336 620 356" stroke="#9BD4E6" stroke-width="6" stroke-linecap="round"/>
+<path d="M570 378C578 370 590 370 598 378" stroke="#F59E6B" stroke-width="6" stroke-linecap="round"/>
+<text x="274" y="332" fill="#D5EEF4" font-family="Arial, sans-serif" font-size="26" font-weight="700">HN-GW500 Gateway</text>
+<text x="274" y="412" fill="#73879B" font-family="Arial, sans-serif" font-size="22">Smart bridge for thermostat networks</text>
+</g>
+<defs>
+<linearGradient id="bg" x1="92" y1="52" x2="896" y2="720" gradientUnits="userSpaceOnUse">
+<stop stop-color="#18313A"/>
+<stop offset="1" stop-color="#4A6F79"/>
+</linearGradient>
+<filter id="shadow" x="172" y="206" width="616" height="314" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="20"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.0901961 0 0 0 0 0.12549 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+</filter>
+</defs>
+</svg>
