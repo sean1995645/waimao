@@ -9406,17 +9406,18 @@ var baseMessages = {
 var defaultLocale = 'en-US';
 var localeStorageKey = 'umi_locale';
 var rtlLocales = new Set(['ar-SA', 'he-IL']);
+var supportedLocales = Object.keys(baseMessages);
 var messages = Object.fromEntries(Object.entries(baseMessages).map(function (_ref) {
   var _ref2 = slicedToArray_default()(_ref, 2),
     locale = _ref2[0],
     localeMessages = _ref2[1];
   return [locale, locale === defaultLocale ? baseMessages[defaultLocale] : objectSpread2_default()(objectSpread2_default()({}, baseMessages[defaultLocale]), localeMessages)];
 }));
-var localeLookup = Object.fromEntries(Object.keys(messages).map(function (locale) {
+var localeLookup = Object.fromEntries(supportedLocales.map(function (locale) {
   return [locale.toLowerCase(), locale];
 }));
 var resolveLocale = function resolveLocale(value) {
-  var _Object$keys$find;
+  var _supportedLocales$fin;
   if (!value) {
     return null;
   }
@@ -9425,18 +9426,20 @@ var resolveLocale = function resolveLocale(value) {
     return localeLookup[normalized];
   }
   var language = normalized.split('-')[0];
-  return (_Object$keys$find = Object.keys(messages).find(function (locale) {
+  return (_supportedLocales$fin = supportedLocales.find(function (locale) {
     return locale.toLowerCase().startsWith("".concat(language, "-"));
-  })) !== null && _Object$keys$find !== void 0 ? _Object$keys$find : null;
+  })) !== null && _supportedLocales$fin !== void 0 ? _supportedLocales$fin : null;
 };
-var getClientLocale = function getClientLocale() {
+var readStoredLocale = function readStoredLocale() {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+  return resolveLocale(localStorage.getItem(localeStorageKey));
+};
+var detectBrowserLocale = function detectBrowserLocale() {
   var _navigator$languages;
   if (typeof window === 'undefined') {
-    return defaultLocale;
-  }
-  var savedLocale = resolveLocale(localStorage.getItem(localeStorageKey));
-  if (savedLocale) {
-    return savedLocale;
+    return null;
   }
   var browserLocales = (_navigator$languages = navigator.languages) !== null && _navigator$languages !== void 0 && _navigator$languages.length ? navigator.languages : [navigator.language];
   var _iterator = createForOfIteratorHelper_default()(browserLocales),
@@ -9454,7 +9457,24 @@ var getClientLocale = function getClientLocale() {
   } finally {
     _iterator.f();
   }
-  return defaultLocale;
+  return null;
+};
+var getClientLocale = function getClientLocale() {
+  var _ref3, _readStoredLocale;
+  return (_ref3 = (_readStoredLocale = readStoredLocale()) !== null && _readStoredLocale !== void 0 ? _readStoredLocale : detectBrowserLocale()) !== null && _ref3 !== void 0 ? _ref3 : defaultLocale;
+};
+var syncDocumentLocale = function syncDocumentLocale(locale) {
+  if (typeof document === 'undefined') {
+    return;
+  }
+  document.documentElement.lang = locale;
+  document.documentElement.dir = rtlLocales.has(locale) ? 'rtl' : 'ltr';
+};
+var persistLocale = function persistLocale(locale) {
+  if (typeof window === 'undefined') {
+    return;
+  }
+  localStorage.setItem(localeStorageKey, locale);
 };
 var LocaleContext = /*#__PURE__*/(0,react.createContext)({
   locale: defaultLocale,
@@ -9463,36 +9483,32 @@ var LocaleContext = /*#__PURE__*/(0,react.createContext)({
 var useLocale = function useLocale() {
   return (0,react.useContext)(LocaleContext);
 };
-var LocaleProvider = function LocaleProvider(_ref3) {
-  var children = _ref3.children;
+var LocaleProvider = function LocaleProvider(_ref4) {
+  var children = _ref4.children;
   var _useState = (0,react.useState)(defaultLocale),
     _useState2 = slicedToArray_default()(_useState, 2),
     locale = _useState2[0],
     setLocaleState = _useState2[1];
   (0,react.useEffect)(function () {
     var clientLocale = getClientLocale();
-    if (clientLocale !== defaultLocale) {
+    if (clientLocale !== locale) {
       (0,react.startTransition)(function () {
         setLocaleState(clientLocale);
       });
     }
-  }, []);
+  }, [locale]);
   (0,react.useEffect)(function () {
-    if (typeof document === 'undefined') {
-      return;
-    }
-    document.documentElement.lang = locale;
-    document.documentElement.dir = rtlLocales.has(locale) ? 'rtl' : 'ltr';
+    syncDocumentLocale(locale);
   }, [locale]);
   var setLocale = function setLocale(newLocale) {
-    if (messages[newLocale] && newLocale !== locale) {
-      if (typeof window !== 'undefined') {
-        localStorage.setItem(localeStorageKey, newLocale);
-      }
-      (0,react.startTransition)(function () {
-        setLocaleState(newLocale);
-      });
+    var resolvedLocale = resolveLocale(newLocale);
+    if (!resolvedLocale || resolvedLocale === locale) {
+      return;
     }
+    persistLocale(resolvedLocale);
+    (0,react.startTransition)(function () {
+      setLocaleState(resolvedLocale);
+    });
   };
   return /*#__PURE__*/(0,jsx_runtime.jsx)(LocaleContext.Provider, {
     value: {

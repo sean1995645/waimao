@@ -33,7 +33,9 @@ import hiIN from './locales/hi-IN';
 import skSK from './locales/sk-SK';
 import hrHR from './locales/hr-HR';
 
-const baseMessages: Record<string, Record<string, string>> = {
+type LocaleMessages = Record<string, string>;
+
+const baseMessages: Record<string, LocaleMessages> = {
   'en-US': enUS,
   'zh-CN': zhCN,
   'es-ES': esES,
@@ -69,14 +71,16 @@ const baseMessages: Record<string, Record<string, string>> = {
 const defaultLocale = 'en-US';
 const localeStorageKey = 'umi_locale';
 const rtlLocales = new Set(['ar-SA', 'he-IL']);
+const supportedLocales = Object.keys(baseMessages);
 
-const messages = Object.fromEntries(
+const messages: Record<string, LocaleMessages> = Object.fromEntries(
   Object.entries(baseMessages).map(([locale, localeMessages]) => [
     locale,
     locale === defaultLocale ? baseMessages[defaultLocale] : { ...baseMessages[defaultLocale], ...localeMessages },
   ]),
 );
-const localeLookup = Object.fromEntries(Object.keys(messages).map((locale) => [locale.toLowerCase(), locale]));
+
+const localeLookup = Object.fromEntries(supportedLocales.map((locale) => [locale.toLowerCase(), locale]));
 
 const resolveLocale = (value?: string | null) => {
   if (!value) {
@@ -90,17 +94,20 @@ const resolveLocale = (value?: string | null) => {
   }
 
   const language = normalized.split('-')[0];
-  return Object.keys(messages).find((locale) => locale.toLowerCase().startsWith(`${language}-`)) ?? null;
+  return supportedLocales.find((locale) => locale.toLowerCase().startsWith(`${language}-`)) ?? null;
 };
 
-const getClientLocale = () => {
+const readStoredLocale = () => {
   if (typeof window === 'undefined') {
-    return defaultLocale;
+    return null;
   }
 
-  const savedLocale = resolveLocale(localStorage.getItem(localeStorageKey));
-  if (savedLocale) {
-    return savedLocale;
+  return resolveLocale(localStorage.getItem(localeStorageKey));
+};
+
+const detectBrowserLocale = () => {
+  if (typeof window === 'undefined') {
+    return null;
   }
 
   const browserLocales = navigator.languages?.length ? navigator.languages : [navigator.language];
@@ -111,7 +118,28 @@ const getClientLocale = () => {
     }
   }
 
-  return defaultLocale;
+  return null;
+};
+
+const getClientLocale = () => {
+  return readStoredLocale() ?? detectBrowserLocale() ?? defaultLocale;
+};
+
+const syncDocumentLocale = (locale: string) => {
+  if (typeof document === 'undefined') {
+    return;
+  }
+
+  document.documentElement.lang = locale;
+  document.documentElement.dir = rtlLocales.has(locale) ? 'rtl' : 'ltr';
+};
+
+const persistLocale = (locale: string) => {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  localStorage.setItem(localeStorageKey, locale);
 };
 
 interface LocaleContextType {
@@ -132,32 +160,29 @@ export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   useEffect(() => {
     const clientLocale = getClientLocale();
 
-    if (clientLocale !== defaultLocale) {
+    if (clientLocale !== locale) {
       startTransition(() => {
         setLocaleState(clientLocale);
       });
     }
-  }, []);
+  }, [locale]);
 
   useEffect(() => {
-    if (typeof document === 'undefined') {
-      return;
-    }
-
-    document.documentElement.lang = locale;
-    document.documentElement.dir = rtlLocales.has(locale) ? 'rtl' : 'ltr';
+    syncDocumentLocale(locale);
   }, [locale]);
 
   const setLocale = (newLocale: string) => {
-    if (messages[newLocale] && newLocale !== locale) {
-      if (typeof window !== 'undefined') {
-        localStorage.setItem(localeStorageKey, newLocale);
-      }
+    const resolvedLocale = resolveLocale(newLocale);
 
-      startTransition(() => {
-        setLocaleState(newLocale);
-      });
+    if (!resolvedLocale || resolvedLocale === locale) {
+      return;
     }
+
+    persistLocale(resolvedLocale);
+
+    startTransition(() => {
+      setLocaleState(resolvedLocale);
+    });
   };
 
   return (
