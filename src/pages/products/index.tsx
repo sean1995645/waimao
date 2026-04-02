@@ -101,41 +101,42 @@ const ProductsPage: React.FC = () => {
         ]}
       />
 
-      <div className="relative bg-hn-surface py-2 lg:py-8 overflow-hidden">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_right,rgba(95,167,212,0.16),transparent_42%)] motion-safe:animate-floatSoft" />
+      <div className="relative bg-hn-surface py-6 lg:py-10">
         <div className="max-w-[1200px] mx-auto px-4 lg:px-5">
           {/* Mobile Accordion */}
-          <div className="motion-fade-up flex flex-col gap-1.5 lg:hidden" data-product-accordion>
+          <div className="motion-fade-up flex flex-col gap-2 lg:hidden" data-product-accordion>
             {categoryIds.map((categoryId) => {
               const categoryProducts = getCategoryProducts(categoryId);
               const isOpen = openAccordion === categoryId;
               const categoryLabel = getLocalizedCategoryName(categoryId, intl.formatMessage);
 
               return (
-                <div key={categoryId} className="overflow-hidden rounded-xl border border-[#e4eaf3] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]" data-product-accordion-item>
+                <div key={categoryId} className="overflow-hidden rounded-xl border border-hn-border bg-white shadow-sm" data-product-accordion-item>
                   <button
                     type="button"
-                    className="flex w-full cursor-pointer items-center justify-between gap-3 px-3 py-2 text-left text-[0.8rem] text-hn-primary bg-transparent border-0"
+                    className="flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-3 text-left text-[0.85rem] font-medium text-hn-primary bg-transparent border-0"
                     onClick={() => toggleAccordion(categoryId)}
                     aria-expanded={isOpen}
                     data-product-accordion-trigger
                   >
                     <span>{categoryLabel}</span>
-                    <span className="ml-auto inline-flex min-w-[1.5rem] items-center justify-center rounded-full bg-[#f5f8fc] px-2 py-0.5 text-[0.7rem] font-semibold text-[#60758e]">{categoryProducts.length}</span>
-                    <svg
-                      className={`h-4 w-4 text-[#60758e] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-                      data-product-accordion-icon
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path d="M6 9l6 6 6-6"/>
-                    </svg>
+                    <div className="flex items-center gap-2">
+                      <span className="inline-flex min-w-[1.5rem] items-center justify-center rounded-full bg-hn-surface-soft px-2 py-0.5 text-[0.7rem] font-semibold text-hn-text-muted">{categoryProducts.length}</span>
+                      <svg
+                        className={`h-4 w-4 text-hn-text-muted transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                        data-product-accordion-icon
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M6 9l6 6 6-6"/>
+                      </svg>
+                    </div>
                   </button>
                   {isOpen && (
-                    <div className="border-t border-[#e7edf5] p-1.5" data-product-accordion-panel>
-                      <div className="grid grid-cols-2 gap-1.5">
+                    <div className="border-t border-hn-border p-2 bg-hn-surface/50" data-product-accordion-panel>
+                      <div className="grid grid-cols-2 gap-2">
                         {categoryProducts.map((product) => (
                           <ProductCard key={product.slug} product={product} />
                         ))}
@@ -148,33 +149,27 @@ const ProductsPage: React.FC = () => {
           </div>
 
           {/* Desktop Layout */}
-          <div className="hidden lg:grid lg:grid-cols-[228px_minmax(0,1fr)] lg:gap-6">
+          <div className="hidden lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8">
             <aside className="motion-fade-right sticky top-24 self-start">
-              <div className="rounded-2xl border border-[#e4eaf3] bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.04)]">
-                <h2 className="mb-3 border-b border-[#edf2f7] pb-2.5 text-[0.95rem] font-bold text-hn-primary">{intl.formatMessage({ id: 'products.categories' })}</h2>
-                <div className="flex flex-col gap-1">
+              <div className="rounded-xl border border-hn-border bg-white p-5 shadow-sm">
+                <h2 className="mb-4 border-b border-hn-border pb-3 text-[0.95rem] font-bold text-hn-primary">{intl.formatMessage({ id: 'products.categories' })}</h2>
+                <div className="flex flex-col gap-1.5">
                   <button
                     type="button"
                     aria-pressed={selectedCategory === 'all'}
-                    className={`relative flex w-full items-start justify-start gap-2 rounded-lg border px-3 py-2.5 text-left text-[0.82rem] transition-colors duration-200 ${
+                    className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[0.85rem] font-medium transition-colors duration-200 ${
                       selectedCategory === 'all'
-                        ? 'border-[#d8e4ef] bg-[#f5f8fc] text-hn-primary'
-                        : 'border-transparent bg-transparent text-[#445468] hover:border-[#e2eaf2] hover:bg-[#f8fafc] hover:text-hn-primary'
+                        ? 'bg-hn-surface-soft text-hn-accent'
+                        : 'bg-transparent text-hn-text-muted hover:bg-hn-surface hover:text-hn-primary'
                     }`}
                     onClick={() => setSelectedCategory('all')}
                     data-category="all"
                   >
-                    <span
-                      className={`absolute left-0 top-2.5 bottom-2.5 w-0.5 rounded-full ${
-                        selectedCategory === 'all' ? 'bg-hn-accent' : 'bg-transparent'
-                      }`}
-                      aria-hidden="true"
-                    />
-                    <span className="min-w-0 flex-1 pl-1.5 font-medium leading-5">{intl.formatMessage({ id: 'products.allProducts' })}</span>
-                    <span className={`mt-0.5 inline-flex h-6 min-w-[1.8rem] shrink-0 items-center justify-center self-start rounded-full px-1.5 text-[0.68rem] font-semibold ${
+                    <span>{intl.formatMessage({ id: 'products.allProducts' })}</span>
+                    <span className={`inline-flex items-center justify-center rounded-full px-2 py-0.5 text-[0.7rem] font-semibold ${
                       selectedCategory === 'all'
-                        ? 'bg-white text-hn-primary ring-1 ring-[#d8e4ef]'
-                        : 'bg-[#f3f6fb] text-[#60758e]'
+                        ? 'bg-white text-hn-accent ring-1 ring-hn-accent/20'
+                        : 'bg-hn-surface-soft text-hn-text-muted'
                     }`}>{products.length}</span>
                   </button>
                   {categoryItems.map(({ id, name, count }) => (
@@ -182,25 +177,19 @@ const ProductsPage: React.FC = () => {
                       key={id}
                       type="button"
                       aria-pressed={selectedCategory === id}
-                      className={`relative flex w-full items-start justify-start gap-2 rounded-lg border px-3 py-2.5 text-left text-[0.82rem] transition-colors duration-200 ${
+                      className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[0.85rem] font-medium transition-colors duration-200 ${
                         selectedCategory === id
-                          ? 'border-[#d8e4ef] bg-[#f5f8fc] text-hn-primary'
-                          : 'border-transparent bg-transparent text-[#445468] hover:border-[#e2eaf2] hover:bg-[#f8fafc] hover:text-hn-primary'
+                          ? 'bg-hn-surface-soft text-hn-accent'
+                          : 'bg-transparent text-hn-text-muted hover:bg-hn-surface hover:text-hn-primary'
                       }`}
                       onClick={() => setSelectedCategory(id)}
                       data-category={id}
                     >
-                      <span
-                        className={`absolute left-0 top-2.5 bottom-2.5 w-0.5 rounded-full ${
-                          selectedCategory === id ? 'bg-hn-accent' : 'bg-transparent'
-                        }`}
-                        aria-hidden="true"
-                      />
-                      <span className="min-w-0 flex-1 pl-1.5 font-medium leading-5 text-current">{name}</span>
-                      <span className={`mt-0.5 inline-flex h-6 min-w-[1.8rem] shrink-0 items-center justify-center self-start rounded-full px-1.5 text-[0.68rem] font-semibold ${
+                      <span>{name}</span>
+                      <span className={`inline-flex items-center justify-center rounded-full px-2 py-0.5 text-[0.7rem] font-semibold ${
                         selectedCategory === id
-                          ? 'bg-white text-hn-primary ring-1 ring-[#d8e4ef]'
-                          : 'bg-[#f3f6fb] text-[#60758e]'
+                          ? 'bg-white text-hn-accent ring-1 ring-hn-accent/20'
+                          : 'bg-hn-surface-soft text-hn-text-muted'
                       }`}>{count}</span>
                     </button>
                   ))}
@@ -209,13 +198,14 @@ const ProductsPage: React.FC = () => {
             </aside>
 
             <div className="motion-fade-left flex-1">
-              <div className="flex items-center justify-between mb-3">
-                <p className="text-[0.9rem] text-[#5f7088]">
-                  {intl.formatMessage({ id: 'products.showing' })} <strong className="text-hn-primary font-semibold">{filteredProducts.length}</strong> {intl.formatMessage({ id: 'products.productsCount' })}
+              <div className="mb-6 flex items-center justify-between border-b border-hn-border pb-3">
+                <h1 className="text-[1.5rem] font-bold text-hn-primary">{selectedCategory === 'all' ? intl.formatMessage({ id: 'products.allProducts' }) : getLocalizedCategoryName(selectedCategory, intl.formatMessage)}</h1>
+                <p className="text-[0.9rem] text-hn-text-muted">
+                  <strong className="font-semibold text-hn-primary">{filteredProducts.length}</strong> {intl.formatMessage({ id: 'products.productsCount' })}
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-3" id="productGrid">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4" id="productGrid">
                 {filteredProducts.map((product) => (
                   <ProductCard key={product.slug} product={product} />
                 ))}

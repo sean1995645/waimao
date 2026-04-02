@@ -13522,25 +13522,23 @@ var ProductsPage = function ProductsPage() {
           id: 'products.hero.privateLabelReady'
         })
       }]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-      className: "relative bg-hn-surface py-2 lg:py-8 overflow-hidden",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_right,rgba(95,167,212,0.16),transparent_42%)] motion-safe:animate-floatSoft"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      className: "relative bg-hn-surface py-6 lg:py-10",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         className: "max-w-[1200px] mx-auto px-4 lg:px-5",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-          className: "motion-fade-up flex flex-col gap-1.5 lg:hidden",
+          className: "motion-fade-up flex flex-col gap-2 lg:hidden",
           "data-product-accordion": true,
           children: _data_products__WEBPACK_IMPORTED_MODULE_5__/* .categoryIds */ .X8.map(function (categoryId) {
             var categoryProducts = getCategoryProducts(categoryId);
             var isOpen = openAccordion === categoryId;
             var categoryLabel = (0,_data_products__WEBPACK_IMPORTED_MODULE_5__/* .getLocalizedCategoryName */ .BZ)(categoryId, intl.formatMessage);
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-              className: "overflow-hidden rounded-xl border border-[#e4eaf3] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]",
+              className: "overflow-hidden rounded-xl border border-hn-border bg-white shadow-sm",
               "data-product-accordion-item": true,
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
                 type: "button",
-                className: "flex w-full cursor-pointer items-center justify-between gap-3 px-3 py-2 text-left text-[0.8rem] text-hn-primary bg-transparent border-0",
+                className: "flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-3 text-left text-[0.85rem] font-medium text-hn-primary bg-transparent border-0",
                 onClick: function onClick() {
                   return toggleAccordion(categoryId);
                 },
@@ -13548,25 +13546,28 @@ var ProductsPage = function ProductsPage() {
                 "data-product-accordion-trigger": true,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
                   children: categoryLabel
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                  className: "ml-auto inline-flex min-w-[1.5rem] items-center justify-center rounded-full bg-[#f5f8fc] px-2 py-0.5 text-[0.7rem] font-semibold text-[#60758e]",
-                  children: categoryProducts.length
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
-                  className: "h-4 w-4 text-[#60758e] transition-transform duration-200 ".concat(isOpen ? 'rotate-180' : ''),
-                  "data-product-accordion-icon": true,
-                  viewBox: "0 0 24 24",
-                  fill: "none",
-                  stroke: "currentColor",
-                  strokeWidth: "2",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
-                    d: "M6 9l6 6 6-6"
-                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                  className: "flex items-center gap-2",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                    className: "inline-flex min-w-[1.5rem] items-center justify-center rounded-full bg-hn-surface-soft px-2 py-0.5 text-[0.7rem] font-semibold text-hn-text-muted",
+                    children: categoryProducts.length
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
+                    className: "h-4 w-4 text-hn-text-muted transition-transform duration-200 ".concat(isOpen ? 'rotate-180' : ''),
+                    "data-product-accordion-icon": true,
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    stroke: "currentColor",
+                    strokeWidth: "2",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                      d: "M6 9l6 6 6-6"
+                    })
+                  })]
                 })]
               }), isOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-                className: "border-t border-[#e7edf5] p-1.5",
+                className: "border-t border-hn-border p-2 bg-hn-surface/50",
                 "data-product-accordion-panel": true,
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-                  className: "grid grid-cols-2 gap-1.5",
+                  className: "grid grid-cols-2 gap-2",
                   children: categoryProducts.map(function (product) {
                     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_ProductCard__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                       product: product
@@ -13577,36 +13578,32 @@ var ProductsPage = function ProductsPage() {
             }, categoryId);
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-          className: "hidden lg:grid lg:grid-cols-[228px_minmax(0,1fr)] lg:gap-6",
+          className: "hidden lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("aside", {
             className: "motion-fade-right sticky top-24 self-start",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-              className: "rounded-2xl border border-[#e4eaf3] bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.04)]",
+              className: "rounded-xl border border-hn-border bg-white p-5 shadow-sm",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h2", {
-                className: "mb-3 border-b border-[#edf2f7] pb-2.5 text-[0.95rem] font-bold text-hn-primary",
+                className: "mb-4 border-b border-hn-border pb-3 text-[0.95rem] font-bold text-hn-primary",
                 children: intl.formatMessage({
                   id: 'products.categories'
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-                className: "flex flex-col gap-1",
+                className: "flex flex-col gap-1.5",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
                   type: "button",
                   "aria-pressed": selectedCategory === 'all',
-                  className: "relative flex w-full items-start justify-start gap-2 rounded-lg border px-3 py-2.5 text-left text-[0.82rem] transition-colors duration-200 ".concat(selectedCategory === 'all' ? 'border-[#d8e4ef] bg-[#f5f8fc] text-hn-primary' : 'border-transparent bg-transparent text-[#445468] hover:border-[#e2eaf2] hover:bg-[#f8fafc] hover:text-hn-primary'),
+                  className: "flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[0.85rem] font-medium transition-colors duration-200 ".concat(selectedCategory === 'all' ? 'bg-hn-surface-soft text-hn-accent' : 'bg-transparent text-hn-text-muted hover:bg-hn-surface hover:text-hn-primary'),
                   onClick: function onClick() {
                     return setSelectedCategory('all');
                   },
                   "data-category": "all",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                    className: "absolute left-0 top-2.5 bottom-2.5 w-0.5 rounded-full ".concat(selectedCategory === 'all' ? 'bg-hn-accent' : 'bg-transparent'),
-                    "aria-hidden": "true"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                    className: "min-w-0 flex-1 pl-1.5 font-medium leading-5",
                     children: intl.formatMessage({
                       id: 'products.allProducts'
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                    className: "mt-0.5 inline-flex h-6 min-w-[1.8rem] shrink-0 items-center justify-center self-start rounded-full px-1.5 text-[0.68rem] font-semibold ".concat(selectedCategory === 'all' ? 'bg-white text-hn-primary ring-1 ring-[#d8e4ef]' : 'bg-[#f3f6fb] text-[#60758e]'),
+                    className: "inline-flex items-center justify-center rounded-full px-2 py-0.5 text-[0.7rem] font-semibold ".concat(selectedCategory === 'all' ? 'bg-white text-hn-accent ring-1 ring-hn-accent/20' : 'bg-hn-surface-soft text-hn-text-muted'),
                     children: _data_products__WEBPACK_IMPORTED_MODULE_5__/* .products */ .RB.length
                   })]
                 }), categoryItems.map(function (_ref) {
@@ -13616,19 +13613,15 @@ var ProductsPage = function ProductsPage() {
                   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
                     type: "button",
                     "aria-pressed": selectedCategory === id,
-                    className: "relative flex w-full items-start justify-start gap-2 rounded-lg border px-3 py-2.5 text-left text-[0.82rem] transition-colors duration-200 ".concat(selectedCategory === id ? 'border-[#d8e4ef] bg-[#f5f8fc] text-hn-primary' : 'border-transparent bg-transparent text-[#445468] hover:border-[#e2eaf2] hover:bg-[#f8fafc] hover:text-hn-primary'),
+                    className: "flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-[0.85rem] font-medium transition-colors duration-200 ".concat(selectedCategory === id ? 'bg-hn-surface-soft text-hn-accent' : 'bg-transparent text-hn-text-muted hover:bg-hn-surface hover:text-hn-primary'),
                     onClick: function onClick() {
                       return setSelectedCategory(id);
                     },
                     "data-category": id,
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                      className: "absolute left-0 top-2.5 bottom-2.5 w-0.5 rounded-full ".concat(selectedCategory === id ? 'bg-hn-accent' : 'bg-transparent'),
-                      "aria-hidden": "true"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                      className: "min-w-0 flex-1 pl-1.5 font-medium leading-5 text-current",
                       children: name
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                      className: "mt-0.5 inline-flex h-6 min-w-[1.8rem] shrink-0 items-center justify-center self-start rounded-full px-1.5 text-[0.68rem] font-semibold ".concat(selectedCategory === id ? 'bg-white text-hn-primary ring-1 ring-[#d8e4ef]' : 'bg-[#f3f6fb] text-[#60758e]'),
+                      className: "inline-flex items-center justify-center rounded-full px-2 py-0.5 text-[0.7rem] font-semibold ".concat(selectedCategory === id ? 'bg-white text-hn-accent ring-1 ring-hn-accent/20' : 'bg-hn-surface-soft text-hn-text-muted'),
                       children: count
                     })]
                   }, id);
@@ -13637,21 +13630,24 @@ var ProductsPage = function ProductsPage() {
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "motion-fade-left flex-1",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "flex items-center justify-between mb-3",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
-                className: "text-[0.9rem] text-[#5f7088]",
-                children: [intl.formatMessage({
-                  id: 'products.showing'
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("strong", {
-                  className: "text-hn-primary font-semibold",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+              className: "mb-6 flex items-center justify-between border-b border-hn-border pb-3",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
+                className: "text-[1.5rem] font-bold text-hn-primary",
+                children: selectedCategory === 'all' ? intl.formatMessage({
+                  id: 'products.allProducts'
+                }) : (0,_data_products__WEBPACK_IMPORTED_MODULE_5__/* .getLocalizedCategoryName */ .BZ)(selectedCategory, intl.formatMessage)
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
+                className: "text-[0.9rem] text-hn-text-muted",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("strong", {
+                  className: "font-semibold text-hn-primary",
                   children: filteredProducts.length
                 }), " ", intl.formatMessage({
                   id: 'products.productsCount'
                 })]
-              })
+              })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-3",
+              className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4",
               id: "productGrid",
               children: filteredProducts.map(function (product) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_ProductCard__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
@@ -13661,7 +13657,7 @@ var ProductsPage = function ProductsPage() {
             })]
           })]
         })]
-      })]
+      })
     })]
   });
 };
