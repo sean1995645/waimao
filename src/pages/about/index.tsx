@@ -80,19 +80,19 @@ const AboutPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-4 max-md:grid-cols-2 gap-6 max-md:gap-3">
-            <div className="interactive-lift motion-card flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-gradient-to-br from-hn-surface to-white rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
+            <div className="interactive-lift motion-card flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-hn-surface rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
               <span className="text-[2.5rem] max-md:text-[2rem] font-bold text-hn-primary mb-2 max-md:mb-1 tracking-[-0.02em]">10+</span>
               <span className="text-sm max-md:text-[0.75rem] text-slate-600 text-center leading-tight">{intl.formatMessage({ id: 'stats.yearsExperience' })}</span>
             </div>
-            <div className="interactive-lift motion-card animation-delay-100 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-gradient-to-br from-hn-surface to-white rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
+            <div className="interactive-lift motion-card animation-delay-100 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-hn-surface rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
               <span className="text-[2.5rem] max-md:text-[2rem] font-bold text-hn-primary mb-2 max-md:mb-1 tracking-[-0.02em]">30+</span>
               <span className="text-sm max-md:text-[0.75rem] text-slate-600 text-center leading-tight">{intl.formatMessage({ id: 'stats.controlSKUs' })}</span>
             </div>
-            <div className="interactive-lift motion-card animation-delay-200 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-gradient-to-br from-hn-surface to-white rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
+            <div className="interactive-lift motion-card animation-delay-200 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-hn-surface rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
               <span className="text-[2.5rem] max-md:text-[2rem] font-bold text-hn-primary mb-2 max-md:mb-1 tracking-[-0.02em]">40+</span>
               <span className="text-sm max-md:text-[0.75rem] text-slate-600 text-center leading-tight">{intl.formatMessage({ id: 'stats.oemMarkets' })}</span>
             </div>
-            <div className="interactive-lift motion-card animation-delay-300 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-gradient-to-br from-hn-surface to-white rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
+            <div className="interactive-lift motion-card animation-delay-300 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-hn-surface rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20">
               <span className="text-[2.5rem] max-md:text-[2rem] font-bold text-hn-primary mb-2 max-md:mb-1 tracking-[-0.02em]">ISO/CE</span>
               <span className="text-sm max-md:text-[0.75rem] text-slate-600 text-center leading-tight">{intl.formatMessage({ id: 'about.stats.certified' })}</span>
             </div>

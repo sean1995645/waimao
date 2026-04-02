@@ -386,11 +386,10 @@ __webpack_require__.d(__webpack_exports__, {
   Helmet: () => (/* reexport */ index_module/* Helmet */.ql),
   Outlet: () => (/* reexport */ react_router/* Outlet */.j3),
   PluginManager: () => (/* reexport */ PluginManager),
-  useLocation: () => (/* reexport */ react_router/* useLocation */.TH),
   useParams: () => (/* reexport */ react_router/* useParams */.UO)
 });
 
-// UNUSED EXPORTS: ApplyPluginsType, HelmetProvider, Link, NavLink, Navigate, __getRoot, __useFetcher, createBrowserHistory, createHashHistory, createHistory, createMemoryHistory, createSearchParams, defineApp, generatePath, history, matchPath, matchRoutes, renderClient, resolvePath, terminal, useAppData, useClientLoaderData, useLoaderData, useMatch, useNavigate, useOutlet, useOutletContext, useResolvedPath, useRouteData, useRouteProps, useRoutes, useSearchParams, useSelectedRoutes, useServerInsertedHTML, useServerLoaderData, withRouter
+// UNUSED EXPORTS: ApplyPluginsType, HelmetProvider, Link, NavLink, Navigate, __getRoot, __useFetcher, createBrowserHistory, createHashHistory, createHistory, createMemoryHistory, createSearchParams, defineApp, generatePath, history, matchPath, matchRoutes, renderClient, resolvePath, terminal, useAppData, useClientLoaderData, useLoaderData, useLocation, useMatch, useNavigate, useOutlet, useOutletContext, useResolvedPath, useRouteData, useRouteProps, useRoutes, useSearchParams, useSelectedRoutes, useServerInsertedHTML, useServerLoaderData, withRouter
 
 // EXTERNAL MODULE: ./node_modules/.pnpm/react-helmet-async@1.3.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-helmet-async/lib/index.module.js
 var index_module = __webpack_require__(3810);
@@ -1316,7 +1315,7 @@ var PageHero = function PageHero(_ref) {
     panelText = _ref.panelText,
     stats = _ref.stats;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
-    className: "relative isolate overflow-hidden bg-[#0c192d] text-white",
+    className: "relative isolate overflow-hidden bg-hn-primary text-white",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "absolute inset-0 hidden bg-cover bg-no-repeat md:block",
       style: {
@@ -1330,29 +1329,15 @@ var PageHero = function PageHero(_ref) {
         backgroundPosition: 'center center'
       }
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "absolute inset-0 bg-[rgba(12,25,45,0.55)]"
+      className: "absolute inset-0 bg-[rgba(0,0,0,0.6)]"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "absolute inset-0 bg-gradient-to-r from-[rgba(7,17,30,0.92)] via-[rgba(7,17,30,0.8)_48%] to-[rgba(7,17,30,0.5)]"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_38%)] opacity-60"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "absolute -right-28 -top-24 h-72 w-72 rounded-full blur-[48px] opacity-35 motion-safe:animate-floatSoft",
-      style: {
-        background: "radial-gradient(circle, ".concat(accentColor, " 0%, transparent 72%)")
-      }
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "absolute -left-24 -bottom-36 h-64 w-64 rounded-full bg-white/10 blur-[48px] opacity-25 motion-safe:animate-driftX"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "absolute inset-0 opacity-[0.08]",
-      style: {
-        backgroundImage: 'url(/pattern.svg)'
-      }
+      className: "absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.8)] to-transparent"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "relative z-10 max-w-[1200px] mx-auto grid gap-5 sm:gap-0 px-4 sm:px-6 py-8 sm:py-20 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end lg:gap-10 lg:px-5 lg:py-24",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "max-w-[42rem] motion-fade-right",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-          className: "inline-flex items-center rounded-full border border-white/15 bg-white/10 px-2.5 py-0.5 text-[0.7rem] sm:text-[0.78rem] font-semibold uppercase tracking-[0.15em] text-[#c0d6e8] backdrop-blur-sm mb-2.5 sm:mb-4 sm:px-3 sm:py-1 motion-safe:animate-pulseGlow",
+          className: "inline-flex items-center rounded-full bg-hn-accent/20 px-2.5 py-0.5 text-[0.7rem] sm:text-[0.78rem] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm mb-2.5 sm:mb-4 sm:px-3 sm:py-1",
           children: eyebrow
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
           className: "max-w-[13ch] text-[1.7rem] sm:text-[2.8rem] lg:text-[3.4rem] font-bold leading-[1.1]",
@@ -1362,18 +1347,18 @@ var PageHero = function PageHero(_ref) {
           children: description
         })]
       }), (panelTitle || panelText || stats) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "motion-fade-left rounded-xl sm:rounded-3xl border border-white/12 bg-white/10 px-3.5 sm:px-6 py-3.5 sm:py-6 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl",
+        className: "motion-fade-left rounded-xl sm:rounded-3xl border border-white/10 bg-white/5 px-3.5 sm:px-6 py-3.5 sm:py-6 shadow-xl backdrop-blur-md",
         children: [panelTitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-          className: "text-[0.7rem] sm:text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[#c0d6e8]",
+          className: "text-[0.7rem] sm:text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-gray-300",
           children: panelTitle
         }), panelText && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-          className: "mt-2 sm:mt-3 text-[0.82rem] sm:text-[0.95rem] leading-[1.5] sm:leading-[1.75] text-white/[0.78]",
+          className: "mt-2 sm:mt-3 text-[0.82rem] sm:text-[0.95rem] leading-[1.5] sm:leading-[1.75] text-gray-200",
           children: panelText
         }), stats && stats.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "mt-3 sm:mt-5 lg:mt-5 grid grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-2 lg:gap-3",
           children: stats.map(function (stat, index) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-              className: "rounded-lg sm:rounded-[1.1rem] border border-white/10 bg-[rgba(13,29,52,0.55)] px-2.5 sm:px-4 py-2.5 sm:py-4 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-3 motion-safe:duration-700",
+              className: "rounded-lg sm:rounded-[1.1rem] border border-white/5 bg-white/5 px-2.5 sm:px-4 py-2.5 sm:py-4 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-3 motion-safe:duration-700",
               style: {
                 animationDelay: "".concat(index * 90, "ms")
               },
@@ -1452,43 +1437,41 @@ var ProductCard = function ProductCard(_ref) {
     setIsSelected(!isSelected);
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-    className: "motion-card group flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(0,0,0,0.1)] ".concat(isSelected ? '[&>a]:shadow-[0_16px_36px_rgba(13,111,184,0.2)] ring-1 ring-hn-accent/20' : ''),
+    className: "motion-card group flex flex-col overflow-hidden rounded-xl bg-white border border-hn-border transition-all duration-300 hover:shadow-md ".concat(isSelected ? 'border-hn-accent ring-1 ring-hn-accent/20' : ''),
     "data-category": product.categoryId,
     "data-featured": product.featured,
     "data-title": localizedProduct.title,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_components_TransitionLink__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
       to: "/products/".concat(product.slug),
       className: "flex flex-1 flex-col no-underline text-inherit",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-        className: "relative h-[140px] lg:h-[152px] bg-[#e9eef5] overflow-hidden",
-        children: [product.image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "relative h-[140px] lg:h-[152px] bg-hn-surface-soft overflow-hidden",
+        children: product.image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
           src: product.image,
           alt: localizedProduct.title,
           loading: "lazy",
-          className: "w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.06] group-focus-visible:scale-[1.06]"
+          className: "w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
         }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-          className: "w-full h-full bg-gradient-to-br from-[#e4e9f2] to-[#cad3e1]"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-          className: "absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[rgba(6,12,24,0.45)] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-          className: "absolute inset-0 hidden lg:flex items-center justify-start w-[min(72%,220px)] right-0 px-4 pl-6 opacity-0 translate-x-full transition-[transform,opacity] duration-300 ease-out bg-gradient-to-l from-[rgba(4,8,16,1)] via-[rgba(5,10,20,0.96)_58%] to-[rgba(5,10,20,0.16)] pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0 [@media(hover:none)]:!hidden",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
-            className: "text-[0.82rem] lg:text-[0.86rem] font-normal leading-[1.4] text-white",
-            children: localizedProduct.title
-          })
-        })]
+          className: "w-full h-full bg-hn-surface"
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-        className: "block lg:hidden py-2 px-2.5 text-center",
+        className: "block lg:hidden py-2 px-2.5 text-center border-b border-hn-surface-soft",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
           className: "text-[0.6rem] leading-[1.3] text-hn-primary font-semibold",
           children: localizedProduct.title
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "hidden lg:block py-3 px-4 text-center border-b border-hn-surface-soft flex-1 flex items-center justify-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+          className: "text-[0.8rem] leading-[1.3] text-hn-primary font-semibold",
+          children: localizedProduct.title
+        })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-      className: "mt-auto flex justify-center border-t border-hn-surface-soft px-2 py-2 lg:px-3.5 lg:py-3",
+      className: "mt-auto flex justify-center px-2 py-2 lg:px-3.5 lg:py-3 bg-hn-surface",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("button", {
         type: "button",
-        className: "flex min-h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-lg border-2 px-3 py-2 lg:px-4 lg:py-2.5 text-center font-semibold transition-all duration-300 ".concat(isSelected ? 'border-hn-accent bg-hn-accent text-white shadow-[0_4px_12px_rgba(13,111,184,0.25)] hover:bg-hn-accent-strong hover:border-hn-accent-strong hover:shadow-[0_6px_16px_rgba(13,111,184,0.35)] active:scale-95' : 'border-gray-200 bg-white text-gray-700 hover:border-hn-accent hover:bg-hn-accent/5 hover:text-hn-accent active:scale-95 hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)]', " lg:hover:-translate-y-0.5"),
+        className: "flex min-h-[40px] w-full cursor-pointer items-center justify-center gap-2 rounded-lg border px-3 py-2 lg:px-4 lg:py-2.5 text-center font-semibold transition-all duration-300 ".concat(isSelected ? 'border-hn-accent bg-hn-accent text-white shadow-sm hover:bg-hn-accent-strong active:scale-95' : 'border-transparent bg-white text-gray-700 hover:border-hn-border hover:bg-gray-50 hover:text-hn-primary active:scale-95 shadow-sm'),
         onClick: handleToggleInquiry,
         "aria-label": isSelected ? intl.formatMessage({
           id: 'inquiry.remove'
@@ -9571,7 +9554,7 @@ var getLocale = function getLocale() {
 
 /***/ }),
 
-/***/ 6680:
+/***/ 4885:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9898,86 +9881,7 @@ var Header = function Header() {
   });
 };
 /* harmony default export */ const components_Header = (Header);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@babel+runtime@7.23.6/node_modules/@babel/runtime/helpers/objectSpread2.js
-var objectSpread2 = __webpack_require__(6068);
-var objectSpread2_default = /*#__PURE__*/__webpack_require__.n(objectSpread2);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@babel+runtime@7.23.6/node_modules/@babel/runtime/helpers/typeof.js
-var helpers_typeof = __webpack_require__(1759);
-var typeof_default = /*#__PURE__*/__webpack_require__.n(helpers_typeof);
-;// CONCATENATED MODULE: ./src/utils/cookieConsent.ts
-
-
-var COOKIE_CONSENT_STORAGE_KEY = 'heatnexis_cookie_consent';
-var COOKIE_CONSENT_EVENT = 'heatnexis-cookie-consent-change';
-var COOKIE_CONSENT_OPEN_EVENT = 'heatnexis-cookie-consent-open';
-var ACCEPT_ALL_PREFERENCES = {
-  necessary: true,
-  analytics: true,
-  supportChat: true
-};
-var NECESSARY_ONLY_PREFERENCES = {
-  necessary: true,
-  analytics: false,
-  supportChat: false
-};
-var normalizeCookieConsent = function normalizeCookieConsent(value) {
-  if (value === 'accepted') {
-    return ACCEPT_ALL_PREFERENCES;
-  }
-  if (value === 'necessary') {
-    return NECESSARY_ONLY_PREFERENCES;
-  }
-  if (!value || typeof_default()(value) !== 'object') {
-    return null;
-  }
-  var candidate = value;
-  return {
-    necessary: true,
-    analytics: candidate.analytics === true,
-    supportChat: candidate.supportChat === true
-  };
-};
-var getCookieConsentPreferences = function getCookieConsentPreferences() {
-  if (typeof window === 'undefined') {
-    return null;
-  }
-  var value = localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
-  if (!value) {
-    return null;
-  }
-  try {
-    return normalizeCookieConsent(JSON.parse(value));
-  } catch (error) {
-    return normalizeCookieConsent(value);
-  }
-};
-var hasCookieConsentFor = function hasCookieConsentFor(category) {
-  var preferences = getCookieConsentPreferences();
-  return preferences ? preferences[category] === true : false;
-};
-var createAcceptAllCookieConsent = function createAcceptAllCookieConsent() {
-  return objectSpread2_default()({}, ACCEPT_ALL_PREFERENCES);
-};
-var createNecessaryOnlyCookieConsent = function createNecessaryOnlyCookieConsent() {
-  return objectSpread2_default()({}, NECESSARY_ONLY_PREFERENCES);
-};
-var setCookieConsentPreferences = function setCookieConsentPreferences(value) {
-  if (typeof window === 'undefined') {
-    return;
-  }
-  localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, JSON.stringify(value));
-  window.dispatchEvent(new CustomEvent(COOKIE_CONSENT_EVENT, {
-    detail: value
-  }));
-};
-var openCookieConsentPreferences = function openCookieConsentPreferences() {
-  if (typeof window === 'undefined') {
-    return;
-  }
-  window.dispatchEvent(new Event(COOKIE_CONSENT_OPEN_EVENT));
-};
 ;// CONCATENATED MODULE: ./src/components/Footer.tsx
-
 
 
 
@@ -9985,7 +9889,7 @@ var openCookieConsentPreferences = function openCookieConsentPreferences() {
 var Footer = function Footer() {
   var intl = (0,useIntl/* default */.Z)();
   return /*#__PURE__*/(0,jsx_runtime.jsx)("footer", {
-    className: "bg-gradient-to-br from-[#0c192d] via-hn-primary to-[#163154] text-white py-12 md:py-8 mt-16 md:mt-10",
+    className: "bg-hn-primary text-white py-12 md:py-8 mt-16 md:mt-10",
     children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
       className: "max-w-[1200px] mx-auto px-5 md:px-4",
       children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
@@ -10026,34 +9930,45 @@ var Footer = function Footer() {
             className: "flex gap-4 md:gap-3",
             children: [/*#__PURE__*/(0,jsx_runtime.jsx)("a", {
               href: "#",
-              className: "text-white no-underline transition-all duration-300 text-base md:text-sm hover:text-hn-accent hover:-translate-y-0.5",
-              children: intl.formatMessage({
+              "aria-label": intl.formatMessage({
                 id: 'footer.facebook'
+              }),
+              className: "inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-hn-accent hover:text-white",
+              children: /*#__PURE__*/(0,jsx_runtime.jsx)("svg", {
+                width: "20",
+                height: "20",
+                viewBox: "0 0 24 24",
+                fill: "currentColor",
+                children: /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+                  d: "M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
+                })
               })
             }), /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
               href: "#",
-              className: "text-white no-underline transition-all duration-300 text-base md:text-sm hover:text-hn-accent hover:-translate-y-0.5",
-              children: intl.formatMessage({
+              "aria-label": intl.formatMessage({
                 id: 'footer.linkedin'
+              }),
+              className: "inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-hn-accent hover:text-white",
+              children: /*#__PURE__*/(0,jsx_runtime.jsx)("svg", {
+                width: "20",
+                height: "20",
+                viewBox: "0 0 24 24",
+                fill: "currentColor",
+                children: /*#__PURE__*/(0,jsx_runtime.jsx)("path", {
+                  d: "M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.16-3.66c-1.16 0-1.69.64-1.98 1.09V9.65h-2.2v8.85h2.2v-4.9c0-.26.05-.52.12-.7a1.44 1.44 0 0 1 1.35-.96c.95 0 1.33.72 1.33 1.78v4.83h2.34M6.88 8.65a1.28 1.28 0 0 0 1.3-1.28A1.28 1.28 0 0 0 6.88 6.1 1.28 1.28 0 0 0 5.58 7.37 1.28 1.28 0 0 0 6.88 8.65M5.78 18.5h2.2V9.65H5.78v8.85z"
+                })
               })
             })]
           })]
         })]
-      }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
+      }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
         className: "motion-fade-up animation-delay-300 text-center pt-8 md:pt-6 border-t border-white/10",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsx)("button", {
-          type: "button",
-          onClick: openCookieConsentPreferences,
-          className: "mb-3 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[0.78rem] font-semibold text-white/80 transition-all duration-200 hover:border-white/30 hover:bg-white/10 hover:text-white",
-          children: intl.formatMessage({
-            id: 'footer.cookieSettings'
-          })
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
+        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("p", {
           className: "text-gray-400 text-base md:text-sm",
           children: ["\xA9 HeatNexis. ", intl.formatMessage({
             id: 'footer.rights'
           })]
-        })]
+        })
       })]
     })
   });
@@ -10116,331 +10031,7 @@ var BackToTop = function BackToTop() {
 /* harmony default export */ const components_BackToTop = (BackToTop);
 // EXTERNAL MODULE: ./src/components/BulkInquiry.tsx
 var BulkInquiry = __webpack_require__(2503);
-// EXTERNAL MODULE: ./node_modules/.pnpm/@babel+runtime@7.23.6/node_modules/@babel/runtime/helpers/defineProperty.js
-var defineProperty = __webpack_require__(2092);
-var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
-;// CONCATENATED MODULE: ./src/components/CookieConsent.tsx
-
-
-
-
-
-
-
-
-var CookieConsent = function CookieConsent() {
-  var intl = (0,useIntl/* default */.Z)();
-  var _useState = (0,react.useState)(false),
-    _useState2 = slicedToArray_default()(_useState, 2),
-    isVisible = _useState2[0],
-    setIsVisible = _useState2[1];
-  var _useState3 = (0,react.useState)(false),
-    _useState4 = slicedToArray_default()(_useState3, 2),
-    isReady = _useState4[0],
-    setIsReady = _useState4[1];
-  var _useState5 = (0,react.useState)(false),
-    _useState6 = slicedToArray_default()(_useState5, 2),
-    isPreferencesOpen = _useState6[0],
-    setIsPreferencesOpen = _useState6[1];
-  var _useState7 = (0,react.useState)(createNecessaryOnlyCookieConsent()),
-    _useState8 = slicedToArray_default()(_useState7, 2),
-    preferences = _useState8[0],
-    setPreferences = _useState8[1];
-  (0,react.useEffect)(function () {
-    var savedPreferences = getCookieConsentPreferences();
-    if (savedPreferences) {
-      setPreferences(savedPreferences);
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-    setIsReady(true);
-  }, []);
-  (0,react.useEffect)(function () {
-    if (typeof window === 'undefined') {
-      return;
-    }
-    var handleOpen = function handleOpen() {
-      var savedPreferences = getCookieConsentPreferences();
-      if (savedPreferences) {
-        setPreferences(savedPreferences);
-      }
-      setIsVisible(true);
-      setIsPreferencesOpen(true);
-    };
-    window.addEventListener(COOKIE_CONSENT_OPEN_EVENT, handleOpen);
-    return function () {
-      window.removeEventListener(COOKIE_CONSENT_OPEN_EVENT, handleOpen);
-    };
-  }, []);
-  var handleSave = function handleSave(value) {
-    setCookieConsentPreferences(value);
-    setPreferences(value);
-    setIsVisible(false);
-    setIsPreferencesOpen(false);
-  };
-  var togglePreference = function togglePreference(key) {
-    setPreferences(function (current) {
-      return objectSpread2_default()(objectSpread2_default()({}, current), {}, defineProperty_default()({}, key, !current[key]));
-    });
-  };
-  if (!isReady || !isVisible) {
-    return null;
-  }
-  return /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-    className: "fixed inset-x-0 bottom-0 z-[650] w-full motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-5 motion-safe:duration-300",
-    children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-      className: "w-full border-t border-[#d9e4ef] bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(244,248,252,0.96))] shadow-[0_-14px_38px_rgba(12,25,45,0.12)] backdrop-blur-xl",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-        className: "mx-auto grid max-w-[1280px] gap-5 px-4 py-4 sm:px-5 md:px-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:px-8",
-        children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-          className: "min-w-0",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("span", {
-            className: "inline-flex items-center rounded-full bg-hn-accent/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-hn-accent",
-            children: intl.formatMessage({
-              id: 'cookie.badge'
-            })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("h3", {
-            className: "mt-3 text-[1rem] font-bold tracking-[-0.02em] text-hn-primary sm:text-[1.06rem] md:text-[1.2rem]",
-            children: intl.formatMessage({
-              id: 'cookie.title'
-            })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-            className: "mt-2 max-w-[52rem] text-[0.84rem] leading-6 text-[#5d7186] sm:text-[0.88rem] md:text-[0.95rem] md:leading-7",
-            children: intl.formatMessage({
-              id: 'cookie.description'
-            })
-          })]
-        }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-          className: "grid grid-cols-2 gap-2 sm:flex sm:flex-row lg:justify-end",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsx)("button", {
-            type: "button",
-            onClick: function onClick() {
-              return setIsPreferencesOpen(function (current) {
-                return !current;
-              });
-            },
-            className: "inline-flex min-h-[42px] items-center justify-center rounded-xl border border-[#d8e4ef] bg-white px-3.5 py-2.5 text-[0.8rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent sm:min-h-[46px] sm:px-5 sm:py-3 sm:text-[0.9rem]",
-            children: intl.formatMessage({
-              id: 'cookie.manage'
-            })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
-            type: "button",
-            onClick: function onClick() {
-              return handleSave(createNecessaryOnlyCookieConsent());
-            },
-            className: "inline-flex min-h-[42px] items-center justify-center rounded-xl border border-[#d8e4ef] bg-white px-3.5 py-2.5 text-[0.8rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent sm:min-h-[46px] sm:px-5 sm:py-3 sm:text-[0.9rem]",
-            children: intl.formatMessage({
-              id: 'cookie.rejectOptional'
-            })
-          }), /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
-            type: "button",
-            onClick: function onClick() {
-              return handleSave(createAcceptAllCookieConsent());
-            },
-            className: "col-span-2 inline-flex min-h-[42px] items-center justify-center rounded-xl bg-hn-primary px-3.5 py-2.5 text-[0.8rem] font-semibold text-white shadow-[0_14px_30px_rgba(16,35,63,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0b2138] hover:shadow-[0_18px_36px_rgba(16,35,63,0.22)] sm:col-auto sm:min-h-[46px] sm:px-5 sm:py-3 sm:text-[0.9rem]",
-            children: intl.formatMessage({
-              id: 'cookie.acceptAll'
-            })
-          })]
-        })]
-      }), isPreferencesOpen && /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-        className: "border-t border-[#e2ebf3] bg-white/70",
-        children: /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-          className: "mx-auto grid max-w-[1280px] gap-3 px-4 py-4 sm:px-5 md:px-6 lg:px-8",
-          children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-            className: "flex items-start justify-between gap-4 rounded-2xl border border-[#dfe8f1] bg-white px-4 py-4",
-            children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-              children: [/*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-                className: "text-[0.92rem] font-semibold text-hn-primary",
-                children: intl.formatMessage({
-                  id: 'cookie.categoryNecessaryTitle'
-                })
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-                className: "mt-1 text-[0.84rem] leading-6 text-[#5d7186]",
-                children: intl.formatMessage({
-                  id: 'cookie.categoryNecessaryDescription'
-                })
-              })]
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
-              className: "inline-flex min-w-[4.8rem] items-center justify-center rounded-full bg-[#eef4f9] px-3 py-1 text-[0.78rem] font-semibold text-hn-primary",
-              children: intl.formatMessage({
-                id: 'cookie.alwaysOn'
-              })
-            })]
-          }), /*#__PURE__*/(0,jsx_runtime.jsxs)("button", {
-            type: "button",
-            onClick: function onClick() {
-              return togglePreference('supportChat');
-            },
-            className: "flex items-start justify-between gap-4 rounded-2xl border border-[#dfe8f1] bg-white px-4 py-4 text-left transition-all duration-200 hover:border-hn-accent/40",
-            children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-              children: [/*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-                className: "text-[0.92rem] font-semibold text-hn-primary",
-                children: intl.formatMessage({
-                  id: 'cookie.categorySupportTitle'
-                })
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-                className: "mt-1 text-[0.84rem] leading-6 text-[#5d7186]",
-                children: intl.formatMessage({
-                  id: 'cookie.categorySupportDescription'
-                })
-              })]
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
-              className: "inline-flex min-w-[4.8rem] items-center justify-center rounded-full px-3 py-1 text-[0.78rem] font-semibold ".concat(preferences.supportChat ? 'bg-hn-primary text-white' : 'bg-[#eef4f9] text-[#60758e]'),
-              children: preferences.supportChat ? intl.formatMessage({
-                id: 'cookie.on'
-              }) : intl.formatMessage({
-                id: 'cookie.off'
-              })
-            })]
-          }), /*#__PURE__*/(0,jsx_runtime.jsxs)("button", {
-            type: "button",
-            onClick: function onClick() {
-              return togglePreference('analytics');
-            },
-            className: "flex items-start justify-between gap-4 rounded-2xl border border-[#dfe8f1] bg-white px-4 py-4 text-left transition-all duration-200 hover:border-hn-accent/40",
-            children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-              children: [/*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-                className: "text-[0.92rem] font-semibold text-hn-primary",
-                children: intl.formatMessage({
-                  id: 'cookie.categoryAnalyticsTitle'
-                })
-              }), /*#__PURE__*/(0,jsx_runtime.jsx)("p", {
-                className: "mt-1 text-[0.84rem] leading-6 text-[#5d7186]",
-                children: intl.formatMessage({
-                  id: 'cookie.categoryAnalyticsDescription'
-                })
-              })]
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("span", {
-              className: "inline-flex min-w-[4.8rem] items-center justify-center rounded-full px-3 py-1 text-[0.78rem] font-semibold ".concat(preferences.analytics ? 'bg-hn-primary text-white' : 'bg-[#eef4f9] text-[#60758e]'),
-              children: preferences.analytics ? intl.formatMessage({
-                id: 'cookie.on'
-              }) : intl.formatMessage({
-                id: 'cookie.off'
-              })
-            })]
-          }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
-            className: "flex flex-col gap-2 pt-1 sm:flex-row sm:justify-end",
-            children: [/*#__PURE__*/(0,jsx_runtime.jsx)("button", {
-              type: "button",
-              onClick: function onClick() {
-                return setIsPreferencesOpen(false);
-              },
-              className: "inline-flex min-h-[44px] items-center justify-center rounded-xl border border-[#d8e4ef] bg-white px-5 py-3 text-[0.88rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent",
-              children: intl.formatMessage({
-                id: 'cookie.cancel'
-              })
-            }), /*#__PURE__*/(0,jsx_runtime.jsx)("button", {
-              type: "button",
-              onClick: function onClick() {
-                return handleSave(preferences);
-              },
-              className: "inline-flex min-h-[44px] items-center justify-center rounded-xl bg-hn-primary px-5 py-3 text-[0.88rem] font-semibold text-white transition-all duration-200 hover:bg-[#0b2138]",
-              children: intl.formatMessage({
-                id: 'cookie.savePreferences'
-              })
-            })]
-          })]
-        })
-      })]
-    })
-  });
-};
-/* harmony default export */ const components_CookieConsent = (CookieConsent);
-;// CONCATENATED MODULE: ./src/components/Analytics.tsx
-
-
-
-var GA_MEASUREMENT_ID = "";
-var GA_SCRIPT_SELECTOR = 'script[data-ga-loader="true"]';
-var ensureAnalyticsLoaded = function ensureAnalyticsLoaded() {
-  if (typeof window === 'undefined' || !GA_MEASUREMENT_ID) {
-    return false;
-  }
-  var analyticsWindow = window;
-  analyticsWindow.dataLayer = analyticsWindow.dataLayer || [];
-  analyticsWindow.gtag = analyticsWindow.gtag || function gtag() {
-    var _analyticsWindow$data;
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    (_analyticsWindow$data = analyticsWindow.dataLayer) === null || _analyticsWindow$data === void 0 || _analyticsWindow$data.push(args);
-  };
-  var existingScript = document.querySelector(GA_SCRIPT_SELECTOR);
-  if (!existingScript) {
-    var script = document.createElement('script');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=".concat(GA_MEASUREMENT_ID);
-    script.async = true;
-    script.dataset.gaLoader = 'true';
-    document.head.appendChild(script);
-  }
-  if (!analyticsWindow.__heatnexisGaInitialized) {
-    analyticsWindow.gtag('js', new Date());
-    analyticsWindow.gtag('consent', 'default', {
-      analytics_storage: 'denied'
-    });
-    analyticsWindow.gtag('config', GA_MEASUREMENT_ID, {
-      anonymize_ip: true,
-      send_page_view: false
-    });
-    analyticsWindow.__heatnexisGaInitialized = true;
-  }
-  analyticsWindow.gtag('consent', 'update', {
-    analytics_storage: 'granted'
-  });
-  return true;
-};
-var disableAnalytics = function disableAnalytics() {
-  var _analyticsWindow$gtag;
-  if (typeof window === 'undefined') {
-    return;
-  }
-  var analyticsWindow = window;
-  (_analyticsWindow$gtag = analyticsWindow.gtag) === null || _analyticsWindow$gtag === void 0 || _analyticsWindow$gtag.call(analyticsWindow, 'consent', 'update', {
-    analytics_storage: 'denied'
-  });
-};
-var Analytics = function Analytics() {
-  var location = (0,_umi_production_exports.useLocation)();
-  (0,react.useEffect)(function () {
-    if (!GA_MEASUREMENT_ID) {
-      return;
-    }
-    var syncAnalyticsConsent = function syncAnalyticsConsent() {
-      if (hasCookieConsentFor('analytics')) {
-        ensureAnalyticsLoaded();
-      } else {
-        disableAnalytics();
-      }
-    };
-    syncAnalyticsConsent();
-    window.addEventListener(COOKIE_CONSENT_EVENT, syncAnalyticsConsent);
-    return function () {
-      window.removeEventListener(COOKIE_CONSENT_EVENT, syncAnalyticsConsent);
-    };
-  }, []);
-  (0,react.useEffect)(function () {
-    var _analyticsWindow$gtag2;
-    if (!GA_MEASUREMENT_ID || !hasCookieConsentFor('analytics')) {
-      return;
-    }
-    var loaded = ensureAnalyticsLoaded();
-    if (!loaded) {
-      return;
-    }
-    var analyticsWindow = window;
-    (_analyticsWindow$gtag2 = analyticsWindow.gtag) === null || _analyticsWindow$gtag2 === void 0 || _analyticsWindow$gtag2.call(analyticsWindow, 'event', 'page_view', {
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: "".concat(location.pathname).concat(location.search).concat(location.hash)
-    });
-  }, [location.hash, location.pathname, location.search]);
-  return null;
-};
-/* harmony default export */ const components_Analytics = (Analytics);
 ;// CONCATENATED MODULE: ./src/components/Crisp.tsx
-
 
 var CRISP_SCRIPT_SELECTOR = 'script[data-crisp-loader="true"]';
 var CRISP_WEBSITE_ID = 'ca9d8e2e-cc3a-409b-bf67-16e6778a2c1e';
@@ -10450,9 +10041,6 @@ var Crisp = function Crisp() {
       return;
     }
     var loadCrisp = function loadCrisp() {
-      if (!hasCookieConsentFor('supportChat')) {
-        return;
-      }
       var crispWindow = window;
       crispWindow.$crisp = crispWindow.$crisp || [];
       crispWindow.CRISP_WEBSITE_ID = CRISP_WEBSITE_ID;
@@ -10467,13 +10055,6 @@ var Crisp = function Crisp() {
       document.head.appendChild(script);
     };
     loadCrisp();
-    var handleConsentChange = function handleConsentChange() {
-      loadCrisp();
-    };
-    window.addEventListener(COOKIE_CONSENT_EVENT, handleConsentChange);
-    return function () {
-      window.removeEventListener(COOKIE_CONSENT_EVENT, handleConsentChange);
-    };
   }, []);
   return null;
 };
@@ -10491,14 +10072,12 @@ var global = __webpack_require__(7134);
 
 
 
-
-
 function Layout() {
   return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [/*#__PURE__*/(0,jsx_runtime.jsx)(components_Header, {}), /*#__PURE__*/(0,jsx_runtime.jsx)("main", {
       className: "min-h-screen motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500",
       children: /*#__PURE__*/(0,jsx_runtime.jsx)(_umi_production_exports.Outlet, {})
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Footer, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_BackToTop, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(BulkInquiry/* default */.ZP, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_CookieConsent, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Analytics, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Crisp, {})]
+    }), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Footer, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_BackToTop, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(BulkInquiry/* default */.ZP, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(components_Crisp, {})]
   });
 }
 
@@ -10635,7 +10214,7 @@ var AboutPage = function AboutPage() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "grid grid-cols-4 max-md:grid-cols-2 gap-6 max-md:gap-3",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "interactive-lift motion-card flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-gradient-to-br from-hn-surface to-white rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20",
+            className: "interactive-lift motion-card flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-hn-surface rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               className: "text-[2.5rem] max-md:text-[2rem] font-bold text-hn-primary mb-2 max-md:mb-1 tracking-[-0.02em]",
               children: "10+"
@@ -10646,7 +10225,7 @@ var AboutPage = function AboutPage() {
               })
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "interactive-lift motion-card animation-delay-100 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-gradient-to-br from-hn-surface to-white rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20",
+            className: "interactive-lift motion-card animation-delay-100 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-hn-surface rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               className: "text-[2.5rem] max-md:text-[2rem] font-bold text-hn-primary mb-2 max-md:mb-1 tracking-[-0.02em]",
               children: "30+"
@@ -10657,7 +10236,7 @@ var AboutPage = function AboutPage() {
               })
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "interactive-lift motion-card animation-delay-200 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-gradient-to-br from-hn-surface to-white rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20",
+            className: "interactive-lift motion-card animation-delay-200 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-hn-surface rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               className: "text-[2.5rem] max-md:text-[2rem] font-bold text-hn-primary mb-2 max-md:mb-1 tracking-[-0.02em]",
               children: "40+"
@@ -10668,7 +10247,7 @@ var AboutPage = function AboutPage() {
               })
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "interactive-lift motion-card animation-delay-300 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-gradient-to-br from-hn-surface to-white rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20",
+            className: "interactive-lift motion-card animation-delay-300 flex flex-col items-center px-6 max-md:px-3 py-8 max-md:py-5 bg-hn-surface rounded-xl max-md:rounded-lg border border-gray-100 transition-all duration-300 hover:border-hn-accent/20",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               className: "text-[2.5rem] max-md:text-[2rem] font-bold text-hn-primary mb-2 max-md:mb-1 tracking-[-0.02em]",
               children: "ISO/CE"
@@ -12089,7 +11668,7 @@ var ContactPage = function ContactPage() {
               children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
                 className: "flex items-start gap-4 max-md:gap-3",
                 children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-                  className: "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gray-100 bg-gradient-to-br from-hn-surface to-white text-hn-accent shadow-sm max-md:h-11 max-md:w-11 max-md:rounded-lg",
+                  className: "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gray-100 bg-hn-surface text-hn-accent shadow-sm max-md:h-11 max-md:w-11 max-md:rounded-lg",
                   children: /*#__PURE__*/(0,jsx_runtime.jsxs)("svg", {
                     width: "24",
                     height: "24",
@@ -12118,7 +11697,7 @@ var ContactPage = function ContactPage() {
               }), /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
                 className: "flex items-start gap-4 max-md:gap-3",
                 children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-                  className: "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gray-100 bg-gradient-to-br from-hn-surface to-white text-hn-accent shadow-sm max-md:h-11 max-md:w-11 max-md:rounded-lg",
+                  className: "flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gray-100 bg-hn-surface text-hn-accent shadow-sm max-md:h-11 max-md:w-11 max-md:rounded-lg",
                   children: /*#__PURE__*/(0,jsx_runtime.jsx)("svg", {
                     width: "24",
                     height: "24",
@@ -12145,7 +11724,7 @@ var ContactPage = function ContactPage() {
               })]
             })]
           }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-            className: "motion-fade-left w-full max-w-[440px] justify-self-start rounded-2xl border border-gray-100 bg-gradient-to-br from-hn-surface to-white p-6 shadow-sm lg:justify-self-end max-md:rounded-xl max-md:p-5",
+            className: "motion-fade-left w-full max-w-[440px] justify-self-start rounded-2xl border border-gray-100 bg-hn-surface p-6 shadow-sm lg:justify-self-end max-md:rounded-xl max-md:p-5",
             children: state.succeeded ? /*#__PURE__*/(0,jsx_runtime.jsxs)("div", {
               className: "motion-pop flex flex-col gap-4",
               children: [/*#__PURE__*/(0,jsx_runtime.jsx)("div", {
@@ -12379,7 +11958,7 @@ var HomePage = function HomePage() {
     secondaryLabel: intl.formatMessage({
       id: 'home.hero.getInTouch'
     }),
-    accentClass: 'from-[rgba(10,20,40,0.82)] via-[rgba(10,20,40,0.65)] to-[rgba(10,20,40,0.45)]'
+    accentClass: 'from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.5)] to-transparent'
   }, {
     id: 'products',
     desktopImage: '/page-hero-products-photo.jpg',
@@ -12409,7 +11988,7 @@ var HomePage = function HomePage() {
       id: 'product.detail.requestQuote',
       defaultMessage: 'Request quote for this model'
     }),
-    accentClass: 'from-[rgba(5,16,32,0.86)] via-[rgba(7,23,44,0.64)] to-[rgba(8,31,54,0.34)]'
+    accentClass: 'from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.5)] to-transparent'
   }, {
     id: 'about',
     desktopImage: '/page-hero-about-photo.jpg',
@@ -12438,7 +12017,7 @@ var HomePage = function HomePage() {
     secondaryLabel: intl.formatMessage({
       id: 'home.hero.getInTouch'
     }),
-    accentClass: 'from-[rgba(9,18,34,0.84)] via-[rgba(11,30,52,0.62)] to-[rgba(19,57,94,0.3)]'
+    accentClass: 'from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.5)] to-transparent'
   }, {
     id: 'contact',
     desktopImage: '/page-hero-contact-photo.jpg',
@@ -12467,7 +12046,7 @@ var HomePage = function HomePage() {
     secondaryLabel: intl.formatMessage({
       id: 'home.hero.viewProducts'
     }),
-    accentClass: 'from-[rgba(7,16,30,0.9)] via-[rgba(10,28,50,0.68)] to-[rgba(18,48,76,0.3)]'
+    accentClass: 'from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.5)] to-transparent'
   }];
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
     _useState2 = _Users_sean_Code_web_waimao_node_modules_pnpm_babel_runtime_7_23_6_node_modules_babel_runtime_helpers_slicedToArray_js__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
@@ -12631,59 +12210,16 @@ var HomePage = function HomePage() {
                   backgroundImage: "url('".concat(slide.mobileImage, "')")
                 }
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-                className: "absolute inset-0 bg-gradient-to-br ".concat(slide.accentClass)
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-                className: "absolute inset-0 bg-[linear-gradient(90deg,rgba(6,13,24,0.48)_0%,rgba(7,18,34,0.22)_48%,rgba(7,18,34,0.1)_100%)]"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-                className: "absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_36%)]"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-                className: "absolute right-[10%] top-[14%] h-48 w-48 rounded-full blur-[28px] transition-all duration-700 ".concat(index === activeHeroSlide ? 'opacity-100 scale-100' : 'opacity-30 scale-90', " bg-[radial-gradient(circle,rgba(95,167,212,0.28),transparent_68%)] motion-safe:animate-floatSoft")
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-                className: "absolute left-[8%] bottom-[12%] h-40 w-40 rounded-full blur-[34px] transition-all duration-700 ".concat(index === activeHeroSlide ? 'opacity-80' : 'opacity-25', " bg-[radial-gradient(circle,rgba(255,255,255,0.16),transparent_70%)] motion-safe:animate-driftX")
+                className: "absolute inset-0 bg-gradient-to-r ".concat(slide.accentClass)
               })]
             }, slide.id);
           })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "absolute inset-y-0 right-0 z-[2] hidden w-[132px] items-center justify-center pr-6 lg:flex",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: "flex w-full flex-col items-center gap-3 rounded-[1.8rem] border border-white/12 bg-[rgba(8,17,30,0.34)] px-3 py-4 backdrop-blur-xl shadow-[0_18px_40px_rgba(0,0,0,0.16)]",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "flex items-center gap-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-              type: "button",
-              onClick: goToPreviousHeroSlide,
-              "aria-label": "Previous hero background",
-              className: "inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/16 bg-white/10 text-white transition-all duration-200 hover:-translate-x-0.5 hover:bg-white/18",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
-                width: "18",
-                height: "18",
-                viewBox: "0 0 24 24",
-                fill: "none",
-                stroke: "currentColor",
-                strokeWidth: "2",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("polyline", {
-                  points: "15 18 9 12 15 6"
-                })
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-              type: "button",
-              onClick: goToNextHeroSlide,
-              "aria-label": "Next hero background",
-              className: "inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/16 bg-white/10 text-white transition-all duration-200 hover:translate-x-0.5 hover:bg-white/18",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
-                width: "18",
-                height: "18",
-                viewBox: "0 0 24 24",
-                fill: "none",
-                stroke: "currentColor",
-                strokeWidth: "2",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("polyline", {
-                  points: "9 18 15 12 9 6"
-                })
-              })
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
             className: "flex w-full flex-col gap-2",
             children: heroSlides.map(function (slide, index) {
               var isActive = index === activeHeroSlide;
@@ -12714,7 +12250,7 @@ var HomePage = function HomePage() {
                 })]
               }, slide.id);
             })
-          })]
+          })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "max-w-[1200px] mx-auto px-6 max-md:px-5 relative z-[2] pt-20 max-md:pt-16 w-full lg:pr-28",
@@ -12902,11 +12438,9 @@ var HomePage = function HomePage() {
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("section", {
-      className: "relative overflow-hidden bg-[linear-gradient(180deg,#f8fbfe_0%,#ffffff_45%,#f2f7fb_100%)] py-16 max-md:py-10",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_left,rgba(95,167,212,0.14),transparent_44%)]"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("section", {
+      className: "relative overflow-hidden bg-hn-surface py-20 max-md:py-12",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "max-w-[1200px] mx-auto px-6 max-md:px-4 relative",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
           className: "grid items-start gap-8 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-10",
@@ -13111,17 +12645,10 @@ var HomePage = function HomePage() {
             })]
           })]
         })
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("section", {
-      className: "relative bg-gradient-to-br from-hn-primary via-hn-secondary to-hn-primary py-32 max-md:py-10 overflow-hidden",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-        className: "absolute inset-0 opacity-10",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-          className: "absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-          className: "absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("section", {
+      className: "relative bg-hn-primary py-24 max-md:py-16 overflow-hidden",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "max-w-[1200px] mx-auto px-6 max-md:px-4 relative z-10",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
           className: "text-center max-w-[700px] mx-auto",
@@ -13137,13 +12664,13 @@ var HomePage = function HomePage() {
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_TransitionLink__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
             to: "/contact",
-            className: "motion-fade-up animation-delay-300 inline-flex items-center px-12 max-md:px-8 py-5 max-md:py-4 bg-white text-hn-primary font-bold text-[1.05rem] max-md:text-[0.92rem] rounded-xl no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full max-md:justify-center hover:bg-[#f0f4f8] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] shadow-2xl",
+            className: "motion-fade-up animation-delay-300 inline-flex items-center px-10 max-md:px-8 py-4 max-md:py-3.5 bg-hn-accent text-white font-bold text-[1rem] max-md:text-[0.92rem] rounded-md no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full max-md:justify-center hover:bg-hn-accent-strong hover:-translate-y-0.5 hover:shadow-lg",
             children: intl.formatMessage({
               id: 'home.cta.button'
             })
           })]
         })
-      })]
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("section", {
       className: "border-t border-[#e8eef5] bg-white py-14 max-md:py-10",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
@@ -13572,7 +13099,7 @@ var ProductDetailPage = function ProductDetailPage() {
     }]
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-    className: "w-full bg-[linear-gradient(180deg,#eff5fa_0%,#ffffff_28%,#f6f9fc_100%)]",
+    className: "w-full bg-hn-surface",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Seo__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .ZP, {
       title: productTitle,
       description: productDescription,
@@ -13581,19 +13108,10 @@ var ProductDetailPage = function ProductDetailPage() {
       keywords: [(localizedProduct === null || localizedProduct === void 0 ? void 0 : localizedProduct.category) || product.categoryId, product.id, (localizedProduct === null || localizedProduct === void 0 || (_localizedProduct$spe6 = localizedProduct.specs) === null || _localizedProduct$spe6 === void 0 ? void 0 : _localizedProduct$spe6.control) || 'thermostat'],
       type: "product",
       structuredData: productStructuredData
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("section", {
-      className: "relative overflow-hidden border-b border-[#e1e9f1] bg-[radial-gradient(circle_at_top_left,rgba(95,167,212,0.22),transparent_34%),linear-gradient(135deg,#081a2d_0%,#102b49_58%,#17395e_100%)] text-white",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "absolute inset-0 opacity-[0.08]",
-        style: {
-          backgroundImage: 'url(/pattern.svg)'
-        }
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "absolute -right-20 top-14 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.22),transparent_65%)] blur-[30px]"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "absolute left-0 top-0 h-full w-full bg-[linear-gradient(90deg,rgba(5,14,26,0.78)_0%,rgba(5,14,26,0.3)_54%,rgba(5,14,26,0.14)_100%)]"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-        className: "relative mx-auto grid max-w-[1200px] gap-10 px-5 py-10 lg:grid-cols-[minmax(0,1.05fr)_420px] lg:items-center lg:py-16 max-md:px-4 max-md:py-8",
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("section", {
+      className: "relative overflow-hidden bg-hn-primary text-white py-8 lg:py-12",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        className: "relative mx-auto grid max-w-[1200px] gap-10 px-5 lg:grid-cols-[minmax(0,1.05fr)_420px] lg:items-center max-md:px-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "flex flex-wrap items-center gap-3 text-[0.78rem] font-semibold tracking-[0.12em] text-white/70",
@@ -13639,9 +13157,9 @@ var ProductDetailPage = function ProductDetailPage() {
             className: "motion-fade-up animation-delay-300 mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4",
             children: productStats.map(function (item) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "rounded-2xl border border-white/12 bg-white/8 px-4 py-4 backdrop-blur-sm",
+                className: "rounded-xl border border-white/10 bg-white/5 px-4 py-4",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                  className: "text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c1d5e6]",
+                  className: "text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-gray-300",
                   children: item.label
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
                   className: "mt-2 text-[0.92rem] font-semibold leading-6 text-white",
@@ -13654,34 +13172,30 @@ var ProductDetailPage = function ProductDetailPage() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
               type: "button",
               onClick: handleToggleInquiry,
-              className: "inline-flex items-center justify-center rounded-xl px-6 py-3 text-[0.92rem] font-semibold transition-all duration-200 ".concat(isSelected ? 'border border-[#8cc5e7] bg-[#5fa7d4] text-white hover:bg-[#5299c6]' : 'border border-white/15 bg-white text-hn-primary hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(0,0,0,0.2)]'),
+              className: "inline-flex items-center justify-center rounded-lg px-6 py-3 text-[0.92rem] font-semibold transition-all duration-200 ".concat(isSelected ? 'bg-hn-accent text-white hover:bg-hn-accent-strong' : 'bg-white text-hn-primary hover:-translate-y-0.5 hover:shadow-lg'),
               children: isSelected ? getMessage('product.detail.removeInquiry', 'Remove from inquiry') : getMessage('product.detail.addInquiry', 'Add to inquiry')
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
               type: "button",
               onClick: handleContact,
-              className: "inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/10 px-6 py-3 text-[0.92rem] font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:border-white/35 hover:bg-white/14",
+              className: "inline-flex items-center justify-center rounded-lg border border-white/20 bg-transparent px-6 py-3 text-[0.92rem] font-semibold text-white transition-all duration-200 hover:bg-white/10",
               children: getMessage('product.detail.requestQuote', 'Request quote for this model')
             })]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: "motion-fade-left relative",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-            className: "absolute -inset-5 rounded-[2.5rem] bg-[radial-gradient(circle_at_top,rgba(95,167,212,0.28),transparent_60%)] blur-[20px]"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            className: "relative overflow-hidden rounded-[2rem] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03))] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl max-md:rounded-[1.5rem]",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+            className: "relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 shadow-xl backdrop-blur-md max-md:rounded-xl",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-              className: "absolute inset-x-0 top-0 h-28 bg-[linear-gradient(180deg,rgba(255,255,255,0.18),transparent)]"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-              className: "relative overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#0d2036] p-4",
+              className: "relative overflow-hidden rounded-xl border border-white/10 bg-white/10 p-2",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
                 src: product.image,
                 alt: localizedProduct === null || localizedProduct === void 0 ? void 0 : localizedProduct.title,
-                className: "aspect-square w-full rounded-[1rem] object-cover"
+                className: "aspect-square w-full rounded-lg object-cover"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
               className: "relative mt-4 grid gap-3 sm:grid-cols-2",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "rounded-[1.25rem] border border-white/10 bg-white/8 px-4 py-4",
+                className: "rounded-xl border border-white/5 bg-white/5 px-4 py-4",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
                   className: "text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c1d5e6]",
                   children: getMessage('product.detail.sku', 'SKU')
@@ -13690,7 +13204,7 @@ var ProductDetailPage = function ProductDetailPage() {
                   children: product.id
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "rounded-[1.25rem] border border-white/10 bg-white/8 px-4 py-4",
+                className: "rounded-xl border border-white/5 bg-white/5 px-4 py-4",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
                   className: "text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c1d5e6]",
                   children: getMessage('product.detail.modelType', 'Model type')
@@ -13700,15 +13214,15 @@ var ProductDetailPage = function ProductDetailPage() {
                 })]
               })]
             })]
-          })]
+          })
         })]
-      })]
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("section", {
       className: "mx-auto grid max-w-[1200px] gap-8 px-5 py-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start max-md:px-4 max-md:py-8",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: "space-y-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-          className: "motion-fade-up rounded-[2rem] border border-[#dde7f0] bg-white p-7 shadow-[0_16px_50px_rgba(13,34,60,0.05)] max-md:rounded-[1.5rem] max-md:p-5",
+          className: "motion-fade-up rounded-2xl border border-hn-border bg-white p-7 shadow-sm max-md:rounded-xl max-md:p-5",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "flex flex-wrap items-end justify-between gap-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
@@ -13728,7 +13242,7 @@ var ProductDetailPage = function ProductDetailPage() {
             className: "mt-6 grid gap-4 sm:grid-cols-2",
             children: productStats.map(function (item) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "rounded-[1.4rem] border border-[#e6edf4] bg-[linear-gradient(180deg,#fbfdff_0%,#f5f8fc_100%)] px-5 py-5",
+                className: "rounded-xl border border-hn-border bg-hn-surface-soft px-5 py-5",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
                   className: "text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-[#6f8498]",
                   children: item.label
@@ -13740,7 +13254,7 @@ var ProductDetailPage = function ProductDetailPage() {
             })
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-          className: "motion-fade-up animation-delay-150 rounded-[2rem] border border-[#dde7f0] bg-white p-7 shadow-[0_16px_50px_rgba(13,34,60,0.05)] max-md:rounded-[1.5rem] max-md:p-5",
+          className: "motion-fade-up animation-delay-150 rounded-2xl border border-hn-border bg-white p-7 shadow-sm max-md:rounded-xl max-md:p-5",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
             className: "text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-[#6d8298]",
             children: getMessage('product.detail.valueTag', 'Project value')
@@ -13751,9 +13265,9 @@ var ProductDetailPage = function ProductDetailPage() {
             className: "mt-6 grid gap-4 md:grid-cols-3",
             children: capabilityCards.map(function (item) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "rounded-[1.4rem] border border-[#e6edf4] bg-[linear-gradient(180deg,#ffffff_0%,#f7fafc_100%)] p-5",
+                className: "rounded-xl border border-hn-border bg-hn-surface-soft p-5",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                  className: "mb-4 h-10 w-10 rounded-xl bg-[linear-gradient(135deg,#e4f0f8_0%,#c7dff0_100%)]"
+                  className: "mb-4 h-10 w-10 rounded-lg bg-hn-surface"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
                   className: "text-[1rem] font-semibold text-hn-primary",
                   children: item.title
@@ -13768,7 +13282,7 @@ var ProductDetailPage = function ProductDetailPage() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("aside", {
         className: "motion-fade-left space-y-5 lg:sticky lg:top-24",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-          className: "overflow-hidden rounded-[1.8rem] border border-[#dbe6f0] bg-[linear-gradient(180deg,#f8fbfe_0%,#eef5fa_100%)] p-6 shadow-[0_16px_40px_rgba(13,34,60,0.05)] max-md:rounded-[1.4rem] max-md:p-5",
+          className: "overflow-hidden rounded-2xl border border-hn-border bg-hn-surface-soft p-6 shadow-sm max-md:rounded-xl max-md:p-5",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
             className: "text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-[#6d8298]",
             children: getMessage('product.detail.quoteTag', 'Quick action')
@@ -13783,17 +13297,17 @@ var ProductDetailPage = function ProductDetailPage() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
               type: "button",
               onClick: handleToggleInquiry,
-              className: "inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-[0.92rem] font-semibold transition-all duration-200 ".concat(isSelected ? 'bg-hn-accent text-white hover:bg-hn-accent-strong' : 'bg-hn-primary text-white hover:bg-[#0a2138]'),
+              className: "inline-flex w-full items-center justify-center rounded-lg px-5 py-3 text-[0.92rem] font-semibold transition-all duration-200 ".concat(isSelected ? 'bg-hn-accent text-white hover:bg-hn-accent-strong' : 'bg-hn-primary text-white hover:bg-hn-secondary'),
               children: isSelected ? getMessage('product.detail.addedState', 'Added to inquiry') : getMessage('product.detail.sidebarAdd', 'Add this model')
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
               type: "button",
               onClick: handleContact,
-              className: "inline-flex w-full items-center justify-center rounded-xl border border-[#d7e2ec] bg-white px-5 py-3 text-[0.92rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent",
+              className: "inline-flex w-full items-center justify-center rounded-lg border border-hn-border bg-white px-5 py-3 text-[0.92rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent",
               children: getMessage('product.detail.sidebarContact', 'Send inquiry now')
             })]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-          className: "motion-fade-left animation-delay-200 rounded-[1.8rem] border border-[#dbe6f0] bg-white p-6 shadow-[0_16px_40px_rgba(13,34,60,0.05)] max-md:rounded-[1.4rem] max-md:p-5",
+          className: "motion-fade-left animation-delay-200 rounded-2xl border border-hn-border bg-white p-6 shadow-sm max-md:rounded-xl max-md:p-5",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
             className: "text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-[#6d8298]",
             children: getMessage('product.detail.supportTag', 'Support scope')
@@ -24263,7 +23777,7 @@ function _getRoutes() {
               }),
               '@@/global-layout': /*#__PURE__*/react.lazy(function () {
                 return Promise.resolve().then(function () {
-                  return interopRequireWildcard_default()(__webpack_require__(6680));
+                  return interopRequireWildcard_default()(__webpack_require__(4885));
                 });
               })
             }

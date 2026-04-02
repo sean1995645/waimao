@@ -178,7 +178,7 @@ const ContactPage: React.FC = () => {
 
               <div className="flex flex-col gap-6 max-md:gap-3">
                 <div className="flex items-start gap-4 max-md:gap-3">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gray-100 bg-gradient-to-br from-hn-surface to-white text-hn-accent shadow-sm max-md:h-11 max-md:w-11 max-md:rounded-lg">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gray-100 bg-hn-surface text-hn-accent shadow-sm max-md:h-11 max-md:w-11 max-md:rounded-lg">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:h-5 max-md:w-5">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                       <polyline points="22,6 12,13 2,6" />
@@ -193,7 +193,7 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-4 max-md:gap-3">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gray-100 bg-gradient-to-br from-hn-surface to-white text-hn-accent shadow-sm max-md:h-11 max-md:w-11 max-md:rounded-lg">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gray-100 bg-hn-surface text-hn-accent shadow-sm max-md:h-11 max-md:w-11 max-md:rounded-lg">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="max-md:h-5 max-md:w-5">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                     </svg>
@@ -208,7 +208,7 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="motion-fade-left w-full max-w-[440px] justify-self-start rounded-2xl border border-gray-100 bg-gradient-to-br from-hn-surface to-white p-6 shadow-sm lg:justify-self-end max-md:rounded-xl max-md:p-5">
+            <div className="motion-fade-left w-full max-w-[440px] justify-self-start rounded-2xl border border-gray-100 bg-hn-surface p-6 shadow-sm lg:justify-self-end max-md:rounded-xl max-md:p-5">
               {state.succeeded ? (
                 <div className="motion-pop flex flex-col gap-4">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 motion-safe:animate-pulseGlow">

@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { COOKIE_CONSENT_EVENT, hasCookieConsentFor } from '@/utils/cookieConsent';
 
 const CRISP_SCRIPT_SELECTOR = 'script[data-crisp-loader="true"]';
 const CRISP_WEBSITE_ID = 'ca9d8e2e-cc3a-409b-bf67-16e6778a2c1e';
@@ -11,10 +10,6 @@ const Crisp: React.FC = () => {
     }
 
     const loadCrisp = () => {
-      if (!hasCookieConsentFor('supportChat')) {
-        return;
-      }
-
       const crispWindow = window as Window & {
         $crisp?: unknown[];
         CRISP_WEBSITE_ID?: string;
@@ -36,15 +31,6 @@ const Crisp: React.FC = () => {
     };
 
     loadCrisp();
-
-    const handleConsentChange = () => {
-      loadCrisp();
-    };
-
-    window.addEventListener(COOKIE_CONSENT_EVENT, handleConsentChange);
-    return () => {
-      window.removeEventListener(COOKIE_CONSENT_EVENT, handleConsentChange);
-    };
   }, []);
 
   return null;

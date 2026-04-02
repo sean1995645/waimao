@@ -6,15 +6,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'hn-primary': '#10233f',
-        'hn-secondary': '#244b78',
-        'hn-accent': '#0d6fb8',
-        'hn-accent-strong': '#0b5fa0',
-        'hn-surface': '#f3f6fb',
-        'hn-surface-soft': '#e7edf5',
+        'hn-primary': '#0f172a', /* slate-900 */
+        'hn-secondary': '#334155', /* slate-700 */
+        'hn-accent': '#2563eb', /* blue-600 */
+        'hn-accent-strong': '#1d4ed8', /* blue-700 */
+        'hn-surface': '#f8fafc', /* slate-50 */
+        'hn-surface-soft': '#f1f5f9', /* slate-100 */
         'hn-text': '#0f172a',
-        'hn-text-muted': '#475569',
-        'hn-border': '#d5dfeb',
+        'hn-text-muted': '#64748b', /* slate-500 */
+        'hn-border': '#e2e8f0', /* slate-200 */
       },
       keyframes: {
         kenburns: {

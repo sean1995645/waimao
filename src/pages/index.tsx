@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
       primaryLabel: intl.formatMessage({ id: 'home.hero.viewProducts' }),
       secondaryTo: '/contact',
       secondaryLabel: intl.formatMessage({ id: 'home.hero.getInTouch' }),
-      accentClass: 'from-[rgba(10,20,40,0.82)] via-[rgba(10,20,40,0.65)] to-[rgba(10,20,40,0.45)]',
+      accentClass: 'from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.5)] to-transparent',
     },
     {
       id: 'products',
@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
       primaryLabel: intl.formatMessage({ id: 'home.hero.viewProducts' }),
       secondaryTo: '/contact',
       secondaryLabel: intl.formatMessage({ id: 'product.detail.requestQuote', defaultMessage: 'Request quote for this model' }),
-      accentClass: 'from-[rgba(5,16,32,0.86)] via-[rgba(7,23,44,0.64)] to-[rgba(8,31,54,0.34)]',
+      accentClass: 'from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.5)] to-transparent',
     },
     {
       id: 'about',
@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
       primaryLabel: intl.formatMessage({ id: 'home.why.learnMore' }),
       secondaryTo: '/contact',
       secondaryLabel: intl.formatMessage({ id: 'home.hero.getInTouch' }),
-      accentClass: 'from-[rgba(9,18,34,0.84)] via-[rgba(11,30,52,0.62)] to-[rgba(19,57,94,0.3)]',
+      accentClass: 'from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.5)] to-transparent',
     },
     {
       id: 'contact',
@@ -70,7 +70,7 @@ const HomePage: React.FC = () => {
       primaryLabel: intl.formatMessage({ id: 'home.cta.button' }),
       secondaryTo: '/products',
       secondaryLabel: intl.formatMessage({ id: 'home.hero.viewProducts' }),
-      accentClass: 'from-[rgba(7,16,30,0.9)] via-[rgba(10,28,50,0.68)] to-[rgba(18,48,76,0.3)]',
+      accentClass: 'from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.5)] to-transparent',
     },
   ];
   const [activeHeroSlide, setActiveHeroSlide] = useState(0);
@@ -242,11 +242,7 @@ const HomePage: React.FC = () => {
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat motion-safe:animate-kenburns md:hidden"
                   style={{ backgroundImage: `url('${slide.mobileImage}')` }}
                 ></div>
-                <div className={`absolute inset-0 bg-gradient-to-br ${slide.accentClass}`}></div>
-                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,13,24,0.48)_0%,rgba(7,18,34,0.22)_48%,rgba(7,18,34,0.1)_100%)]"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_36%)]"></div>
-                <div className={`absolute right-[10%] top-[14%] h-48 w-48 rounded-full blur-[28px] transition-all duration-700 ${index === activeHeroSlide ? 'opacity-100 scale-100' : 'opacity-30 scale-90'} bg-[radial-gradient(circle,rgba(95,167,212,0.28),transparent_68%)] motion-safe:animate-floatSoft`}></div>
-                <div className={`absolute left-[8%] bottom-[12%] h-40 w-40 rounded-full blur-[34px] transition-all duration-700 ${index === activeHeroSlide ? 'opacity-80' : 'opacity-25'} bg-[radial-gradient(circle,rgba(255,255,255,0.16),transparent_70%)] motion-safe:animate-driftX`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-r ${slide.accentClass}`}></div>
               </div>
             ))}
           </div>
@@ -398,8 +394,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Why Section */}
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8fbfe_0%,#ffffff_45%,#f2f7fb_100%)] py-16 max-md:py-10">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_left,rgba(95,167,212,0.14),transparent_44%)]"></div>
+      <section className="relative overflow-hidden bg-hn-surface py-20 max-md:py-12">
         <div className="max-w-[1200px] mx-auto px-6 max-md:px-4 relative">
           <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-10">
             <div className="motion-fade-right">
@@ -498,18 +493,14 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-gradient-to-br from-hn-primary via-hn-secondary to-hn-primary py-32 max-md:py-10 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        </div>
+      <section className="relative bg-hn-primary py-24 max-md:py-16 overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-6 max-md:px-4 relative z-10">
           <div className="text-center max-w-[700px] mx-auto">
             <h2 className="motion-fade-up text-[clamp(2rem,3.5vw,3rem)] max-md:text-[1.65rem] font-bold text-white mb-6 max-md:mb-3 tracking-[-0.025em] leading-tight drop-shadow-lg">{intl.formatMessage({ id: 'home.cta.title' })}</h2>
             <p className="motion-fade-up animation-delay-150 text-white/85 text-[1.1rem] max-md:text-[0.95rem] mb-12 max-md:mb-6 leading-[1.75] max-md:leading-[1.7] drop-shadow-md px-4 max-md:px-0">
               {intl.formatMessage({ id: 'home.cta.description' })}
             </p>
-            <TransitionLink to="/contact" className="motion-fade-up animation-delay-300 inline-flex items-center px-12 max-md:px-8 py-5 max-md:py-4 bg-white text-hn-primary font-bold text-[1.05rem] max-md:text-[0.92rem] rounded-xl no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full max-md:justify-center hover:bg-[#f0f4f8] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] shadow-2xl">{intl.formatMessage({ id: 'home.cta.button' })}</TransitionLink>
+            <TransitionLink to="/contact" className="motion-fade-up animation-delay-300 inline-flex items-center px-10 max-md:px-8 py-4 max-md:py-3.5 bg-hn-accent text-white font-bold text-[1rem] max-md:text-[0.92rem] rounded-md no-underline transition-all duration-300 tracking-[0.01em] max-md:w-full max-md:justify-center hover:bg-hn-accent-strong hover:-translate-y-0.5 hover:shadow-lg">{intl.formatMessage({ id: 'home.cta.button' })}</TransitionLink>
           </div>
         </div>
       </section>

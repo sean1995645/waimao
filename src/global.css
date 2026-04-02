@@ -43,12 +43,12 @@
   }
 
   header {
-    border-bottom: 1px solid rgba(16, 35, 63, 0.08);
-    box-shadow: 0 8px 24px rgba(16, 35, 63, 0.06);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   }
 
   footer {
-    background: linear-gradient(145deg, #0c192d 0%, #10233f 52%, #163154 100%);
+    background: #0f172a;
   }
 
   a,
@@ -64,7 +64,7 @@
   input:focus-visible,
   textarea:focus-visible,
   select:focus-visible {
-    outline: 2px solid #0d6fb8;
+    outline: 2px solid #2563eb;
     outline-offset: 2px;
   }
 }
@@ -95,7 +95,7 @@
   }
 
   .interactive-lift {
-    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(16,35,63,0.12)];
+    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(15,23,42,0.08)];
   }
 
   .reveal-up {
