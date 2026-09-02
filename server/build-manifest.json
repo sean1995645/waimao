@@ -1,6 +1,5 @@
 {
   "assets": {
-    "public/.DS_Store": "/.DS_Store",
     "public/heatnexis-icon.png": "/heatnexis-icon.png",
     "public/heatnexis-logo.png": "/heatnexis-logo.png",
     "public/hero-floor-heating-controller.svg": "/hero-floor-heating-controller.svg",

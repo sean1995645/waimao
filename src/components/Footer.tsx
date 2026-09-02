@@ -1,48 +1,5 @@
 import React from 'react';
-import { useIntl } from 'react-intl';
-
-const Footer: React.FC = () => {
-  const intl = useIntl();
-
-  return (
-    <footer className="bg-hn-primary text-white py-12 md:py-8 mt-16 md:mt-10">
-      <div className="max-w-[1200px] mx-auto px-5 md:px-4">
-        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8 md:gap-6 mb-8 md:mb-6">
-          <div className="motion-fade-up">
-            <h3 className="mb-4 md:mb-3 text-lg md:text-base font-semibold">HeatNexis</h3>
-            <p className="mb-2 text-gray-300 text-base md:text-sm">
-              {intl.formatMessage({ id: 'footer.description' })}
-            </p>
-          </div>
-          <div className="motion-fade-up animation-delay-100">
-            <h3 className="mb-4 md:mb-3 text-lg md:text-base font-semibold">{intl.formatMessage({ id: 'footer.contactInfo' })}</h3>
-            <p className="mb-2 text-gray-300 text-base md:text-sm">sales@heatnexis.com</p>
-            <p className="mb-2 text-gray-300 text-base md:text-sm">+86 138 0010 2400</p>
-          </div>
-          <div className="motion-fade-up animation-delay-200">
-            <h3 className="mb-4 md:mb-3 text-lg md:text-base font-semibold">{intl.formatMessage({ id: 'footer.followUs' })}</h3>
-            <div className="flex gap-4 md:gap-3">
-              <a href="#" aria-label={intl.formatMessage({ id: 'footer.facebook' })} className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-hn-accent hover:text-white">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
-                </svg>
-              </a>
-              <a href="#" aria-label={intl.formatMessage({ id: 'footer.linkedin' })} className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-hn-accent hover:text-white">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.16-3.66c-1.16 0-1.69.64-1.98 1.09V9.65h-2.2v8.85h2.2v-4.9c0-.26.05-.52.12-.7a1.44 1.44 0 0 1 1.35-.96c.95 0 1.33.72 1.33 1.78v4.83h2.34M6.88 8.65a1.28 1.28 0 0 0 1.3-1.28A1.28 1.28 0 0 0 6.88 6.1 1.28 1.28 0 0 0 5.58 7.37 1.28 1.28 0 0 0 6.88 8.65M5.78 18.5h2.2V9.65H5.78v8.85z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="motion-fade-up animation-delay-300 text-center pt-8 md:pt-6 border-t border-white/10">
-          <p className="text-gray-400 text-base md:text-sm">
-            &copy; HeatNexis. {intl.formatMessage({ id: 'footer.rights' })}
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
+import {useIntl} from 'react-intl';
+import TransitionLink from './TransitionLink';
+const Footer:React.FC=()=>{const intl=useIntl();return <footer className="mt-0 bg-[#171815] px-5 pb-8 pt-16 text-white md:px-10 md:pt-20 lg:px-16"><div className="mx-auto max-w-[1312px]"><div className="grid gap-12 border-b border-white/12 pb-14 lg:grid-cols-[1.25fr_.75fr_.75fr]"><div><img src="/heatnexis-logo.png" alt="HeatNexis" className="h-9 w-auto brightness-0 invert"/><p className="mt-6 max-w-md text-sm leading-7 text-white/55">{intl.formatMessage({id:'footer.description'})}</p><p className="mt-8 text-[10px] font-bold uppercase tracking-[.2em] text-[#e88a51]">Smart heating · Made connected</p></div><div><h3 className="text-[10px] font-bold uppercase tracking-[.2em] text-white/45">Explore</h3><nav className="mt-5 flex flex-col gap-3 text-sm text-white/75"><TransitionLink to="/products">{intl.formatMessage({id:'nav.products'})}</TransitionLink><TransitionLink to="/about">{intl.formatMessage({id:'nav.about'})}</TransitionLink><TransitionLink to="/contact">{intl.formatMessage({id:'nav.contact'})}</TransitionLink></nav></div><div><h3 className="text-[10px] font-bold uppercase tracking-[.2em] text-white/45">{intl.formatMessage({id:'footer.contactInfo'})}</h3><div className="mt-5 space-y-3 text-sm text-white/75"><a href="mailto:sales@heatnexis.com" className="block hover:text-[#f2a16b]">sales@heatnexis.com</a><a href="tel:+8613800102400" className="block hover:text-[#f2a16b]">+86 138 0010 2400</a></div><TransitionLink to="/contact" className="mt-7 inline-flex rounded-full bg-[#d9652d] px-5 py-3 text-xs font-bold text-white hover:bg-[#b84d1d]">Request a quote</TransitionLink></div></div><div className="flex flex-col gap-3 pt-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between"><p>&copy; HeatNexis. {intl.formatMessage({id:'footer.rights'})}</p><p>Heating controls for global projects</p></div></div></footer>};
 export default Footer;

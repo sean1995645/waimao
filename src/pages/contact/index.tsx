@@ -139,7 +139,7 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="inner-page w-full">
       <Seo
         title={contactTitle}
         description={contactDescription}
@@ -165,7 +165,7 @@ const ContactPage: React.FC = () => {
         ]}
       />
 
-      <section className="bg-white py-24 max-md:py-8">
+      <section className="bg-[#f7f5f0] py-20 md:py-28">
         <div className="mx-auto max-w-[1200px] px-5 max-md:px-4">
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_440px] lg:gap-12">
             <div className="motion-fade-right">
@@ -208,7 +208,7 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="motion-fade-left w-full max-w-[440px] justify-self-start rounded-2xl border border-gray-100 bg-hn-surface p-6 shadow-sm lg:justify-self-end max-md:rounded-xl max-md:p-5">
+            <div className="motion-fade-left w-full max-w-[480px] justify-self-start border border-[#d8d3c9] bg-white p-6 lg:justify-self-end md:p-8">
               {state.succeeded ? (
                 <div className="motion-pop flex flex-col gap-4">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 motion-safe:animate-pulseGlow">
@@ -227,7 +227,7 @@ const ContactPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={reset}
-                    className="w-full rounded-lg border border-[#d5dfeb] bg-white px-6 py-3 text-[0.92rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent max-md:px-6 max-md:py-3 max-md:text-[0.88rem]"
+                    className="w-full rounded-lg border border-[#d2ccc1] bg-white px-6 py-3 text-[0.92rem] font-semibold text-hn-primary transition-all duration-200 hover:border-hn-accent hover:text-hn-accent max-md:px-6 max-md:py-3 max-md:text-[0.88rem]"
                   >
                     {getMessage('contact.form.sendAnother', 'Send another message')}
                   </button>
@@ -235,7 +235,7 @@ const ContactPage: React.FC = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-md:gap-3.5">
                   {selectedItems.length > 0 && (
-                    <div className="motion-card rounded-xl border border-[#d8e4ef] bg-white/80 p-4">
+                    <div className="motion-card rounded-xl border border-[#ded8ce] bg-[#f7f5f0] p-4">
                       <div className="mb-3">
                         <h3 className="text-[0.92rem] font-semibold text-hn-primary">
                           {getMessage('contact.form.selectedProductsTitle', 'Selected products')}
@@ -246,11 +246,11 @@ const ContactPage: React.FC = () => {
                       </div>
                       <div className="flex flex-col gap-2.5">
                         {selectedItems.map((item) => (
-                          <div key={item.id} className="flex items-center gap-3 rounded-lg border border-[#e8eef5] bg-white px-3 py-2.5">
+                          <div key={item.id} className="flex items-center gap-3 rounded-lg border border-[#e2ddd3] bg-white px-3 py-2.5">
                             {item.img ? (
                               <img src={item.img} alt={getDisplayName(item)} className="h-12 w-12 rounded-lg object-cover" />
                             ) : (
-                              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#eef3f8] text-[0.95rem] font-semibold text-hn-primary">
+                              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#eeeae3] text-[0.95rem] font-semibold text-hn-primary">
                                 {getDisplayName(item).charAt(0)}
                               </div>
                             )}
@@ -350,7 +350,7 @@ const ContactPage: React.FC = () => {
                   <button
                     type="submit"
                     disabled={state.submitting}
-                    className="w-full rounded-lg bg-hn-accent px-6 py-3 text-[0.92rem] font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-hn-accent-strong hover:shadow-[0_8px_24px_rgba(13,111,184,0.3)] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:shadow-none max-md:px-6 max-md:py-3 max-md:text-[0.88rem]"
+                    className="w-full rounded-full bg-hn-accent px-6 py-3.5 text-[0.92rem] font-semibold text-white transition-all duration-200 hover:bg-hn-accent-strong disabled:cursor-not-allowed disabled:opacity-70 max-md:text-[0.88rem]"
                   >
                     {submitLabel}
                   </button>

@@ -75,7 +75,7 @@ const ProductsPage: React.FC = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="inner-page w-full">
       <Seo
         title={productsTitle}
         description={productsDescription}
@@ -101,7 +101,7 @@ const ProductsPage: React.FC = () => {
         ]}
       />
 
-      <div className="relative bg-hn-surface py-6 lg:py-10">
+      <div className="relative bg-hn-surface py-14 lg:py-24">
         <div className="max-w-[1200px] mx-auto px-4 lg:px-5">
           {/* Mobile Accordion */}
           <div className="motion-fade-up flex flex-col gap-2 lg:hidden" data-product-accordion>
@@ -149,9 +149,9 @@ const ProductsPage: React.FC = () => {
           </div>
 
           {/* Desktop Layout */}
-          <div className="hidden lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8">
+          <div className="hidden lg:grid lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-12">
             <aside className="motion-fade-right sticky top-24 self-start">
-              <div className="rounded-xl border border-hn-border bg-white p-5 shadow-sm">
+              <div className="border border-hn-border bg-white p-6">
                 <h2 className="mb-4 border-b border-hn-border pb-3 text-[0.95rem] font-bold text-hn-primary">{intl.formatMessage({ id: 'products.categories' })}</h2>
                 <div className="flex flex-col gap-1.5">
                   <button

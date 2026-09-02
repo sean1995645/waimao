@@ -187,7 +187,7 @@ const ProductDetailPage: React.FC = () => {
   ];
 
   return (
-    <div className="w-full bg-hn-surface">
+    <div className="inner-page w-full bg-hn-surface">
       <Seo
         title={productTitle}
         description={productDescription}
@@ -197,7 +197,7 @@ const ProductDetailPage: React.FC = () => {
         type="product"
         structuredData={productStructuredData}
       />
-      <section className="relative overflow-hidden bg-hn-primary text-white py-8 lg:py-12">
+      <section className="relative overflow-hidden bg-hn-primary py-16 text-white lg:py-24">
         <div className="relative mx-auto grid max-w-[1200px] gap-10 px-5 lg:grid-cols-[minmax(0,1.05fr)_420px] lg:items-center max-md:px-4">
           <div>
             <div className="flex flex-wrap items-center gap-3 text-[0.78rem] font-semibold tracking-[0.12em] text-white/70">
@@ -222,7 +222,7 @@ const ProductDetailPage: React.FC = () => {
                 </span>
               )}
               {isSelected && (
-                <span className="inline-flex rounded-full border border-[#5fa7d4]/40 bg-[#5fa7d4]/12 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#d1e8f8]">
+                <span className="inline-flex rounded-full border border-[#e78a50]/40 bg-[#e78a50]/12 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#f4bd96]">
                   {getMessage('product.detail.inInquiry', 'In inquiry list')}
                 </span>
               )}
@@ -272,7 +272,7 @@ const ProductDetailPage: React.FC = () => {
                 <img
                   src={product.image}
                   alt={localizedProduct?.title}
-                  className="aspect-square w-full rounded-lg object-cover"
+                  className="aspect-square w-full rounded-lg bg-[#f1eee8] object-contain p-6"
                 />
               </div>
               <div className="relative mt-4 grid gap-3 sm:grid-cols-2">

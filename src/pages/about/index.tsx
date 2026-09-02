@@ -40,7 +40,7 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="inner-page w-full bg-[#f7f5f0]">
       <Seo
         title={aboutTitle}
         description={aboutDescription}
@@ -66,17 +66,20 @@ const AboutPage: React.FC = () => {
         ]}
       />
 
-      <section className="py-8 max-md:py-5 bg-white">
+      <section className="bg-[#f7f5f0] py-20 md:py-28">
         <div className="max-w-[1200px] mx-auto px-5 max-md:px-4">
-          <div className="motion-fade-up max-w-[800px] mx-auto mb-16 max-md:mb-6 text-center">
-            <p className="inline-block text-[0.8rem] max-md:text-[0.7rem] font-semibold tracking-[0.15em] max-md:tracking-[0.12em] uppercase text-hn-accent mb-3 max-md:mb-2 px-4 max-md:px-3 py-1.5 max-md:py-1 bg-hn-accent/10 rounded-full">{intl.formatMessage({ id: 'about.story.eyebrow' })}</p>
-            <h2 className="text-[clamp(1.75rem,3vw,2.5rem)] max-md:text-[1.5rem] font-bold text-hn-primary mb-6 max-md:mb-3 tracking-[-0.02em]">{intl.formatMessage({ id: 'about.story.title' })}</h2>
+          <div className="mb-20 grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="motion-fade-up">
+            <p className="mb-5 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-hn-accent">{intl.formatMessage({ id: 'about.story.eyebrow' })}</p>
+            <h2 className="mb-7 text-[clamp(2.2rem,4vw,4rem)] font-medium leading-[1.02] tracking-[-0.045em] text-hn-primary">{intl.formatMessage({ id: 'about.story.title' })}</h2>
             <p className="text-[1.125rem] max-md:text-[0.95rem] text-gray-600 leading-[1.8] max-md:leading-[1.7] mb-6 max-md:mb-3">
               {intl.formatMessage({ id: 'about.story.paragraph1' })}
             </p>
             <p className="text-[1.125rem] max-md:text-[0.95rem] text-gray-600 leading-[1.8] max-md:leading-[1.7] mb-6 max-md:mb-3">
               {intl.formatMessage({ id: 'about.story.paragraph2' })}
             </p>
+          </div>
+          <div className="relative min-h-[520px] overflow-hidden rounded-t-[220px]"><img src="/page-hero-products-photo.jpg" alt="HeatNexis smart heating control in a modern home" className="absolute inset-0 h-full w-full object-cover"/><div className="absolute bottom-0 left-0 bg-[#d9652d] px-6 py-5 text-xs font-bold uppercase tracking-[.16em] text-white">Comfort meets control</div></div>
           </div>
 
           <div className="grid grid-cols-4 max-md:grid-cols-2 gap-6 max-md:gap-3">

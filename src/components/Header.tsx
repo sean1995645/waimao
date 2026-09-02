@@ -64,8 +64,8 @@ const Header: React.FC = () => {
   const currentLanguage = languages.find(lang => lang.code === currentLocale) || languages[0];
 
   return (
-    <header className="bg-white/95 shadow-[0_2px_8px_rgba(0,0,0,0.05)] sticky top-0 z-50 backdrop-blur-[10px] border-b border-hn-primary/[0.08]">
-      <div className="max-w-[1200px] mx-auto px-5 max-md:px-4">
+    <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f7f5f0]/95 backdrop-blur-xl">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-16">
         <div className="motion-fade-down flex items-center justify-between flex-wrap gap-3 max-md:gap-2 py-4 max-md:py-3">
           {/* Logo */}
           <div className="flex-1 min-w-0">
