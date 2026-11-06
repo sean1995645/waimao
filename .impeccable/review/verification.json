@@ -1,0 +1,40 @@
+{
+  "source_reference": "brand-dribbble-a11127/heatnexis",
+  "pages": 22,
+  "product_detail_pages": 16,
+  "supported_locales": 30,
+  "homepage_banner": {
+    "slides": 3,
+    "interval_ms": 5500,
+    "transition_ms": 560,
+    "controls": [
+      "previous",
+      "next",
+      "pagination",
+      "pause",
+      "keyboard",
+      "touch swipe"
+    ],
+    "pauses": [
+      "hover",
+      "focus",
+      "hidden document",
+      "offscreen",
+      "manual",
+      "prefers-reduced-motion"
+    ]
+  },
+  "checks": {
+    "dom_suites_passed": 14,
+    "typescript": "passed",
+    "production_build": "passed",
+    "static_routes": "22 pages verified",
+    "independent_review": "ship, code scope only"
+  },
+  "visual_verification": {
+    "status": "blocked",
+    "reason": "Browser access host unavailable; native Chrome access rejected as not approved."
+  },
+  "external_form_delivery": "not sent; success and failure paths verified with mocked requests",
+  "production_output": "dist"
+}

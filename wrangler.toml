@@ -6,4 +6,4 @@ command = "pnpm install && UMI_APP_GA_MEASUREMENT_ID=G-QD7DS6Q89S pnpm build"
 
 [assets]
 directory = "dist"
-not_found_handling = "single-page-application"
+not_found_handling = "404-page"

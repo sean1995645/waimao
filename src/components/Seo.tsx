@@ -67,7 +67,7 @@ const Seo: React.FC<SeoProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywordContent} />
       <meta name="robots" content={robots} />
-      <meta name="theme-color" content="#10233f" />
+      <meta name="theme-color" content="#16181d" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

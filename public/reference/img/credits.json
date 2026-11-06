@@ -1,0 +1,11 @@
+{
+  "note": "Scene photos are generic stock images, not HeatNexis premises or products. Replace them with your own photos when available. Logo and icon come from heatnexis.com.",
+  "images": [
+    {"file": "room.jpg", "width": 1600, "height": 2844, "source": "https://www.pexels.com/photo/modern-minimalist-living-room-interior-design-37252541/", "author": "Misbaa eri", "license": "Pexels License (https://www.pexels.com/license/)"},
+    {"file": "port.jpg", "width": 1600, "height": 1067, "source": "https://www.pexels.com/photo/container-ship-and-cargo-port-under-cloudy-sky-36652835/", "author": "Rafael Rodrigues", "license": "Pexels License (https://www.pexels.com/license/)"},
+    {"file": "inspect.jpg", "width": 1200, "height": 2133, "source": "https://www.pexels.com/photo/technician-inspecting-circuit-board-with-microscope-35187504/", "author": "Bulat843", "license": "Pexels License (https://www.pexels.com/license/)"},
+    {"file": "pcb-team.jpg", "width": 1200, "height": 800, "source": "https://www.pexels.com/photo/engineers-holding-circuit-board-3912373/", "author": "ThisIsEngineering", "license": "Pexels License (https://www.pexels.com/license/)"},
+    {"file": "pcb-engineer.jpg", "width": 1200, "height": 800, "source": "https://www.pexels.com/photo/an-electrical-engineer-working-on-a-circuit-board-9242271/", "author": "Mikhail Nilov", "license": "Pexels License (https://www.pexels.com/license/)"}
+  ],
+  "fonts": [{"file": "../fonts/mona-sans-latin-wght.woff2", "family": "Mona Sans", "source": "https://www.jsdelivr.com/package/npm/@fontsource-variable/mona-sans", "license": "SIL Open Font License 1.1"}]
+}

@@ -6,7 +6,8 @@
     "build": "umi build",
     "postinstall": "umi setup",
     "setup": "umi setup",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "test:reference": "node --test tests/reference.test.cjs"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
@@ -17,6 +18,7 @@
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "autoprefixer": "^10.4.27",
+    "jsdom": "^29.1.1",
     "postcss": "^8.5.8",
     "tailwindcss": "^3.4.19",
     "tailwindcss-animate": "^1.0.7",

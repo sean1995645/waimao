@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "@user_d07ff29f/foreigntradeskill": {
+      "name": "foreigntradeskill",
+      "zip_url": "https://api.skillhub.cn/api/v1/download?slug=foreigntradeskill&namespace=user_d07ff29f",
+      "source": "community",
+      "version": "1.0.0",
+      "namespace": {
+        "canonicalName": "@user_d07ff29f/foreigntradeskill",
+        "displayName": "user_d07ff29f",
+        "handle": "user_d07ff29f",
+        "publicSlug": "foreigntradeskill"
+      },
+      "internalSlug": "foreigntradeskill",
+      "publicSlug": "foreigntradeskill",
+      "installDir": "/Users/sean/Code/web/waimao/skills/@user_d07ff29f/foreigntradeskill"
+    }
+  }
+}
