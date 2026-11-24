@@ -181,9 +181,14 @@ main {
 }
 
 .header.is-solid,
+.header.scrolled,
+.header.has-menu-open {
+  background: var(--color-black);
+}
+
+.header.is-solid,
 .header.scrolled {
   height: var(--header-height);
-  background: var(--color-black);
 }
 
 .header-inner {
@@ -242,7 +247,7 @@ main {
   height: 100%;
   display: flex;
   align-items: center;
-  position: static;
+  position: relative;
 }
 
 .nav-label {
@@ -372,11 +377,11 @@ main {
   height: 36px;
 }
 
-/* Floating white Mega Menu (Measured 2-col and 3-col layout) */
+/* Floating white Mega Menu (Anchored directly below hovered nav item, matching reference) */
 .mega-menu {
   display: none;
-  position: fixed;
-  top: var(--header-height);
+  position: absolute;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   width: min(860px, 90vw);
@@ -385,11 +390,7 @@ main {
   box-shadow: var(--shadow-dropdown);
   border-top: 2px solid var(--color-primary);
   z-index: 90;
-  padding: 28px 32px;
-}
-
-.header:not(.scrolled):not(.is-solid) .mega-menu {
-  top: var(--header-height-top);
+  padding: 26px 30px;
 }
 
 .mega-menu.expanded {
@@ -397,14 +398,20 @@ main {
 }
 
 .mega-menu.mega-two-col {
-  width: min(640px, 86vw);
-  grid-template-columns: 230px 1fr;
-  gap: 28px;
+  width: min(560px, 86vw);
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+}
+
+.mega-menu.mega-align-right {
+  left: auto;
+  right: -40px;
+  transform: none;
 }
 
 .mega-menu.mega-three-col {
-  width: min(920px, 92vw);
-  grid-template-columns: 230px 260px 1fr;
+  width: min(860px, 92vw);
+  grid-template-columns: 220px 250px 1fr;
   gap: 24px;
 }
 
@@ -2791,6 +2798,20 @@ table.spec-table th {
    RESPONSIVE BREAKPOINTS (Measured: <1200, <992, <768)
    ============================================================ */
 @media (max-width: 1199px) {
+  .mega-menu.mega-two-col {
+    width: min(500px, 86vw);
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    padding: 22px 24px;
+  }
+
+  .mega-menu.mega-three-col {
+    width: min(740px, 92vw);
+    grid-template-columns: 200px 220px 1fr;
+    gap: 20px;
+    padding: 22px 24px;
+  }
+
   .footer-grid {
     grid-template-columns: 1.5fr repeat(3, minmax(0, 1fr));
   }
@@ -2806,7 +2827,8 @@ table.spec-table th {
   /* Measured: Mobile & 768px Tablet Header is 60px SOLID WHITE */
   .header,
   .header.is-solid,
-  .header.scrolled {
+  .header.scrolled,
+  .header.has-menu-open {
     height: 60px;
     background: var(--color-white);
     color: var(--color-black);
@@ -2881,8 +2903,11 @@ table.spec-table th {
 
   .mega-menu,
   .mega-menu.mega-two-col,
-  .mega-menu.mega-three-col {
+  .mega-menu.mega-three-col,
+  .mega-menu.mega-align-right {
     position: static;
+    left: auto;
+    right: auto;
     transform: none;
     width: 100%;
     box-shadow: none;

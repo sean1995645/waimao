@@ -89,7 +89,7 @@ export function Header() {
     <>
       <header
         ref={headerRef}
-        className={`header ${!isHome ? 'is-solid' : ''} ${scrolled ? 'scrolled' : ''}`}
+        className={`header ${!isHome ? 'is-solid' : ''} ${scrolled ? 'scrolled' : ''} ${open || search ? 'has-menu-open' : ''}`}
         onKeyDown={(event) => {
           if (event.key !== 'Escape') return;
           event.preventDefault();
@@ -260,7 +260,9 @@ export function Header() {
                     {item.children && !isProductsMenu && (
                       <div
                         id={`submenu-${index}`}
-                        className={`mega-menu mega-two-col ${isOpen ? 'expanded' : ''}`}
+                        className={`mega-menu mega-two-col ${
+                          item.name === 'Service & Support' || item.name === 'About Us' ? 'mega-align-right' : ''
+                        } ${isOpen ? 'expanded' : ''}`}
                       >
                         <div>
                           <div className="mega-col-title">{item.name}</div>

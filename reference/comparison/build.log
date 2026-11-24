@@ -1,0 +1,36 @@
+
+> beok-controls@0.1.0 build /Users/sean/Code/web/waimao
+> next build
+
+▲ Next.js 16.4.6 (Turbopack)
+✓ Running next.config.ts took 13ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 317ms
+  Running TypeScript ...
+  Finished TypeScript in 1106ms ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/57) ...
+  Generating static pages using 7 workers (14/57) 
+  Generating static pages using 7 workers (28/57) 
+  Generating static pages using 7 workers (42/57) 
+✓ Generating static pages using 7 workers (57/57) in 307ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /_not-found
+├ ƒ /[[...slug]]
+├   /[[...slug]]
+│ ├ ● /
+│ ├ ● /products
+│ ├ ● /products/gas-boiler-thermostats
+│ └ ● [+43 more paths]
+├ ƒ /api/inquiry
+├ ○ /robots.txt
+└ ○ /sitemap.xml
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

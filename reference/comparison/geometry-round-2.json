@@ -1,0 +1,4862 @@
+{
+  "round": "2",
+  "generatedAt": "2026-11-24T04:16:00.836Z",
+  "deltas": [
+    {
+      "slug": "home",
+      "viewport": "1920x1080",
+      "refScrollH": 7409,
+      "locScrollH": 6652,
+      "refHeaderH": 106,
+      "locHeaderH": 106,
+      "refHeaderBg": "rgba(0, 0, 0, 0)",
+      "locHeaderBg": "rgba(0, 0, 0, 0.28)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "products",
+      "viewport": "1920x1080",
+      "refScrollH": 7312,
+      "locScrollH": 6610,
+      "refHeaderH": 78,
+      "locHeaderH": 78,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "product-detail",
+      "viewport": "1920x1080",
+      "refScrollH": 8081,
+      "locScrollH": 5081,
+      "refHeaderH": 78,
+      "locHeaderH": 78,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "solutions",
+      "viewport": "1920x1080",
+      "refScrollH": 6308,
+      "locScrollH": 4723,
+      "refHeaderH": 78,
+      "locHeaderH": 78,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "about",
+      "viewport": "1920x1080",
+      "refScrollH": 6473,
+      "locScrollH": 3831,
+      "refHeaderH": 78,
+      "locHeaderH": 78,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "contact",
+      "viewport": "1920x1080",
+      "refScrollH": 2877,
+      "locScrollH": 3056,
+      "refHeaderH": 78,
+      "locHeaderH": 78,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "home",
+      "viewport": "1440x900",
+      "refScrollH": 5649,
+      "locScrollH": 5533,
+      "refHeaderH": 79,
+      "locHeaderH": 79,
+      "refHeaderBg": "rgba(0, 0, 0, 0)",
+      "locHeaderBg": "rgba(0, 0, 0, 0.28)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "tailor-made",
+      "viewport": "1440x900",
+      "refScrollH": 4006,
+      "locScrollH": 4856,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "products",
+      "viewport": "1440x900",
+      "refScrollH": 5472,
+      "locScrollH": 5908,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "product-detail",
+      "viewport": "1440x900",
+      "refScrollH": 6062,
+      "locScrollH": 4596,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "solutions",
+      "viewport": "1440x900",
+      "refScrollH": 4731,
+      "locScrollH": 3820,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "blog",
+      "viewport": "1440x900",
+      "refScrollH": 2426,
+      "locScrollH": 2050,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "faqs",
+      "viewport": "1440x900",
+      "refScrollH": 1580,
+      "locScrollH": 1737,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "downloads",
+      "viewport": "1440x900",
+      "refScrollH": 1661,
+      "locScrollH": 1986,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "videos",
+      "viewport": "1440x900",
+      "refScrollH": 2575,
+      "locScrollH": 2553,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "about",
+      "viewport": "1440x900",
+      "refScrollH": 4856,
+      "locScrollH": 3195,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "advantages",
+      "viewport": "1440x900",
+      "refScrollH": 2941,
+      "locScrollH": 3123,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "contact",
+      "viewport": "1440x900",
+      "refScrollH": 2158,
+      "locScrollH": 2756,
+      "refHeaderH": 59,
+      "locHeaderH": 59,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "home",
+      "viewport": "1280x800",
+      "refScrollH": 5026,
+      "locScrollH": 5117,
+      "refHeaderH": 71,
+      "locHeaderH": 70,
+      "refHeaderBg": "rgba(0, 0, 0, 0)",
+      "locHeaderBg": "rgba(0, 0, 0, 0.28)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "products",
+      "viewport": "1280x800",
+      "refScrollH": 4875,
+      "locScrollH": 5794,
+      "refHeaderH": 52,
+      "locHeaderH": 54,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "product-detail",
+      "viewport": "1280x800",
+      "refScrollH": 1713,
+      "locScrollH": 4398,
+      "refHeaderH": 52,
+      "locHeaderH": 54,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "solutions",
+      "viewport": "1280x800",
+      "refScrollH": 3727,
+      "locScrollH": 3473,
+      "refHeaderH": 52,
+      "locHeaderH": 54,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "about",
+      "viewport": "1280x800",
+      "refScrollH": 4320,
+      "locScrollH": 2969,
+      "refHeaderH": 52,
+      "locHeaderH": 54,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "contact",
+      "viewport": "1280x800",
+      "refScrollH": 1918,
+      "locScrollH": 2630,
+      "refHeaderH": 52,
+      "locHeaderH": 54,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "home",
+      "viewport": "1024x768",
+      "refScrollH": 4133,
+      "locScrollH": 4985,
+      "refHeaderH": 57,
+      "locHeaderH": 64,
+      "refHeaderBg": "rgba(0, 0, 0, 0)",
+      "locHeaderBg": "rgba(0, 0, 0, 0.28)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "products",
+      "viewport": "1024x768",
+      "refScrollH": 3893,
+      "locScrollH": 5865,
+      "refHeaderH": 42,
+      "locHeaderH": 56,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "product-detail",
+      "viewport": "1024x768",
+      "refScrollH": 4314,
+      "locScrollH": 4290,
+      "refHeaderH": 42,
+      "locHeaderH": 56,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "solutions",
+      "viewport": "1024x768",
+      "refScrollH": 3365,
+      "locScrollH": 3113,
+      "refHeaderH": 42,
+      "locHeaderH": 56,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "about",
+      "viewport": "1024x768",
+      "refScrollH": 3452,
+      "locScrollH": 2900,
+      "refHeaderH": 42,
+      "locHeaderH": 56,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "contact",
+      "viewport": "1024x768",
+      "refScrollH": 1535,
+      "locScrollH": 2550,
+      "refHeaderH": 42,
+      "locHeaderH": 56,
+      "refHeaderBg": "rgb(0, 0, 0)",
+      "locHeaderBg": "rgb(0, 0, 0)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "home",
+      "viewport": "768x1024",
+      "refScrollH": 6922,
+      "locScrollH": 7138,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "products",
+      "viewport": "768x1024",
+      "refScrollH": 10712,
+      "locScrollH": 6816,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "product-detail",
+      "viewport": "768x1024",
+      "refScrollH": 4043,
+      "locScrollH": 5542,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "solutions",
+      "viewport": "768x1024",
+      "refScrollH": 5529,
+      "locScrollH": 5550,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "about",
+      "viewport": "768x1024",
+      "refScrollH": 6477,
+      "locScrollH": 4503,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "contact",
+      "viewport": "768x1024",
+      "refScrollH": 2851,
+      "locScrollH": 2975,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "home",
+      "viewport": "390x844",
+      "refScrollH": 6059,
+      "locScrollH": 8887,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "products",
+      "viewport": "390x844",
+      "refScrollH": 8017,
+      "locScrollH": 7285,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "product-detail",
+      "viewport": "390x844",
+      "refScrollH": 7150,
+      "locScrollH": 6158,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "solutions",
+      "viewport": "390x844",
+      "refScrollH": 3863,
+      "locScrollH": 4219,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "about",
+      "viewport": "390x844",
+      "refScrollH": 4837,
+      "locScrollH": 4200,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    },
+    {
+      "slug": "contact",
+      "viewport": "390x844",
+      "refScrollH": 2494,
+      "locScrollH": 3235,
+      "refHeaderH": 60,
+      "locHeaderH": 60,
+      "refHeaderBg": "rgb(255, 255, 255)",
+      "locHeaderBg": "rgb(255, 255, 255)",
+      "locOverflowX": false,
+      "refFooterBg": "rgb(39, 39, 39)",
+      "locFooterBg": "rgb(39, 39, 39)"
+    }
+  ],
+  "localMetrics": [
+    {
+      "slug": "home",
+      "path": "/",
+      "viewport": "1920x1080",
+      "shotPath": "reference/comparison/local-round-2/home-1920x1080.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/",
+        "viewport": {
+          "w": 1920,
+          "h": 1080
+        },
+        "scrollHeight": 6652,
+        "overflowX": false,
+        "header": {
+          "h": 106,
+          "w": 1920,
+          "bg": "rgba(0, 0, 0, 0.28)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 387,
+          "w": 883,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "52px",
+          "lineHeight": "64.48px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 56,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "45.9999px",
+          "lineHeight": "56.1199px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 451,
+          "w": 1920,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "home-banner",
+            "h": 1080,
+            "w": 1920,
+            "headingText": "Professional OEM/ODM manufacturer of WiFi thermost",
+            "headingSize": "52px",
+            "headingLineHeight": "64.48px"
+          },
+          {
+            "className": "iservice",
+            "h": 825,
+            "w": 1920,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "iproducts",
+            "h": 1636,
+            "w": 1920,
+            "headingText": "Products",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "section-block",
+            "h": 1031,
+            "w": 1920,
+            "headingText": "Applications",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "section-block",
+            "h": 800,
+            "w": 1920,
+            "headingText": "Company Introduction",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "section-block",
+            "h": 829,
+            "w": 1920,
+            "headingText": "News and Information",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tailor-made",
+      "path": "/tailor-made-solution",
+      "viewport": "1920x1080",
+      "shotPath": "reference/comparison/local-round-2/tailor-made-1920x1080.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/tailor-made-solution",
+        "viewport": {
+          "w": 1920,
+          "h": 1080
+        },
+        "scrollHeight": 5581,
+        "overflowX": false,
+        "header": {
+          "h": 78,
+          "w": 1920,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 54,
+          "w": 1600,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "44px",
+          "lineHeight": "53.68px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 112,
+          "w": 764,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "45.9999px",
+          "lineHeight": "56.1199px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 451,
+          "w": 1920,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 620,
+            "w": 1920,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "44px",
+            "headingLineHeight": "53.68px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 670,
+            "w": 1920,
+            "headingText": "Tailored Manufacturing Solutions for Your Brand",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "section-block",
+            "h": 901,
+            "w": 1920,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 741,
+            "w": 1920,
+            "headingText": "Service Process",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "section-block",
+            "h": 1034,
+            "w": 1920,
+            "headingText": "Service Advantages",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1111,
+            "w": 1920,
+            "headingText": "Start Your Custom Thermostat Brief",
+            "headingSize": "32px",
+            "headingLineHeight": "39.04px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "products",
+      "path": "/products",
+      "viewport": "1920x1080",
+      "shotPath": "reference/comparison/local-round-2/products-1920x1080.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products",
+        "viewport": {
+          "w": 1920,
+          "h": 1080
+        },
+        "scrollHeight": 6610,
+        "overflowX": false,
+        "header": {
+          "h": 78,
+          "w": 1920,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 93,
+          "w": 807,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "38px",
+          "lineHeight": "46.36px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 33,
+          "w": 240,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "17px",
+          "lineHeight": "20.74px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 451,
+          "w": 1920,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "pro-banner",
+            "h": 384,
+            "w": 1920,
+            "headingText": "Professional Smart Thermostat Product Solutions",
+            "headingSize": "38px",
+            "headingLineHeight": "46.36px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "product-detail",
+      "path": "/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+      "viewport": "1920x1080",
+      "shotPath": "reference/comparison/local-round-2/product-detail-1920x1080.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+        "viewport": {
+          "w": 1920,
+          "h": 1080
+        },
+        "scrollHeight": 5081,
+        "overflowX": false,
+        "header": {
+          "h": 78,
+          "w": 1920,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 768,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 56,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "45.9999px",
+          "lineHeight": "56.1199px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 451,
+          "w": 1920,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "product-detail-hero",
+            "h": 748,
+            "w": 1920,
+            "headingText": "WiFi Gas Boiler Thermostat",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block",
+            "h": 1264,
+            "w": 1920,
+            "headingText": "Highlights at a glance",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 586,
+            "w": 1920,
+            "headingText": "FAQ",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1111,
+            "w": 1920,
+            "headingText": "Product Inquiry",
+            "headingSize": "32px",
+            "headingLineHeight": "39.04px"
+          },
+          {
+            "className": "section-block",
+            "h": 868,
+            "w": 1920,
+            "headingText": "Related Products",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "solutions",
+      "path": "/solutions",
+      "viewport": "1920x1080",
+      "shotPath": "reference/comparison/local-round-2/solutions-1920x1080.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/solutions",
+        "viewport": {
+          "w": 1920,
+          "h": 1080
+        },
+        "scrollHeight": 4723,
+        "overflowX": false,
+        "header": {
+          "h": 78,
+          "w": 1920,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 54,
+          "w": 1600,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "44px",
+          "lineHeight": "53.68px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 37,
+          "w": 416,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "30px",
+          "lineHeight": "36.6px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 451,
+          "w": 1920,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 620,
+            "w": 1920,
+            "headingText": "Solutions",
+            "headingSize": "44px",
+            "headingLineHeight": "53.68px"
+          },
+          {
+            "className": "section-block",
+            "h": 3597,
+            "w": 1920,
+            "headingText": "Underfloor Heating Solutions",
+            "headingSize": "30px",
+            "headingLineHeight": "36.6px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "about",
+      "path": "/about",
+      "viewport": "1920x1080",
+      "shotPath": "reference/comparison/local-round-2/about-1920x1080.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/about",
+        "viewport": {
+          "w": 1920,
+          "h": 1080
+        },
+        "scrollHeight": 3831,
+        "overflowX": false,
+        "header": {
+          "h": 78,
+          "w": 1920,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 54,
+          "w": 1600,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "44px",
+          "lineHeight": "53.68px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 56,
+          "w": 764,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "45.9999px",
+          "lineHeight": "56.1199px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 451,
+          "w": 1920,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 620,
+            "w": 1920,
+            "headingText": "About BEOK Controls",
+            "headingSize": "44px",
+            "headingLineHeight": "53.68px"
+          },
+          {
+            "className": "section-block",
+            "h": 670,
+            "w": 1920,
+            "headingText": "BEOK Controls",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 893,
+            "w": 1920,
+            "headingText": "R&D Center",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "culture-band",
+            "h": 473,
+            "w": 1920,
+            "headingText": "Corporate Culture",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 670,
+            "w": 1920,
+            "headingText": "Qualifications & Certifications",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "contact",
+      "path": "/contact",
+      "viewport": "1920x1080",
+      "shotPath": "reference/comparison/local-round-2/contact-1920x1080.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/contact",
+        "viewport": {
+          "w": 1920,
+          "h": 1080
+        },
+        "scrollHeight": 3056,
+        "overflowX": false,
+        "header": {
+          "h": 78,
+          "w": 1920,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 54,
+          "w": 1600,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "44px",
+          "lineHeight": "53.68px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 112,
+          "w": 735,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "45.9999px",
+          "lineHeight": "56.1199px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 451,
+          "w": 1920,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 620,
+            "w": 1920,
+            "headingText": "Contact Us",
+            "headingSize": "44px",
+            "headingLineHeight": "53.68px"
+          },
+          {
+            "className": "section-block",
+            "h": 819,
+            "w": 1920,
+            "headingText": "BEOK Controls — Global B2B Desk",
+            "headingSize": "45.9999px",
+            "headingLineHeight": "56.1199px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1111,
+            "w": 1920,
+            "headingText": "Service Inquiry",
+            "headingSize": "32px",
+            "headingLineHeight": "39.04px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "home",
+      "path": "/",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/home-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 5533,
+        "overflowX": false,
+        "header": {
+          "h": 79,
+          "w": 1440,
+          "bg": "rgba(0, 0, 0, 0.28)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 305,
+          "w": 657,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "41.04px",
+          "lineHeight": "50.8896px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 42,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "34.5px",
+          "lineHeight": "42.0899px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "home-banner",
+            "h": 900,
+            "w": 1440,
+            "headingText": "Professional OEM/ODM manufacturer of WiFi thermost",
+            "headingSize": "41.04px",
+            "headingLineHeight": "50.8896px"
+          },
+          {
+            "className": "iservice",
+            "h": 664,
+            "w": 1440,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "iproducts",
+            "h": 1394,
+            "w": 1440,
+            "headingText": "Products",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block",
+            "h": 774,
+            "w": 1440,
+            "headingText": "Applications",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block",
+            "h": 671,
+            "w": 1440,
+            "headingText": "Company Introduction",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block",
+            "h": 655,
+            "w": 1440,
+            "headingText": "News and Information",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tailor-made",
+      "path": "/tailor-made-solution",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/tailor-made-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/tailor-made-solution",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 4856,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 84,
+          "w": 568,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "34.5px",
+          "lineHeight": "42.0899px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 488,
+            "w": 1440,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 504,
+            "w": 1440,
+            "headingText": "Tailored Manufacturing Solutions for Your Brand",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block",
+            "h": 731,
+            "w": 1440,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 698,
+            "w": 1440,
+            "headingText": "Service Process",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block",
+            "h": 812,
+            "w": 1440,
+            "headingText": "Service Advantages",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1091,
+            "w": 1440,
+            "headingText": "Start Your Custom Thermostat Brief",
+            "headingSize": "28.8px",
+            "headingLineHeight": "35.136px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "products",
+      "path": "/products",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/products-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 5908,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 77,
+          "w": 598,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "31.68px",
+          "lineHeight": "38.6496px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 33,
+          "w": 240,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "17px",
+          "lineHeight": "20.74px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "pro-banner",
+            "h": 374,
+            "w": 1440,
+            "headingText": "Professional Smart Thermostat Product Solutions",
+            "headingSize": "31.68px",
+            "headingLineHeight": "38.6496px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "product-detail",
+      "path": "/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/product-detail-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 4596,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 39,
+          "w": 571,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "31.68px",
+          "lineHeight": "38.6496px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 42,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "34.5px",
+          "lineHeight": "42.0899px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "product-detail-hero",
+            "h": 592,
+            "w": 1440,
+            "headingText": "WiFi Gas Boiler Thermostat",
+            "headingSize": "31.68px",
+            "headingLineHeight": "38.6496px"
+          },
+          {
+            "className": "section-block",
+            "h": 1160,
+            "w": 1440,
+            "headingText": "Highlights at a glance",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 521,
+            "w": 1440,
+            "headingText": "FAQ",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1091,
+            "w": 1440,
+            "headingText": "Product Inquiry",
+            "headingSize": "28.8px",
+            "headingLineHeight": "35.136px"
+          },
+          {
+            "className": "section-block",
+            "h": 703,
+            "w": 1440,
+            "headingText": "Related Products",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "solutions",
+      "path": "/solutions",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/solutions-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/solutions",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 3820,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 32,
+          "w": 359,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "25.92px",
+          "lineHeight": "31.6224px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 488,
+            "w": 1440,
+            "headingText": "Solutions",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block",
+            "h": 2801,
+            "w": 1440,
+            "headingText": "Underfloor Heating Solutions",
+            "headingSize": "25.92px",
+            "headingLineHeight": "31.6224px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "blog",
+      "path": "/blog",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/blog-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/blog",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 2050,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 17,
+          "w": 138,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "17.08px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 488,
+            "w": 1440,
+            "headingText": "Blog",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block",
+            "h": 1031,
+            "w": 1440,
+            "headingText": "",
+            "headingSize": null,
+            "headingLineHeight": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "faqs",
+      "path": "/support/faqs",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/faqs-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/support/faqs",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 1737,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 17,
+          "w": 138,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "17.08px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 488,
+            "w": 1440,
+            "headingText": "Thermostat FAQs",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block",
+            "h": 719,
+            "w": 1440,
+            "headingText": "",
+            "headingSize": null,
+            "headingLineHeight": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "downloads",
+      "path": "/support/downloads",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/downloads-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/support/downloads",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 1986,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 42,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "34.5px",
+          "lineHeight": "42.0899px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 488,
+            "w": 1440,
+            "headingText": "Downloads",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block",
+            "h": 967,
+            "w": 1440,
+            "headingText": "Data Download",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "videos",
+      "path": "/support/videos",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/videos-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/support/videos",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 2553,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 42,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "34.5px",
+          "lineHeight": "42.0899px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 488,
+            "w": 1440,
+            "headingText": "Videos",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block",
+            "h": 1534,
+            "w": 1440,
+            "headingText": "Videos",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "about",
+      "path": "/about",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/about-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/about",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 3195,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 42,
+          "w": 568,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "34.5px",
+          "lineHeight": "42.0899px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 488,
+            "w": 1440,
+            "headingText": "About BEOK Controls",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block",
+            "h": 504,
+            "w": 1440,
+            "headingText": "BEOK Controls",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 716,
+            "w": 1440,
+            "headingText": "R&D Center",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "culture-band",
+            "h": 452,
+            "w": 1440,
+            "headingText": "Corporate Culture",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 504,
+            "w": 1440,
+            "headingText": "Qualifications & Certifications",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "advantages",
+      "path": "/about/advantages",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/advantages-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/about/advantages",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 3123,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 42,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "34.5px",
+          "lineHeight": "42.0899px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 488,
+            "w": 1440,
+            "headingText": "Our Advantages",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block",
+            "h": 623,
+            "w": 1440,
+            "headingText": "R&D Strength",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "innovation-dark-band",
+            "h": 294,
+            "w": 1440,
+            "headingText": "Innovation Capability",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 531,
+            "w": 1440,
+            "headingText": "Quality Assurance",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "section-block",
+            "h": 504,
+            "w": 1440,
+            "headingText": "Manufacturing & Supply Readiness",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "contact",
+      "path": "/contact",
+      "viewport": "1440x900",
+      "shotPath": "reference/comparison/local-round-2/contact-1440x900.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/contact",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "scrollHeight": 2756,
+        "overflowX": false,
+        "header": {
+          "h": 59,
+          "w": 1440,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 44,
+          "w": 1200,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36px",
+          "lineHeight": "43.92px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 84,
+          "w": 545,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "34.5px",
+          "lineHeight": "42.0899px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 476,
+          "w": 1440,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 488,
+            "w": 1440,
+            "headingText": "Contact Us",
+            "headingSize": "36px",
+            "headingLineHeight": "43.92px"
+          },
+          {
+            "className": "section-block",
+            "h": 646,
+            "w": 1440,
+            "headingText": "BEOK Controls — Global B2B Desk",
+            "headingSize": "34.5px",
+            "headingLineHeight": "42.0899px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1091,
+            "w": 1440,
+            "headingText": "Service Inquiry",
+            "headingSize": "28.8px",
+            "headingLineHeight": "35.136px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "home",
+      "path": "/",
+      "viewport": "1280x800",
+      "shotPath": "reference/comparison/local-round-2/home-1280x800.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/",
+        "viewport": {
+          "w": 1280,
+          "h": 800
+        },
+        "scrollHeight": 5117,
+        "overflowX": false,
+        "header": {
+          "h": 70,
+          "w": 1280,
+          "bg": "rgba(0, 0, 0, 0.28)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 271,
+          "w": 584,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "36.48px",
+          "lineHeight": "45.2352px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 37,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "30.6666px",
+          "lineHeight": "37.4133px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 494,
+          "w": 1280,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "home-banner",
+            "h": 800,
+            "w": 1280,
+            "headingText": "Professional OEM/ODM manufacturer of WiFi thermost",
+            "headingSize": "36.48px",
+            "headingLineHeight": "45.2352px"
+          },
+          {
+            "className": "iservice",
+            "h": 595,
+            "w": 1280,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "iproducts",
+            "h": 1338,
+            "w": 1280,
+            "headingText": "Products",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "section-block",
+            "h": 691,
+            "w": 1280,
+            "headingText": "Applications",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "section-block",
+            "h": 600,
+            "w": 1280,
+            "headingText": "Company Introduction",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "section-block",
+            "h": 600,
+            "w": 1280,
+            "headingText": "News and Information",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tailor-made",
+      "path": "/tailor-made-solution",
+      "viewport": "1280x800",
+      "shotPath": "reference/comparison/local-round-2/tailor-made-1280x800.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/tailor-made-solution",
+        "viewport": {
+          "w": 1280,
+          "h": 800
+        },
+        "scrollHeight": 4610,
+        "overflowX": false,
+        "header": {
+          "h": 54,
+          "w": 1280,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 39,
+          "w": 1067,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "32px",
+          "lineHeight": "39.04px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 75,
+          "w": 505,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "30.6666px",
+          "lineHeight": "37.4133px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 494,
+          "w": 1280,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 434,
+            "w": 1280,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "32px",
+            "headingLineHeight": "39.04px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 448,
+            "w": 1280,
+            "headingText": "Tailored Manufacturing Solutions for Your Brand",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "section-block",
+            "h": 670,
+            "w": 1280,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 716,
+            "w": 1280,
+            "headingText": "Service Process",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "section-block",
+            "h": 733,
+            "w": 1280,
+            "headingText": "Service Advantages",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1060,
+            "w": 1280,
+            "headingText": "Start Your Custom Thermostat Brief",
+            "headingSize": "25.6px",
+            "headingLineHeight": "31.232px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "products",
+      "path": "/products",
+      "viewport": "1280x800",
+      "shotPath": "reference/comparison/local-round-2/products-1280x800.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products",
+        "viewport": {
+          "w": 1280,
+          "h": 800
+        },
+        "scrollHeight": 5794,
+        "overflowX": false,
+        "header": {
+          "h": 54,
+          "w": 1280,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 69,
+          "w": 532,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "28.16px",
+          "lineHeight": "34.3552px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 33,
+          "w": 240,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "17px",
+          "lineHeight": "20.74px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 494,
+          "w": 1280,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "pro-banner",
+            "h": 364,
+            "w": 1280,
+            "headingText": "Professional Smart Thermostat Product Solutions",
+            "headingSize": "28.16px",
+            "headingLineHeight": "34.3552px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "product-detail",
+      "path": "/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+      "viewport": "1280x800",
+      "shotPath": "reference/comparison/local-round-2/product-detail-1280x800.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+        "viewport": {
+          "w": 1280,
+          "h": 800
+        },
+        "scrollHeight": 4398,
+        "overflowX": false,
+        "header": {
+          "h": 54,
+          "w": 1280,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 508,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "28.16px",
+          "lineHeight": "34.3552px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 37,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "30.6666px",
+          "lineHeight": "37.4133px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 494,
+          "w": 1280,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "product-detail-hero",
+            "h": 533,
+            "w": 1280,
+            "headingText": "WiFi Gas Boiler Thermostat",
+            "headingSize": "28.16px",
+            "headingLineHeight": "34.3552px"
+          },
+          {
+            "className": "section-block",
+            "h": 1122,
+            "w": 1280,
+            "headingText": "Highlights at a glance",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 494,
+            "w": 1280,
+            "headingText": "FAQ",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1060,
+            "w": 1280,
+            "headingText": "Product Inquiry",
+            "headingSize": "25.6px",
+            "headingLineHeight": "31.232px"
+          },
+          {
+            "className": "section-block",
+            "h": 643,
+            "w": 1280,
+            "headingText": "Related Products",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "solutions",
+      "path": "/solutions",
+      "viewport": "1280x800",
+      "shotPath": "reference/comparison/local-round-2/solutions-1280x800.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/solutions",
+        "viewport": {
+          "w": 1280,
+          "h": 800
+        },
+        "scrollHeight": 3473,
+        "overflowX": false,
+        "header": {
+          "h": 54,
+          "w": 1280,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 39,
+          "w": 1067,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "32px",
+          "lineHeight": "39.04px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 28,
+          "w": 319,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "23.04px",
+          "lineHeight": "28.1088px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 494,
+          "w": 1280,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 434,
+            "w": 1280,
+            "headingText": "Solutions",
+            "headingSize": "32px",
+            "headingLineHeight": "39.04px"
+          },
+          {
+            "className": "section-block",
+            "h": 2491,
+            "w": 1280,
+            "headingText": "Underfloor Heating Solutions",
+            "headingSize": "23.04px",
+            "headingLineHeight": "28.1088px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "about",
+      "path": "/about",
+      "viewport": "1280x800",
+      "shotPath": "reference/comparison/local-round-2/about-1280x800.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/about",
+        "viewport": {
+          "w": 1280,
+          "h": 800
+        },
+        "scrollHeight": 2969,
+        "overflowX": false,
+        "header": {
+          "h": 54,
+          "w": 1280,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 39,
+          "w": 1067,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "32px",
+          "lineHeight": "39.04px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 37,
+          "w": 505,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "30.6666px",
+          "lineHeight": "37.4133px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 494,
+          "w": 1280,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 434,
+            "w": 1280,
+            "headingText": "About BEOK Controls",
+            "headingSize": "32px",
+            "headingLineHeight": "39.04px"
+          },
+          {
+            "className": "section-block",
+            "h": 456,
+            "w": 1280,
+            "headingText": "BEOK Controls",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 651,
+            "w": 1280,
+            "headingText": "R&D Center",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "culture-band",
+            "h": 430,
+            "w": 1280,
+            "headingText": "Corporate Culture",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 448,
+            "w": 1280,
+            "headingText": "Qualifications & Certifications",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "contact",
+      "path": "/contact",
+      "viewport": "1280x800",
+      "shotPath": "reference/comparison/local-round-2/contact-1280x800.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/contact",
+        "viewport": {
+          "w": 1280,
+          "h": 800
+        },
+        "scrollHeight": 2630,
+        "overflowX": false,
+        "header": {
+          "h": 54,
+          "w": 1280,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 39,
+          "w": 1067,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "32px",
+          "lineHeight": "39.04px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 75,
+          "w": 484,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "30.6666px",
+          "lineHeight": "37.4133px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 494,
+          "w": 1280,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 434,
+            "w": 1280,
+            "headingText": "Contact Us",
+            "headingSize": "32px",
+            "headingLineHeight": "39.04px"
+          },
+          {
+            "className": "section-block",
+            "h": 587,
+            "w": 1280,
+            "headingText": "BEOK Controls — Global B2B Desk",
+            "headingSize": "30.6666px",
+            "headingLineHeight": "37.4133px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1060,
+            "w": 1280,
+            "headingText": "Service Inquiry",
+            "headingSize": "25.6px",
+            "headingLineHeight": "31.232px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "home",
+      "path": "/",
+      "viewport": "1024x768",
+      "shotPath": "reference/comparison/local-round-2/home-1024x768.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/",
+        "viewport": {
+          "w": 1024,
+          "h": 768
+        },
+        "scrollHeight": 4985,
+        "overflowX": false,
+        "header": {
+          "h": 64,
+          "w": 1024,
+          "bg": "rgba(0, 0, 0, 0.28)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 217,
+          "w": 506,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "29.184px",
+          "lineHeight": "36.1882px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 34,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 575,
+          "w": 1024,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "home-banner",
+            "h": 768,
+            "w": 1024,
+            "headingText": "Professional OEM/ODM manufacturer of WiFi thermost",
+            "headingSize": "29.184px",
+            "headingLineHeight": "36.1882px"
+          },
+          {
+            "className": "iservice",
+            "h": 544,
+            "w": 1024,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "iproducts",
+            "h": 1365,
+            "w": 1024,
+            "headingText": "Products",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 615,
+            "w": 1024,
+            "headingText": "Applications",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 564,
+            "w": 1024,
+            "headingText": "Company Introduction",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 554,
+            "w": 1024,
+            "headingText": "News and Information",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tailor-made",
+      "path": "/tailor-made-solution",
+      "viewport": "1024x768",
+      "shotPath": "reference/comparison/local-round-2/tailor-made-1024x768.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/tailor-made-solution",
+        "viewport": {
+          "w": 1024,
+          "h": 768
+        },
+        "scrollHeight": 4413,
+        "overflowX": false,
+        "header": {
+          "h": 56,
+          "w": 1024,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 922,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 68,
+          "w": 438,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 575,
+          "w": 1024,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 340,
+            "w": 1024,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 407,
+            "w": 1024,
+            "headingText": "Tailored Manufacturing Solutions for Your Brand",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 639,
+            "w": 1024,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 722,
+            "w": 1024,
+            "headingText": "Service Process",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 661,
+            "w": 1024,
+            "headingText": "Service Advantages",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1014,
+            "w": 1024,
+            "headingText": "Start Your Custom Thermostat Brief",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "products",
+      "path": "/products",
+      "viewport": "1024x768",
+      "shotPath": "reference/comparison/local-round-2/products-1024x768.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products",
+        "viewport": {
+          "w": 1024,
+          "h": 768
+        },
+        "scrollHeight": 5865,
+        "overflowX": false,
+        "header": {
+          "h": 56,
+          "w": 1024,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 63,
+          "w": 461,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 33,
+          "w": 240,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "17px",
+          "lineHeight": "20.74px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 575,
+          "w": 1024,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "pro-banner",
+            "h": 324,
+            "w": 1024,
+            "headingText": "Professional Smart Thermostat Product Solutions",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "product-detail",
+      "path": "/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+      "viewport": "1024x768",
+      "shotPath": "reference/comparison/local-round-2/product-detail-1024x768.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+        "viewport": {
+          "w": 1024,
+          "h": 768
+        },
+        "scrollHeight": 4290,
+        "overflowX": false,
+        "header": {
+          "h": 56,
+          "w": 1024,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 29,
+          "w": 440,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "24px",
+          "lineHeight": "29.28px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 34,
+          "w": 740,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 575,
+          "w": 1024,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "product-detail-hero",
+            "h": 464,
+            "w": 1024,
+            "headingText": "WiFi Gas Boiler Thermostat",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          },
+          {
+            "className": "section-block",
+            "h": 1095,
+            "w": 1024,
+            "headingText": "Highlights at a glance",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 478,
+            "w": 1024,
+            "headingText": "FAQ",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1014,
+            "w": 1024,
+            "headingText": "Product Inquiry",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          },
+          {
+            "className": "section-block",
+            "h": 611,
+            "w": 1024,
+            "headingText": "Related Products",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "solutions",
+      "path": "/solutions",
+      "viewport": "1024x768",
+      "shotPath": "reference/comparison/local-round-2/solutions-1024x768.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/solutions",
+        "viewport": {
+          "w": 1024,
+          "h": 768
+        },
+        "scrollHeight": 3113,
+        "overflowX": false,
+        "header": {
+          "h": 56,
+          "w": 1024,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 922,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 27,
+          "w": 305,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "22px",
+          "lineHeight": "26.84px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 575,
+          "w": 1024,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 340,
+            "w": 1024,
+            "headingText": "Solutions",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 2143,
+            "w": 1024,
+            "headingText": "Underfloor Heating Solutions",
+            "headingSize": "22px",
+            "headingLineHeight": "26.84px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "about",
+      "path": "/about",
+      "viewport": "1024x768",
+      "shotPath": "reference/comparison/local-round-2/about-1024x768.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/about",
+        "viewport": {
+          "w": 1024,
+          "h": 768
+        },
+        "scrollHeight": 2900,
+        "overflowX": false,
+        "header": {
+          "h": 56,
+          "w": 1024,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 922,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 34,
+          "w": 438,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 575,
+          "w": 1024,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 340,
+            "w": 1024,
+            "headingText": "About BEOK Controls",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 489,
+            "w": 1024,
+            "headingText": "BEOK Controls",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 617,
+            "w": 1024,
+            "headingText": "R&D Center",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "culture-band",
+            "h": 422,
+            "w": 1024,
+            "headingText": "Corporate Culture",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 402,
+            "w": 1024,
+            "headingText": "Qualifications & Certifications",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "contact",
+      "path": "/contact",
+      "viewport": "1024x768",
+      "shotPath": "reference/comparison/local-round-2/contact-1024x768.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/contact",
+        "viewport": {
+          "w": 1024,
+          "h": 768
+        },
+        "scrollHeight": 2550,
+        "overflowX": false,
+        "header": {
+          "h": 56,
+          "w": 1024,
+          "bg": "rgb(0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 922,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 68,
+          "w": 419,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 575,
+          "w": 1024,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 340,
+            "w": 1024,
+            "headingText": "Contact Us",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 566,
+            "w": 1024,
+            "headingText": "BEOK Controls — Global B2B Desk",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1014,
+            "w": 1024,
+            "headingText": "Service Inquiry",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "home",
+      "path": "/",
+      "viewport": "768x1024",
+      "shotPath": "reference/comparison/local-round-2/home-768x1024.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "scrollHeight": 7138,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 768,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 139,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.72px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 34,
+          "w": 728,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 730,
+          "w": 768,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "home-banner",
+            "h": 987,
+            "w": 768,
+            "headingText": "Professional OEM/ODM manufacturer of WiFi thermost",
+            "headingSize": "28px",
+            "headingLineHeight": "34.72px"
+          },
+          {
+            "className": "iservice",
+            "h": 891,
+            "w": 768,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "iproducts",
+            "h": 2168,
+            "w": 768,
+            "headingText": "Products",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 895,
+            "w": 768,
+            "headingText": "Applications",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 549,
+            "w": 768,
+            "headingText": "Company Introduction",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 918,
+            "w": 768,
+            "headingText": "News and Information",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tailor-made",
+      "path": "/tailor-made-solution",
+      "viewport": "768x1024",
+      "shotPath": "reference/comparison/local-round-2/tailor-made-768x1024.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/tailor-made-solution",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "scrollHeight": 6328,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 768,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 34,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 730,
+          "w": 768,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 290,
+            "w": 768,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 788,
+            "w": 768,
+            "headingText": "Tailored Manufacturing Solutions for Your Brand",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 993,
+            "w": 768,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 1246,
+            "w": 768,
+            "headingText": "Service Process",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 1245,
+            "w": 768,
+            "headingText": "Service Advantages",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 981,
+            "w": 768,
+            "headingText": "Start Your Custom Thermostat Brief",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "products",
+      "path": "/products",
+      "viewport": "768x1024",
+      "shotPath": "reference/comparison/local-round-2/products-768x1024.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "scrollHeight": 6816,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 768,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 32,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 33,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "17px",
+          "lineHeight": "20.74px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 730,
+          "w": 768,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "pro-banner",
+            "h": 531,
+            "w": 768,
+            "headingText": "Professional Smart Thermostat Product Solutions",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "product-detail",
+      "path": "/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+      "viewport": "768x1024",
+      "shotPath": "reference/comparison/local-round-2/product-detail-768x1024.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "scrollHeight": 5542,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 768,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 29,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "24px",
+          "lineHeight": "29.28px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 34,
+          "w": 680,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 730,
+          "w": 768,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "product-detail-hero",
+            "h": 943,
+            "w": 768,
+            "headingText": "WiFi Gas Boiler Thermostat",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          },
+          {
+            "className": "section-block",
+            "h": 1353,
+            "w": 768,
+            "headingText": "Highlights at a glance",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 451,
+            "w": 768,
+            "headingText": "FAQ",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 981,
+            "w": 768,
+            "headingText": "Product Inquiry",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          },
+          {
+            "className": "section-block",
+            "h": 1031,
+            "w": 768,
+            "headingText": "Related Products",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "solutions",
+      "path": "/solutions",
+      "viewport": "768x1024",
+      "shotPath": "reference/comparison/local-round-2/solutions-768x1024.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/solutions",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "scrollHeight": 5550,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 768,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 27,
+          "w": 305,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "22px",
+          "lineHeight": "26.84px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 730,
+          "w": 768,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 290,
+            "w": 768,
+            "headingText": "Solutions",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 4475,
+            "w": 768,
+            "headingText": "Underfloor Heating Solutions",
+            "headingSize": "22px",
+            "headingLineHeight": "26.84px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "about",
+      "path": "/about",
+      "viewport": "768x1024",
+      "shotPath": "reference/comparison/local-round-2/about-768x1024.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/about",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "scrollHeight": 4503,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 768,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 34,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 730,
+          "w": 768,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 290,
+            "w": 768,
+            "headingText": "About BEOK Controls",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 839,
+            "w": 768,
+            "headingText": "BEOK Controls",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 1263,
+            "w": 768,
+            "headingText": "R&D Center",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "culture-band",
+            "h": 548,
+            "w": 768,
+            "headingText": "Corporate Culture",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 777,
+            "w": 768,
+            "headingText": "Qualifications & Certifications",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "contact",
+      "path": "/contact",
+      "viewport": "768x1024",
+      "shotPath": "reference/comparison/local-round-2/contact-768x1024.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/contact",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "scrollHeight": 2975,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 768,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 34,
+          "w": 720,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 730,
+          "w": 768,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 290,
+            "w": 768,
+            "headingText": "Contact Us",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 918,
+            "w": 768,
+            "headingText": "BEOK Controls — Global B2B Desk",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 981,
+            "w": 768,
+            "headingText": "Service Inquiry",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "home",
+      "path": "/",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/home-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 8887,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 278,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.72px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 32,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "home-banner",
+            "h": 863,
+            "w": 390,
+            "headingText": "Professional OEM/ODM manufacturer of WiFi thermost",
+            "headingSize": "28px",
+            "headingLineHeight": "34.72px"
+          },
+          {
+            "className": "iservice",
+            "h": 1644,
+            "w": 390,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "iproducts",
+            "h": 2036,
+            "w": 390,
+            "headingText": "Products",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block",
+            "h": 1627,
+            "w": 390,
+            "headingText": "Applications",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block",
+            "h": 629,
+            "w": 390,
+            "headingText": "Company Introduction",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block",
+            "h": 1300,
+            "w": 390,
+            "headingText": "News and Information",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tailor-made",
+      "path": "/tailor-made-solution",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/tailor-made-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/tailor-made-solution",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 6400,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 63,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 240,
+            "w": 390,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 656,
+            "w": 390,
+            "headingText": "Tailored Manufacturing Solutions for Your Brand",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block",
+            "h": 916,
+            "w": 390,
+            "headingText": "Tailor-Made Solution",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 1436,
+            "w": 390,
+            "headingText": "Service Process",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block",
+            "h": 1048,
+            "w": 390,
+            "headingText": "Service Advantages",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1261,
+            "w": 390,
+            "headingText": "Start Your Custom Thermostat Brief",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "products",
+      "path": "/products",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/products-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 7285,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 95,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 33,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "17px",
+          "lineHeight": "20.74px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "pro-banner",
+            "h": 519,
+            "w": 390,
+            "headingText": "Professional Smart Thermostat Product Solutions",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "product-detail",
+      "path": "/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/product-detail-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 6158,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 29,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "24px",
+          "lineHeight": "29.28px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 32,
+          "w": 310,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "product-detail-hero",
+            "h": 786,
+            "w": 390,
+            "headingText": "WiFi Gas Boiler Thermostat",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          },
+          {
+            "className": "section-block",
+            "h": 1866,
+            "w": 390,
+            "headingText": "Highlights at a glance",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 607,
+            "w": 390,
+            "headingText": "FAQ",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1232,
+            "w": 390,
+            "headingText": "Product Inquiry",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          },
+          {
+            "className": "section-block",
+            "h": 826,
+            "w": 390,
+            "headingText": "Related Products",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "solutions",
+      "path": "/solutions",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/solutions-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/solutions",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 4219,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 27,
+          "w": 305,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "22px",
+          "lineHeight": "26.84px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 240,
+            "w": 390,
+            "headingText": "Solutions",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 3135,
+            "w": 390,
+            "headingText": "Underfloor Heating Solutions",
+            "headingSize": "22px",
+            "headingLineHeight": "26.84px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "blog",
+      "path": "/blog",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/blog-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/blog",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 3543,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 0,
+          "w": 0,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "17.08px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 240,
+            "w": 390,
+            "headingText": "Blog",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 2460,
+            "w": 390,
+            "headingText": "",
+            "headingSize": null,
+            "headingLineHeight": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "faqs",
+      "path": "/support/faqs",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/faqs-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/support/faqs",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 2130,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 0,
+          "w": 0,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "17.08px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 240,
+            "w": 390,
+            "headingText": "Thermostat FAQs",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 1046,
+            "w": 390,
+            "headingText": "",
+            "headingSize": null,
+            "headingLineHeight": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "downloads",
+      "path": "/support/downloads",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/downloads-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/support/downloads",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 2733,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 32,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 240,
+            "w": 390,
+            "headingText": "Downloads",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 1650,
+            "w": 390,
+            "headingText": "Data Download",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "videos",
+      "path": "/support/videos",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/videos-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/support/videos",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 3024,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 32,
+          "w": 310,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 240,
+            "w": 390,
+            "headingText": "Videos",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 1941,
+            "w": 390,
+            "headingText": "Videos",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "about",
+      "path": "/about",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/about-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/about",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 4200,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 32,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 240,
+            "w": 390,
+            "headingText": "About BEOK Controls",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 741,
+            "w": 390,
+            "headingText": "BEOK Controls",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 959,
+            "w": 390,
+            "headingText": "R&D Center",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "culture-band",
+            "h": 795,
+            "w": 390,
+            "headingText": "Corporate Culture",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 622,
+            "w": 390,
+            "headingText": "Qualifications & Certifications",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "advantages",
+      "path": "/about/advantages",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/advantages-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/about/advantages",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 4806,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 32,
+          "w": 310,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 240,
+            "w": 390,
+            "headingText": "Our Advantages",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 1272,
+            "w": 390,
+            "headingText": "R&D Strength",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "innovation-dark-band",
+            "h": 306,
+            "w": 390,
+            "headingText": "Innovation Capability",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block is-surface",
+            "h": 831,
+            "w": 390,
+            "headingText": "Quality Assurance",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "section-block",
+            "h": 635,
+            "w": 390,
+            "headingText": "Manufacturing & Supply Readiness",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "contact",
+      "path": "/contact",
+      "viewport": "390x844",
+      "shotPath": "reference/comparison/local-round-2/contact-390x844.png",
+      "metrics": {
+        "url": "http://127.0.0.1:3005/contact",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "scrollHeight": 3235,
+        "overflowX": false,
+        "header": {
+          "h": 60,
+          "w": 390,
+          "bg": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "h1": {
+          "h": 34,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "fontWeight": "700"
+        },
+        "h2": {
+          "h": 63,
+          "w": 350,
+          "bg": "rgba(0, 0, 0, 0)",
+          "color": "rgb(39, 39, 39)",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "fontWeight": "700"
+        },
+        "footer": {
+          "h": 788,
+          "w": 390,
+          "bg": "rgb(39, 39, 39)",
+          "color": "rgb(184, 188, 196)",
+          "fontSize": "14px",
+          "lineHeight": "23.1px",
+          "fontWeight": "400"
+        },
+        "sections": [
+          {
+            "className": "detail-banner",
+            "h": 240,
+            "w": 390,
+            "headingText": "Contact Us",
+            "headingSize": "28px",
+            "headingLineHeight": "34.16px"
+          },
+          {
+            "className": "section-block",
+            "h": 920,
+            "w": 390,
+            "headingText": "BEOK Controls — Global B2B Desk",
+            "headingSize": "26px",
+            "headingLineHeight": "31.72px"
+          },
+          {
+            "className": "inquiry-backdrop-band",
+            "h": 1232,
+            "w": 390,
+            "headingText": "Service Inquiry",
+            "headingSize": "24px",
+            "headingLineHeight": "29.28px"
+          }
+        ]
+      }
+    }
+  ]
+}

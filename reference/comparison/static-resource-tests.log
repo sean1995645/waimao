@@ -1,0 +1,18 @@
+
+> beok-controls@0.1.0 test /Users/sean/Code/web/waimao
+> playwright test --grep 'stylesheet and script assets'
+
+
+Running 3 tests using 3 workers
+
+(node:61823) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:61825) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:61824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile] › tests/site.spec.ts:11:1 › rendered pages load their stylesheet and script assets (85ms)
+  ✓  3 [desktop] › tests/site.spec.ts:11:1 › rendered pages load their stylesheet and script assets (82ms)
+  ✓  1 [tablet] › tests/site.spec.ts:11:1 › rendered pages load their stylesheet and script assets (86ms)
+
+  3 passed (396ms)

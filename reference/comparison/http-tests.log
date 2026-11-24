@@ -1,0 +1,21 @@
+
+> beok-controls@0.1.0 test /Users/sean/Code/web/waimao
+> playwright test --grep 'all page routes|404 and inquiry'
+
+
+Running 6 tests using 3 workers
+
+(node:47890) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47891) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [mobile] › tests/site.spec.ts:4:1 › all page routes and metadata respond (287ms)
+  ✓  4 [mobile] › tests/site.spec.ts:9:1 › 404 and inquiry endpoint do not imply success (17ms)
+  ✓  2 [tablet] › tests/site.spec.ts:4:1 › all page routes and metadata respond (308ms)
+  ✓  3 [desktop] › tests/site.spec.ts:4:1 › all page routes and metadata respond (299ms)
+  ✓  5 [tablet] › tests/site.spec.ts:9:1 › 404 and inquiry endpoint do not imply success (16ms)
+  ✓  6 [desktop] › tests/site.spec.ts:9:1 › 404 and inquiry endpoint do not imply success (14ms)
+
+  6 passed (680ms)

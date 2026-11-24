@@ -1,0 +1,15 @@
+
+> beok-controls@0.1.0 test:http /Users/sean/Code/web/waimao
+> playwright test tests/http.spec.ts --project desktop
+
+
+Running 4 tests using 1 worker
+
+(node:65893) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/http.spec.ts:5:1 › all page routes and metadata respond (276ms)
+  ✓  2 [desktop] › tests/http.spec.ts:15:1 › all rendered internal links and fragments resolve (153ms)
+  ✓  3 [desktop] › tests/http.spec.ts:44:1 › all rendered stylesheets and scripts load (124ms)
+  ✓  4 [desktop] › tests/http.spec.ts:68:1 › 404 and inquiry endpoint do not imply success (17ms)
+
+  4 passed (791ms)
