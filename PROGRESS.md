@@ -63,6 +63,13 @@ The BEOK Controls B2B smart thermostat website has been rebuilt from the ground 
 - Rebuilt `.iservice-grid` and `a.iservice-card` in `src/components/HomeSections.tsx` and `src/styles/globals.css` to match the measured reference animation while preserving the `< 992px` mobile/tablet carousel.
 - Visually verified `reference/comparison/local-iservice-{rest,hover-0,hover-1}.png` against `ref-iservice-{rest,hover-full}.png` and verified `pnpm build` (`89/89`) + `pnpm test` (`30/30 passed`).
 
+## Header Mega Menu Dropdown Positioning Fix
+- Fixed `.mega-menu` positioning in `src/components/Header.tsx` and `src/styles/globals.css`:
+  - Switched `.nav-item` to `position: relative` and `.mega-menu` to `position: absolute; top: 100%` (eliminating detached screen-center offset and any vertical hover gap between header and dropdown).
+  - Anchored each dropdown directly below its parent nav item (`Tailor-Made Solution`, `Products`, `Solutions`, `Blog` centered under their trigger; `Service & Support` and `About Us` right-aligned via `.mega-align-right` so they never clip off the right edge; compact widths at `<= 1199px` so `1024px` never clips on the left).
+  - Added `.has-menu-open` solid black desktop header state while any dropdown/search is active (while keeping `< 992px` mobile header white).
+- Verified **24 / 24** geometry assertions across all 6 dropdowns × 4 desktop viewports (`1920×1080`, `1440×900`, `1280×800`, `1024×768`: `gapTop: 0`, `clipLeft: false`, `clipRight: false`, `coversTrigger: true`) and **30 / 30** Playwright E2E/HTTP tests.
+
 ## Active Local Server & Remaining External Blockers
 - Scoped Git commits created on branch `prod`, preserving all unrelated deletions outside the new implementation scope.
 - Fresh production server live on `http://localhost:3000/`.
