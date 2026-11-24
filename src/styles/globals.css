@@ -208,19 +208,17 @@ main {
 }
 
 .brand-logo-img {
-  height: clamp(28px, 2.2vw, 38px);
+  height: clamp(30px, 2.3vw, 40px);
   width: auto;
   display: block;
   object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 
 .footer-logo-img {
-  height: 30px;
+  height: 32px;
   width: auto;
   display: block;
   object-fit: contain;
-  filter: brightness(0) invert(1);
   margin-bottom: 10px;
 }
 
@@ -2781,7 +2779,6 @@ table.spec-table th {
 
   .brand-logo-img {
     height: 30px;
-    filter: none;
   }
 
   .desktop-drawer-toggle {
