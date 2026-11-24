@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { articles, categories, odmCases, products, services, solutions } from '@/data/catalog';
-import { pages, type PageRecord } from '@/data/pages';
+import { type PageRecord } from '@/data/pages';
 import { BlogDetailView, BlogIndexView } from './BlogSections';
 import { AboutPageView, AdvantagesPageView, ContactPageView, JoinUsPageView } from './CompanySections';
 import { Footer } from './Footer';
@@ -9,21 +9,14 @@ import { HomePageView } from './HomeSections';
 import { Breadcrumb, Container, Pagination, SectionTitle } from './LayoutPrimitives';
 import { ProductDetailView } from './ProductDetailView';
 import { ProductGrid } from './ProductsCatalog';
+import { SearchPageView } from './SearchView';
 import { SolutionDetailView, SolutionsIndexView } from './SolutionsSections';
 import { DownloadsDirectory, FAQAccordion, SupportOverviewView, VideosLibrary } from './SupportSections';
 import { OdmDetailView, OdmIndexView, ServiceDetailView, TailorMadeIndexView } from './TailorMadeSections';
 
 export { Breadcrumb, Container, Footer, HeroBanner, Pagination, SectionTitle };
 
-export function PageBody({
-  page,
-  q = '',
-  requestedPage = 1,
-}: {
-  page: PageRecord;
-  q?: string;
-  requestedPage?: number;
-}) {
+export function PageBody({ page }: { page: PageRecord }) {
   switch (page.kind) {
     case 'home':
       return <HomePageView />;
@@ -61,7 +54,7 @@ export function PageBody({
     }
 
     case 'blog':
-      return <BlogIndexView activeCategory={page.key} currentPath={page.path} requestedPage={requestedPage} />;
+      return <BlogIndexView activeCategory={page.key} currentPath={page.path} />;
 
     case 'article': {
       const art = articles.find((a) => a.slug === page.key);
@@ -98,51 +91,8 @@ export function PageBody({
     case 'contact':
       return <ContactPageView />;
 
-    case 'search': {
-      const term = q.trim().toLowerCase();
-      const found = term
-        ? pages.filter(
-            (p) =>
-              !['home', 'search', 'sitemap', 'text'].includes(p.kind) &&
-              `${p.title} ${p.description}`.toLowerCase().includes(term),
-          )
-        : [];
-      return (
-        <section className="section-block">
-          <Container>
-            <form className="page-search" action="/search">
-              <label htmlFor="search-query">Search Heatnexis products, solutions, services and articles</label>
-              <div className="search-row">
-                <input
-                  id="search-query"
-                  name="q"
-                  type="search"
-                  defaultValue={q}
-                  placeholder="Enter keywords such as boiler, underfloor, TRV, PCB..."
-                  required
-                />
-                <button className="btn-primary" type="submit">
-                  Search
-                </button>
-              </div>
-            </form>
-            <p role="status" style={{ fontWeight: 600 }}>
-              {q ? `${found.length} ${found.length === 1 ? 'result' : 'results'} for “${q}”` : 'Enter a search term to begin.'}
-            </p>
-            <ul className="search-results">
-              {found.map((item) => (
-                <li key={item.path}>
-                  <h2>
-                    <Link href={item.path}>{item.title}</Link>
-                  </h2>
-                  <p style={{ margin: '6px 0 0', color: '#666' }}>{item.description}</p>
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </section>
-      );
-    }
+    case 'search':
+      return <SearchPageView />;
 
     case 'sitemap': {
       const groups = [

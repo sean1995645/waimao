@@ -1,0 +1,12 @@
+name = "waimao"
+main = "worker/index.ts"
+compatibility_date = "2026-03-26"
+
+[build]
+command = "pnpm install --frozen-lockfile && pnpm build"
+
+[assets]
+directory = "out"
+binding = "ASSETS"
+not_found_handling = "404-page"
+run_worker_first = ["/api/*"]

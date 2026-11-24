@@ -7,7 +7,6 @@ import { pages } from '@/data/pages';
 
 type Props = {
   params: Promise<{ slug?: string[] }>;
-  searchParams: Promise<{ q?: string; page?: string }>;
 };
 
 export const dynamicParams = false;
@@ -40,11 +39,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function Page({ params, searchParams }: Props) {
+export default async function Page({ params }: Props) {
   const page = await resolve(params);
   if (!page) notFound();
-
-  const query = ['search', 'blog'].includes(page.kind) ? await searchParams : {};
 
   const breadcrumbItems = [
     { '@type': 'ListItem', position: 1, name: 'Home', item: site.url },
@@ -116,12 +113,12 @@ export default async function Page({ params, searchParams }: Props) {
         }}
       />
       {hasCustomHero ? (
-        <PageBody page={page} q={query.q || ''} requestedPage={Number(query.page) || 1} />
+        <PageBody page={page} />
       ) : (
         <>
           <HeroBanner page={page} />
           <Breadcrumb page={page} />
-          <PageBody page={page} q={query.q || ''} requestedPage={Number(query.page) || 1} />
+          <PageBody page={page} />
         </>
       )}
     </>

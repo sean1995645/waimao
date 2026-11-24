@@ -1,4 +1,8 @@
+'use client';
+
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import { Calendar, ChevronRight } from 'lucide-react';
 import { articleCategories, articles } from '@/data/catalog';
 import type { ArticleRecord } from '@/types/content';
@@ -25,15 +29,15 @@ export function ArticleCard({ article }: { article: ArticleRecord }) {
   );
 }
 
-export function BlogIndexView({
+function BlogIndexInner({
   activeCategory,
   currentPath,
-  requestedPage,
 }: {
   activeCategory?: string;
   currentPath: string;
-  requestedPage: number;
 }) {
+  const searchParams = useSearchParams();
+  const requestedPage = Number(searchParams.get('page')) || 1;
   const list = activeCategory ? articles.filter((a) => a.category === activeCategory) : articles;
   const pageSize = 6;
   const totalPages = Math.max(1, Math.ceil(list.length / pageSize));
@@ -71,6 +75,34 @@ export function BlogIndexView({
         <Pagination current={current} total={totalPages} base={currentPath} />
       </Container>
     </section>
+  );
+}
+
+export function BlogIndexView({
+  activeCategory,
+  currentPath,
+}: {
+  activeCategory?: string;
+  currentPath: string;
+}) {
+  return (
+    <Suspense
+      fallback={
+        <section className="section-block">
+          <Container>
+            <div className="inews-grid" style={{ marginTop: 28 }}>
+              {(activeCategory ? articles.filter((a) => a.category === activeCategory) : articles)
+                .slice(0, 6)
+                .map((art) => (
+                  <ArticleCard key={art.slug} article={art} />
+                ))}
+            </div>
+          </Container>
+        </section>
+      }
+    >
+      <BlogIndexInner activeCategory={activeCategory} currentPath={currentPath} />
+    </Suspense>
   );
 }
 
