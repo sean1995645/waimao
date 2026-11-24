@@ -18,9 +18,29 @@ export function FloatingContact() {
             </button>
           </div>
           <p>
-            Looking for wholesale pricing, sample evaluation, or OEM/ODM thermostat customization? Prepare a structured
-            B2B project brief online.
+            Looking for wholesale pricing, sample evaluation, or OEM/ODM thermostat customization? Reach us directly or
+            prepare a B2B brief online.
           </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 14, fontSize: 13 }}>
+            <div>
+              <strong>WhatsApp:</strong>{' '}
+              <a
+                href="https://wa.me/8617301760334"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-link"
+                style={{ fontSize: 13 }}
+              >
+                +86 173 0176 0334
+              </a>
+            </div>
+            <div>
+              <strong>Email:</strong>{' '}
+              <a href="mailto:sean.org.cn@gmail.com" className="text-link" style={{ fontSize: 13 }}>
+                sean.org.cn@gmail.com
+              </a>
+            </div>
+          </div>
           <Link href="/contact" className="btn-primary" style={{ width: '100%' }} onClick={() => setOpen(false)}>
             Request B2B Quote →
           </Link>

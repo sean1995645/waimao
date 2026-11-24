@@ -468,13 +468,24 @@ export function ContactPageView() {
                 <li>
                   <Phone size={18} aria-hidden="true" />
                   <span>
-                    <strong>Telephone / WhatsApp:</strong> Direct regional sales line shared upon B2B account inquiry
+                    <strong>WhatsApp / Tel:</strong>{' '}
+                    <a
+                      href="https://wa.me/8617301760334"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-link"
+                    >
+                      +86 173 0176 0334 (17301760334)
+                    </a>
                   </span>
                 </li>
                 <li>
                   <Mail size={18} aria-hidden="true" />
                   <span>
-                    <strong>Business RFQ Desk:</strong> Prepare your structured project inquiry draft below
+                    <strong>Business Email:</strong>{' '}
+                    <a href="mailto:sean.org.cn@gmail.com" className="text-link">
+                      sean.org.cn@gmail.com
+                    </a>
                   </span>
                 </li>
                 <li>

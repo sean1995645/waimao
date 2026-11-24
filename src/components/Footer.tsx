@@ -33,10 +33,14 @@ export function Footer() {
               <strong>Address : </strong>People&apos;s Square, Huangpu District, Shanghai, China
             </div>
             <div>
-              <strong>RFQ Desk : </strong>Structured project quotes via Contact Us
+              <strong>WhatsApp : </strong>
+              <a href="https://wa.me/8617301760334" target="_blank" rel="noopener noreferrer">
+                +86 173 0176 0334
+              </a>
             </div>
             <div>
-              <strong>Support : </strong>Technical datasheets &amp; sample coordination
+              <strong>Email : </strong>
+              <a href="mailto:sean.org.cn@gmail.com">sean.org.cn@gmail.com</a>
             </div>
             <div className="footer-qr-row">
               <div className="footer-qr-box" aria-label="Heatnexis B2B Inquiry Desk">

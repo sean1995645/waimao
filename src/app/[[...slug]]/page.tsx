@@ -75,6 +75,8 @@ export default async function Page({ params }: Props) {
       name: 'Heatnexis',
       url: site.url,
       description: page.description,
+      email: site.contact.email,
+      telephone: site.contact.whatsapp,
       address: {
         '@type': 'PostalAddress',
         streetAddress: "People's Square, Huangpu District",
