@@ -1,0 +1,80 @@
+/* Browser-measured Design Tokens from https://smartthermostatmanufacturer.com/
+   Measured via Playwright Chromium across 1920x1080, 1440x900, 1280x800, 1024x768, 768x1024, 390x844. */
+:root {
+  /* Brand & Semantic Colors */
+  --color-primary: #0067e7;
+  --color-primary-hover: #0054bf;
+  --color-primary-soft: rgba(0, 103, 231, 0.08);
+  --color-black: #000000;
+  --color-title: #000000;
+  --color-heading: #272727;
+  --color-card-title: #2e3742;
+  --color-text: #4c505f;
+  --color-text-muted: #666666;
+  --color-white: #ffffff;
+  --color-surface: #f5f6f8;
+  --color-surface-alt: #f7f8fa;
+  --color-input-bg: #f3f4f6;
+  --color-border: #e8ecf0;
+  --color-border-strong: #d5dce3;
+  --color-dark-surface: #1b2026;
+  --color-dark-surface-2: #2c333c;
+  --color-footer-bg: #272727;
+  --color-footer-text: #b8bcc4;
+  --color-footer-muted: #8a9099;
+  --color-danger: #d93025;
+
+  /* Typography */
+  --font-body: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --text-size: 14px;
+  --text-leading: 1.65;
+  --title-size: clamp(28px, 2.39583vw, 46px);
+  --title-leading: 1.22;
+  --subtitle-size: clamp(13px, 0.9375vw, 16px);
+
+  /* Layout & Container (measured .content1600 = 83.33333vw) */
+  --container: 83.33333vw;
+  --container-max: 1600px;
+  --header-height-top: clamp(64px, 5.5vw, 106px);
+  --header-height: clamp(54px, 4.1vw, 78px);
+  --section-space: clamp(56px, 5.2vw, 96px);
+  --inner-banner-height: clamp(340px, 33.9vw, 620px);
+
+  /* Geometry & Motion */
+  --radius: 0px;
+  --shadow-dropdown: 0 12px 32px rgba(0, 0, 0, 0.14);
+  --shadow-card-float: 0 14px 40px rgba(0, 0, 0, 0.08);
+  --transition-fast: 200ms ease;
+  --transition: 350ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+@media (max-width: 1199px) {
+  :root {
+    --container: 90vw;
+    --header-height-top: 64px;
+    --header-height: 56px;
+    --section-space: 64px;
+    --inner-banner-height: 340px;
+  }
+}
+
+@media (max-width: 991px) {
+  :root {
+    --container: calc(100% - 48px);
+    --header-height-top: 60px;
+    --header-height: 60px;
+    --section-space: 52px;
+    --inner-banner-height: 290px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container: calc(100% - 40px);
+    --header-height-top: 60px;
+    --header-height: 60px;
+    --section-space: 44px;
+    --title-size: 26px;
+    --inner-banner-height: 240px;
+  }
+}

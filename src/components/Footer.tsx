@@ -1,5 +1,100 @@
-import React from 'react';
-import {useIntl} from 'react-intl';
-import TransitionLink from './TransitionLink';
-const Footer:React.FC=()=>{const intl=useIntl();return <footer className="mt-0 bg-[#171815] px-5 pb-8 pt-16 text-white md:px-10 md:pt-20 lg:px-16"><div className="mx-auto max-w-[1312px]"><div className="grid gap-12 border-b border-white/12 pb-14 lg:grid-cols-[1.25fr_.75fr_.75fr]"><div><img src="/heatnexis-logo.png" alt="HeatNexis" className="h-9 w-auto brightness-0 invert"/><p className="mt-6 max-w-md text-sm leading-7 text-white/55">{intl.formatMessage({id:'footer.description'})}</p><p className="mt-8 text-[10px] font-bold uppercase tracking-[.2em] text-[#e88a51]">Smart heating · Made connected</p></div><div><h3 className="text-[10px] font-bold uppercase tracking-[.2em] text-white/45">Explore</h3><nav className="mt-5 flex flex-col gap-3 text-sm text-white/75"><TransitionLink to="/products">{intl.formatMessage({id:'nav.products'})}</TransitionLink><TransitionLink to="/about">{intl.formatMessage({id:'nav.about'})}</TransitionLink><TransitionLink to="/contact">{intl.formatMessage({id:'nav.contact'})}</TransitionLink></nav></div><div><h3 className="text-[10px] font-bold uppercase tracking-[.2em] text-white/45">{intl.formatMessage({id:'footer.contactInfo'})}</h3><div className="mt-5 space-y-3 text-sm text-white/75"><a href="mailto:sales@heatnexis.com" className="block hover:text-[#f2a16b]">sales@heatnexis.com</a><a href="tel:+8613800102400" className="block hover:text-[#f2a16b]">+86 138 0010 2400</a></div><TransitionLink to="/contact" className="mt-7 inline-flex rounded-full bg-[#d9652d] px-5 py-3 text-xs font-bold text-white hover:bg-[#b84d1d]">Request a quote</TransitionLink></div></div><div className="flex flex-col gap-3 pt-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between"><p>&copy; HeatNexis. {intl.formatMessage({id:'footer.rights'})}</p><p>Heating controls for global projects</p></div></div></footer>};
-export default Footer;
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import { ChevronDown, Globe, Mail, MessageSquare, Share2 } from 'lucide-react';
+import { navigation } from '@/data/catalog';
+import { Container } from './LayoutPrimitives';
+
+export function Footer() {
+  const [openCol, setOpenCol] = useState<string | null>(null);
+  const navGroups = navigation.filter((n) => n.children);
+
+  return (
+    <footer className="site-footer">
+      <Container>
+        <div className="footer-grid">
+          <div className="footer-contact-col">
+            <div>
+              <strong>Brand : </strong>BEOK Controls — Heating Control OEM/ODM
+            </div>
+            <div>
+              <strong>Address : </strong>Official factory &amp; office address pending brand approval
+            </div>
+            <div>
+              <strong>Email : </strong>Commercial email address pending verification
+            </div>
+            <div>
+              <strong>Tel : </strong>Business telephone pending verification
+            </div>
+            <div className="footer-qr-row">
+              <div className="footer-qr-box" aria-label="Official contact QR code placeholder">
+                QR PENDING
+              </div>
+              <div>
+                <div>BEOK Controls</div>
+                <div>Official channel QR pending</div>
+                <Link href="/contact" className="text-link" style={{ fontSize: '12px', marginTop: '4px' }}>
+                  Prepare Inquiry →
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {navGroups.map((group) => {
+            const isOpen = openCol === group.name;
+            return (
+              <div className={`footer-col ${isOpen ? 'is-open' : ''}`} key={group.href}>
+                <h2>
+                  <Link href={group.href}>{group.name}</Link>
+                </h2>
+                <button
+                  type="button"
+                  className="footer-col-toggle"
+                  aria-expanded={isOpen}
+                  onClick={() => setOpenCol((c) => (c === group.name ? null : group.name))}
+                >
+                  <span>{group.name}</span>
+                  <ChevronDown
+                    size={16}
+                    style={{ transform: isOpen ? 'rotate(180deg)' : undefined, transition: 'transform 200ms' }}
+                  />
+                </button>
+                <ul>
+                  {group.children?.map((child) => (
+                    <li key={child.href}>
+                      <Link href={child.href}>{child.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="footer-bottom">
+          <div className="footer-bottom-links">
+            <Link href="/sitemap">Site Map</Link>
+            <Link href="/legal-notice">Legal Disclaimer</Link>
+            <Link href="/privacy">Privacy Policy</Link>
+            <span>Copyright © {new Date().getFullYear()} BEOK Controls. Development preview.</span>
+          </div>
+          <div className="footer-socials" aria-label="BEOK Controls quick links">
+            <Link href="/contact" aria-label="Contact inquiry">
+              <Mail size={14} />
+            </Link>
+            <Link href="/support/faqs" aria-label="Technical FAQs">
+              <MessageSquare size={14} />
+            </Link>
+            <Link href="/solutions" aria-label="Global heating solutions">
+              <Globe size={14} />
+            </Link>
+            <Link href="/sitemap" aria-label="Website sitemap">
+              <Share2 size={14} />
+            </Link>
+          </div>
+        </div>
+      </Container>
+    </footer>
+  );
+}

@@ -1,0 +1,382 @@
+[
+  {
+    "local": "/",
+    "reference": "https://smartthermostatmanufacturer.com/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/_global-error",
+    "reference": null,
+    "status": "browser-verified"
+  },
+  {
+    "local": "/about",
+    "reference": "https://smartthermostatmanufacturer.com/About_us/about-chsgd/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/about/advantages",
+    "reference": "https://smartthermostatmanufacturer.com/About_us/our-advantages",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/about/join-us",
+    "reference": "https://smartthermostatmanufacturer.com/About_us/join-us",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/blog/bms-commercial-hvac-thermostats",
+    "reference": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/blog/connected-heating-projects",
+    "reference": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/blog/enclosure-development",
+    "reference": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/blog/heating-zone-planning",
+    "reference": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/blog/pcb-reliability-testing-thermostats",
+    "reference": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/blog/planning-a-thermostat-oem-project",
+    "reference": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/blog/requesting-product-documents",
+    "reference": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/blog/smart-radiator-valves-retrofits",
+    "reference": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/blog/thermostat-compatibility-checklist",
+    "reference": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/contact",
+    "reference": "https://smartthermostatmanufacturer.com/About_us/Contact_Us/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/legal-notice",
+    "reference": "https://smartthermostatmanufacturer.com/Legal_Notice/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm",
+    "reference": "https://smartthermostatmanufacturer.com/odm/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/branded-smart-thermostat-mobile-app",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/commercial-multi-site-heating-dashboard",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/connected-gas-boiler-control-platform",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/dual-sensor-electric-floor-mainboard",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/eight-zone-wiring-centre-control-board",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/ergonomic-trv-valve-housing",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/quick-pair-installer-commissioning-flow",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/rotary-multi-color-smart-thermostat-id",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/touch-glass-smart-home-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/ultra-low-power-battery-rf-pcb",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/ultra-slim-flush-glass-wall-enclosure",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/odm/zigbee-multi-zone-hydronic-kit",
+    "reference": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/privacy",
+    "reference": "https://smartthermostatmanufacturer.com/privacy/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products",
+    "reference": "https://smartthermostatmanufacturer.com/products/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/electric-underfloor-heating-thermostats",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/electric-underfloor-heating-thermostats/black-glass-electric-floor-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/electric-underfloor-heating-thermostats/electric-underfloor-heating-thermostats-concept",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/electric-underfloor-heating-thermostats/programmable-electric-floor-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/electric-underfloor-heating-thermostats/rotary-electric-heating-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/gas-boiler-thermostats",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/gas-boiler-thermostats/gas-boiler-thermostats-concept",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/gas-boiler-thermostats/programmable-touch-boiler-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/gas-boiler-thermostats/rotary-knob-gas-boiler-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/gas-boiler-thermostats/wireless-rf-gas-boiler-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/smart-heating-controllers",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/smart-heating-controllers/commercial-modbus-heating-controller",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/smart-heating-controllers/smart-heating-controllers-concept",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/smart-radiator-valves",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/smart-radiator-valves/led-wifi-radiator-valve",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/smart-radiator-valves/smart-radiator-valves-concept",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/thermal-actuators",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/thermal-actuators/normally-open-thermal-actuator",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/thermal-actuators/thermal-actuators-concept",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/water-heating-thermostats",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/water-heating-thermostats/hydronic-touch-room-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/water-heating-thermostats/programmable-water-heating-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/water-heating-thermostats/water-heating-thermostats-concept",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/water-heating-thermostats/wireless-hydronic-zone-thermostat",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/wiring-centres",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/wiring-centres/wireless-multi-zone-wiring-centre",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/products/wiring-centres/wiring-centres-concept",
+    "reference": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/sitemap",
+    "reference": "https://smartthermostatmanufacturer.com/sitemap/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/solutions",
+    "reference": "https://smartthermostatmanufacturer.com/Solutions/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/solutions/boiler-heating-solutions",
+    "reference": "https://smartthermostatmanufacturer.com/Solutions/boiler-heating-solutions",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/solutions/commercial-heating-control-solutions",
+    "reference": "https://smartthermostatmanufacturer.com/Solutions/commercial-heating-control-solutions",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/solutions/energy-saving-thermostat-solutions",
+    "reference": "https://smartthermostatmanufacturer.com/Solutions/energy-saving-thermostat-solutions",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/solutions/oem-odm-smart-thermostat-solutions",
+    "reference": "https://smartthermostatmanufacturer.com/Solutions/oem-odm-smart-thermostat-solutions",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/solutions/smart-home-hvac-solutions",
+    "reference": "https://smartthermostatmanufacturer.com/Solutions/smart-home-hvac-solutions",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/solutions/underfloor-heating-solutions",
+    "reference": "https://smartthermostatmanufacturer.com/Solutions/underfloor-heating-solutions",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/support",
+    "reference": "https://smartthermostatmanufacturer.com/Support/support",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/support/downloads",
+    "reference": "https://smartthermostatmanufacturer.com/Support/downloads",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/support/faqs",
+    "reference": "https://smartthermostatmanufacturer.com/Support/Thermostat-FAQs/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/support/terms",
+    "reference": null,
+    "status": "browser-verified"
+  },
+  {
+    "local": "/support/videos",
+    "reference": "https://smartthermostatmanufacturer.com/Support/Video/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/tailor-made-solution",
+    "reference": "https://smartthermostatmanufacturer.com/custom-thermostat-development-services/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/tailor-made-solution/app-development",
+    "reference": "https://smartthermostatmanufacturer.com/custom-thermostat-development-services/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/tailor-made-solution/pcb-development",
+    "reference": "https://smartthermostatmanufacturer.com/custom-thermostat-development-services/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/tailor-made-solution/smart-home-integration",
+    "reference": "https://smartthermostatmanufacturer.com/custom-thermostat-development-services/",
+    "status": "browser-verified"
+  },
+  {
+    "local": "/tailor-made-solution/structural-design",
+    "reference": "https://smartthermostatmanufacturer.com/custom-thermostat-development-services/",
+    "status": "browser-verified"
+  }
+]

@@ -1,27 +1,37 @@
 {
+  "name": "beok-controls",
+  "version": "0.1.0",
   "private": true,
-  "author": "cnb <ANYVMg1My0ImGxpvnjPFNC+cnb.askPqk8uQGA@noreply.cnb.cool>",
   "scripts": {
-    "dev": "umi dev",
-    "build": "umi build",
-    "postinstall": "umi setup",
-    "setup": "umi setup",
-    "start": "npm run dev",
-    "test:reference": "node --test tests/reference.test.cjs"
+    "dev": "WATCHPACK_POLLING=true next dev --webpack --hostname 0.0.0.0",
+    "build": "next build --webpack",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "playwright test",
+    "capture": "node scripts/capture.mjs",
+    "test:http": "playwright test tests/http.spec.ts --project desktop"
   },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "dependencies": {
-    "@formspree/react": "^3.0.0",
-    "react-intl": "^10.1.0",
-    "umi": "^4.6.35"
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "lucide-react": "^0.468.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.33",
-    "@types/react-dom": "^18.0.11",
-    "autoprefixer": "^10.4.27",
-    "jsdom": "^29.1.1",
-    "postcss": "^8.5.8",
-    "tailwindcss": "^3.4.19",
-    "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.0.3"
-  }
+    "typescript": "^5.9.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "@playwright/test": "^1.56.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.0.0"
+  },
+  "packageManager": "pnpm@10.15.1"
 }

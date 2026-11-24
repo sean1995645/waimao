@@ -1,148 +1,436 @@
-import React, { startTransition, useState } from 'react';
-import { useIntl } from 'react-intl';
-import TransitionLink from '@/components/TransitionLink';
-import { useLocale } from '../i18n';
+'use client';
 
-const Header: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [langMenuOpen, setLangMenuOpen] = useState(false);
-  const intl = useIntl();
-  const { locale: currentLocale, setLocale } = useLocale();
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { ChevronDown, ChevronRight, Globe, Menu, Search, X } from 'lucide-react';
+import { categories, navigation, products } from '@/data/catalog';
+import { DarkSectionBackdrop, ProductDeviceVisual, variantStyleFromIcon } from './BrandVisual';
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
+export function LanguageSwitcher() {
+  return (
+    <label className="language">
+      <Globe size={16} aria-hidden="true" />
+      <span className="sr-only">Language</span>
+      <select aria-label="Language" defaultValue="en">
+        <option value="en">EN</option>
+        <option disabled>DE (Pending)</option>
+        <option disabled>FR (Pending)</option>
+        <option disabled>ES (Pending)</option>
+        <option disabled>中文 (Pending)</option>
+      </select>
+    </label>
+  );
+}
+
+export function Header() {
+  const pathname = usePathname() || '/';
+  const isHome = pathname === '/';
+
+  const [mobile, setMobile] = useState(false);
+  const [desktopDrawer, setDesktopDrawer] = useState(false);
+  const [search, setSearch] = useState(false);
+  const [open, setOpen] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Interactive mega-menu selection state
+  const [activeProdCat, setActiveProdCat] = useState(categories[0].slug);
+  const [activeProdSlug, setActiveProdSlug] = useState(products[0].slug);
+  const [activeSubHref, setActiveSubHref] = useState<string | null>(null);
+
+  const searchRef = useRef<HTMLInputElement>(null);
+  const searchButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileButtonRef = useRef<HTMLButtonElement>(null);
+  const drawerButtonRef = useRef<HTMLButtonElement>(null);
+  const menuButtons = useRef(new Map<string, HTMLButtonElement>());
+  const hoverOpened = useRef<string | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
+
+  const closeNavigation = () => {
+    setMobile(false);
+    setDesktopDrawer(false);
+    setOpen(null);
   };
 
-  const toggleLangMenu = () => {
-    setLangMenuOpen(!langMenuOpen);
+  const closeSearch = () => {
+    setSearch(false);
+    searchButtonRef.current?.focus();
   };
 
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-  };
+  const supportsHover = () =>
+    typeof window !== 'undefined' && window.matchMedia('(min-width: 992px) and (hover: hover)').matches;
 
-  const changeLanguage = (locale: string) => {
-    startTransition(() => {
-      setLocale(locale);
-      setLangMenuOpen(false);
-    });
-  };
+  useEffect(() => {
+    const update = () => setScrolled(window.scrollY > 30);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, []);
 
-  const languages = [
-    { code: 'en-US', name: 'English', flag: '🇺🇸' },
-    { code: 'zh-CN', name: '中文', flag: '🇨🇳' },
-    { code: 'es-ES', name: 'Español', flag: '🇪🇸' },
-    { code: 'fr-FR', name: 'Français', flag: '🇫🇷' },
-    { code: 'ar-SA', name: 'العربية', flag: '🇸🇦' },
-    { code: 'de-DE', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'ja-JP', name: '日本語', flag: '🇯🇵' },
-    { code: 'ko-KR', name: '한국어', flag: '🇰🇷' },
-    { code: 'tr-TR', name: 'Türkçe', flag: '🇹🇷' },
-    { code: 'it-IT', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'ru-RU', name: 'Русский', flag: '🇷🇺' },
-    { code: 'pt-PT', name: 'Português', flag: '🇵🇹' },
-    { code: 'vi-VN', name: 'Tiếng Việt', flag: '🇻🇳' },
-    { code: 'cs-CZ', name: 'Čeština', flag: '🇨🇿' },
-    { code: 'pl-PL', name: 'Polski', flag: '🇵🇱' },
-    { code: 'nl-NL', name: 'Nederlands', flag: '🇳🇱' },
-    { code: 'th-TH', name: 'ไทย', flag: '🇹🇭' },
-    { code: 'sv-SE', name: 'Svenska', flag: '🇸🇪' },
-    { code: 'no-NO', name: 'Norsk', flag: '🇳🇴' },
-    { code: 'fi-FI', name: 'Suomi', flag: '🇫🇮' },
-    { code: 'hu-HU', name: 'Magyar', flag: '🇭🇺' },
-    { code: 'da-DK', name: 'Dansk', flag: '🇩🇰' },
-    { code: 'el-GR', name: 'Ελληνικά', flag: '🇬🇷' },
-    { code: 'ro-RO', name: 'Română', flag: '🇷🇴' },
-    { code: 'he-IL', name: 'עברית', flag: '🇮🇱' },
-    { code: 'uk-UA', name: 'Українська', flag: '🇺🇦' },
-    { code: 'id-ID', name: 'Bahasa Indonesia', flag: '🇮🇩' },
-    { code: 'hi-IN', name: 'हिन्दी', flag: '🇮🇳' },
-    { code: 'sk-SK', name: 'Slovenčina', flag: '🇸🇰' },
-    { code: 'hr-HR', name: 'Hrvatski', flag: '🇭🇷' },
-  ];
+  useEffect(() => {
+    if (search) searchRef.current?.focus();
+  }, [search]);
 
-  const currentLanguage = languages.find(lang => lang.code === currentLocale) || languages[0];
+  useEffect(() => {
+    const outside = (event: PointerEvent) => {
+      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) {
+        setOpen(null);
+        setSearch(false);
+        setMobile(false);
+      }
+    };
+    document.addEventListener('pointerdown', outside);
+    return () => document.removeEventListener('pointerdown', outside);
+  }, []);
+
+  const catProducts = products.filter((p) => p.category === activeProdCat);
+  const previewProduct = catProducts.find((p) => p.slug === activeProdSlug) || catProducts[0] || products[0];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f7f5f0]/95 backdrop-blur-xl">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-16">
-        <div className="motion-fade-down flex items-center justify-between flex-wrap gap-3 max-md:gap-2 py-4 max-md:py-3">
-          {/* Logo */}
-          <div className="flex-1 min-w-0">
-            <TransitionLink to="/" className="inline-flex transition-transform duration-300 hover:translate-y-[-1px] hover:scale-[1.01]">
-              <img src="/heatnexis-logo.png" alt="HeatNexis" className="h-10 max-md:h-7 w-auto" />
-            </TransitionLink>
-          </div>
+    <>
+      <header
+        ref={headerRef}
+        className={`header ${!isHome ? 'is-solid' : ''} ${scrolled ? 'scrolled' : ''}`}
+        onKeyDown={(event) => {
+          if (event.key !== 'Escape') return;
+          event.preventDefault();
+          if (search) {
+            closeSearch();
+            return;
+          }
+          if (open) {
+            menuButtons.current.get(open)?.focus();
+            setOpen(null);
+            return;
+          }
+          if (desktopDrawer) {
+            setDesktopDrawer(false);
+            drawerButtonRef.current?.focus();
+            return;
+          }
+          if (mobile) {
+            setMobile(false);
+            mobileButtonRef.current?.focus();
+          }
+        }}
+      >
+        <div className="header-inner">
+          <Link className="brand" href="/" aria-label="BEOK Controls home" onClick={closeNavigation}>
+            <span className="brand-mark">
+              <svg width="26" height="26" viewBox="0 0 28 28" aria-hidden="true">
+                <rect x="2" y="2" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.4" />
+                <circle cx="14" cy="14" r="6" fill="none" stroke="#0067e7" strokeWidth="2.4" />
+                <circle cx="14" cy="14" r="2.2" fill="#0067e7" />
+              </svg>
+              <span>
+                <span className="brand-word">BEOK</span>
+                <span className="brand-sub">CONTROLS</span>
+              </span>
+            </span>
+          </Link>
 
-          {/* Mobile Nav Toggle & Language Selector */}
-          <div className="flex items-center gap-3 max-md:gap-2 order-2 md:order-3 md:ml-0">
-            {/* Mobile Menu Toggle Button */}
-            <button
-              id="navToggle"
-              className={`md:hidden flex flex-col justify-center gap-[5px] max-md:gap-[4px] w-11 h-11 max-md:w-9 max-md:h-9 bg-transparent border border-gray-200 rounded-xl max-md:rounded-lg p-2 max-md:p-1.5 cursor-pointer ${mobileMenuOpen ? '[&>span:nth-child(1)]:translate-y-[7px] max-md:[&>span:nth-child(1)]:translate-y-[6px] [&>span:nth-child(1)]:rotate-45 [&>span:nth-child(2)]:opacity-0 [&>span:nth-child(3)]:-translate-y-[7px] max-md:[&>span:nth-child(3)]:-translate-y-[6px] [&>span:nth-child(3)]:-rotate-45' : ''}`}
-              aria-label={intl.formatMessage({ id: 'nav.toggle' })}
-              aria-controls="mainNav"
-              aria-expanded={mobileMenuOpen}
-              type="button"
-              onClick={toggleMobileMenu}
+          <div className="header-right">
+            <nav
+              id="main-navigation"
+              aria-label="Main navigation"
+              className={mobile ? 'navigation is-open' : 'navigation'}
             >
-              <span className="block w-full h-0.5 bg-gray-800 rounded-sm transition-all duration-300"></span>
-              <span className="block w-full h-0.5 bg-gray-800 rounded-sm transition-all duration-300"></span>
-              <span className="block w-full h-0.5 bg-gray-800 rounded-sm transition-all duration-300"></span>
-            </button>
+              {navigation.map((item, index) => {
+                const isActive =
+                  item.href === '/' ? pathname === '/' : pathname === item.href || pathname.startsWith(`${item.href}/`);
+                const isOpen = open === item.name;
+                const isProductsMenu = item.name === 'Products';
+                const selectedChild =
+                  item.children?.find((c) => c.href === activeSubHref) || item.children?.[0];
 
-            {/* Language Dropdown */}
-            <div className="relative">
+                return (
+                  <div
+                    className={`nav-item ${isActive ? 'is-active' : ''} ${isOpen ? 'is-open' : ''}`}
+                    key={item.href}
+                    onMouseEnter={() => {
+                      if (supportsHover()) {
+                        hoverOpened.current = item.children ? item.name : null;
+                        setOpen(hoverOpened.current);
+                        if (item.children?.[0]) setActiveSubHref(item.children[0].href);
+                      }
+                    }}
+                    onMouseLeave={(event) => {
+                      hoverOpened.current = null;
+                      if (supportsHover() && !event.currentTarget.contains(document.activeElement)) {
+                        setOpen(null);
+                      }
+                    }}
+                    onBlur={(event) => {
+                      if (!event.currentTarget.contains(event.relatedTarget)) {
+                        setOpen((current) => (current === item.name ? null : current));
+                      }
+                    }}
+                  >
+                    <div className="nav-label">
+                      <Link href={item.href} onClick={closeNavigation}>
+                        {item.name}
+                      </Link>
+                      {item.children && (
+                        <button
+                          type="button"
+                          className="nav-expand-btn"
+                          ref={(element) => {
+                            if (element) menuButtons.current.set(item.name, element);
+                            else menuButtons.current.delete(item.name);
+                          }}
+                          aria-label={`Expand ${item.name}`}
+                          aria-expanded={isOpen}
+                          aria-controls={`submenu-${index}`}
+                          onClick={(event) => {
+                            const retainHover = event.detail > 0 && hoverOpened.current === item.name;
+                            hoverOpened.current = null;
+                            setOpen((current) =>
+                              retainHover ? item.name : current === item.name ? null : item.name,
+                            );
+                          }}
+                        >
+                          <ChevronDown size={13} aria-hidden="true" />
+                        </button>
+                      )}
+                    </div>
+
+                    {item.children && isProductsMenu && (
+                      <div
+                        id={`submenu-${index}`}
+                        className={`mega-menu mega-three-col ${isOpen ? 'expanded' : ''}`}
+                      >
+                        <div>
+                          <div className="mega-col-title">Products</div>
+                          <ul className="mega-list">
+                            {categories.map((cat) => (
+                              <li
+                                key={cat.slug}
+                                className={`mega-list-item ${activeProdCat === cat.slug ? 'is-selected' : ''}`}
+                              >
+                                <Link
+                                  href={`/products/${cat.slug}`}
+                                  onMouseEnter={() => {
+                                    setActiveProdCat(cat.slug);
+                                    const first = products.find((p) => p.category === cat.slug);
+                                    if (first) setActiveProdSlug(first.slug);
+                                  }}
+                                  onFocus={() => setActiveProdCat(cat.slug)}
+                                  onClick={closeNavigation}
+                                >
+                                  <span>{cat.name}</span>
+                                  <ChevronRight size={14} aria-hidden="true" />
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="mega-col-divider">
+                          <ul className="mega-list">
+                            {catProducts.map((prod) => (
+                              <li
+                                key={prod.slug}
+                                className={`mega-list-item ${previewProduct.slug === prod.slug ? 'is-selected' : ''}`}
+                              >
+                                <Link
+                                  href={`/products/${prod.category}/${prod.slug}`}
+                                  onMouseEnter={() => setActiveProdSlug(prod.slug)}
+                                  onFocus={() => setActiveProdSlug(prod.slug)}
+                                  onClick={closeNavigation}
+                                >
+                                  <span>{prod.name}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="mega-col-divider mega-preview">
+                          <p className="mega-preview-title">{previewProduct.name}</p>
+                          <p className="mega-preview-desc">{previewProduct.highlights.join(' · ')}</p>
+                          <div className="mega-preview-visual">
+                            <ProductDeviceVisual
+                              variant={previewProduct.variantStyle}
+                              theme="light"
+                              label={previewProduct.name}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {item.children && !isProductsMenu && (
+                      <div
+                        id={`submenu-${index}`}
+                        className={`mega-menu mega-two-col ${isOpen ? 'expanded' : ''}`}
+                      >
+                        <div>
+                          <div className="mega-col-title">{item.name}</div>
+                          <ul className="mega-list">
+                            {item.children.map((child) => (
+                              <li
+                                key={child.href}
+                                className={`mega-list-item ${selectedChild?.href === child.href ? 'is-selected' : ''}`}
+                              >
+                                <Link
+                                  href={child.href}
+                                  onMouseEnter={() => setActiveSubHref(child.href)}
+                                  onFocus={() => setActiveSubHref(child.href)}
+                                  onClick={closeNavigation}
+                                >
+                                  <span>{child.name}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="mega-col-divider mega-preview">
+                          <p className="mega-preview-title">{selectedChild?.name || item.name}</p>
+                          <p className="mega-preview-desc">
+                            {selectedChild?.summary || item.previewSummary}
+                          </p>
+                          <div className="mega-preview-visual">
+                            {item.name === 'Tailor-Made Solution' ? (
+                              <ProductDeviceVisual
+                                variant={variantStyleFromIcon('boiler')}
+                                theme="light"
+                                label={selectedChild?.name || item.name}
+                              />
+                            ) : (
+                              <DarkSectionBackdrop theme="tech" label={selectedChild?.name || item.name} />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </nav>
+
+            <div className="header-tools">
               <button
-                id="langToggle"
-                className="flex items-center gap-2 max-md:gap-1.5 px-4 py-2 max-md:px-3 max-md:py-1.5 bg-gray-50 border border-gray-300 rounded-md max-md:rounded text-base max-md:text-xs text-gray-800 transition-all duration-300 cursor-pointer hover:bg-gray-100 hover:border-hn-accent"
                 type="button"
-                aria-label={intl.formatMessage({ id: 'nav.selectLanguage' })}
-                aria-expanded={langMenuOpen}
-                onClick={toggleLangMenu}
+                className="header-tool-btn"
+                ref={searchButtonRef}
+                aria-label="Open search"
+                aria-expanded={search}
+                aria-controls="header-search-panel"
+                onClick={() => {
+                  if (search) closeSearch();
+                  else {
+                    closeNavigation();
+                    setSearch(true);
+                  }
+                }}
               >
-                <span className="text-xl max-md:text-sm leading-none">{currentLanguage.flag}</span>
-                <span className="font-medium max-md:hidden">{currentLanguage.name}</span>
-                <span className="font-medium md:hidden">{currentLanguage.code.split('-')[0].toUpperCase()}</span>
-                <svg className={`transition-transform duration-300 max-md:w-2.5 max-md:h-2.5 ${langMenuOpen ? 'rotate-180' : ''}`} width="12" height="8" viewBox="0 0 12 8" fill="none">
-                  <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
+                <Search size={18} aria-hidden="true" />
               </button>
 
-              {langMenuOpen && (
-                <div className="absolute top-[calc(100%+0.5rem)] right-0 z-[9999] max-h-[400px] w-[360px] overflow-y-auto rounded-lg border border-gray-300 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] motion-safe:animate-in motion-safe:fade-in motion-safe:zoom-in-95 motion-safe:slide-in-from-top-2 motion-safe:duration-200 max-md:w-[280px]">
-                  <div className="grid grid-cols-2 gap-1 p-2">
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => changeLanguage(lang.code)}
-                        className={`flex items-center gap-2 px-3 py-2.5 text-gray-800 text-sm rounded-md text-left transition-all duration-200 hover:bg-gray-50 ${
-                          currentLocale === lang.code ? 'bg-hn-accent text-white font-medium hover:bg-hn-accent shadow-sm' : ''
-                        }`}
-                      >
-                        <span className="text-lg leading-none flex-shrink-0">{lang.flag}</span>
-                        <span className="truncate">{lang.name}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
+              <LanguageSwitcher />
+
+              <button
+                type="button"
+                ref={drawerButtonRef}
+                className="desktop-drawer-toggle"
+                aria-label="Open site directory menu"
+                aria-expanded={desktopDrawer}
+                onClick={() => {
+                  setOpen(null);
+                  setSearch(false);
+                  setDesktopDrawer((v) => !v);
+                }}
+              >
+                <Menu size={18} aria-hidden="true" />
+              </button>
+
+              <button
+                type="button"
+                ref={mobileButtonRef}
+                className="menu-toggle"
+                aria-label={mobile ? 'Close menu' : 'Open menu'}
+                aria-expanded={mobile}
+                aria-controls="main-navigation"
+                onClick={() => {
+                  setMobile((v) => !v);
+                  setOpen(null);
+                  setSearch(false);
+                }}
+              >
+                {mobile ? <X size={22} /> : <Menu size={22} />}
+              </button>
             </div>
           </div>
-
-          {/* Navigation Menu */}
-          <nav className={`order-4 md:order-2 flex-[0_0_100%] md:flex-[0_0_auto] w-full md:w-auto md:ml-auto ${mobileMenuOpen ? 'block motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-top-3 motion-safe:duration-200' : 'hidden'} md:block`} id="mainNav">
-            <ul className="flex list-none flex-col md:flex-row md:items-center gap-1 md:gap-8 py-2 md:py-0 pb-4 max-md:pb-3 md:pb-0">
-              <li><TransitionLink to="/" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.home' })}</TransitionLink></li>
-              <li><TransitionLink to="/products" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.products' })}</TransitionLink></li>
-              <li><TransitionLink to="/about" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.about' })}</TransitionLink></li>
-              <li><TransitionLink to="/contact" onClick={closeMobileMenu} className="block py-3 max-md:py-2.5 md:py-0 px-1 md:px-0 text-gray-800 text-base max-md:text-sm no-underline transition-colors duration-300 border-b md:border-b-0 border-gray-100 hover:text-hn-accent">{intl.formatMessage({ id: 'nav.contact' })}</TransitionLink></li>
-            </ul>
-          </nav>
         </div>
-      </div>
-    </header>
-  );
-};
 
-export default Header;
+        {search && (
+          <div id="header-search-panel" className="search-panel">
+            <form action="/search">
+              <label htmlFor="header-search">Search BEOK Controls</label>
+              <div className="search-row">
+                <input
+                  ref={searchRef}
+                  id="header-search"
+                  name="q"
+                  type="search"
+                  placeholder="Search thermostats, solutions, OEM services..."
+                  required
+                />
+                <button className="search-submit-btn" type="submit" aria-label="Search">
+                  <Search size={18} />
+                </button>
+                <button
+                  type="button"
+                  className="search-close-btn"
+                  aria-label="Close search"
+                  onClick={closeSearch}
+                >
+                  <X size={18} />
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
+      </header>
+
+      {desktopDrawer && (
+        <div className="full-nav-overlay" role="dialog" aria-modal="true" aria-label="Full site navigation">
+          <button
+            type="button"
+            className="full-nav-close"
+            aria-label="Close site directory menu"
+            onClick={() => {
+              setDesktopDrawer(false);
+              drawerButtonRef.current?.focus();
+            }}
+          >
+            <X size={20} />
+          </button>
+          <div className="full-nav-grid">
+            {navigation
+              .filter((n) => n.children)
+              .map((group) => (
+                <div className="full-nav-group" key={group.href}>
+                  <h3>
+                    <Link href={group.href} onClick={closeNavigation}>
+                      {group.name}
+                    </Link>
+                  </h3>
+                  <ul>
+                    {group.children?.map((child) => (
+                      <li key={child.href}>
+                        <Link href={child.href} onClick={closeNavigation}>
+                          {child.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+          </div>
+        </div>
+      )}
+    </>
+  );
+}

@@ -1,0 +1,2 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({channel:'chrome',headless:true});const page=await browser.newPage({viewport:{width:1440,height:900}});const response=await page.goto('https://smartthermostatmanufacturer.com/',{waitUntil:'domcontentloaded',timeout:45000});await page.screenshot({path:'reference/screenshots/desktop/home-initial.png',fullPage:true});console.log(JSON.stringify({status:response.status(),title:await page.title(),text:(await page.locator('body').innerText()).slice(0,7000)}));await browser.close();

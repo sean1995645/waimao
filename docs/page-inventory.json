@@ -1,0 +1,778 @@
+[
+  {
+    "url": "https://smartthermostatmanufacturer.com/",
+    "status": 200,
+    "title": "OEM/ODM Smart Thermostat Manufacturer &amp; Heating Control Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/000.html",
+    "browserVerified": true,
+    "template": "home"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Solutions/",
+    "status": 200,
+    "title": "Smart Heating &amp; Thermostat Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/001.html",
+    "browserVerified": true,
+    "template": "solutions"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/custom-thermostat-development-services/",
+    "status": 200,
+    "title": "OEM/ODM Thermostat PCB &amp; Smart Control System Customization - CHSGD Smart Thermostat",
+    "source": "reference/html/002.html",
+    "browserVerified": true,
+    "template": "tailor-made"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/",
+    "status": 200,
+    "title": "Smart Thermostat Products &amp; Heating Control Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/003.html",
+    "browserVerified": true,
+    "template": "products"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/oem-odm-thermostat-insights",
+    "status": 200,
+    "title": "OEM/ODM Thermostat Development Insights - CHSGD Smart Thermostat",
+    "source": "reference/html/004.html",
+    "browserVerified": true,
+    "template": "blog-category"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/oem-odm-thermostat-insightssmart-thermostat-underfloor-heating",
+    "status": 200,
+    "title": "Smart Thermostat Manufacturer for Underfloor Heating OEM - CHSGD Smart Thermostat",
+    "source": "reference/html/005.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/oem-odm-thermostat-insightssmart-thermostat-oem-odm-custom-heating",
+    "status": 200,
+    "title": "Smart Thermostat OEM and ODM for Custom Heating Controls - CHSGD Smart Thermostat",
+    "source": "reference/html/006.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/oem-odm-thermostat-insightssmart-thermostat-manufacturer-private-label",
+    "status": 200,
+    "title": "Smart Thermostat Manufacturer for Private Label WiFi - CHSGD Smart Thermostat",
+    "source": "reference/html/007.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/thermostat-buying-guide",
+    "status": 200,
+    "title": "Smart Thermostat Buying Guide &amp; Selection Tips - CHSGD Smart Thermostat",
+    "source": "reference/html/008.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/thermostat-buying-guideBest-Smart-Thermostat-2026",
+    "status": 200,
+    "title": "Best Smart Thermostat 2026: 003 WiFi Thermostat for Home - CHSGD Smart Thermostat",
+    "source": "reference/html/009.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/thermostat-buying-guidewhat-is-the-purpose-of-a-thermostatic-valve",
+    "status": 200,
+    "title": "What Is the Purpose of a Thermostatic Valve? Smart Radiator Valve Guide - CHSGD Smart Thermostat",
+    "source": "reference/html/010.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/thermostat-buying-guidewhat-is-a-zigbee-gateway",
+    "status": 200,
+    "title": "What Is a Zigbee Gateway? How It Works and Why You Need It for Smart Home Automation - CHSGD Smart Thermostat",
+    "source": "reference/html/011.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/thermostat-buying-guideWhat-Is-The-Best-Thermostat-App",
+    "status": 200,
+    "title": "What Is the Best Thermostat App? Tuya Smart vs Smart Life for Smart Thermostat Control - CHSGD Smart Thermostat",
+    "source": "reference/html/012.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/thermostat-buying-guideHow-to-choose-a-smart-home-thermostat",
+    "status": 200,
+    "title": "How To Choose A Smart Home Thermostat To Enhance Your Comfort? - CHSGD Smart Thermostat",
+    "source": "reference/html/013.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/",
+    "status": 200,
+    "title": "Smart Home &amp; HVAC Industry Trends - CHSGD Smart Thermostat",
+    "source": "reference/html/014.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/WiFi_vs_Programmable_Furnace_Thermostat",
+    "status": 200,
+    "title": "WiFi vs Programmable Furnace Thermostat: Which Is Better for B2B Buyers &amp; HVAC Projects - CHSGD Smart Thermostat",
+    "source": "reference/html/015.html",
+    "browserVerified": true,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/smart-home-hvac-trends/How_to_Choose_the_Right_Furnace_Thermostat",
+    "status": 200,
+    "title": "How to Choose the Right Furnace Thermostat for HVAC Projects - CHSGD Smart Thermostat",
+    "source": "reference/html/016.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blog/heating-system-knowledge/",
+    "status": 200,
+    "title": "Heating System Knowledge &amp; HVAC Control Insights - CHSGD Smart Thermostat",
+    "source": "reference/html/017.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blog/heating-system-knowledge/Discover_Customizable_Water_Heater_Solutions_with_Shining_Points_for_European_Markets",
+    "status": 200,
+    "title": "Discover Customizable Water Heater Solutions with Shining Points for European Markets - CHSGD Smart Thermostat",
+    "source": "reference/html/018.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blog/heating-system-knowledge/Customizable-Solutions-from-Leading-Water-Heater-Thermostat-Manufacturers",
+    "status": 200,
+    "title": "Customizable Solutions from Leading Water Heater Thermostat Manufacturers - CHSGD Smart Thermostat",
+    "source": "reference/html/019.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Solutions/boiler-heating-solutions",
+    "status": 200,
+    "title": "Smart Boiler Thermostat Control Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/020.html",
+    "browserVerified": true,
+    "template": "solution-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/About_us/about-chsgd/",
+    "status": 200,
+    "title": "About CHSGD | Smart Home Heating Control Technology Company - CHSGD Smart Thermostat",
+    "source": "reference/html/021.html",
+    "browserVerified": true,
+    "template": "about"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/About_us/our-advantages",
+    "status": 200,
+    "title": "Why Choose CHSGD | Smart Thermostat OEM/ODM Advantages - CHSGD Smart Thermostat",
+    "source": "reference/html/022.html",
+    "browserVerified": true,
+    "template": "advantages"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/About_us/join-us",
+    "status": 200,
+    "title": "Join CHSGD | Careers in Smart Home Technology - CHSGD Smart Thermostat",
+    "source": "reference/html/023.html",
+    "browserVerified": true,
+    "template": "join-us"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/About_us/Contact_Us/",
+    "status": 200,
+    "title": "Contact CHSGD | Smart Thermostat OEM/ODM Manufacturer - CHSGD Smart Thermostat",
+    "source": "reference/html/024.html",
+    "browserVerified": true,
+    "template": "contact"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Support/Thermostat-FAQs/",
+    "status": 200,
+    "title": "Smart Thermostat FAQs &amp; Technical Support Answers - CHSGD Smart Thermostat",
+    "source": "reference/html/025.html",
+    "browserVerified": true,
+    "template": "faqs"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Support/support",
+    "status": 200,
+    "title": "Thermostat Technical Support &amp; Product Resources - CHSGD Smart Thermostat",
+    "source": "reference/html/026.html",
+    "browserVerified": true,
+    "template": "support"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Support/downloads",
+    "status": 200,
+    "title": "Thermostat Downloads: Datasheets, Software &amp; Technical Documents - CHSGD Smart Thermostat",
+    "source": "reference/html/027.html",
+    "browserVerified": true,
+    "template": "downloads"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/",
+    "status": 200,
+    "title": "Furnace Thermostats for HVAC &amp; Central Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/028.html",
+    "browserVerified": true,
+    "template": "product-category"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Zigbee-Thermostatic-Radiator-Valve",
+    "status": 200,
+    "title": " - CHSGD Smart Thermostat",
+    "source": "reference/html/029.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/LED-WiFi-Thermostatic-Radiator-Valve",
+    "status": 200,
+    "title": "Smart LED WiFi Thermostatic Radiator Valve, Remote Digital Heating Radiator Thermostat Valve for Home Radiator Heating - CHSGD Smart Thermostat",
+    "source": "reference/html/030.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-WiFi-Thermostat-for-Underfloor-Heating",
+    "status": 200,
+    "title": "3A 240V WiFi Thermostat for Water &amp; Floor Heating, Alexa Enabled - CHSGD Smart Thermostat",
+    "source": "reference/html/031.html",
+    "browserVerified": true,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Wireless-Furnace-Thermostat",
+    "status": 200,
+    "title": "Wireless Thermostat for Gas Furnace Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/032.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/oil-furnace-thermostat",
+    "status": 200,
+    "title": "Smart Thermostat for Oil Furnace Heating Applications - CHSGD Smart Thermostat",
+    "source": "reference/html/033.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/Smart-Furnace-Thermostat",
+    "status": 200,
+    "title": "Knob Design Smart Furnace Thermostat for HVAC Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/034.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/gas-furnace-thermostat",
+    "status": 200,
+    "title": "Wireless Thermostat for Gas Furnace Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/035.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/oem-furnace-thermostat",
+    "status": 200,
+    "title": "OEM Furnace Thermostat Manufacturer for Smart Heating Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/036.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/wifi-furnace-thermostat",
+    "status": 200,
+    "title": "WiFi Thermostat for Boiler &amp; Furnace Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/037.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/furnace-thermostats/programmable-furnace-thermostat",
+    "status": 200,
+    "title": "Programmable Furnace Thermostat for Smart Heating Control - CHSGD Smart Thermostat",
+    "source": "reference/html/038.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/",
+    "status": 200,
+    "title": " - CHSGD Smart Thermostat",
+    "source": "reference/html/039.html",
+    "browserVerified": true,
+    "template": "odm-index"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Wireless-Water-Heating-Wall-Hung-Boiler-Thermostat",
+    "status": 200,
+    "title": "Structural Design of Wireless Water Heating Wall-Hung Boiler Thermostat - CHSGD Smart Thermostat",
+    "source": "reference/html/040.html",
+    "browserVerified": true,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Structure-Design-for-Rotary-Multi-color-WiFi-Smart-Thermostat",
+    "status": 200,
+    "title": "Structure Design for Rotary Multi-color WiFi Smart Thermostat - CHSGD Smart Thermostat",
+    "source": "reference/html/041.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/ODM-Smart-Thermostat-Structural-Design",
+    "status": 200,
+    "title": "ODM Smart Thermostat Structural Design - CHSGD Smart Thermostat",
+    "source": "reference/html/042.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Mainboard_Development_White_TUYA_WiFi_Smart_Thermostat",
+    "status": 200,
+    "title": "  Custom Mainboard Development White TUYA WiFi Smart Thermostat - CHSGD Smart Thermostat",
+    "source": "reference/html/043.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Mainboard_Development_Tuya_WiFi_Underfloor_Heating_Thermostat",
+    "status": 200,
+    "title": "Custom Mainboard Development Tuya WiFi Underfloor Heating Thermostat - CHSGD Smart Thermostat",
+    "source": "reference/html/044.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Mainboard_Development_Smart_WiFi_Thermostat_OEM_ODM",
+    "status": 200,
+    "title": "Custom Mainboard Development Smart WiFi Thermostat OEM ODM - CHSGD Smart Thermostat",
+    "source": "reference/html/045.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Development_WiFi_Rotary_Knob_Smart_Furnace_Thermostat_OEM_ODM",
+    "status": 200,
+    "title": "Custom Development WiFi Rotary Knob Smart Furnace Thermostat OEM ODM - CHSGD Smart Thermostat",
+    "source": "reference/html/046.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Hardware_Development_WiFi_LCD_Touch_Thermostat_OEM_ODM",
+    "status": 200,
+    "title": "Custom Hardware Development WiFi LCD Touch Thermostat 220VAC OEM ODM - CHSGD Smart Thermostat",
+    "source": "reference/html/047.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Hardware_Mainboard_Development_for_Smart_WiFi",
+    "status": 200,
+    "title": "Custom Hardware Mainboard Development for Smart WiFi &amp; Programmable Thermostats - CHSGD Smart Thermostat",
+    "source": "reference/html/048.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_WiFi_Programmable_Underfloor_Heating_Thermostat_OEM_Manufacturer",
+    "status": 200,
+    "title": "Custom OEM ODM Smart WiFi Programmable Digital Room Thermostat, Underfloor Heating Controller with App Control for Apartment Smart Home - CHSGD Smart Thermostat",
+    "source": "reference/html/049.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Tuya_Underfloor_Heating_Thermosta_OEM_ODM_Smart_Home_Controller",
+    "status": 200,
+    "title": "Custom Tuya Underfloor Heating Thermostat OEM ODM Smart Home Controller - CHSGD Smart Thermostat",
+    "source": "reference/html/050.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Tuya_WiFi_Smart_Thermostat_for_Water_Gas_Boiler_OEM_ODM",
+    "status": 200,
+    "title": "Custom OEM ODM Tuya WiFi Smart Thermostat Wireless Receiver, Temperature Controller for Water Gas Boiler, Supports Alexa Google Home Smart Home - CHSGD Smart Thermostat",
+    "source": "reference/html/051.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Tuya_WiFi_Gas_Boiler_Thermostat_Battery_USB_Powered_OEM_Manufacturer",
+    "status": 200,
+    "title": "Custom Tuya WiFi Gas Boiler Thermostat Battery USB Powered OEM Manufacturer - CHSGD Smart Thermostat",
+    "source": "reference/html/052.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Custom_Touch_Screen_Smart_Thermostat_WiFi_Zigbee_Smart_Home_System_OEM_Manufacturer",
+    "status": 200,
+    "title": "Custom OEM ODM Touch Screen Smart Thermostat, WiFi Zigbee Humidity Sensor Smart Switch, App Voice Control Smart Home Automation System Manufacturer - CHSGD Smart Thermostat",
+    "source": "reference/html/053.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/odm/Tuya_WiFi_Smart_Weather_Station_Indoor_Outdoor_Thermometer_Hygrometer",
+    "status": 200,
+    "title": "Custom Tuya WiFi Smart Weather Station Manufacturer, Indoor Outdoor Digital Thermometer Hygrometer Alarm Clock, OEM ODM Smart Home Weather Station - CHSGD Smart Thermostat",
+    "source": "reference/html/054.html",
+    "browserVerified": false,
+    "template": "odm-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/hydronic-thermostats/",
+    "status": 200,
+    "title": "Hydronic Thermostats for Boiler &amp; Water Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/055.html",
+    "browserVerified": false,
+    "template": "product-category"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/hydronic-thermostats/Smart-WiFi-Thermostat-for-Water-Heating",
+    "status": 200,
+    "title": "WiFi Smart Thermostat for Water Heating, Compatible with Amazon Alexa &amp; Google Assistant - CHSGD Smart Thermostat",
+    "source": "reference/html/056.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/hydronic-thermostats/hot-water-thermostat",
+    "status": 200,
+    "title": "Knob Design Smart Hot Water Thermostat - Tuya WiFi Enabled for Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/057.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/hydronic-thermostats/wireless-hydronic-thermostat",
+    "status": 200,
+    "title": "Wireless Hydronic Thermostat for Smart Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/058.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/hydronic-thermostats/boiler-heating-thermostat",
+    "status": 200,
+    "title": "Boiler Heating Thermostat for Hydronic Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/059.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/hydronic-thermostats/hydronic-floor-heating-thermostat",
+    "status": 200,
+    "title": "Hydronic Floor Heating Thermostat for Underfloor Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/060.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/hydronic-thermostats/programmable-water-heater-thermostat",
+    "status": 200,
+    "title": "Programmable Water Heater Thermostat for Smart Heating Control - CHSGD Smart Thermostat",
+    "source": "reference/html/061.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/hydronic-thermostats/wifi-water-heater-thermostat",
+    "status": 200,
+    "title": "WiFi Water Heater Thermostat with APP Control - CHSGD Smart Thermostat",
+    "source": "reference/html/062.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/hydronic-thermostats/water-heater-thermostat",
+    "status": 200,
+    "title": "Smart Water Heater Thermostat for Hydronic Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/063.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/electric-heating-thermostats/",
+    "status": 200,
+    "title": "Electric Heating Thermostats for Floor Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/064.html",
+    "browserVerified": false,
+    "template": "product-category"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/electric-heating-thermostats/WiFi-Smart-Electric-Heating-Thermostats",
+    "status": 200,
+    "title": "Programmable Electric Heating Thermostats for Electric Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/065.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/electric-heating-thermostats/Electric-Heating-Smart-Thermostat",
+    "status": 200,
+    "title": "Smart Thermostat for Electric Heating System Applications - CHSGD Smart Thermostat",
+    "source": "reference/html/066.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/electric-heating-thermostats/HVAC-Smart-Thermostat-for-Electric-Heating",
+    "status": 200,
+    "title": "Knob Design  Smart Electric Heating Thermostat for HVAC Heating Systems - CHSGD Smart Thermostat",
+    "source": "reference/html/067.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/electric-heating-thermostats/Wireless-Thermostat-for-Electric-Heating-Systems",
+    "status": 200,
+    "title": "Wireless Smart Thermostat for Electric Heating Systems | Programmable Heating Controller - CHSGD Smart Thermostat",
+    "source": "reference/html/068.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/electric-heating-thermostats/OEM-Manufacturer-of-Smart-Electric-Heating-Thermostats",
+    "status": 200,
+    "title": "OEM Electric Heating Thermostat Manufacturer | Smart Heating Solutions Supplier - CHSGD Smart Thermostat",
+    "source": "reference/html/069.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/electric-heating-thermostats/Smart-WiFi-Thermostat-for-Electric-Heating-Systems",
+    "status": 200,
+    "title": "App Controlled WiFi Electric Heating Thermostat, Programmable Energy Saving Thermostat - CHSGD Smart Thermostat",
+    "source": "reference/html/070.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/electric-heating-thermostats/Programmable-Electric-Heating-Thermostat",
+    "status": 200,
+    "title": "Programmable Electric Heating Thermostat for Smart Heating Control - CHSGD Smart Thermostat",
+    "source": "reference/html/071.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/Smart-Dimmer-Switch/",
+    "status": 200,
+    "title": " - CHSGD Smart Thermostat",
+    "source": "reference/html/072.html",
+    "browserVerified": false,
+    "template": "product-category"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/Smart-Dimmer-Switch/4-Gang-WiFi-Touch-Smart-Light-Switch",
+    "status": 200,
+    "title": "4 Gang WiFi Touch Smart Light Switch, Temperature Humidity Sensor Tuya App Control - CHSGD Smart Thermostat",
+    "source": "reference/html/073.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/Smart-Dimmer-Switch/3-Gang-WiFi-Touch-Smart-Light-Switch",
+    "status": 200,
+    "title": "3 Gang WiFi Touch Smart Light Switch, Temperature Humidity Sensor Tuya App Control - CHSGD Smart Thermostat",
+    "source": "reference/html/074.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/Smart-Dimmer-Switch/2-Gang-WiFi-Touch-Smart-Light-Switch",
+    "status": 200,
+    "title": "2 Gang WiFi Touch Smart Light Switch, Temperature Humidity Sensor Tuya App Control - CHSGD Smart Thermostat",
+    "source": "reference/html/075.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/Smart-Dimmer-Switch/1-Gang-WiFi-Touch-Smart-Light-Switch",
+    "status": 200,
+    "title": "1 Gang WiFi Touch Smart Light Switch, Temperature Humidity Sensor Tuya App Control - CHSGD Smart Thermostat",
+    "source": "reference/html/076.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/Smart-Gateway-Hub/",
+    "status": 200,
+    "title": " - CHSGD Smart Thermostat",
+    "source": "reference/html/077.html",
+    "browserVerified": false,
+    "template": "product-category"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/Smart-Gateway-Hub/Tuya-Zigbee-Bluetooth-Gateway-Hub",
+    "status": 200,
+    "title": "[Online Devices Display Quantity] Tuya Smart Bluetooth ZigBee Hub - CHSGD Smart Thermostat",
+    "source": "reference/html/078.html",
+    "browserVerified": false,
+    "template": "product-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/Smart-Outlet/",
+    "status": 200,
+    "title": " - CHSGD Smart Thermostat",
+    "source": "reference/html/079.html",
+    "browserVerified": false,
+    "template": "product-category"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/sitemap/",
+    "status": 200,
+    "title": "Site Map",
+    "source": "reference/html/080.html",
+    "browserVerified": true,
+    "template": "sitemap"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Legal_Notice/",
+    "status": 200,
+    "title": "Legal Disclaimer - CHSGD Smart Thermostat",
+    "source": "reference/html/081.html",
+    "browserVerified": true,
+    "template": "legal"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/privacy/",
+    "status": 200,
+    "title": "Privacy Policy - CHSGD Smart Thermostat",
+    "source": "reference/html/082.html",
+    "browserVerified": true,
+    "template": "privacy"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Solutions/underfloor-heating-solutions",
+    "status": 200,
+    "title": "Smart Underfloor Heating Thermostat Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/083.html",
+    "browserVerified": false,
+    "template": "solution-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Solutions/oem-odm-smart-thermostat-solutions/",
+    "status": 200,
+    "title": "Custom OEM/ODM Smart Thermostat Development Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/084.html",
+    "browserVerified": false,
+    "template": "solution-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Solutions/smart-home-hvac-solutions",
+    "status": 200,
+    "title": " Smart HVAC Thermostat Solutions for Smart Homes - CHSGD Smart Thermostat",
+    "source": "reference/html/085.html",
+    "browserVerified": false,
+    "template": "solution-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Solutions/energy-saving-thermostat-solutions",
+    "status": 200,
+    "title": "Energy Saving Smart Thermostat Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/086.html",
+    "browserVerified": false,
+    "template": "solution-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Solutions/commercial-heating-control-solutions/",
+    "status": 200,
+    "title": " Commercial Heating Control &amp; Thermostat Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/087.html",
+    "browserVerified": false,
+    "template": "solution-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Blogs/smart-thermostat-technology",
+    "status": 200,
+    "title": "Smart Thermostat Technology &amp; WiFi Control Innovations - CHSGD Smart Thermostat",
+    "source": "reference/html/088.html",
+    "browserVerified": false,
+    "template": "blog-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/News/",
+    "status": 200,
+    "title": "Smart Thermostat Knowledge Center &amp; HVAC Industry Insights - CHSGD Smart Thermostat",
+    "source": "reference/html/089.html",
+    "browserVerified": true,
+    "template": "blog"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Support/Video/",
+    "status": 200,
+    "title": "Thermostat Video Guides &amp; Technical Tutorials - CHSGD Smart Thermostat",
+    "source": "reference/html/090.html",
+    "browserVerified": true,
+    "template": "videos"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/products/Infrared-Thermometer/",
+    "status": 404,
+    "title": "Page error",
+    "source": "reference/html/091.html",
+    "browserVerified": false,
+    "template": "product-category"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Solutions/commercial-heating-control-solutions",
+    "status": 200,
+    "title": " Commercial Heating Control &amp; Thermostat Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/092.html",
+    "browserVerified": false,
+    "template": "solution-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/Solutions/oem-odm-smart-thermostat-solutions",
+    "status": 200,
+    "title": "Custom OEM/ODM Smart Thermostat Development Solutions - CHSGD Smart Thermostat",
+    "source": "reference/html/093.html",
+    "browserVerified": false,
+    "template": "solution-detail"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/sitemap.html",
+    "status": 200,
+    "title": "Site Map",
+    "source": "reference/html/094.html",
+    "browserVerified": false,
+    "template": "other"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/rss.xml",
+    "status": 200,
+    "title": "\r\n            <![CDATA[ CHSGD Smart Thermostat ]]>\r\n        ",
+    "source": "reference/html/095.html",
+    "browserVerified": false,
+    "template": "other"
+  },
+  {
+    "url": "https://smartthermostatmanufacturer.com/sitemap.xml",
+    "status": 200,
+    "title": "",
+    "source": "reference/html/096.html",
+    "browserVerified": false,
+    "template": "other"
+  }
+]
