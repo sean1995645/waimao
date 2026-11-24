@@ -111,7 +111,7 @@ export function PageBody({
         <section className="section-block">
           <Container>
             <form className="page-search" action="/search">
-              <label htmlFor="search-query">Search BEOK Controls products, solutions, services and articles</label>
+              <label htmlFor="search-query">Search Heatnexis products, solutions, services and articles</label>
               <div className="search-row">
                 <input
                   id="search-query"
@@ -188,7 +188,7 @@ export function PageBody({
             { label: 'Downloads', href: '/support/downloads' },
             { label: 'Videos', href: '/support/videos' },
             { label: 'Terms of Service', href: '/support/terms' },
-            { label: 'About BEOK Controls', href: '/about' },
+            { label: 'About Heatnexis', href: '/about' },
             { label: 'Our Advantages', href: '/about/advantages' },
             { label: 'Join Us', href: '/about/join-us' },
             { label: 'Contact Us', href: '/contact' },
@@ -229,7 +229,7 @@ export function PageBody({
               <h2 style={{ marginTop: 0 }}>{page.title}</h2>
               <p>{page.description}</p>
               <p className="notice-box">
-                This notice is an interim development placeholder pending review and approval by the operating BEOK
+                This notice is an interim development placeholder pending review and approval by the operating Heatnexis
                 Controls legal entity prior to commercial publication.
               </p>
               <Link href="/contact" className="text-link">

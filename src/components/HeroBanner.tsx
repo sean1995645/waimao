@@ -27,7 +27,7 @@ export function HomeHeroBanner() {
   return (
     <section
       className="home-banner"
-      aria-label="Featured BEOK Controls OEM/ODM showcase"
+      aria-label="Featured Heatnexis OEM/ODM showcase"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -116,7 +116,7 @@ export function HeroBanner({ page }: { page: PageRecord }) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/products/pro-banner.png"
-                alt="BEOK Controls Smart Thermostat Lineup"
+                alt="Heatnexis Smart Thermostat Lineup"
                 className="img-contain"
               />
             </div>

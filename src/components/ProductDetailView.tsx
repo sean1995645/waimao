@@ -117,7 +117,7 @@ export function ProductGallery({
 export function SpecificationsTable({ rows }: { rows: [string, string][] }) {
   return (
     <table className="spec-table">
-      <caption>Technical parameters — awaiting verified BEOK Controls specification sheet</caption>
+      <caption>Technical parameters — awaiting verified Heatnexis specification sheet</caption>
       <tbody>
         {rows.map(([k, v]) => (
           <tr key={k}>
@@ -310,7 +310,7 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
       {/* Product FAQ */}
       <section className="section-block is-surface">
         <Container>
-          <SectionTitle title="FAQ" subtitle="Common technical and sourcing questions for BEOK Controls products." />
+          <SectionTitle title="FAQ" subtitle="Common technical and sourcing questions for Heatnexis products." />
           <FAQAccordion limit={4} showTabs={false} />
         </Container>
       </section>
@@ -327,7 +327,7 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
       {/* Related Products */}
       <section className="section-block">
         <Container>
-          <SectionTitle title="Related Products" subtitle="Explore complementary BEOK Controls heating control categories." />
+          <SectionTitle title="Related Products" subtitle="Explore complementary Heatnexis heating control categories." />
           <div className="product-grid">
             {related.map((item) => (
               <ProductCard key={item.slug} product={item} />

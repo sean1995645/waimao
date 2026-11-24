@@ -31,10 +31,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: p.description,
     alternates: { canonical: p.path },
     openGraph: {
-      title: `${p.title} | BEOK Controls`,
+      title: `${p.title} | Heatnexis`,
       description: p.description,
       url: p.path,
-      siteName: 'BEOK Controls',
+      siteName: 'Heatnexis',
       type: p.kind === 'article' ? 'article' : 'website',
     },
   };
@@ -75,7 +75,7 @@ export default async function Page({ params, searchParams }: Props) {
     jsonLdGraph.push({
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'BEOK Controls',
+      name: 'Heatnexis',
       url: site.url,
       description: page.description,
     });
@@ -87,7 +87,7 @@ export default async function Page({ params, searchParams }: Props) {
         '@type': 'Product',
         name: prod.name,
         sku: prod.reference,
-        brand: { '@type': 'Brand', name: 'BEOK Controls' },
+        brand: { '@type': 'Brand', name: 'Heatnexis' },
         description: prod.description,
       });
     }
@@ -99,7 +99,7 @@ export default async function Page({ params, searchParams }: Props) {
         '@type': 'Article',
         headline: art.title,
         datePublished: art.date.replaceAll('.', '-'),
-        author: { '@type': 'Organization', name: 'BEOK Controls' },
+        author: { '@type': 'Organization', name: 'Heatnexis' },
         description: art.excerpt,
       });
     }

@@ -10,9 +10,9 @@ export function FloatingContact() {
   return (
     <aside className="aside-module" aria-label="Quick contact and navigation controls">
       {open && (
-        <div className="contact-popover" role="region" aria-label="BEOK Controls quick inquiry">
+        <div className="contact-popover" role="region" aria-label="Heatnexis quick inquiry">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-            <h3 style={{ margin: 0 }}>Contact BEOK Controls</h3>
+            <h3 style={{ margin: 0 }}>Contact Heatnexis</h3>
             <button type="button" aria-label="Close contact panel" onClick={() => setOpen(false)}>
               <X size={16} />
             </button>

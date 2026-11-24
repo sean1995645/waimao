@@ -17,7 +17,7 @@ test('navigation, mega menu, mobile drawer and search work cleanly', async ({ pa
 
   await page.goto('/');
   await page.getByRole('button', { name: 'Open search', exact: true }).click();
-  await page.getByLabel('Search BEOK Controls').fill('boiler');
+  await page.getByLabel('Search Heatnexis').fill('boiler');
   await page.getByRole('button', { name: 'Search', exact: true }).click();
   await expect(page).toHaveURL(/search\?q=boiler/);
   await expect(page.locator('.search-results li').first()).toBeVisible();
@@ -87,7 +87,7 @@ test('keyboard menu closes while its trigger remains focused', async ({ page, vi
   await expect(submenu).toBeHidden();
 
   await page.getByRole('button', { name: 'Open search', exact: true }).click();
-  await expect(page.getByLabel('Search BEOK Controls')).toBeFocused();
+  await expect(page.getByLabel('Search Heatnexis')).toBeFocused();
   await page.keyboard.press('Escape');
   await expect(page.getByRole('button', { name: 'Open search', exact: true })).toBeFocused();
 });

@@ -41,7 +41,7 @@ export function TailorMadeIndexView() {
             <div>
               <h2 style={{ margin: '0 0 16px' }}>Tailored Manufacturing Solutions for Your Brand</h2>
               <p>
-                With BEOK Controls, B2B partners can structure OEM private-label branding or full ODM engineering across
+                With Heatnexis, B2B partners can structure OEM private-label branding or full ODM engineering across
                 gas boiler, underfloor, radiator valve and smart HVAC controllers.
               </p>
               <p>
@@ -57,7 +57,7 @@ export function TailorMadeIndexView() {
             </div>
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/services/intro.jpg" alt="BEOK Controls OEM/ODM engineering team" className="img-cover" />
+              <img src="/images/services/intro.jpg" alt="Heatnexis OEM/ODM engineering team" className="img-cover" />
             </div>
           </div>
         </Container>
@@ -270,7 +270,7 @@ export function ServiceDetailView({ service }: { service: ServiceRecord }) {
         <Container>
           <SectionTitle
             title="Key Engineering Deliverables"
-            subtitle={`Core workstreams covered in ${service.name} projects with BEOK Controls.`}
+            subtitle={`Core workstreams covered in ${service.name} projects with Heatnexis.`}
           />
           <div className="qa-grid">
             {service.deliverables.map((item, idx) => (
@@ -520,7 +520,7 @@ export function OdmDetailView({ odmCase }: { odmCase: OdmCaseRecord }) {
       {/* Reference serviceMore: More Projects 3-Column Grid */}
       <section className="section-block">
         <Container>
-          <SectionTitle title="More Projects" subtitle="Explore additional BEOK Controls OEM/ODM concept programs." />
+          <SectionTitle title="More Projects" subtitle="Explore additional Heatnexis OEM/ODM concept programs." />
           <div className="product-grid">
             {moreProjects.map((item) => (
               <Link href={`/odm/${item.slug}`} key={item.slug} className="product-card">

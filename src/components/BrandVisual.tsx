@@ -1,7 +1,7 @@
 import type { ProductRecord, VisualVariant } from '@/types/content';
 
 /**
- * Original BEOK Controls minimalist industrial SVG visuals.
+ * Original Heatnexis minimalist industrial SVG visuals.
  * Strictly zero third-party reference images; every visual carries a clear
  * non-intrusive pending-photography cue while matching measured surface luminance.
  */
@@ -31,7 +31,7 @@ export function ProductDeviceVisual({
         width="100%"
         height="100%"
         role="img"
-        aria-label={`${label || 'BEOK thermostat'} — ${viewTag} (Approved photography pending)`}
+        aria-label={`${label || 'Heatnexis thermostat'} — ${viewTag} (Approved photography pending)`}
         style={{ display: 'block' }}
       >
         <rect width="400" height="300" fill={bgFill} />
@@ -94,7 +94,7 @@ export function ProductDeviceVisual({
           </g>
         )}
         <text x="200" y="274" textAnchor="middle" fontSize="10.5" fill={badgeText} letterSpacing="1.2">
-          {viewTag} · BEOK APPROVED ASSET PENDING
+          {viewTag} · Heatnexis APPROVED ASSET PENDING
         </text>
       </svg>
     );
@@ -106,7 +106,7 @@ export function ProductDeviceVisual({
       width="100%"
       height="100%"
       role="img"
-      aria-label={`${label || 'BEOK product'} visual placeholder (Approved photography pending)`}
+      aria-label={`${label || 'Heatnexis product'} visual placeholder (Approved photography pending)`}
       style={{ display: 'block' }}
     >
       <rect width="400" height="300" fill={bgFill} />
@@ -165,7 +165,7 @@ export function ProductDeviceVisual({
           <circle cx="200" cy="122" r="78" fill="#ffffff" stroke="#c8d0da" strokeWidth="3" />
           <circle cx="200" cy="122" r="65" fill="#141a21" stroke="#0067e7" strokeWidth="2.5" />
           <text x="200" y="96" textAnchor="middle" fontSize="10" fill="#8ea4bf" fontWeight="600">
-            BEOK DIAL SERIES
+            Heatnexis DIAL SERIES
           </text>
           <text x="200" y="132" textAnchor="middle" fontSize="34" fill="#ffffff" fontWeight="700">
             21.0°
@@ -204,7 +204,7 @@ export function ProductDeviceVisual({
           <rect x="92" y="76" width="216" height="118" rx="4" fill="#ffffff" stroke="#c5ced8" strokeWidth="2" />
           <rect x="108" y="92" width="184" height="24" fill="#1c242e" />
           <text x="200" y="108" textAnchor="middle" fontSize="10" fill="#ffffff" fontWeight="700">
-            BEOK MULTI-ZONE CONTROL HUB
+            Heatnexis MULTI-ZONE CONTROL HUB
           </text>
           {[120, 146, 172, 198, 224, 250, 276].map((x) => (
             <circle key={x} cx={x} cy="136" r="4.5" fill="#0067e7" />
@@ -214,7 +214,7 @@ export function ProductDeviceVisual({
       )}
 
       <text x="200" y="278" textAnchor="middle" fontSize="10" fill={badgeText} letterSpacing="1.1">
-        BEOK CONTROLS · APPROVED PHOTOGRAPHY PENDING
+        HEATNEXIS · APPROVED PHOTOGRAPHY PENDING
       </text>
     </svg>
   );
@@ -227,7 +227,7 @@ export function HeroShowcaseVisual({ slideType }: { slideType: 'oem' | 'thermost
       width="100%"
       height="100%"
       role="img"
-      aria-label="BEOK Controls smart thermostat platform technical showcase (Approved photography pending)"
+      aria-label="Heatnexis smart thermostat platform technical showcase (Approved photography pending)"
       style={{ display: 'block' }}
     >
       <rect width="640" height="460" fill="#182028" stroke="rgba(255,255,255,0.12)" />
@@ -254,7 +254,7 @@ export function HeroShowcaseVisual({ slideType }: { slideType: 'oem' | 'thermost
           <circle cx="320" cy="206" r="102" fill="#ffffff" stroke="#0067e7" strokeWidth="3" />
           <circle cx="320" cy="206" r="84" fill="#121820" />
           <text x="320" y="176" textAnchor="middle" fontSize="12" fill="#6ab0ff" fontWeight="700">
-            BEOK OEM/ODM
+            Heatnexis OEM/ODM
           </text>
           <text x="320" y="220" textAnchor="middle" fontSize="42" fill="#ffffff" fontWeight="700">
             21.5°
@@ -334,7 +334,7 @@ export function HeroShowcaseVisual({ slideType }: { slideType: 'oem' | 'thermost
 
       <rect x="24" y="408" width="592" height="32" fill="rgba(0,0,0,0.45)" />
       <text x="320" y="428" textAnchor="middle" fontSize="11" fill="rgba(255,255,255,0.68)" letterSpacing="1">
-        BEOK CONTROLS CONCEPT VISUAL · APPROVED COMMERCIAL PHOTOGRAPHY PENDING
+        HEATNEXIS CONCEPT VISUAL · APPROVED COMMERCIAL PHOTOGRAPHY PENDING
       </text>
     </svg>
   );
@@ -363,7 +363,7 @@ export function DarkSectionBackdrop({
       width="100%"
       height="100%"
       role="img"
-      aria-label={label || 'BEOK Controls visual placeholder (Approved photography pending)'}
+      aria-label={label || 'Heatnexis visual placeholder (Approved photography pending)'}
       style={{ display: 'block', width: '100%', height: '100%' }}
     >
       <rect width="800" height="500" fill={c1} />
@@ -404,7 +404,7 @@ export function DarkSectionBackdrop({
         <g>
           <rect x="52" y="56" width="120" height="28" fill="#0067e7" />
           <text x="112" y="75" textAnchor="middle" fontSize="13" fill="#ffffff" fontWeight="700">
-            BEOK INSIGHTS
+            Heatnexis INSIGHTS
           </text>
           <rect x="500" y="120" width="180" height="180" rx="6" fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.24)" />
           <text x="590" y="220" textAnchor="middle" fontSize="34" fill="#ffffff" fontWeight="700">

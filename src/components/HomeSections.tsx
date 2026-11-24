@@ -78,7 +78,7 @@ export function HomePageView() {
           <div className="section-header">
             <h2 id="home-tailor-heading">Tailor-Made Solution</h2>
             <p>
-              Specialized in the smart thermostat industry, BEOK Controls structures end-to-end OEM/ODM workflows
+              Specialized in the smart thermostat industry, Heatnexis structures end-to-end OEM/ODM workflows
               covering R&amp;D design, hardware customization, software integration and verification.
             </p>
           </div>
@@ -252,9 +252,9 @@ export function HomePageView() {
 
             <div className="iaboutus-inner">
               <div className="iaboutus-copy">
-                <h3 id="home-about-heading">Why Choose BEOK Controls</h3>
+                <h3 id="home-about-heading">Why Choose Heatnexis</h3>
                 <p>
-                  BEOK Controls focuses on B2B smart thermostats, radiator valves, thermal actuators, wiring centres and
+                  Heatnexis focuses on B2B smart thermostats, radiator valves, thermal actuators, wiring centres and
                   connected HVAC controllers for international distributors, wholesalers, contractors and brand partners.
                   Verified company history, production metrics and certification files are pending official brand supply.
                 </p>
@@ -265,7 +265,7 @@ export function HomePageView() {
               </div>
             </div>
 
-            <div className="iaboutus-stats-bar" aria-label="BEOK Controls capability highlights">
+            <div className="iaboutus-stats-bar" aria-label="Heatnexis capability highlights">
               <div className="iaboutus-stat">
                 <Factory size={26} className="iaboutus-stat-icon" aria-hidden="true" />
                 <div>
@@ -298,7 +298,7 @@ export function HomePageView() {
           <Container>
             <div className="section-header">
               <h2 id="home-news-heading">News and Information</h2>
-              <p>Technical buying guides, HVAC heating control knowledge and OEM/ODM insights from BEOK Controls.</p>
+              <p>Technical buying guides, HVAC heating control knowledge and OEM/ODM insights from Heatnexis.</p>
             </div>
 
             <div className="inews-grid home-news-grid">

@@ -86,7 +86,7 @@ export function BlogDetailView({ article }: { article: ArticleRecord }) {
             <h2 style={{ marginTop: 0 }}>{article.title}</h2>
             <div style={{ display: 'flex', gap: 16, fontSize: 13, color: '#666', paddingBottom: 18, borderBottom: '1px solid #e8ecf0', marginBottom: 24 }}>
               <span>{article.date}</span>
-              <span>BEOK Controls Editorial</span>
+              <span>Heatnexis Editorial</span>
               <span>{article.category}</span>
             </div>
 
@@ -129,7 +129,7 @@ export function BlogDetailView({ article }: { article: ArticleRecord }) {
 
       <section className="section-block is-surface">
         <Container>
-          <SectionTitle title="Related Articles" subtitle="Continue reading BEOK Controls technical resources." />
+          <SectionTitle title="Related Articles" subtitle="Continue reading Heatnexis technical resources." />
           <div className="inews-grid">
             {related.map((item) => (
               <ArticleCard key={item.slug} article={item} />

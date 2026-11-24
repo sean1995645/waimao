@@ -114,18 +114,15 @@ export function Header() {
         }}
       >
         <div className="header-inner">
-          <Link className="brand" href="/" aria-label="BEOK Controls home" onClick={closeNavigation}>
-            <span className="brand-mark">
-              <svg width="26" height="26" viewBox="0 0 28 28" aria-hidden="true">
-                <rect x="2" y="2" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2.4" />
-                <circle cx="14" cy="14" r="6" fill="none" stroke="#0067e7" strokeWidth="2.4" />
-                <circle cx="14" cy="14" r="2.2" fill="#0067e7" />
-              </svg>
-              <span>
-                <span className="brand-word">BEOK</span>
-                <span className="brand-sub">CONTROLS</span>
-              </span>
-            </span>
+          <Link className="brand" href="/" aria-label="Heatnexis home" onClick={closeNavigation}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/brand/heatnexis-logo.png"
+              alt="Heatnexis"
+              className="brand-logo-img"
+              width={138}
+              height={38}
+            />
           </Link>
 
           <div className="header-right">
@@ -376,7 +373,7 @@ export function Header() {
         {search && (
           <div id="header-search-panel" className="search-panel">
             <form action="/search">
-              <label htmlFor="header-search">Search BEOK Controls</label>
+              <label htmlFor="header-search">Search Heatnexis</label>
               <div className="search-row">
                 <input
                   ref={searchRef}

@@ -47,13 +47,13 @@ export const pages: PageRecord[] = [
     '/',
     'Smart Thermostat Manufacturer & OEM/ODM Solutions',
     'home',
-    'BEOK Controls: professional smart thermostat and heating control OEM/ODM solutions for global distributors, HVAC contractors and brand partners.',
+    'Heatnexis: professional smart thermostat and heating control OEM/ODM solutions for global distributors, HVAC contractors and brand partners.',
   ),
   page(
     '/products',
     'Products',
     'catalog',
-    'Explore BEOK Controls gas boiler thermostats, underfloor heating thermostats, smart radiator valves, thermal actuators, wiring centres and smart controllers.',
+    'Explore Heatnexis gas boiler thermostats, underfloor heating thermostats, smart radiator valves, thermal actuators, wiring centres and smart controllers.',
   ),
   ...categories.map((c) =>
     page(`/products/${c.slug}`, c.name, 'catalog', c.summary, c.slug, { label: 'Products', href: '/products' }),
@@ -69,7 +69,7 @@ export const pages: PageRecord[] = [
     '/tailor-made-solution',
     'Tailor-Made Solution',
     'services',
-    'From ID design, PCB development, software integration to verification, BEOK Controls structures end-to-end OEM/ODM thermostat programs.',
+    'From ID design, PCB development, software integration to verification, Heatnexis structures end-to-end OEM/ODM thermostat programs.',
   ),
   ...services.map((s) =>
     page(`/tailor-made-solution/${s.slug}`, s.name, 'service', s.description, s.slug, {
@@ -81,7 +81,7 @@ export const pages: PageRecord[] = [
     '/odm',
     'ODM Engineering Projects',
     'odm-index',
-    'Explore BEOK Controls concept ODM engineering cases across smart home integration, PCB development, mobile apps and structural enclosure design.',
+    'Explore Heatnexis concept ODM engineering cases across smart home integration, PCB development, mobile apps and structural enclosure design.',
     undefined,
     { label: 'Tailor-Made Solution', href: '/tailor-made-solution' },
   ),
@@ -95,7 +95,7 @@ export const pages: PageRecord[] = [
     '/solutions',
     'Solutions',
     'solutions',
-    'BEOK Controls provides smart thermostat and heating control solutions for underfloor heating, gas boilers, commercial HVAC and smart home applications.',
+    'Heatnexis provides smart thermostat and heating control solutions for underfloor heating, gas boilers, commercial HVAC and smart home applications.',
   ),
   ...solutions.map((s) =>
     page(`/solutions/${s.slug}`, s.name, 'solution', s.description, s.slug, {
@@ -110,7 +110,7 @@ export const pages: PageRecord[] = [
     'Professional resources covering smart thermostat buying guides, HVAC systems, WiFi/Zigbee technologies and OEM/ODM development insights.',
   ),
   ...articleCategories.map((c, i) =>
-    page(`/blog/category/${i + 1}`, c, 'blog', `Read BEOK Controls technical resources in ${c}.`, c, {
+    page(`/blog/category/${i + 1}`, c, 'blog', `Read Heatnexis technical resources in ${c}.`, c, {
       label: 'Blog',
       href: '/blog',
     }),
@@ -136,7 +136,7 @@ export const pages: PageRecord[] = [
     '/support/downloads',
     'Downloads',
     'downloads',
-    'Access structured product manuals, technical datasheets and wiring guide listings for BEOK Controls heating devices.',
+    'Access structured product manuals, technical datasheets and wiring guide listings for Heatnexis heating devices.',
     undefined,
     { label: 'Service & Support', href: '/support' },
   ),
@@ -158,9 +158,9 @@ export const pages: PageRecord[] = [
   ),
   page(
     '/about',
-    'About BEOK Controls',
+    'About Heatnexis',
     'about',
-    'BEOK Controls is a dedicated smart thermostat and heating control brand platform for global distributors, HVAC contractors and OEM/ODM partners.',
+    'Heatnexis is a dedicated smart thermostat and heating control brand platform for global distributors, HVAC contractors and OEM/ODM partners.',
   ),
   page(
     '/about/advantages',
@@ -174,7 +174,7 @@ export const pages: PageRecord[] = [
     '/about/join-us',
     'Join Us',
     'join',
-    'Explore engineering and international B2B collaboration opportunities with BEOK Controls.',
+    'Explore engineering and international B2B collaboration opportunities with Heatnexis.',
     undefined,
     { label: 'About Us', href: '/about' },
   ),
@@ -190,7 +190,7 @@ export const pages: PageRecord[] = [
     '/search',
     'Search',
     'search',
-    'Search BEOK Controls thermostats, heating control solutions, OEM/ODM services and technical articles.',
+    'Search Heatnexis thermostats, heating control solutions, OEM/ODM services and technical articles.',
   ),
   page(
     '/privacy',
@@ -202,12 +202,12 @@ export const pages: PageRecord[] = [
     '/legal-notice',
     'Legal Notice',
     'text',
-    'BEOK Controls is the designated website brand. Approved legal entity name, registered address and statutory disclosures must be finalized prior to commercial launch.',
+    'Heatnexis is the designated website brand. Approved legal entity name, registered address and statutory disclosures must be finalized prior to commercial launch.',
   ),
   page(
     '/sitemap',
     'Website Sitemap',
     'sitemap',
-    'Browse the complete page structure of the BEOK Controls smart thermostat and heating control website.',
+    'Browse the complete page structure of the Heatnexis smart thermostat and heating control website.',
   ),
 ];

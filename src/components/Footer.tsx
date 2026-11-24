@@ -15,8 +15,19 @@ export function Footer() {
       <Container>
         <div className="footer-grid">
           <div className="footer-contact-col">
+            <Link href="/" aria-label="Heatnexis home">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/brand/heatnexis-logo.png"
+                alt="Heatnexis"
+                className="footer-logo-img"
+                width={110}
+                height={30}
+                loading="lazy"
+              />
+            </Link>
             <div>
-              <strong>Brand : </strong>BEOK Controls — Heating Control OEM/ODM
+              <strong>Brand : </strong>Heatnexis — Heating Control OEM/ODM
             </div>
             <div>
               <strong>Address : </strong>Official factory &amp; office address pending brand approval
@@ -32,7 +43,7 @@ export function Footer() {
                 QR PENDING
               </div>
               <div>
-                <div>BEOK Controls</div>
+                <div>Heatnexis</div>
                 <div>Official channel QR pending</div>
                 <Link href="/contact" className="text-link" style={{ fontSize: '12px', marginTop: '4px' }}>
                   Prepare Inquiry →
@@ -77,9 +88,9 @@ export function Footer() {
             <Link href="/sitemap">Site Map</Link>
             <Link href="/legal-notice">Legal Disclaimer</Link>
             <Link href="/privacy">Privacy Policy</Link>
-            <span>Copyright © {new Date().getFullYear()} BEOK Controls. Development preview.</span>
+            <span>Copyright © {new Date().getFullYear()} Heatnexis. Development preview.</span>
           </div>
-          <div className="footer-socials" aria-label="BEOK Controls quick links">
+          <div className="footer-socials" aria-label="Heatnexis quick links">
             <Link href="/contact" aria-label="Contact inquiry">
               <Mail size={14} />
             </Link>

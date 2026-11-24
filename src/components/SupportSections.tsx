@@ -68,7 +68,7 @@ export function DownloadsDirectory() {
         <div style={{ marginBottom: 24 }}>
           <h2 style={{ margin: '0 0 8px' }}>Data Download</h2>
           <p style={{ margin: 0, color: '#666' }}>
-            Select a BEOK Controls product category and document type. Direct PDF links will activate once verified
+            Select a Heatnexis product category and document type. Direct PDF links will activate once verified
             commercial manuals and datasheets are uploaded into <code>public/downloads/</code>.
           </p>
         </div>
@@ -188,7 +188,7 @@ export function VideosLibrary() {
           onClose={() => setSelectedVideo(null)}
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-            <strong>{selectedVideo?.title || 'BEOK Controls Video'}</strong>
+            <strong>{selectedVideo?.title || 'Heatnexis Video'}</strong>
             <button
               type="button"
               autoFocus
@@ -246,7 +246,7 @@ export function SupportOverviewView() {
         <Container>
           <SectionTitle
             title="Technical Support & Documentation Hub"
-            subtitle="Structured after-sales and pre-sales engineering resources for BEOK Controls distributors and HVAC installers."
+            subtitle="Structured after-sales and pre-sales engineering resources for Heatnexis distributors and HVAC installers."
           />
           <div className="qa-grid">
             {cards.map(({ icon: Icon, title, desc, href }) => (

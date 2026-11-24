@@ -15,7 +15,7 @@ export function InquiryForm({ product, title = 'Service Inquiry' }: { product?: 
     const form = e.currentTarget;
     const d = new FormData(form);
     const body = [
-      'BEOK Controls — B2B Project Inquiry Draft',
+      'Heatnexis — B2B Project Inquiry Draft',
       `Company: ${d.get('company') || ''}`,
       `Name: ${d.get('name') || ''}`,
       `Business Email: ${d.get('email') || ''}`,
@@ -58,7 +58,7 @@ export function InquiryForm({ product, title = 'Service Inquiry' }: { product?: 
     <form className="inquiry-form" onSubmit={handleSubmit}>
       <div className="inquiry-form-head">
         <h2>{title}</h2>
-        <p>Prepare your sourcing, distribution or OEM/ODM customization requirements for BEOK Controls.</p>
+        <p>Prepare your sourcing, distribution or OEM/ODM customization requirements for Heatnexis.</p>
       </div>
 
       <label>
@@ -89,12 +89,12 @@ export function InquiryForm({ product, title = 'Service Inquiry' }: { product?: 
         Interested Product / Project
         <input
           name="product"
-          list="beok-product-categories"
+          list="heatnexis-product-categories"
           defaultValue={product || ''}
           maxLength={200}
           placeholder="Select or enter a product line or OEM/ODM project"
         />
-        <datalist id="beok-product-categories">
+        <datalist id="heatnexis-product-categories">
           {categories.map((c) => (
             <option key={c.slug} value={c.name} />
           ))}
@@ -143,7 +143,7 @@ export function InquiryForm({ product, title = 'Service Inquiry' }: { product?: 
                 const url = URL.createObjectURL(new Blob([draftText], { type: 'text/plain' }));
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'beok-controls-project-inquiry.txt';
+                a.download = 'heatnexis-project-inquiry.txt';
                 a.click();
                 URL.revokeObjectURL(url);
               }}

@@ -8,11 +8,11 @@ import '@/styles/globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'BEOK Controls | Smart Thermostat OEM/ODM Manufacturer',
-    template: '%s | BEOK Controls',
+    default: 'Heatnexis | Smart Thermostat OEM/ODM Manufacturer',
+    template: '%s | Heatnexis',
   },
   description:
-    'BEOK Controls: professional B2B smart thermostat and heating control OEM/ODM solutions for global distributors, HVAC contractors and brand partners.',
+    'Heatnexis: professional B2B smart thermostat and heating control OEM/ODM solutions for global distributors, HVAC contractors and brand partners.',
   robots: {
     index: process.env.INDEX_SITE === 'true',
     follow: true,

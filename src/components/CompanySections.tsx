@@ -28,9 +28,9 @@ export function AboutPageView() {
         <Container>
           <div className="split-band">
             <div>
-              <h2 style={{ margin: '0 0 16px' }}>BEOK Controls</h2>
+              <h2 style={{ margin: '0 0 16px' }}>Heatnexis</h2>
               <p>
-                BEOK Controls is the designated smart thermostat and heating control brand for global B2B distributors,
+                Heatnexis is the designated smart thermostat and heating control brand for global B2B distributors,
                 wholesalers, HVAC contractors and OEM/ODM private-label partners.
               </p>
               <p>
@@ -63,7 +63,7 @@ export function AboutPageView() {
             </div>
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/factory/about-building.jpg" alt="BEOK Controls manufacturing facility" className="img-cover" />
+              <img src="/images/factory/about-building.jpg" alt="Heatnexis manufacturing facility" className="img-cover" />
             </div>
           </div>
         </Container>
@@ -223,7 +223,7 @@ export function AboutPageView() {
             </div>
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/factory/env-5.jpg" alt="BEOK Controls quality and testing workshop" className="img-cover" loading="lazy" />
+              <img src="/images/factory/env-5.jpg" alt="Heatnexis quality and testing workshop" className="img-cover" loading="lazy" />
             </div>
           </div>
         </Container>
@@ -320,7 +320,7 @@ export function AdvantagesPageView() {
           <h2>Innovation Capability</h2>
           <p style={{ maxWidth: 640, margin: '0 auto', color: 'rgba(255,255,255,0.85)' }}>
             Quantitative R&amp;D team headcount, patent totals and factory floor figures are intentionally omitted until
-            verified corporate records are supplied by BEOK Controls.
+            verified corporate records are supplied by Heatnexis.
           </p>
         </Container>
       </section>
@@ -386,12 +386,12 @@ export function AdvantagesPageView() {
                 ))}
               </ul>
               <p className="notice-box">
-                Verified factory production capacity figures will be published once supplied by BEOK Controls.
+                Verified factory production capacity figures will be published once supplied by Heatnexis.
               </p>
             </div>
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/factory/manufacturing.jpg" alt="BEOK Controls PCB testing and soldering" className="img-cover" loading="lazy" />
+              <img src="/images/factory/manufacturing.jpg" alt="Heatnexis PCB testing and soldering" className="img-cover" loading="lazy" />
             </div>
           </div>
         </Container>
@@ -406,7 +406,7 @@ export function JoinUsPageView() {
       <section className="section-block">
         <Container>
           <SectionTitle
-            title="Collaborate & Grow With BEOK Controls"
+            title="Collaborate & Grow With Heatnexis"
             subtitle="Explore engineering and global B2B collaboration opportunities."
           />
           <div className="rd-grid">
@@ -459,7 +459,7 @@ export function ContactPageView() {
         <Container>
           <div className="contact-top-grid">
             <div>
-              <h2 style={{ margin: '0 0 12px' }}>BEOK Controls — Global B2B Desk</h2>
+              <h2 style={{ margin: '0 0 12px' }}>Heatnexis — Global B2B Desk</h2>
               <p style={{ margin: 0 }}>
                 Share your heating application, target regional market, product category or OEM/ODM customization scope.
               </p>

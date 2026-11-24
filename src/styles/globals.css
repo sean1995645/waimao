@@ -207,26 +207,21 @@ main {
   line-height: 1;
 }
 
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.brand-word {
-  font-size: clamp(22px, 1.75vw, 30px);
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  line-height: 1;
-}
-
-.brand-sub {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.24em;
-  opacity: 0.78;
+.brand-logo-img {
+  height: clamp(28px, 2.2vw, 38px);
+  width: auto;
   display: block;
-  margin-top: 3px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer-logo-img {
+  height: 30px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  margin-bottom: 10px;
 }
 
 .header-right {
@@ -2782,6 +2777,11 @@ table.spec-table th {
   .language,
   .menu-toggle {
     color: var(--color-black);
+  }
+
+  .brand-logo-img {
+    height: 30px;
+    filter: none;
   }
 
   .desktop-drawer-toggle {
