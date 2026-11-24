@@ -166,7 +166,7 @@ export function HeroBanner({ page }: { page: PageRecord }) {
               <img
                 src="/images/products/pro-banner.png"
                 alt="Heatnexis Smart Thermostat Lineup"
-                className="img-contain"
+                className="img-cover"
               />
             </div>
             <div className="pro-banner-copy">

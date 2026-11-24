@@ -1034,10 +1034,10 @@ main {
 
 .pro-banner-visual {
   aspect-ratio: 16 / 10;
-  background: var(--color-white);
+  background: var(--color-obsidian);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 0;
   box-shadow: var(--shadow-card);
   overflow: hidden;
 }

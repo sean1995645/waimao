@@ -78,6 +78,13 @@ The BEOK Controls B2B smart thermostat website has been rebuilt from the ground 
 - Caught and fixed mobile `.iaboutus-band` stacking (`flex-direction: column` under `<= 991px`) via visual inspection of `redesign-home-390x844.png`.
 - Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (`89/89`), **24 / 24** Mega Menu desktop geometry checks, **30 / 30** Playwright E2E/HTTP tests across desktop/tablet/mobile, and desktop/mobile visual captures (`reference/comparison/redesign-*.png`).
 
+## HD Commercial Imagery Upgrade (`public/images/`)
+- Audited all 100 images in `public/images/` and identified blurry low-res reference downloads (`360×257` product shots at 3–11KB, `611×326` products banner, `524×357` ODM cards, `600×400` blog/video covers with competitor logos).
+- Generated **14 brand-new ultra-HD (`1200×896`–`1376×768`) watermark-free studio & editorial images** before hitting `gemini-3.1-flash-image` `429 RESOURCE_EXHAUSTED` quota, and deployed them across all flagship visual slots:
+  - Hero slides (`hero/slide-1.jpg`, `slide-2.jpg` with seamless obsidian feather-blend, plus portrait mobile crops), Tailor-Made 4 strips (`services/{smart-home,pcb,app,structural}.jpg`), Products Center hero lineup (`products/pro-banner.png`), Home dark studio showcase (`products/dark-1..10.jpg`), core studio catalog shots (`products/prod-{white,black,round}-*.png`, `prod-detail-1..3.jpg`), Solutions (`energy-saving`, `smart-home`, `oem-odm`), Factory/R&D (`home-about`, `env-1..5`, `rd-1..2`, `adv-rd-1..3`, `manufacturing`), and Blog/Video covers (`blog/art-1..3,7,9`, `support/vid-1,2,4,5,7,8`).
+- Cleanly enhanced the remaining 35 secondary images (`< 1000px` wide) via 2× Lanczos resampling + gentle unsharp mask + Q92 re-encoding so zero low-resolution thumbnails remain anywhere on the site.
+- Verified `pnpm build` (`89/89`), `pnpm test` (**30 / 30 passed** including HTTP `200 image/*` verification for every rendered `<img>`), and visually verified fresh HD captures on `http://localhost:3000/`.
+
 ## Active Local Server & Remaining External Blockers
 - Scoped Git commits created on branch `prod`, preserving all unrelated deletions outside the new implementation scope.
 - Fresh production server live on `http://localhost:3000/`.
