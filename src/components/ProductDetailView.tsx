@@ -174,6 +174,7 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
         <Container>
           <div className="product-intro">
             <div className="product-intro-copy">
+              <span className="article-tag" style={{ marginBottom: 12 }}>{product.reference} · {product.application}</span>
               <h1>{product.name}</h1>
               <p>{product.description}</p>
               <p className="notice-box">{product.status}</p>

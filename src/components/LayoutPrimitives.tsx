@@ -12,12 +12,15 @@ export function Container({ children, className = '' }: { children: ReactNode; c
 export function SectionTitle({
   title,
   subtitle,
+  eyebrow,
 }: {
   title: string;
   subtitle?: string;
+  eyebrow?: string;
 }) {
   return (
     <div className="section-header">
+      {eyebrow && <span className="section-eyebrow">{eyebrow}</span>}
       <h2>{title}</h2>
       {subtitle && <p>{subtitle}</p>}
     </div>

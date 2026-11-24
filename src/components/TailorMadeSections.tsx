@@ -435,9 +435,9 @@ export function OdmIndexView() {
                   <img src={item.image} alt={item.title} className="img-contain" loading="lazy" />
                 </div>
                 <div className="product-card-body">
-                  <span style={{ fontSize: 12, color: '#0067e7', fontWeight: 600 }}>{item.serviceName}</span>
+                  <span className="article-tag" style={{ marginBottom: 10 }}>{item.serviceName}</span>
                   <h3>{item.title}</h3>
-                  <p style={{ margin: 0, fontSize: 13, color: '#666' }}>{item.subtitle}</p>
+                  <p style={{ margin: 0, fontSize: 13.5, color: 'var(--color-text-muted)' }}>{item.subtitle}</p>
                 </div>
               </Link>
             ))}

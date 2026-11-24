@@ -318,6 +318,11 @@ export function Header() {
             </nav>
 
             <div className="header-tools">
+              <Link href="/contact" className="header-cta-btn" onClick={closeNavigation}>
+                <span>Get Quote</span>
+                <ChevronRight size={14} aria-hidden="true" />
+              </Link>
+
               <button
                 type="button"
                 className="header-tool-btn"

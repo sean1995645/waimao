@@ -155,7 +155,7 @@ export function AboutPageView() {
               { icon: ShieldCheck, title: 'Core Values', desc: 'Integrity, engineering rigor, safety compliance awareness and continuous product refinement.' },
             ].map(({ icon: Icon, title, desc }) => (
               <div className="culture-card" key={title}>
-                <Icon size={24} color="#0067e7" aria-hidden="true" />
+                <Icon size={24} color="#fda4af" aria-hidden="true" />
                 <h3>{title}</h3>
                 <p>{desc}</p>
               </div>
@@ -245,13 +245,14 @@ export function AboutPageView() {
               <div
                 key={channel}
                 style={{
-                  background: '#f5f6f8',
-                  border: '1px solid #e8ecf0',
+                  background: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                  borderRadius: 'var(--radius)',
                   padding: '26px 20px',
                   textAlign: 'center',
                   fontWeight: 700,
-                  fontSize: 14,
-                  color: '#272727',
+                  fontSize: 14.5,
+                  color: 'var(--color-title)',
                 }}
               >
                 {channel}
@@ -379,7 +380,7 @@ export function AdvantagesPageView() {
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 22px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                 {['Incoming component inspection', 'In-circuit functional testing', 'Aging & burn-in screening', 'Pre-shipment AQL review'].map((line) => (
                   <li key={line} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13.5 }}>
-                    <CheckCircle2 size={16} color="#0067e7" aria-hidden="true" />
+                    <CheckCircle2 size={16} color="var(--color-primary)" aria-hidden="true" />
                     <span>{line}</span>
                   </li>
                 ))}

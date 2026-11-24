@@ -70,6 +70,14 @@ The BEOK Controls B2B smart thermostat website has been rebuilt from the ground 
   - Added `.has-menu-open` solid black desktop header state while any dropdown/search is active (while keeping `< 992px` mobile header white).
 - Verified **24 / 24** geometry assertions across all 6 dropdowns × 4 desktop viewports (`1920×1080`, `1440×900`, `1280×800`, `1024×768`: `gapTop: 0`, `clipLeft: false`, `clipRight: false`, `coversTrigger: true`) and **30 / 30** Playwright E2E/HTTP tests.
 
+## UI-UX-Pro-Max Full-Site Redesign (All 76 Routes)
+- Per explicit user request ("使用 ui-ux-pro-max 所有的页面帮我重新设计"), established a cohesive **Precision Thermal Engineering** design system in `src/styles/{tokens,typography,animations,globals}.css`:
+  - Unified brand identity around **Heatnexis Crimson (`#C81E2B`)** + **Deep Obsidian (`#0B0F17`)** + **Cool Porcelain (`#F8FAFC`)**, replacing legacy `#0067e7` inline colors across all components.
+  - Upgraded typography with tight geometric display headings, technical monospace kickers/reference badges (`.section-eyebrow`, `.detail-banner-kicker`, `.article-tag`), precision rounded geometry (`6px` / `10px` / `14px` / `999px`), frosted glass desktop header & sticky product tabs, and layered ambient shadows.
+  - Enhanced B2B conversion architecture across all templates: Header `Get Quote` CTA pill, Hero dual CTAs + 4-pillar B2B Trust Bar, preserved 4-strip horizontal accordion Tailor-Made cards, segmented product showcase, framed studio catalog & product detail views, pre-footer B2B RFQ Callout Band, and deep obsidian footer with crimson top accent.
+- Caught and fixed mobile `.iaboutus-band` stacking (`flex-direction: column` under `<= 991px`) via visual inspection of `redesign-home-390x844.png`.
+- Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (`89/89`), **24 / 24** Mega Menu desktop geometry checks, **30 / 30** Playwright E2E/HTTP tests across desktop/tablet/mobile, and desktop/mobile visual captures (`reference/comparison/redesign-*.png`).
+
 ## Active Local Server & Remaining External Blockers
 - Scoped Git commits created on branch `prod`, preserving all unrelated deletions outside the new implementation scope.
 - Fresh production server live on `http://localhost:3000/`.

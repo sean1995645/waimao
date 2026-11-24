@@ -1,7 +1,8 @@
 a,
 button {
   transition: color var(--transition-fast), background-color var(--transition-fast),
-    border-color var(--transition-fast), opacity var(--transition-fast), transform var(--transition-fast);
+    border-color var(--transition-fast), opacity var(--transition-fast),
+    transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 html {
@@ -12,7 +13,29 @@ html {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdownReveal {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes dropdownRevealRight {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -26,7 +49,7 @@ html {
 }
 
 .reveal[data-reveal='visible'] {
-  animation: fadeInUp 520ms cubic-bezier(0.4, 0.01, 0.165, 0.99) both;
+  animation: fadeInUp 560ms var(--ease-out) both;
 }
 
 @media (prefers-reduced-motion: reduce) {

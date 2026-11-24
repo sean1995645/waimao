@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Cpu, Factory, Globe2, ShieldCheck } from 'lucide-react';
 import { heroSlides } from '@/data/catalog';
 import type { PageRecord } from '@/data/pages';
 import { Container } from './LayoutPrimitives';
@@ -44,8 +44,12 @@ export function HomeHeroBanner() {
           <p className="home-banner-eyebrow">{slide.eyebrow}</p>
           <h1>{slide.headline}</h1>
           <div className="home-banner-actions">
-            <Link href={slide.ctaHref} className="btn-white">
+            <Link href={slide.ctaHref} className="btn-primary">
               <span>{slide.ctaLabel}</span>
+              <ChevronRight size={15} aria-hidden="true" />
+            </Link>
+            <Link href="/contact" className="btn-ghost-white">
+              <span>Request B2B Quote</span>
               <ChevronRight size={15} aria-hidden="true" />
             </Link>
           </div>
@@ -53,30 +57,75 @@ export function HomeHeroBanner() {
         <div aria-hidden="true" />
       </div>
 
-      <div className="banner-controls">
-        <button type="button" className="banner-nav-btn" onClick={prev} aria-label="Previous slide">
-          <ChevronLeft size={14} aria-hidden="true" />
-          <span>PREV</span>
-        </button>
-        <div className="banner-progress-track" aria-hidden="true">
-          <div
-            className="banner-progress-fill"
-            style={{
-              width: `${100 / heroSlides.length}%`,
-              left: `${(index * 100) / heroSlides.length}%`,
-            }}
-          />
+      <div className="hero-controls-row">
+        <div className="banner-controls">
+          <button type="button" className="banner-nav-btn" onClick={prev} aria-label="Previous slide">
+            <ChevronLeft size={14} aria-hidden="true" />
+            <span>PREV</span>
+          </button>
+          <div className="banner-progress-track" aria-hidden="true">
+            <div
+              className="banner-progress-fill"
+              style={{
+                width: `${100 / heroSlides.length}%`,
+                left: `${(index * 100) / heroSlides.length}%`,
+              }}
+            />
+          </div>
+          <button type="button" className="banner-nav-btn" onClick={next} aria-label="Next slide">
+            <span>NEXT</span>
+            <ChevronRight size={14} aria-hidden="true" />
+          </button>
         </div>
-        <button type="button" className="banner-nav-btn" onClick={next} aria-label="Next slide">
-          <span>NEXT</span>
-          <ChevronRight size={14} aria-hidden="true" />
-        </button>
+
+        <div className="banner-pagination-vertical" aria-hidden="true">
+          <span>{String(index + 1).padStart(2, '0')}</span>
+          <span className="banner-pagination-line" />
+          <span>{String(heroSlides.length).padStart(2, '0')}</span>
+        </div>
       </div>
 
-      <div className="banner-pagination-vertical" aria-hidden="true">
-        <span>{String(index + 1).padStart(2, '0')}</span>
-        <span className="banner-pagination-line" />
-        <span>{String(heroSlides.length).padStart(2, '0')}</span>
+      <div className="hero-trust-bar" aria-label="Heatnexis B2B capabilities">
+        <Container>
+          <div className="hero-trust-grid">
+            <div className="hero-trust-item">
+              <span className="hero-trust-icon" aria-hidden="true">
+                <Factory size={18} />
+              </span>
+              <div>
+                <strong>7 Heating Control Lines</strong>
+                <span>Boiler, Underfloor, TRV &amp; Hubs</span>
+              </div>
+            </div>
+            <div className="hero-trust-item">
+              <span className="hero-trust-icon" aria-hidden="true">
+                <Cpu size={18} />
+              </span>
+              <div>
+                <strong>Full-Stack OEM / ODM</strong>
+                <span>PCB, Firmware, ID &amp; Mobile App</span>
+              </div>
+            </div>
+            <div className="hero-trust-item">
+              <span className="hero-trust-icon" aria-hidden="true">
+                <ShieldCheck size={18} />
+              </span>
+              <div>
+                <strong>Regional Wall-Box Ready</strong>
+                <span>EU 86mm, UK &amp; North America</span>
+              </div>
+            </div>
+            <div className="hero-trust-item">
+              <span className="hero-trust-icon" aria-hidden="true">
+                <Globe2 size={18} />
+              </span>
+              <div>
+                <strong>Global B2B Export</strong>
+                <span>Distributors, HVAC &amp; Brand OEM</span>
+              </div>
+            </div>
+          </div>
+        </Container>
       </div>
     </section>
   );
@@ -121,12 +170,18 @@ export function HeroBanner({ page }: { page: PageRecord }) {
               />
             </div>
             <div className="pro-banner-copy">
+              <span className="section-eyebrow">HEATNEXIS · PRODUCT PORTFOLIO</span>
               <h1>{page.title === 'Products' ? 'Professional Smart Thermostat Product Solutions' : page.title}</h1>
               <p>{page.description}</p>
-              <Link href="/tailor-made-solution" className="text-link">
-                <span>Explore OEM/ODM Customization</span>
-                <ChevronRight size={15} aria-hidden="true" />
-              </Link>
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                <Link href="/contact" className="btn-primary">
+                  <span>Request Price List &amp; Samples</span>
+                  <ChevronRight size={15} aria-hidden="true" />
+                </Link>
+                <Link href="/tailor-made-solution" className="btn-outline">
+                  <span>OEM/ODM Customization</span>
+                </Link>
+              </div>
             </div>
           </div>
         </Container>
@@ -142,6 +197,7 @@ export function HeroBanner({ page }: { page: PageRecord }) {
       </div>
       <div className="banner-photo-scrim" aria-hidden="true" />
       <div className="detail-banner-inner">
+        <span className="detail-banner-kicker">HEATNEXIS · THERMAL CONTROL ENGINEERING</span>
         <h1>{page.title}</h1>
         <p>{page.description}</p>
       </div>

@@ -76,6 +76,7 @@ export function HomePageView() {
       <section className="iservice" aria-labelledby="home-tailor-heading">
         <Reveal>
           <div className="section-header">
+            <span className="section-eyebrow">OEM / ODM ENGINEERING</span>
             <h2 id="home-tailor-heading">Tailor-Made Solution</h2>
             <p>
               Specialized in the smart thermostat industry, Heatnexis structures end-to-end OEM/ODM workflows
@@ -133,6 +134,7 @@ export function HomePageView() {
       <section className="iproducts" aria-labelledby="home-products-heading">
         <Reveal>
           <div className="section-header">
+            <span className="section-eyebrow">HARDWARE LINEUP</span>
             <h2 id="home-products-heading">Products</h2>
             <p>
               Full-range smart thermostat and heating control categories — built for wholesale distribution, private-label
@@ -198,6 +200,7 @@ export function HomePageView() {
         <Reveal>
           <Container>
             <div className="section-header">
+              <span className="section-eyebrow">HEATING SCENARIOS</span>
               <h2 id="home-applications-heading">Applications</h2>
               <p>
                 Structured heating control solutions tailored for residential, commercial, underfloor and OEM/ODM
@@ -243,6 +246,7 @@ export function HomePageView() {
       <section className="section-block" style={{ paddingBottom: 0 }} aria-labelledby="home-about-heading">
         <Reveal>
           <SectionTitle
+            eyebrow="GLOBAL MANUFACTURING PARTNER"
             title="Company Introduction"
             subtitle="One-stop Smart Thermostat & Heating Control Solution Partner"
           />
@@ -301,6 +305,7 @@ export function HomePageView() {
         <Reveal>
           <Container>
             <div className="section-header">
+              <span className="section-eyebrow">TECHNICAL INSIGHTS</span>
               <h2 id="home-news-heading">News and Information</h2>
               <p>Technical buying guides, HVAC heating control knowledge and OEM/ODM insights from Heatnexis.</p>
             </div>
@@ -316,6 +321,7 @@ export function HomePageView() {
                     <img src={art.image} alt={art.title} className="img-cover" loading="lazy" />
                   </Link>
                   <div className="article-card-body">
+                    <span className="article-tag">{art.category}</span>
                     <h3>
                       <Link href={`/blog/${art.slug}`}>{art.title}</Link>
                     </h3>
@@ -345,6 +351,32 @@ export function HomePageView() {
             </div>
           </Container>
         </Reveal>
+      </section>
+
+      {/* Section 6: Pre-Footer B2B Conversion Callout Band */}
+      <section className="cta-band" aria-labelledby="home-cta-heading">
+        <Container>
+          <div className="cta-band-inner">
+            <div className="cta-band-copy">
+              <span className="detail-banner-kicker">B2B SOURCING &amp; OEM / ODM DESK</span>
+              <h2 id="home-cta-heading">Ready to Source or Customize Your Next Thermostat Line?</h2>
+              <p>
+                Share your heating system type, target market standards and project volume for a structured B2B
+                quotation, sample evaluation or custom ODM engineering brief.
+              </p>
+            </div>
+            <div className="cta-band-actions">
+              <Link href="/contact" className="btn-primary">
+                <span>Request B2B Quote</span>
+                <ChevronRight size={15} aria-hidden="true" />
+              </Link>
+              <Link href="/tailor-made-solution" className="btn-ghost-white">
+                <span>Explore OEM/ODM</span>
+                <ChevronRight size={15} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </Container>
       </section>
     </>
   );

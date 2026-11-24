@@ -12,6 +12,7 @@ export function ArticleCard({ article }: { article: ArticleRecord }) {
         <img src={article.image} alt={article.title} className="img-cover" loading="lazy" />
       </Link>
       <div className="article-card-body">
+        <span className="article-tag">{article.category}</span>
         <h3>
           <Link href={`/blog/${article.slug}`}>{article.title}</Link>
         </h3>
