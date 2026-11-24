@@ -81,7 +81,7 @@ export const pages: PageRecord[] = [
     '/odm',
     'ODM Engineering Projects',
     'odm-index',
-    'Explore Heatnexis concept ODM engineering cases across smart home integration, PCB development, mobile apps and structural enclosure design.',
+    'Explore Heatnexis reference ODM engineering cases across smart home integration, PCB development, mobile apps and structural enclosure design.',
     undefined,
     { label: 'Tailor-Made Solution', href: '/tailor-made-solution' },
   ),

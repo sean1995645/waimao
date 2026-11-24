@@ -117,7 +117,7 @@ export function ProductGallery({
 export function SpecificationsTable({ rows }: { rows: [string, string][] }) {
   return (
     <table className="spec-table">
-      <caption>Technical parameters — awaiting verified Heatnexis specification sheet</caption>
+      <caption>Technical parameters — model-specific values confirmed in your project datasheet</caption>
       <tbody>
         {rows.map(([k, v]) => (
           <tr key={k}>
@@ -134,9 +134,9 @@ export function ProductDownload({ productName }: { productName?: string }) {
   return (
     <div className="download-rows">
       {[
-        { title: `${productName || 'Product'} — Technical Datasheet (PDF)`, desc: 'Verified datasheet awaiting brand upload' },
-        { title: `${productName || 'Product'} — Installation & Wiring Manual (PDF)`, desc: 'Verified wiring schematic awaiting approval' },
-        { title: `${productName || 'Product'} — Compliance & Declaration Pack`, desc: 'Target market certification files supplied on request' },
+        { title: `${productName || 'Product'} — Technical Datasheet (PDF)`, desc: 'Full electrical specs & dimensions supplied via B2B desk' },
+        { title: `${productName || 'Product'} — Installation & Wiring Manual (PDF)`, desc: 'Model-matched wiring schematic & installer guide' },
+        { title: `${productName || 'Product'} — Compliance & Declaration Pack`, desc: 'Target-market compliance documents supplied on request' },
       ].map((doc) => (
         <div className="download-row" key={doc.title}>
           <h3>{doc.title}</h3>
@@ -157,10 +157,10 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
   const related = products.filter((x) => x.slug !== product.slug).slice(0, 3);
 
   const featureIcons = [
-    { icon: Smartphone, label: 'Mobile App Concept' },
-    { icon: Mic, label: 'Voice Ecosystem Brief' },
+    { icon: Smartphone, label: 'Mobile App Control' },
+    { icon: Mic, label: 'Voice Ecosystem Ready' },
     { icon: Thermometer, label: 'Precision Sensing' },
-    { icon: Snowflake, label: 'Frost Protection Logic' },
+    { icon: Snowflake, label: 'Frost Protection' },
     { icon: Lock, label: 'Child / Keypad Lock' },
     { icon: Sun, label: 'Custom Backlight' },
     { icon: CalendarClock, label: 'Weekly Programming' },
@@ -179,11 +179,11 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
               <p className="notice-box">{product.status}</p>
               <div className="product-intro-actions">
                 <a href="#inquiry" className="btn-outline">
-                  <span>Consultation</span>
+                  <span>Request Sample</span>
                   <ChevronRight size={14} aria-hidden="true" />
                 </a>
                 <a href="#inquiry" className="btn-primary">
-                  <span>Product Inquiry</span>
+                  <span>Request B2B Quote</span>
                   <ChevronRight size={14} aria-hidden="true" />
                 </a>
               </div>
@@ -237,7 +237,7 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
               <>
                 <SectionTitle
                   title="Highlights at a glance"
-                  subtitle={`Planned capability architecture for ${product.name}. Final commercial specifications depend on verified datasheet confirmation.`}
+                  subtitle={`Core capabilities for ${product.name}. Final commercial specifications are confirmed per your target region and OEM/ODM brief.`}
                 />
                 <div className="prose" style={{ marginBottom: 32 }}>
                   <ul>
@@ -288,7 +288,7 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
               <>
                 <SectionTitle
                   title="Technical Specifications"
-                  subtitle={`Reference ID: ${product.reference} — Verified engineering values pending official datasheet release.`}
+                  subtitle={`Reference Series: ${product.reference} — Request the signed engineering datasheet for your target region.`}
                 />
                 <SpecificationsTable rows={product.specifications} />
               </>

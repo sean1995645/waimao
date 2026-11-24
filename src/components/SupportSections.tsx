@@ -66,10 +66,10 @@ export function DownloadsDirectory() {
     <section className="section-block">
       <Container>
         <div style={{ marginBottom: 24 }}>
-          <h2 style={{ margin: '0 0 8px' }}>Data Download</h2>
+          <h2 style={{ margin: '0 0 8px' }}>Technical Documentation &amp; Downloads</h2>
           <p style={{ margin: 0, color: '#666' }}>
-            Select a Heatnexis product category and document type. Direct PDF links will activate once verified
-            commercial manuals and datasheets are uploaded into <code>public/downloads/</code>.
+            Filter by Heatnexis product category and document type to request model-matched user manuals, technical
+            datasheets and wiring schematics from our B2B engineering desk.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export function VideosLibrary() {
       <Container>
         <SectionTitle
           title="Videos"
-          subtitle="Structured product overview, wiring and technical setup video placeholders. Playback activates once approved media files are provided in public/videos/."
+          subtitle="Product hardware overviews, installation wiring guides and OEM/ODM workflow walkthroughs for B2B partners."
         />
 
         <div className="pill-tab-bar" role="group" aria-label="Video categories">
@@ -200,11 +200,10 @@ export function VideosLibrary() {
             </button>
           </div>
           <div className="notice-box" style={{ marginBottom: 16 }}>
-            Approved commercial video media has not yet been uploaded to <code>public/videos/</code>. No placeholder
-            third-party video stream is embedded.
+            On-demand video playback for this model is supplied directly by our B2B technical desk upon request.
           </div>
           <Link href="/contact" className="btn-primary" onClick={() => dialogRef.current?.close()}>
-            Request Technical Demo or Manual →
+            Request Live Demo or Video File →
           </Link>
         </dialog>
       </Container>

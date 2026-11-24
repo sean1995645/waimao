@@ -24,6 +24,10 @@ export function ProductCard({ product: p }: { product: ProductRecord }) {
             <li key={h}>{h}</li>
           ))}
         </ul>
+        <Link href={`/products/${p.category}/${p.slug}`} className="text-link" style={{ fontSize: 13, marginTop: 14 }}>
+          <span>Specs &amp; B2B Quote</span>
+          <ChevronRight size={14} aria-hidden="true" />
+        </Link>
       </div>
     </article>
   );

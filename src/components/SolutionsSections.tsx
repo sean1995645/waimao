@@ -75,7 +75,7 @@ export function SolutionDetailView({ solution }: { solution: SolutionRecord }) {
               </p>
               <div style={{ marginTop: 22 }}>
                 <a href="#inquiry" className="btn-primary">
-                  <span>Discuss Your Application</span>
+                  <span>Request Solution Quote</span>
                   <ChevronRight size={15} aria-hidden="true" />
                 </a>
               </div>
@@ -110,7 +110,7 @@ export function SolutionDetailView({ solution }: { solution: SolutionRecord }) {
         <Container>
           <SectionTitle
             title="Recommended Product Lines"
-            subtitle="Concept product families aligned with this application scenario."
+            subtitle="Heatnexis product families aligned with this heating application scenario."
           />
           <div className="product-grid">
             {matchedProducts.map((p) => (

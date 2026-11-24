@@ -131,8 +131,8 @@ export function HomePageView() {
           <div className="section-header">
             <h2 id="home-products-heading">Products</h2>
             <p>
-              Full-range smart thermostat and heating control categories — from concept scoping to OEM/ODM customization
-              for global heating markets.
+              Full-range smart thermostat and heating control categories — built for wholesale distribution, private-label
+              OEM and custom ODM projects worldwide.
             </p>
           </div>
 
@@ -182,7 +182,7 @@ export function HomePageView() {
 
           <div className="iproducts-more-wrap">
             <Link href={`/products/${activeCat}`} className="btn-primary">
-              <span>More Product</span>
+              <span>Explore Category</span>
               <ChevronRight size={15} aria-hidden="true" />
             </Link>
           </div>
@@ -254,12 +254,12 @@ export function HomePageView() {
               <div className="iaboutus-copy">
                 <h3 id="home-about-heading">Why Choose Heatnexis</h3>
                 <p>
-                  Heatnexis focuses on B2B smart thermostats, radiator valves, thermal actuators, wiring centres and
-                  connected HVAC controllers for international distributors, wholesalers, contractors and brand partners.
-                  Verified company history, production metrics and certification files are pending official brand supply.
+                  Heatnexis supplies B2B smart thermostats, radiator valves, thermal actuators, wiring centres and
+                  connected HVAC controllers for international distributors, wholesalers, contractors and brand partners—
+                  supporting sample evaluation, private-label OEM and full-cycle ODM engineering.
                 </p>
                 <Link href="/about" className="btn-white">
-                  <span>Read More</span>
+                  <span>About Heatnexis</span>
                   <ChevronRight size={15} aria-hidden="true" />
                 </Link>
               </div>
@@ -277,14 +277,14 @@ export function HomePageView() {
                 <Award size={26} className="iaboutus-stat-icon" aria-hidden="true" />
                 <div>
                   <strong>OEM / ODM</strong>
-                  <span>4 Customization Pillars</span>
+                  <span>4 Engineering Pillars</span>
                 </div>
               </div>
               <div className="iaboutus-stat">
                 <Users size={26} className="iaboutus-stat-icon" aria-hidden="true" />
                 <div>
-                  <strong>Pending</strong>
-                  <span>Verified Factory Figures</span>
+                  <strong>Global B2B</strong>
+                  <span>Wholesale &amp; Brand Supply</span>
                 </div>
               </div>
             </div>

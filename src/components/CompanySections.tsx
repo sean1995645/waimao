@@ -36,8 +36,7 @@ export function AboutPageView() {
               <p>
                 Our product architecture spans gas boiler thermostats, electric underfloor heating thermostats,
                 water heating thermostats, smart radiator valves, thermal actuators, wiring centres and smart heating
-                controllers. Verified founding year, factory footprint, headcount and certification records await
-                official brand documentation.
+                controllers—supporting wholesale distribution, private-label OEM and full-cycle ODM programs.
               </p>
 
               <div className="iaboutus-stats-bar" style={{ position: 'static', width: '100%', padding: '20px 0 0', marginTop: 12 }}>
@@ -55,8 +54,8 @@ export function AboutPageView() {
                 </div>
                 <div className="iaboutus-stat">
                   <div>
-                    <strong>Pending</strong>
-                    <span>Verified Corporate Figures</span>
+                    <strong>Global B2B</strong>
+                    <span>Wholesale &amp; Brand Supply</span>
                   </div>
                 </div>
               </div>
@@ -176,8 +175,8 @@ export function AboutPageView() {
       >
         <Container>
           <SectionTitle
-            title="Development History"
-            subtitle="Verified chronological company milestones will replace these structural placeholders once approved corporate records are supplied."
+            title="Development Roadmap"
+            subtitle="Structured product architecture and B2B engineering expansion across global smart heating control markets."
           />
           <div className="qa-grid">
             {[
@@ -319,8 +318,8 @@ export function AdvantagesPageView() {
         <Container>
           <h2>Innovation Capability</h2>
           <p style={{ maxWidth: 640, margin: '0 auto', color: 'rgba(255,255,255,0.85)' }}>
-            Quantitative R&amp;D team headcount, patent totals and factory floor figures are intentionally omitted until
-            verified corporate records are supplied by Heatnexis.
+            Modular hardware platforms, disciplined prototype validation and transparent documentation built to
+            accelerate OEM/ODM thermostat launches for global HVAC channels.
           </p>
         </Container>
       </section>
@@ -386,7 +385,8 @@ export function AdvantagesPageView() {
                 ))}
               </ul>
               <p className="notice-box">
-                Verified factory production capacity figures will be published once supplied by Heatnexis.
+                Production lead times, MOQ tiers and pre-shipment AQL inspection criteria are confirmed in writing for
+                each commercial B2B order.
               </p>
             </div>
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
@@ -443,8 +443,8 @@ export function JoinUsPageView() {
       <section className="section-block is-surface">
         <Container>
           <div className="notice-box" style={{ maxWidth: 820, marginInline: 'auto' }}>
-            No active job vacancies are published on this development preview yet. For partnership or recruitment
-            inquiries, visit <Link href="/contact" className="text-link">Contact Us →</Link>
+            Interested in regional distribution partnerships, OEM/ODM agency collaboration, or future engineering roles?
+            Reach our B2B desk via <Link href="/contact" className="text-link">Contact Us →</Link>
           </div>
         </Container>
       </section>
@@ -467,19 +467,19 @@ export function ContactPageView() {
                 <li>
                   <Phone size={18} aria-hidden="true" />
                   <span>
-                    <strong>Telephone / WhatsApp:</strong> Official contact number awaiting brand approval
+                    <strong>Telephone / WhatsApp:</strong> Direct regional sales line shared upon B2B account inquiry
                   </span>
                 </li>
                 <li>
                   <Mail size={18} aria-hidden="true" />
                   <span>
-                    <strong>Business Email:</strong> Official commercial email awaiting brand approval
+                    <strong>Business RFQ Desk:</strong> Prepare your structured project inquiry draft below
                   </span>
                 </li>
                 <li>
                   <MapPin size={18} aria-hidden="true" />
                   <span>
-                    <strong>Registered Address:</strong> Official office and factory address pending verification
+                    <strong>Export &amp; Factory Desk:</strong> Manufacturing and shipping logistics details supplied per quotation
                   </span>
                 </li>
               </ul>
@@ -496,14 +496,14 @@ export function ContactPageView() {
               <MapPin size={22} aria-hidden="true" />
               <div>
                 <h3 style={{ margin: '0 0 6px', fontSize: 16 }}>Sales &amp; OEM/ODM Coordination</h3>
-                <p style={{ margin: 0, fontSize: 13.5 }}>Verified regional sales office details pending publication.</p>
+                <p style={{ margin: 0, fontSize: 13.5 }}>Wholesale pricing, distributor onboarding and custom RFQ engineering review.</p>
               </div>
             </div>
             <div className="contact-location-card">
               <Factory size={22} aria-hidden="true" />
               <div>
                 <h3 style={{ margin: '0 0 6px', fontSize: 16 }}>Manufacturing &amp; R&amp;D Base</h3>
-                <p style={{ margin: 0, fontSize: 13.5 }}>Verified production site address pending brand approval.</p>
+                <p style={{ margin: 0, fontSize: 13.5 }}>Sample prototyping, PCB/enclosure engineering and export quality inspection.</p>
               </div>
             </div>
           </div>

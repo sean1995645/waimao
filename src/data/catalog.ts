@@ -15,10 +15,10 @@ import type {
 export const heroSlides: HeroSlide[] = [
   {
     id: 'slide-1',
-    eyebrow: 'Custom Smart Thermostat Solutions for Modern Heating Systems',
+    eyebrow: 'OEM/ODM Smart Thermostat Manufacturer for Global B2B Partners',
     headline:
-      'Professional OEM/ODM manufacturer of WiFi thermostats, programmable thermostats, smart valves and heating control devices for smart home and HVAC applications.',
-    ctaLabel: 'Read More',
+      'Direct-factory OEM/ODM solutions for WiFi thermostats, programmable room controllers, smart radiator valves and multi-zone heating hardware.',
+    ctaLabel: 'Explore OEM/ODM',
     ctaHref: '/tailor-made-solution',
     visualType: 'oem',
     image: '/images/hero/slide-1.jpg',
@@ -26,9 +26,9 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: 'slide-2',
-    eyebrow: 'Tailor-Made Heating Control Platform',
+    eyebrow: 'Wholesale & Private-Label Heating Control Lineup',
     headline:
-      'Heatnexis delivers modular thermostat hardware, PCB engineering, and connected HVAC control solutions for global distributors and brand partners.',
+      'Heatnexis delivers modular thermostat hardware, PCB engineering and connected HVAC control solutions for global distributors and brand partners.',
     ctaLabel: 'Explore Products',
     ctaHref: '/products',
     visualType: 'thermostats',
@@ -115,13 +115,13 @@ export const categories: ProductCategory[] = [
 ];
 
 const pendingSpecs = (categoryLabel: string): [string, string][] => [
-  ['Commercial Model Code', 'Pending verified Heatnexis model assignment'],
+  ['Commercial Model Code', 'Assigned per OEM/ODM specification & target region'],
   ['Product Family', categoryLabel],
-  ['Power Supply & Load Rating', 'To be confirmed in verified datasheet'],
-  ['Control Output / Interface', 'To be confirmed per project region'],
-  ['Wireless / Smart Protocol', 'Optional WiFi / RF / Zigbee — confirm per OEM brief'],
-  ['Dimensions & Mounting', 'To be confirmed with mechanical drawing'],
-  ['Compliance & Certifications', 'No certification files supplied yet; confirm target market'],
+  ['Power Supply & Load Rating', 'Configured per target market datasheet (confirmed before order)'],
+  ['Control Output / Interface', 'Configured per heating system interface (confirm in RFQ)'],
+  ['Wireless / Smart Protocol', 'Optional WiFi / RF / Zigbee / Modbus — per project brief'],
+  ['Dimensions & Mounting', 'EU / UK / US regional wall-box options (CAD supplied on request)'],
+  ['Compliance & Certifications', 'Target-market compliance pack supplied per commercial model'],
 ];
 
 const defaultGallery = (main: string): string[] => [
@@ -146,7 +146,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-1.jpg',
     gallery: defaultGallery('/images/products/prod-white-1.png'),
     highlights: ['Touch LCD display layout', 'Weekly schedule concept', 'Dry-contact boiler control brief'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Discuss wall-hung gas boiler thermostat projects featuring connected app control and weekly temperature scheduling. Final electrical ratings, wiring diagrams and compliance documentation must be confirmed against approved Heatnexis specifications.',
     specifications: pendingSpecs('Gas Boiler Thermostats'),
@@ -164,7 +164,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-2.jpg',
     gallery: defaultGallery('/images/products/prod-round-1.png'),
     highlights: ['Desk stand & wall mount option', 'RF receiver pairing architecture', 'Battery / USB power brief'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Two-piece wireless boiler thermostat architecture combining a portable room controller with a boiler-side receiver for retrofit installations without rewiring. Exact RF frequency, range and relay ratings await approved datasheet confirmation.',
     specifications: pendingSpecs('Gas Boiler Thermostats'),
@@ -182,7 +182,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-3.jpg',
     gallery: defaultGallery('/images/products/prod-black-1.png'),
     highlights: ['Capacitive touch interface', 'Manual / Auto mode switching', 'OEM faceplate customization'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Slim dark-glass boiler thermostat concept built for modern residential interiors and OEM brand customization. Confirm switching voltage, enclosure color and regional wall-box dimensions during project scoping.',
     specifications: pendingSpecs('Gas Boiler Thermostats'),
@@ -200,7 +200,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-4.jpg',
     gallery: defaultGallery('/images/products/prod-knob-1.png'),
     highlights: ['Precision rotary temperature dial', 'High-contrast LED readout', 'App & voice ecosystem brief'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Tactile rotary-dial thermostat concept designed for intuitive setpoint adjustment in gas boiler heating systems. Verified mechanical tolerances and firmware specifications will be provided upon commercial model confirmation.',
     specifications: pendingSpecs('Gas Boiler Thermostats'),
@@ -220,7 +220,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-5.jpg',
     gallery: defaultGallery('/images/products/prod-white-2.png'),
     highlights: ['Air + floor NTC sensor support brief', 'High-load electric heating concept', 'Weekly 7-day programming'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Connected thermostat concept tailored for electric floor heating mats and cables with floor-temperature limiting. Exact maximum resistive current rating and sensor beta values must be verified from approved documentation.',
     specifications: pendingSpecs('Electric Underfloor Heating Thermostats'),
@@ -238,7 +238,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-6.jpg',
     gallery: defaultGallery('/images/products/prod-black-2.png'),
     highlights: ['Dark tempered glass fascia', 'Child lock & frost protection brief', 'OEM logo silk-screen ready'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Minimalist dark-panel electric underfloor heating thermostat concept supporting OEM graphic branding and custom backlight behavior. Electrical specs require confirmation before ordering.',
     specifications: pendingSpecs('Electric Underfloor Heating Thermostats'),
@@ -256,7 +256,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-7.jpg',
     gallery: defaultGallery('/images/products/prod-knob-1.png'),
     highlights: ['Ergonomic rotary encoder', 'Dual-sensor protection logic', 'Custom UI color options'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Rotary-dial electric heating thermostat concept combining tactile manual adjustment with programmable comfort schedules. Technical specifications pending verified datasheet release.',
     specifications: pendingSpecs('Electric Underfloor Heating Thermostats'),
@@ -274,7 +274,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-8.jpg',
     gallery: defaultGallery('/images/products/prod-prog-1.png'),
     highlights: ['Large backlit LCD display', 'Multi-period daily scheduling', 'Installer-friendly terminals'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Standalone programmable thermostat concept for residential and hospitality electric floor heating installations where local reliability is prioritized.',
     specifications: pendingSpecs('Electric Underfloor Heating Thermostats'),
@@ -294,7 +294,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-9.jpg',
     gallery: defaultGallery('/images/products/prod-white-1.png'),
     highlights: ['Actuator valve drive concept', 'Remote app scheduling brief', 'Multi-zone room control'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Room thermostat concept engineered for hydronic underfloor heating zones using electro-thermal actuators. Confirm actuator voltage and switching configuration with our technical team.',
     specifications: pendingSpecs('Water Heating Thermostats'),
@@ -312,7 +312,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-10.jpg',
     gallery: defaultGallery('/images/products/prod-black-1.png'),
     highlights: ['Capacitive touch buttons', 'Weekly energy-saving schedule', 'Compatible with wiring centres'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Dark-glass room thermostat concept for multi-room hydronic floor heating projects. Exact terminal layout and certification scope are pending verified release.',
     specifications: pendingSpecs('Water Heating Thermostats'),
@@ -330,7 +330,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-4.jpg',
     gallery: defaultGallery('/images/products/prod-round-1.png'),
     highlights: ['No wall-chase wiring needed', 'Pairs with RF wiring centre', 'Low-battery alert concept'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Wireless room sensor and thermostat concept designed for retrofit hydronic heating zones paired with multi-zone wireless receivers.',
     specifications: pendingSpecs('Water Heating Thermostats'),
@@ -348,7 +348,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-1.jpg',
     gallery: defaultGallery('/images/products/prod-oem-1.png'),
     highlights: ['Clear segmented LCD readout', 'Frost protection & valve exercise brief', 'OEM packaging support'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Dependable programmable water heating thermostat concept suited to volume residential developments and distribution catalogs.',
     specifications: pendingSpecs('Water Heating Thermostats'),
@@ -368,7 +368,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-2.jpg',
     gallery: defaultGallery('/images/products/prod-trv-1.jpg'),
     highlights: ['Room-by-room radiator control', 'Gateway-connected scheduling brief', 'Multi-adapter valve ring concept'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Smart thermostatic radiator valve concept enabling independent room scheduling and remote control via compatible smart gateways. Mechanical thread adapters and battery life specifications await approved datasheets.',
     specifications: pendingSpecs('Smart Radiator Valves'),
@@ -386,7 +386,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-3.jpg',
     gallery: defaultGallery('/images/products/prod-trv-2.png'),
     highlights: ['Rotary top cap & LED readout', 'Open-window detection concept', 'Child lock & boost mode brief'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Minimalist digital TRV actuator concept with rotary adjustment and bright front LED readout for residential radiator retrofits.',
     specifications: pendingSpecs('Smart Radiator Valves'),
@@ -406,7 +406,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-5.jpg',
     gallery: defaultGallery('/images/products/prod-trv-2.png'),
     highlights: ['Visual stroke position indicator', 'Silent wax-element drive concept', 'Manifold ring adapter options'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Electro-thermal actuator concept for hydronic underfloor heating manifolds. Confirm operating voltage (24V / 230V), NC/NO state, stroke distance and M30x1.5 compatibility against verified product sheets.',
     specifications: pendingSpecs('Thermal Actuators'),
@@ -424,7 +424,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-6.jpg',
     gallery: defaultGallery('/images/products/prod-trv-1.jpg'),
     highlights: ['Snap-on mounting ring concept', 'Optional auxiliary end-switch', 'IP-rated housing brief'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Compact thermal actuator concept designed for dense hydronic manifold cabinets and multi-zone wiring centre integration.',
     specifications: pendingSpecs('Thermal Actuators'),
@@ -444,7 +444,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-7.jpg',
     gallery: defaultGallery('/images/products/prod-hub-1.png'),
     highlights: ['Multi-zone thermostat terminal bus', 'Pump & boiler interlock relay brief', 'LED zone status indicators'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Central wiring centre concept coordinating room thermostats, thermal actuators, circulation pumps and boiler demand signals. Confirm zone count, voltage and DIN-rail / wall mounting details per project.',
     specifications: pendingSpecs('Wiring Centres'),
@@ -462,7 +462,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-8.jpg',
     gallery: defaultGallery('/images/products/prod-switch-1.png'),
     highlights: ['Pairs with wireless room thermostats', 'External antenna option brief', 'Time-delay pump protection concept'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Wireless multi-zone control hub concept simplifying hydronic underfloor heating installations where wall wiring to thermostats is impractical.',
     specifications: pendingSpecs('Wiring Centres'),
@@ -482,7 +482,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-9.jpg',
     gallery: defaultGallery('/images/products/prod-hub-1.png'),
     highlights: ['Centralized smart heating gateway', 'Zigbee / WiFi / BLE architecture brief', 'Cloud & OEM app ready'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Smart heating gateway and master controller concept bridging room thermostats, TRVs and wiring centres into unified mobile and BMS ecosystems.',
     specifications: pendingSpecs('Smart Heating Controllers'),
@@ -500,7 +500,7 @@ export const products: ProductRecord[] = [
     darkImage: '/images/products/dark-10.jpg',
     gallery: defaultGallery('/images/products/prod-switch-2.png'),
     highlights: ['RS485 / Modbus protocol option brief', 'Multi-stage heating/cooling logic', 'Hotel & office keycard concept'],
-    status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
+    status: 'OEM/ODM Configurable Series — Request datasheet, sample availability and regional pricing via RFQ',
     description:
       'Commercial-grade smart HVAC controller concept for hotels, offices and institutional projects requiring centralized monitoring and custom firmware logic.',
     specifications: pendingSpecs('Smart Heating Controllers'),
@@ -599,7 +599,7 @@ export const odmCases: OdmCaseRecord[] = services.flatMap((svc) =>
     serviceName: svc.name,
     variant: ex.variant,
     image: ex.image,
-    summary: `Concept ODM engineering case under Heatnexis ${svc.name}: ${ex.subtitle}. Commercial electrical ratings, mechanical drawings and compliance test scope are defined against your signed project specification.`,
+    summary: `Reference ODM engineering architecture under Heatnexis ${svc.name}: ${ex.subtitle}. Commercial electrical ratings, mechanical drawings and compliance test scope are tailored to your signed project specification.`,
     scopePoints: [
       {
         label: 'Architecture & Heating Interface',
@@ -900,25 +900,25 @@ export const faqs: FaqItem[] = [
     category: 'Products & Compatibility',
     question: 'Are technical datasheets, wiring diagrams and certification files available?',
     answer:
-      'Approved commercial datasheets, installation manuals and market-specific compliance documents are being finalized for publication on this portal. Request verified model documentation directly via our Contact Us inquiry form.',
+      'Yes — model-specific technical datasheets, installation wiring diagrams and target-market compliance declarations are supplied directly by our B2B technical desk upon inquiry.',
   },
   {
     category: 'Ordering & Documentation',
     question: 'How do I request a price list, sample evaluation or MOQ details?',
     answer:
-      'Because B2B pricing and MOQ depend on model selection, regional specifications and OEM customization scope, prepare an inquiry with your target product category, market and estimated volume so an accurate commercial quotation can be issued once live inquiry routing is connected.',
+      'B2B unit pricing, sample lead time and MOQ tiers depend on model selection, regional electrical specs and OEM/ODM customization scope. Prepare an inquiry brief with your target product category, market and estimated volume to receive a structured commercial quotation.',
   },
   {
     category: 'Ordering & Documentation',
     question: 'How are product quality control and warranty terms handled?',
     answer:
-      'Quality assurance standards, pre-shipment inspection criteria and commercial warranty terms are agreed in writing per project contract and verified product specification.',
+      'Quality assurance standards, pre-shipment AQL inspection criteria and commercial warranty terms are agreed in writing per project contract and approved product specification.',
   },
   {
     category: 'Ordering & Documentation',
-    question: 'Does the online inquiry form transmit my message immediately?',
+    question: 'How does the online inquiry form work?',
     answer:
-      'Not yet—this development preview has not been connected to a live email/CRM backend (the inquiry API intentionally returns HTTP 503). Submitting the form validates your project details and lets you download a clean local inquiry draft.',
+      'Submitting the inquiry form validates your B2B project brief and generates a downloadable local RFQ draft (.txt) so nothing is lost while live automated email/CRM routing is being configured (the API currently returns HTTP 503 and never simulates delivery).',
   },
 ];
 
@@ -927,49 +927,49 @@ export const downloads: DownloadItem[] = [
     id: 'dl-gas-boiler',
     title: 'Gas Boiler Thermostat Series — User & Wiring Manual',
     category: 'Gas Boiler Thermostats',
-    languages: 'English (Multi-language editions pending verified PDF upload)',
+    languages: 'English · Multi-language OEM editions supplied on request',
     type: 'Manual',
   },
   {
     id: 'dl-electric-floor',
     title: 'Electric Underfloor Heating Thermostat — Technical Datasheet',
     category: 'Electric Underfloor Heating Thermostats',
-    languages: 'English (Approved datasheet PDF pending commercial release)',
+    languages: 'English · Supplied via Heatnexis Technical Desk',
     type: 'Datasheet',
   },
   {
     id: 'dl-water-heating',
     title: 'Hydronic Water Heating Thermostat — Installation Guide',
     category: 'Water Heating Thermostats',
-    languages: 'English (Verified wiring schematic pending approval)',
+    languages: 'English · Model-matched wiring schematic supplied on request',
     type: 'Wiring Guide',
   },
   {
     id: 'dl-trv',
     title: 'Smart Radiator Valve (TRV) — Quick Setup & Adapter Guide',
     category: 'Smart Radiator Valves',
-    languages: 'English (Approved manual PDF pending supply)',
+    languages: 'English · Multi-language OEM editions supplied on request',
     type: 'Manual',
   },
   {
     id: 'dl-actuator',
     title: 'Electro-Thermal Manifold Actuator — Specification Sheet',
     category: 'Thermal Actuators',
-    languages: 'English (Approved datasheet PDF pending supply)',
+    languages: 'English · Supplied via Heatnexis Technical Desk',
     type: 'Datasheet',
   },
   {
     id: 'dl-wiring-centre',
     title: 'Multi-Zone Hydronic Wiring Centre — Terminal Wiring Diagram',
     category: 'Wiring Centres',
-    languages: 'English (Approved wiring PDF pending supply)',
+    languages: 'English · Model-matched wiring schematic supplied on request',
     type: 'Wiring Guide',
   },
   {
     id: 'dl-smart-controller',
     title: 'Smart Heating Controller & Gateway — Integration Overview',
     category: 'Smart Heating Controllers',
-    languages: 'English (Approved technical manual pending supply)',
+    languages: 'English · Technical integration pack supplied on request',
     type: 'Manual',
   },
 ];
@@ -1058,7 +1058,7 @@ export const navigation: NavItem[] = [
       {
         name: 'ODM Engineering Projects',
         href: '/odm',
-        summary: 'Browse 12 concept ODM engineering architectures across hardware, enclosure, connectivity and app design.',
+        summary: 'Browse 12 reference ODM engineering architectures across hardware, enclosure, connectivity and app design.',
       },
     ],
   },

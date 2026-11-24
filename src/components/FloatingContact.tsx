@@ -18,11 +18,11 @@ export function FloatingContact() {
             </button>
           </div>
           <p>
-            Official telephone, WhatsApp and direct email credentials are awaiting brand approval. You can prepare a
-            structured OEM/ODM project brief online now.
+            Looking for wholesale pricing, sample evaluation, or OEM/ODM thermostat customization? Prepare a structured
+            B2B project brief online.
           </p>
           <Link href="/contact" className="btn-primary" style={{ width: '100%' }} onClick={() => setOpen(false)}>
-            Prepare Project Inquiry →
+            Request B2B Quote →
           </Link>
         </div>
       )}

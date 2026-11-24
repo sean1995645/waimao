@@ -50,6 +50,14 @@ The BEOK Controls B2B smart thermostat website has been rebuilt from the ground 
 - Downloaded `https://www.heatnexis.com/reference/img/heatnexis-icon.png` (210×237 transparent RGBA PNG) into `public/images/brand/heatnexis-icon.png` and generated centered square browser/app icons: `src/app/favicon.ico` (16/32/48px), `src/app/icon.png` (64×64), and `src/app/apple-icon.png` (180×180).
 - Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (89/89 outputs), HTTP `200` responses for `/favicon.ico`, `/icon.png`, `/apple-icon.png`, and `<link rel="icon">` rendering on `http://localhost:3000/`.
 
+## B2B Sales Micro-Refinements Across All Pages
+- Applied subtle, high-impact B2B sales refinements across all 76 routes without redesigning layout or drifting from verified `src/styles/` design tokens:
+  - Replaced internal developer/placeholder phrasing (`Concept placeholder`, `Pending Verified Factory Figures`, `public/downloads/`, `public/videos/`, `Development preview`) with crisp, honest B2B wholesale & OEM/ODM copy across Home, Products, Product Detail, Tailor-Made, ODM, Solutions, Blog, Support, About, Advantages, Join Us, Contact, Footer, and FloatingContact (zero invented specs, headcounts, or certifications).
+  - Sharpened B2B conversion CTAs (`Explore OEM/ODM`, `Explore Category`, `Specs & B2B Quote` on product cards, `Request Sample` + `Request B2B Quote` on Product Detail, `Request ODM Quote` on ODM Detail, `Request Solution Quote` on Solutions, and inline B2B quote CTA in Blog articles).
+  - Added a B2B `Inquiry Type` selector (`Wholesale / Distribution`, `OEM Private Label`, `Custom ODM Development`, `Sample & Datasheet Request`, `Technical / Engineering Support`) to `InquiryForm` while keeping truthful HTTP 503 local `.txt` draft behavior intact.
+  - Fixed minor `"Heatnexis Controls"` text inconsistency in `Site.tsx`.
+- Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (`89/89` outputs), restarted fresh server on `http://localhost:3000/`, and passed **30 / 30 Playwright tests** (`10.1s`) across `desktop`, `tablet`, and `mobile`.
+
 ## Active Local Server & Remaining External Blockers
 - Scoped Git commits created on branch `prod`, preserving all unrelated deletions outside the new implementation scope.
 - Fresh production server live on `http://localhost:3000/`.

@@ -104,6 +104,12 @@ export function BlogDetailView({ article }: { article: ArticleRecord }) {
               Document the heating system type, power supply, installation back-box standard, wireless protocol needs and
               required regional compliance documentation before finalizing samples or tooling.
             </p>
+            <p style={{ marginTop: 14 }}>
+              <Link href="/contact" className="text-link">
+                <span>Planning a wholesale or OEM/ODM thermostat order? Request a B2B Quote</span>
+                <ChevronRight size={15} aria-hidden="true" />
+              </Link>
+            </p>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 28, paddingTop: 20, borderTop: '1px solid #e8ecf0' }}>
               <strong style={{ fontSize: 13, marginRight: 6 }}>Tags:</strong>

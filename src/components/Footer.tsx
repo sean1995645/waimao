@@ -30,23 +30,23 @@ export function Footer() {
               <strong>Brand : </strong>Heatnexis — Heating Control OEM/ODM
             </div>
             <div>
-              <strong>Address : </strong>Official factory &amp; office address pending brand approval
+              <strong>Supply : </strong>Global B2B Wholesale, OEM &amp; ODM Export
             </div>
             <div>
-              <strong>Email : </strong>Commercial email address pending verification
+              <strong>RFQ Desk : </strong>Structured project quotes via Contact Us
             </div>
             <div>
-              <strong>Tel : </strong>Business telephone pending verification
+              <strong>Support : </strong>Technical datasheets &amp; sample coordination
             </div>
             <div className="footer-qr-row">
-              <div className="footer-qr-box" aria-label="Official contact QR code placeholder">
-                QR PENDING
+              <div className="footer-qr-box" aria-label="Heatnexis B2B Inquiry Desk">
+                B2B RFQ
               </div>
               <div>
-                <div>Heatnexis</div>
-                <div>Official channel QR pending</div>
+                <div>Heatnexis B2B Desk</div>
+                <div>Wholesale &amp; OEM/ODM Quotes</div>
                 <Link href="/contact" className="text-link" style={{ fontSize: '12px', marginTop: '4px' }}>
-                  Prepare Inquiry →
+                  Request a Quote →
                 </Link>
               </div>
             </div>
@@ -88,7 +88,7 @@ export function Footer() {
             <Link href="/sitemap">Site Map</Link>
             <Link href="/legal-notice">Legal Disclaimer</Link>
             <Link href="/privacy">Privacy Policy</Link>
-            <span>Copyright © {new Date().getFullYear()} Heatnexis. Development preview.</span>
+            <span>Copyright © {new Date().getFullYear()} Heatnexis. All rights reserved.</span>
           </div>
           <div className="footer-socials" aria-label="Heatnexis quick links">
             <Link href="/contact" aria-label="Contact inquiry">

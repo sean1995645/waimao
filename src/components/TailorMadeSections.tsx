@@ -26,10 +26,10 @@ export function TailorMadeIndexView() {
   const activeSvc = services.find((s) => s.slug === activeSvcSlug) || services[0];
 
   const advantageTabs = [
-    { label: 'Engineering Environment', caption: 'Dedicated R&D workspace imagery pending brand photography.' },
-    { label: 'Assembly & Production', caption: 'SMT and final assembly line visuals awaiting verified factory photos.' },
-    { label: 'Reliability Validation', caption: 'Environmental and switching reliability test scope confirmed per project.' },
-    { label: 'Compliance & Quality', caption: 'Target market certification and quality documentation supplied on approval.' },
+    { label: 'Engineering Environment', caption: 'Dedicated hardware, embedded firmware and industrial design workflows supporting global OEM/ODM thermostat programs.' },
+    { label: 'Assembly & Production', caption: 'Structured SMT, sensor calibration and final assembly processes aligned to B2B volume orders.' },
+    { label: 'Reliability Validation', caption: 'Thermal cycling, relay switching endurance and functional verification scoped to target market standards.' },
+    { label: 'Compliance & Quality', caption: 'Design-to-shipment quality checkpoints and regional compliance preparation for global heating channels.' },
   ];
 
   return (
@@ -290,7 +290,7 @@ export function ServiceDetailView({ service }: { service: ServiceRecord }) {
 
       <section className="section-block">
         <Container>
-          <SectionTitle title="Illustrative Concept Projects" subtitle="Representative architectures for scoping discussions." />
+          <SectionTitle title="Reference ODM Architectures" subtitle="Representative B2B engineering platforms for customization scoping." />
           <div className="product-grid">
             {service.odmExamples.map((ex) => (
               <Link href={`/odm/${ex.slug}`} className="product-card" key={ex.slug}>
@@ -402,7 +402,7 @@ export function OdmIndexView() {
         <Container>
           <SectionTitle
             title="ODM Engineering Projects"
-            subtitle="Filter concept ODM project architectures across Smart Home Integration, PCB Development, APP Development and Structural Design."
+            subtitle="Filter reference ODM project architectures across Smart Home Integration, PCB Development, APP Development and Structural Design."
           />
 
           <div className="pill-tab-bar" role="group" aria-label="Filter ODM projects by discipline">
@@ -480,11 +480,11 @@ export function OdmDetailView({ odmCase }: { odmCase: OdmCaseRecord }) {
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 14, flexWrap: 'wrap', marginTop: 28 }}>
             <a href="#inquiry" className="btn-outline">
-              <span>Consultation</span>
+              <span>Engineering Review</span>
               <ChevronRight size={14} aria-hidden="true" />
             </a>
             <a href="#inquiry" className="btn-primary">
-              <span>Message</span>
+              <span>Request ODM Quote</span>
               <ChevronRight size={14} aria-hidden="true" />
             </a>
           </div>
@@ -496,7 +496,7 @@ export function OdmDetailView({ odmCase }: { odmCase: OdmCaseRecord }) {
         <Container>
           <SectionTitle
             title={`${odmCase.serviceName} Scope`}
-            subtitle="Illustrative ODM engineering checkpoints confirmed against signed customer requirements."
+            subtitle="Engineering checkpoints confirmed against your signed B2B project specification."
           />
           <div className="prose">
             <ol>
@@ -507,8 +507,8 @@ export function OdmDetailView({ odmCase }: { odmCase: OdmCaseRecord }) {
               ))}
             </ol>
             <p className="notice-box" style={{ marginTop: 24 }}>
-              Concept ODM engineering showcase — exact electrical load ratings, PCB bill of materials and regional
-              certifications are defined during formal project initiation.
+              Reference ODM architecture — exact electrical load ratings, PCB bill of materials and regional
+              certifications are finalized during project initiation.
             </p>
           </div>
         </Container>
@@ -520,7 +520,7 @@ export function OdmDetailView({ odmCase }: { odmCase: OdmCaseRecord }) {
       {/* Reference serviceMore: More Projects 3-Column Grid */}
       <section className="section-block">
         <Container>
-          <SectionTitle title="More Projects" subtitle="Explore additional Heatnexis OEM/ODM concept programs." />
+          <SectionTitle title="More Projects" subtitle="Explore additional Heatnexis OEM/ODM engineering programs." />
           <div className="product-grid">
             {moreProjects.map((item) => (
               <Link href={`/odm/${item.slug}`} key={item.slug} className="product-card">

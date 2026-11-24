@@ -154,7 +154,7 @@ export function PageBody({
           ],
         },
         {
-          title: 'Product Concept Models',
+          title: 'Product Series & Models',
           items: products.map((p) => ({ label: p.name, href: `/products/${p.category}/${p.slug}` })),
         },
         {
@@ -229,8 +229,8 @@ export function PageBody({
               <h2 style={{ marginTop: 0 }}>{page.title}</h2>
               <p>{page.description}</p>
               <p className="notice-box">
-                This notice is an interim development placeholder pending review and approval by the operating Heatnexis
-                Controls legal entity prior to commercial publication.
+                This notice is an interim legal placeholder pending final corporate review by the operating Heatnexis
+                legal entity prior to public commercial launch.
               </p>
               <Link href="/contact" className="text-link">
                 Contact Us →

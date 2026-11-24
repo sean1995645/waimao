@@ -21,6 +21,7 @@ export function InquiryForm({ product, title = 'Service Inquiry' }: { product?: 
       `Business Email: ${d.get('email') || ''}`,
       `Phone / WhatsApp: ${d.get('phone') || 'Not provided'}`,
       `Country / Market: ${d.get('market') || ''}`,
+      `Inquiry Type: ${d.get('inquiryType') || 'Wholesale / OEM / ODM'}`,
       `Product / Project: ${d.get('product') || ''}`,
       '',
       'Project Requirements:',
@@ -85,22 +86,34 @@ export function InquiryForm({ product, title = 'Service Inquiry' }: { product?: 
         </label>
       </div>
 
-      <label>
-        Interested Product / Project
-        <input
-          name="product"
-          list="heatnexis-product-categories"
-          defaultValue={product || ''}
-          maxLength={200}
-          placeholder="Select or enter a product line or OEM/ODM project"
-        />
-        <datalist id="heatnexis-product-categories">
-          {categories.map((c) => (
-            <option key={c.slug} value={c.name} />
-          ))}
-          <option value="OEM/ODM Custom Thermostat Development" />
-        </datalist>
-      </label>
+      <div className="form-grid">
+        <label>
+          Inquiry Type
+          <select name="inquiryType" defaultValue="Wholesale / Distribution">
+            <option value="Wholesale / Distribution">Wholesale / Distribution</option>
+            <option value="OEM Private Label">OEM Private Label</option>
+            <option value="Custom ODM Development">Custom ODM Development</option>
+            <option value="Sample & Datasheet Request">Sample &amp; Datasheet Request</option>
+            <option value="Technical / Engineering Support">Technical / Engineering Support</option>
+          </select>
+        </label>
+        <label>
+          Interested Product / Project
+          <input
+            name="product"
+            list="heatnexis-product-categories"
+            defaultValue={product || ''}
+            maxLength={200}
+            placeholder="Select or enter a product line or OEM/ODM project"
+          />
+          <datalist id="heatnexis-product-categories">
+            {categories.map((c) => (
+              <option key={c.slug} value={c.name} />
+            ))}
+            <option value="OEM/ODM Custom Thermostat Development" />
+          </datalist>
+        </label>
+      </div>
 
       <label>
         Project requirements *
