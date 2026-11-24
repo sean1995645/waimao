@@ -44,11 +44,11 @@ The BEOK Controls B2B smart thermostat website has been rebuilt from the ground 
 - Wired all real local images into `src/data/catalog.ts`, `HeroBanner`, `Header` (Mega Menu previews), `HomeSections`, `ProductsCatalog`, `ProductDetailView`, `TailorMadeSections` (including `/odm` & `/odm/[slug]`), `SolutionsSections`, `BlogSections`, `SupportSections`, and `CompanySections` while preserving BEOK Controls brand identity.
 - Rebuilt (`pnpm typecheck`, `pnpm lint` 0 warnings, `pnpm build` 86/86 outputs), restarted `http://localhost:3000/`, passed **30 / 30 Playwright tests** (including HTTP `200 image/*` verification for every `<img>` across all 76 routes and `naturalWidth > 0` checks), and inspected Round 4 full-page screenshots (`reference/comparison/local-round-4/`).
 
-## Heatnexis Brand & Logo Switch
+## Heatnexis Brand, Red Logo & Browser Favicon
 - Downloaded `https://www.heatnexis.com/reference/img/heatnexis-logo.png` (865×237 transparent RGBA PNG) into `public/images/brand/heatnexis-logo.png`.
-- Updated brand identity across all 20 source & test files (`src/config/site.ts`, `src/app/`, `src/components/`, `src/data/`, `tests/site.spec.ts`) from BEOK Controls to **Heatnexis**.
-- Styled Header & Footer logo cleanly (`filter: brightness(0) invert(1)` on dark desktop header & `#272727` footer; original crimson on `< 992px` white mobile header).
-- Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (86/86 outputs), `pnpm test` (**30 / 30 passed** on `http://localhost:3000/`), and visually verified desktop & mobile screenshots (`reference/comparison/local-round-4/heatnexis-{desktop-1440x900,mobile-390x844}.png`).
+- Updated brand identity across all 20 source & test files (`src/config/site.ts`, `src/app/`, `src/components/`, `src/data/`, `tests/site.spec.ts`) from BEOK Controls to **Heatnexis**, displaying the original crimson/red logo consistently across desktop Header, mobile Header, and Footer.
+- Downloaded `https://www.heatnexis.com/reference/img/heatnexis-icon.png` (210×237 transparent RGBA PNG) into `public/images/brand/heatnexis-icon.png` and generated centered square browser/app icons: `src/app/favicon.ico` (16/32/48px), `src/app/icon.png` (64×64), and `src/app/apple-icon.png` (180×180).
+- Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (89/89 outputs), HTTP `200` responses for `/favicon.ico`, `/icon.png`, `/apple-icon.png`, and `<link rel="icon">` rendering on `http://localhost:3000/`.
 
 ## Active Local Server & Remaining External Blockers
 - Scoped Git commits created on branch `prod`, preserving all unrelated deletions outside the new implementation scope.
