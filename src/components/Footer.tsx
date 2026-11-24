@@ -30,7 +30,7 @@ export function Footer() {
               <strong>Brand : </strong>Heatnexis — Heating Control OEM/ODM
             </div>
             <div>
-              <strong>Supply : </strong>Global B2B Wholesale, OEM &amp; ODM Export
+              <strong>Address : </strong>People&apos;s Square, Huangpu District, Shanghai, China
             </div>
             <div>
               <strong>RFQ Desk : </strong>Structured project quotes via Contact Us

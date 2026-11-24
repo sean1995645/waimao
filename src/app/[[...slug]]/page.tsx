@@ -75,6 +75,12 @@ export default async function Page({ params }: Props) {
       name: 'Heatnexis',
       url: site.url,
       description: page.description,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: "People's Square, Huangpu District",
+        addressLocality: 'Shanghai',
+        addressCountry: 'CN',
+      },
     });
   } else if (page.kind === 'product') {
     const prod = products.find((p) => p.slug === page.key);

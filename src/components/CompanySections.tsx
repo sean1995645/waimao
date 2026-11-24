@@ -480,7 +480,7 @@ export function ContactPageView() {
                 <li>
                   <MapPin size={18} aria-hidden="true" />
                   <span>
-                    <strong>Export &amp; Factory Desk:</strong> Manufacturing and shipping logistics details supplied per quotation
+                    <strong>Office Address:</strong> People&apos;s Square, Huangpu District, Shanghai, China
                   </span>
                 </li>
               </ul>
@@ -488,7 +488,7 @@ export function ContactPageView() {
 
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden', border: '1px solid #e8ecf0' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/factory/contact-map.jpg" alt="Location map overview" className="img-cover" />
+              <img src="/images/factory/contact-map.jpg" alt="People's Square, Shanghai location overview" className="img-cover" />
             </div>
           </div>
 
@@ -496,15 +496,20 @@ export function ContactPageView() {
             <div className="contact-location-card">
               <MapPin size={22} aria-hidden="true" />
               <div>
-                <h3 style={{ margin: '0 0 6px', fontSize: 16 }}>Sales &amp; OEM/ODM Coordination</h3>
-                <p style={{ margin: 0, fontSize: 13.5 }}>Wholesale pricing, distributor onboarding and custom RFQ engineering review.</p>
+                <h3 style={{ margin: '0 0 6px', fontSize: 16 }}>Shanghai Sales &amp; OEM/ODM Office</h3>
+                <p style={{ margin: 0, fontSize: 13.5 }}>
+                  People&apos;s Square, Huangpu District, Shanghai, China — Wholesale pricing, distributor onboarding and
+                  custom RFQ engineering review.
+                </p>
               </div>
             </div>
             <div className="contact-location-card">
               <Factory size={22} aria-hidden="true" />
               <div>
-                <h3 style={{ margin: '0 0 6px', fontSize: 16 }}>Manufacturing &amp; R&amp;D Base</h3>
-                <p style={{ margin: 0, fontSize: 13.5 }}>Sample prototyping, PCB/enclosure engineering and export quality inspection.</p>
+                <h3 style={{ margin: '0 0 6px', fontSize: 16 }}>Manufacturing &amp; R&amp;D Coordination</h3>
+                <p style={{ margin: 0, fontSize: 13.5 }}>
+                  Sample prototyping, PCB/enclosure engineering and export quality inspection coordinated via Shanghai.
+                </p>
               </div>
             </div>
           </div>
