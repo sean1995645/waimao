@@ -537,10 +537,27 @@ export function ContactPageView() {
               </div>
             </div>
 
-            <div style={{ aspectRatio: '16 / 10', overflow: 'hidden', border: '1px solid #e8ecf0' }}>
+            <a
+              href="https://www.openstreetmap.org/?mlat=31.2304&mlon=121.4737#map=16/31.2304/121.4737"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open People's Square, Shanghai on OpenStreetMap"
+              style={{
+                display: 'block',
+                aspectRatio: '16 / 10',
+                overflow: 'hidden',
+                border: '1px solid var(--color-border)',
+                borderRadius: 'var(--radius-lg)',
+                boxShadow: 'var(--shadow-card)',
+              }}
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/factory/contact-map.jpg" alt="People's Square, Shanghai location overview" className="img-cover" />
-            </div>
+              <img
+                src="/images/factory/contact-map.jpg"
+                alt="Heatnexis Shanghai Office — People's Square, Huangpu District, Shanghai map"
+                className="img-cover"
+              />
+            </a>
           </div>
 
           <div className="contact-location-cards">
