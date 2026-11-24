@@ -212,6 +212,7 @@ main {
   width: auto;
   display: block;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .footer-logo-img {
@@ -220,6 +221,7 @@ main {
   display: block;
   object-fit: contain;
   margin-bottom: 10px;
+  filter: brightness(0) invert(1);
 }
 
 .header-right {
@@ -2820,6 +2822,7 @@ table.spec-table th {
 
   .brand-logo-img {
     height: 30px;
+    filter: none;
   }
 
   .desktop-drawer-toggle {

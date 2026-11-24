@@ -46,7 +46,7 @@ The BEOK Controls B2B smart thermostat website has been rebuilt from the ground 
 
 ## Heatnexis Brand, Red Logo & Browser Favicon
 - Downloaded `https://www.heatnexis.com/reference/img/heatnexis-logo.png` (865×237 transparent RGBA PNG) into `public/images/brand/heatnexis-logo.png`.
-- Updated brand identity across all 20 source & test files (`src/config/site.ts`, `src/app/`, `src/components/`, `src/data/`, `tests/site.spec.ts`) from BEOK Controls to **Heatnexis**, displaying the original crimson/red logo consistently across desktop Header, mobile Header, and Footer.
+- Updated brand identity across all 20 source & test files (`src/config/site.ts`, `src/app/`, `src/components/`, `src/data/`, `tests/site.spec.ts`) from BEOK Controls to **Heatnexis**, displaying a pure white logo (`filter: brightness(0) invert(1)`) on the dark desktop Header & Footer and keeping original crimson on the `< 992px` white mobile Header for legibility.
 - Downloaded `https://www.heatnexis.com/reference/img/heatnexis-icon.png` (210×237 transparent RGBA PNG) into `public/images/brand/heatnexis-icon.png` and generated centered square browser/app icons: `src/app/favicon.ico` (16/32/48px), `src/app/icon.png` (64×64), and `src/app/apple-icon.png` (180×180).
 - Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (89/89 outputs), HTTP `200` responses for `/favicon.ico`, `/icon.png`, `/apple-icon.png`, and `<link rel="icon">` rendering on `http://localhost:3000/`.
 
