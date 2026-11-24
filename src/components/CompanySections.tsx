@@ -495,6 +495,46 @@ export function ContactPageView() {
                   </span>
                 </li>
               </ul>
+
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 16,
+                  marginTop: 22,
+                  padding: '12px 18px 12px 12px',
+                  background: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                  borderRadius: 'var(--radius)',
+                }}
+              >
+                <a
+                  href="https://wa.me/8617301760334"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Scan WhatsApp QR code"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/brand/whatsapp-qr.png"
+                    alt="Heatnexis WhatsApp QR Code"
+                    width={96}
+                    height={96}
+                    style={{ borderRadius: 6, background: '#fff', border: '1px solid var(--color-border)' }}
+                  />
+                </a>
+                <div>
+                  <strong style={{ display: 'block', fontSize: 14.5, color: 'var(--color-title)', marginBottom: 4 }}>
+                    Scan WhatsApp QR Code
+                  </strong>
+                  <span style={{ display: 'block', fontSize: 13, color: 'var(--color-text-muted)' }}>
+                    Direct B2B sales &amp; OEM/ODM desk
+                  </span>
+                  <span style={{ display: 'block', fontSize: 12.5, fontWeight: 600, color: 'var(--color-primary)', marginTop: 4 }}>
+                    wa.me/8617301760334
+                  </span>
+                </div>
+              </div>
             </div>
 
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden', border: '1px solid #e8ecf0' }}>

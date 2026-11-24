@@ -41,6 +41,33 @@ export function FloatingContact() {
               </a>
             </div>
           </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 12,
+              padding: 10,
+              marginBottom: 14,
+              background: 'var(--color-surface)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-sm)',
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/brand/whatsapp-qr.png"
+              alt="Scan Heatnexis WhatsApp QR Code"
+              width={78}
+              height={78}
+              style={{ borderRadius: 4, background: '#fff', flexShrink: 0 }}
+            />
+            <div style={{ fontSize: 12, lineHeight: 1.5, color: 'var(--color-text-muted)' }}>
+              <strong style={{ display: 'block', color: 'var(--color-title)', marginBottom: 2 }}>
+                Scan WhatsApp QR
+              </strong>
+              Instant B2B quote &amp; OEM/ODM consultation.
+            </div>
+          </div>
           <Link href="/contact" className="btn-primary" style={{ width: '100%' }} onClick={() => setOpen(false)}>
             Request B2B Quote →
           </Link>

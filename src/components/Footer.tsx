@@ -43,12 +43,25 @@ export function Footer() {
               <a href="mailto:sean.org.cn@gmail.com">sean.org.cn@gmail.com</a>
             </div>
             <div className="footer-qr-row">
-              <div className="footer-qr-box" aria-label="Heatnexis B2B Inquiry Desk">
-                B2B RFQ
-              </div>
+              <a
+                href="https://wa.me/8617301760334"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-qr-box"
+                aria-label="Scan WhatsApp QR code to chat with Heatnexis"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/brand/whatsapp-qr.png"
+                  alt="Heatnexis WhatsApp QR Code"
+                  width={74}
+                  height={74}
+                  loading="lazy"
+                />
+              </a>
               <div>
-                <div>Heatnexis B2B Desk</div>
-                <div>Wholesale &amp; OEM/ODM Quotes</div>
+                <div>Scan WhatsApp QR</div>
+                <div>+86 173 0176 0334</div>
                 <Link href="/contact" className="text-link" style={{ fontSize: '12px', marginTop: '4px' }}>
                   Request a Quote →
                 </Link>
