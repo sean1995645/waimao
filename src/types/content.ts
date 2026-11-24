@@ -25,6 +25,9 @@ export interface ProductRecord {
   reference: string;
   visual: VisualVariant;
   variantStyle: 'white-square' | 'black-square' | 'round-dial' | 'valve' | 'actuator' | 'hub';
+  image: string;
+  darkImage: string;
+  gallery: string[];
   highlights: string[];
   status: string;
   description: string;
@@ -38,6 +41,7 @@ export interface OdmCaseRecord {
   serviceSlug: ServiceRecord['slug'];
   serviceName: string;
   variant: ProductRecord['variantStyle'];
+  image: string;
   summary: string;
   scopePoints: { label: string; detail: string }[];
 }
@@ -48,12 +52,14 @@ export interface ServiceRecord {
   shortDesc: string;
   description: string;
   icon: 'home' | 'cpu' | 'smartphone' | 'layers';
+  image: string;
   deliverables: string[];
   odmExamples: {
     slug: string;
     title: string;
     subtitle: string;
     variant: ProductRecord['variantStyle'];
+    image: string;
   }[];
 }
 
@@ -63,6 +69,7 @@ export interface SolutionRecord {
   summary: string;
   description: string;
   icon: 'flame' | 'grid' | 'home' | 'leaf' | 'building' | 'wrench';
+  image: string;
   requirements: string[];
   recommendedCategories: string[];
 }
@@ -72,6 +79,7 @@ export interface ArticleRecord {
   title: string;
   category: string;
   date: string;
+  image: string;
   excerpt: string;
   tags: string[];
   body: string[];
@@ -84,6 +92,8 @@ export interface HeroSlide {
   ctaLabel: string;
   ctaHref: string;
   visualType: 'oem' | 'thermostats' | 'smart-hvac';
+  image: string;
+  mobileImage: string;
 }
 
 export interface FaqItem {
@@ -106,6 +116,7 @@ export interface VideoItem {
   category: 'Product Showcase' | 'Installation & Wiring' | 'Technical Guides';
   duration: string;
   visual: VisualVariant;
+  image: string;
 }
 
 export interface ContentRepository<T> {

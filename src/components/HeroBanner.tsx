@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { heroSlides } from '@/data/catalog';
 import type { PageRecord } from '@/data/pages';
-import { DarkSectionBackdrop, HeroShowcaseVisual, ProductDeviceVisual } from './BrandVisual';
 import { Container } from './LayoutPrimitives';
 
 export function HomeHeroBanner() {
@@ -33,8 +32,12 @@ export function HomeHeroBanner() {
       onMouseLeave={() => setPaused(false)}
     >
       <div className="home-banner-bg" aria-hidden="true">
-        <DarkSectionBackdrop theme="tech" label="BEOK Controls hero background" />
+        <picture>
+          <source media="(max-width: 767px)" srcSet={slide.mobileImage} />
+          <img src={slide.image} alt="" className="img-cover" />
+        </picture>
       </div>
+      <div className="banner-photo-scrim" aria-hidden="true" />
 
       <div className="home-banner-inner">
         <div className="home-banner-copy">
@@ -47,10 +50,7 @@ export function HomeHeroBanner() {
             </Link>
           </div>
         </div>
-
-        <div className="home-banner-visual">
-          <HeroShowcaseVisual slideType={slide.visualType} />
-        </div>
+        <div aria-hidden="true" />
       </div>
 
       <div className="banner-controls">
@@ -82,6 +82,30 @@ export function HomeHeroBanner() {
   );
 }
 
+function resolveInnerBannerImage(kind: PageRecord['kind']): string {
+  switch (kind) {
+    case 'services':
+    case 'service':
+      return '/images/services/banner.jpg';
+    case 'odm-index':
+    case 'odm-detail':
+      return '/images/services/odm-banner.jpg';
+    case 'solutions':
+    case 'solution':
+      return '/images/solutions/banner.jpg';
+    case 'blog':
+    case 'article':
+      return '/images/blog/banner.jpg';
+    case 'support':
+    case 'faq':
+    case 'downloads':
+    case 'videos':
+      return '/images/support/banner.jpg';
+    default:
+      return '/images/factory/about-banner.jpg';
+  }
+}
+
 export function HeroBanner({ page }: { page: PageRecord }) {
   if (page.kind === 'catalog') {
     return (
@@ -89,7 +113,12 @@ export function HeroBanner({ page }: { page: PageRecord }) {
         <Container>
           <div className="pro-banner-inner">
             <div className="pro-banner-visual">
-              <ProductDeviceVisual variant="round-dial" theme="light" label={page.title} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/products/pro-banner.png"
+                alt="BEOK Controls Smart Thermostat Lineup"
+                className="img-contain"
+              />
             </div>
             <div className="pro-banner-copy">
               <h1>{page.title === 'Products' ? 'Professional Smart Thermostat Product Solutions' : page.title}</h1>
@@ -108,8 +137,10 @@ export function HeroBanner({ page }: { page: PageRecord }) {
   return (
     <section className="detail-banner">
       <div className="detail-banner-bg" aria-hidden="true">
-        <DarkSectionBackdrop theme={page.kind === 'solutions' || page.kind === 'solution' ? 'application' : 'tech'} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={resolveInnerBannerImage(page.kind)} alt="" className="img-cover" />
       </div>
+      <div className="banner-photo-scrim" aria-hidden="true" />
       <div className="detail-banner-inner">
         <h1>{page.title}</h1>
         <p>{page.description}</p>

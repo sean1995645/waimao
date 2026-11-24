@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Building2, ChevronRight, Flame, Grid3X3, Home, Leaf, Wrench } from 'lucide-react';
 import { products, solutions } from '@/data/catalog';
 import type { SolutionRecord } from '@/types/content';
-import { DarkSectionBackdrop } from './BrandVisual';
 import { InquiryForm } from './InquiryForm';
 import { Container, SectionTitle } from './LayoutPrimitives';
 import { ProductCard } from './ProductsCatalog';
@@ -31,7 +30,8 @@ export function SolutionsIndexView() {
         {solutions.map((sol, idx) => (
           <div className={`solution-alt-row ${idx % 2 === 1 ? 'is-reversed' : ''}`} key={sol.slug}>
             <Link href={`/solutions/${sol.slug}`} className="solution-alt-media">
-              <DarkSectionBackdrop theme="application" label={sol.name} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={sol.image} alt={sol.name} className="img-cover" loading="lazy" />
             </Link>
             <div className="solution-alt-copy">
               <SolutionIcon icon={sol.icon} />
@@ -62,7 +62,8 @@ export function SolutionDetailView({ solution }: { solution: SolutionRecord }) {
         <Container>
           <div className="split-band">
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
-              <DarkSectionBackdrop theme="application" label={solution.name} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={solution.image} alt={solution.name} className="img-cover" />
             </div>
             <div>
               <SolutionIcon icon={solution.icon} />

@@ -99,6 +99,62 @@ textarea {
   clip-path: none;
 }
 
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.banner-photo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 14, 20, 0.72) 0%, rgba(10, 14, 20, 0.36) 55%, rgba(10, 14, 20, 0.16) 100%);
+  z-index: 1;
+}
+
+.iservice-photo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 35%, rgba(0, 0, 0, 0.72) 100%);
+  z-index: 1;
+}
+
+.iproducts-showcase-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 450ms ease;
+}
+
+.iproducts-showcase-card:hover .iproducts-showcase-photo {
+  transform: scale(1.03);
+}
+
+.iproducts-showcase-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16, 20, 26, 0.45) 0%, rgba(16, 20, 26, 0.06) 45%, rgba(16, 20, 26, 0.12) 100%);
+  z-index: 1;
+}
+
+.iaboutus-photo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(12, 34, 64, 0.68) 0%, rgba(12, 34, 64, 0.25) 58%, rgba(12, 34, 64, 0.06) 100%);
+  z-index: 1;
+}
+
 .container {
   width: var(--container);
   max-width: var(--container-max);

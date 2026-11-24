@@ -22,7 +22,6 @@ import {
 } from 'lucide-react';
 import { articles, categories, products, services, solutions } from '@/data/catalog';
 import type { VisualVariant } from '@/types/content';
-import { DarkSectionBackdrop, ProductDeviceVisual } from './BrandVisual';
 import { HomeHeroBanner } from './HeroBanner';
 import { Container, Reveal, SectionTitle } from './LayoutPrimitives';
 
@@ -91,8 +90,10 @@ export function HomePageView() {
                 className={`iservice-card ${serviceSlide === idx ? 'is-slide-active' : ''}`}
               >
                 <div className="iservice-card-bg" aria-hidden="true">
-                  <DarkSectionBackdrop theme="service" label={svc.name} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={svc.image} alt="" className="img-cover" loading="lazy" />
                 </div>
+                <div className="iservice-photo-scrim" aria-hidden="true" />
                 <div className="iservice-card-content">
                   <span className="iservice-icon-ring">
                     <ServiceIcon icon={svc.icon} />
@@ -159,6 +160,14 @@ export function HomePageView() {
                 key={prod.slug}
                 className="iproducts-showcase-card"
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={prod.darkImage}
+                  alt={prod.name}
+                  className="iproducts-showcase-photo"
+                  loading="lazy"
+                />
+                <div className="iproducts-showcase-scrim" aria-hidden="true" />
                 <div className="iproducts-showcase-head">
                   <span className="iproducts-showcase-eyebrow">{prod.eyebrow}</span>
                   <h3>{prod.name}</h3>
@@ -166,9 +175,6 @@ export function HomePageView() {
                     <span>Learn More</span>
                     <ChevronRight size={14} aria-hidden="true" />
                   </span>
-                </div>
-                <div className="iproducts-showcase-visual">
-                  <ProductDeviceVisual variant={prod.variantStyle} theme="dark" label={prod.name} />
                 </div>
               </Link>
             ))}
@@ -203,7 +209,8 @@ export function HomePageView() {
                   className={`iapply-card ${appSlide === idx ? 'is-slide-active' : ''}`}
                 >
                   <div className="iapply-card-bg" aria-hidden="true">
-                    <DarkSectionBackdrop theme="application" label={sol.name} />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={sol.image} alt="" className="img-cover" loading="lazy" />
                   </div>
                   <div className="iapply-card-overlay">
                     <h3>{sol.name}</h3>
@@ -238,8 +245,10 @@ export function HomePageView() {
 
           <div className="iaboutus-band">
             <div className="iaboutus-bg" aria-hidden="true">
-              <DarkSectionBackdrop theme="building" label="BEOK Controls facility placeholder" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/home-about.jpg" alt="" className="img-cover" loading="lazy" />
             </div>
+            <div className="iaboutus-photo-scrim" aria-hidden="true" />
 
             <div className="iaboutus-inner">
               <div className="iaboutus-copy">
@@ -299,7 +308,8 @@ export function HomePageView() {
                   key={art.slug}
                 >
                   <Link href={`/blog/${art.slug}`} className="article-card-media">
-                    <DarkSectionBackdrop theme="news" label={art.title} />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={art.image} alt={art.title} className="img-cover" loading="lazy" />
                   </Link>
                   <div className="article-card-body">
                     <h3>

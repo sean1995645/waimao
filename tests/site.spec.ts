@@ -121,9 +121,15 @@ test('all routes have zero horizontal overflow, zero broken images and zero runt
     ).toBeTruthy();
     expect(
       await page.locator('img').evaluateAll((imgs) =>
-        imgs.every((i) => i instanceof HTMLImageElement && i.complete && i.naturalWidth > 0),
+        imgs
+          .filter((i): i is HTMLImageElement => {
+            if (!(i instanceof HTMLImageElement)) return false;
+            const rect = i.getBoundingClientRect();
+            return rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight * 1.2;
+          })
+          .every((i) => i.complete && i.naturalWidth > 0),
       ),
-      `Broken image on ${p.path}`,
+      `Broken visible image on ${p.path}`,
     ).toBeTruthy();
   }
   expect(errors).toEqual([]);

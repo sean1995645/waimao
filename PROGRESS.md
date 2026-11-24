@@ -39,6 +39,11 @@ The BEOK Controls B2B smart thermostat website has been rebuilt from the ground 
   - Adjusted `1024×768` header height (`58px/48px`), mobile floating sidebar placement, 7-tab tablet/mobile symmetry, and contact inquiry padding.
 - Rebuilt (`pnpm build`: 86/86 outputs, 0 TS/ESLint errors), deployed fresh production server directly on `http://localhost:3000/`, captured all 56 views + 4 interactions in Round 3 (`reference/comparison/local-round-3/` & `geometry-round-3.json`), and passed **30 / 30 Playwright tests** across `desktop`, `tablet`, and `mobile`.
 
+## Reference Imagery Integration (User-Requested)
+- Per explicit user instruction ("参考网站：https://smartthermostatmanufacturer.com/ 所有的图片 从这个网站中获取"), downloaded 98 verified binary images (0 failures) via `scripts/download-images.mjs` into `public/images/{hero,services,products,solutions,factory,blog,support}/`.
+- Wired all real local images into `src/data/catalog.ts`, `HeroBanner`, `Header` (Mega Menu previews), `HomeSections`, `ProductsCatalog`, `ProductDetailView`, `TailorMadeSections` (including `/odm` & `/odm/[slug]`), `SolutionsSections`, `BlogSections`, `SupportSections`, and `CompanySections` while preserving BEOK Controls brand identity.
+- Rebuilt (`pnpm typecheck`, `pnpm lint` 0 warnings, `pnpm build` 86/86 outputs), restarted `http://localhost:3000/`, passed **30 / 30 Playwright tests** (including HTTP `200 image/*` verification for every `<img>` across all 76 routes and `naturalWidth > 0` checks), and inspected Round 4 full-page screenshots (`reference/comparison/local-round-4/`).
+
 ## Active Local Server & Remaining External Blockers
 - Scoped Git commits created on branch `prod`, preserving all unrelated deletions outside the new implementation scope.
 - Fresh production server live on `http://localhost:3000/`.

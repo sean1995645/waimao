@@ -18,6 +18,7 @@
 - [x] Apply fixes in CSS/components and rebuild cleanly.
 - [x] Round 2: Re-capture all 52 local full-page views + 4 interactive states (`reference/comparison/local-round-2/` & `geometry-round-2.json`) and verify pixel/geometry parity (0px header delta on 1920/1440/768/390, zero horizontal overflow).
 - [x] Round 3 (Strict UI Acceptance on `http://localhost:3000/`): Fix 10 additional P0/P1/P2 visual diffs (mobile/tablet carousels with dots for Tailor-Made/Applications/News bringing 390px home height to `5999px` vs ref `6059px` (-0.99%), pure transparent desktop top header `rgba(0,0,0,0)`, unclipped mobile product detail `follow-nav-bar`, desktop Tailor-Made hover-reveal cards, About Us `Environment`/`Development History`/`Target Global Partners` bands, compact 1024px header, mobile sidebar placement, balanced 7-tab layout). Re-captured all 56 views + 4 interactive states in `reference/comparison/local-round-3/`.
+- [x] Round 4 (User-requested reference imagery integration): Downloaded all 98 images from `https://smartthermostatmanufacturer.com/` into `public/images/{hero,services,products,solutions,factory,blog,support}/` via `scripts/download-images.mjs`, replaced all SVG placeholders across all templates, verified every image returns HTTP `200 image/*` and renders cleanly in Playwright (`30/30 passed`), and inspected Round 4 captures (`reference/comparison/local-round-4/`).
 - [x] Publish `docs/visual-diff-report.md`.
 
 ## Phase 8–9: SEO, Automated Playwright Testing & Production Build (Completed)

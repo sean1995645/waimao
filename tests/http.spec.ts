@@ -46,8 +46,9 @@ test('all rendered internal links and fragments resolve', async ({ request }) =>
   }
 });
 
-test('all rendered stylesheets and scripts load', async ({ request }) => {
+test('all rendered stylesheets, scripts and images load', async ({ request }) => {
   const assets = new Set<string>();
+  const images = new Set<string>();
   for (const page of pages) {
     const response = await request.get(page.path);
     const html = await response.text();
@@ -55,6 +56,7 @@ test('all rendered stylesheets and scripts load', async ({ request }) => {
     expect(styles.length, `${page.path} must include a stylesheet`).toBeGreaterThan(0);
     styles.forEach((style) => assets.add(style));
     for (const match of html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)) assets.add(match[1]);
+    for (const match of html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)) images.add(match[1]);
   }
   for (const asset of assets) {
     const response = await request.get(asset.replaceAll('&amp;', '&'));
@@ -67,6 +69,12 @@ test('all rendered stylesheets and scripts load', async ({ request }) => {
     } else {
       expect(response.headers()['content-type'], asset).toMatch(/javascript/);
     }
+  }
+  expect(images.size).toBeGreaterThan(20);
+  for (const img of images) {
+    const response = await request.get(img.replaceAll('&amp;', '&'));
+    expect(response.status(), img).toBe(200);
+    expect(response.headers()['content-type'], img).toMatch(/^image\//);
   }
 });
 

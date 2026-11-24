@@ -5,14 +5,14 @@ import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { categories, products } from '@/data/catalog';
 import type { ProductRecord } from '@/types/content';
-import { ProductDeviceVisual } from './BrandVisual';
 import { Container } from './LayoutPrimitives';
 
 export function ProductCard({ product: p }: { product: ProductRecord }) {
   return (
     <article className="product-card">
       <Link href={`/products/${p.category}/${p.slug}`} className="product-card-media">
-        <ProductDeviceVisual variant={p.variantStyle} theme="light" label={p.name} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={p.image} alt={p.name} className="img-contain" loading="lazy" />
       </Link>
       <div className="product-card-body">
         <h3>

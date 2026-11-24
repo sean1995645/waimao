@@ -16,7 +16,6 @@ import {
 } from 'lucide-react';
 import { odmCases, services } from '@/data/catalog';
 import type { OdmCaseRecord, ServiceRecord } from '@/types/content';
-import { DarkSectionBackdrop, ProductDeviceVisual } from './BrandVisual';
 import { InquiryForm } from './InquiryForm';
 import { Container, SectionTitle } from './LayoutPrimitives';
 import { ProductGallery } from './ProductDetailView';
@@ -57,7 +56,8 @@ export function TailorMadeIndexView() {
               </div>
             </div>
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
-              <DarkSectionBackdrop theme="service" label="BEOK Controls OEM/ODM engineering placeholder" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/services/intro.jpg" alt="BEOK Controls OEM/ODM engineering team" className="img-cover" />
             </div>
           </div>
         </Container>
@@ -92,7 +92,8 @@ export function TailorMadeIndexView() {
                 className="product-card"
               >
                 <div className="product-card-media">
-                  <ProductDeviceVisual variant={ex.variant} theme="light" label={ex.title} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={ex.image} alt={ex.title} className="img-contain" loading="lazy" />
                 </div>
                 <div className="product-card-body">
                   <h3>{ex.title}</h3>
@@ -202,19 +203,24 @@ export function TailorMadeIndexView() {
 
           <div className="bento-advantage-grid">
             <div className="bento-cell bento-main">
-              <DarkSectionBackdrop theme="building" label={advantageTabs[advTab].label} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/about-building.jpg" alt={advantageTabs[advTab].label} className="img-cover" loading="lazy" />
             </div>
             <div className="bento-cell">
-              <DarkSectionBackdrop theme="service" label="Hardware engineering placeholder" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/env-1.jpg" alt="Hardware engineering line" className="img-cover" loading="lazy" />
             </div>
             <div className="bento-cell">
-              <DarkSectionBackdrop theme="tech" label="Reliability lab placeholder" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/env-2.jpg" alt="Reliability testing lab" className="img-cover" loading="lazy" />
             </div>
             <div className="bento-cell">
-              <DarkSectionBackdrop theme="application" label="Assembly line placeholder" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/env-3.jpg" alt="Assembly workshop" className="img-cover" loading="lazy" />
             </div>
             <div className="bento-cell">
-              <DarkSectionBackdrop theme="news" label="Quality inspection placeholder" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/env-4.jpg" alt="Quality inspection facility" className="img-cover" loading="lazy" />
             </div>
           </div>
         </Container>
@@ -239,7 +245,8 @@ export function ServiceDetailView({ service }: { service: ServiceRecord }) {
         <Container>
           <div className="split-band">
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
-              <DarkSectionBackdrop theme="service" label={service.name} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={service.image} alt={service.name} className="img-cover" />
             </div>
             <div>
               <h2 style={{ margin: '0 0 14px' }}>{service.name}</h2>
@@ -288,7 +295,8 @@ export function ServiceDetailView({ service }: { service: ServiceRecord }) {
             {service.odmExamples.map((ex) => (
               <Link href={`/odm/${ex.slug}`} className="product-card" key={ex.slug}>
                 <div className="product-card-media">
-                  <ProductDeviceVisual variant={ex.variant} theme="light" label={ex.title} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={ex.image} alt={ex.title} className="img-contain" loading="lazy" />
                 </div>
                 <div className="product-card-body">
                   <h3>{ex.title}</h3>
@@ -423,7 +431,8 @@ export function OdmIndexView() {
             {filtered.map((item) => (
               <Link href={`/odm/${item.slug}`} key={item.slug} className="product-card">
                 <div className="product-card-media">
-                  <ProductDeviceVisual variant={item.variant} theme="light" label={item.title} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.image} alt={item.title} className="img-contain" loading="lazy" />
                 </div>
                 <div className="product-card-body">
                   <span style={{ fontSize: 12, color: '#0067e7', fontWeight: 600 }}>{item.serviceName}</span>
@@ -459,7 +468,15 @@ export function OdmDetailView({ odmCase }: { odmCase: OdmCaseRecord }) {
         <Container>
           <SectionTitle title={odmCase.title} subtitle={odmCase.summary} />
           <div style={{ maxWidth: 680, marginInline: 'auto' }}>
-            <ProductGallery name={odmCase.title} variant={odmCase.variant} />
+            <ProductGallery
+              name={odmCase.title}
+              images={[
+                odmCase.image,
+                '/images/services/odm-10.png',
+                '/images/services/odm-11.png',
+                '/images/services/odm-12.png',
+              ]}
+            />
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 14, flexWrap: 'wrap', marginTop: 28 }}>
             <a href="#inquiry" className="btn-outline">
@@ -508,7 +525,8 @@ export function OdmDetailView({ odmCase }: { odmCase: OdmCaseRecord }) {
             {moreProjects.map((item) => (
               <Link href={`/odm/${item.slug}`} key={item.slug} className="product-card">
                 <div className="product-card-media">
-                  <ProductDeviceVisual variant={item.variant} theme="light" label={item.title} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.image} alt={item.title} className="img-contain" loading="lazy" />
                 </div>
                 <div className="product-card-body">
                   <h3>{item.title}</h3>

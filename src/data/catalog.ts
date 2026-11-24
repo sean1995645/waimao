@@ -21,6 +21,8 @@ export const heroSlides: HeroSlide[] = [
     ctaLabel: 'Read More',
     ctaHref: '/tailor-made-solution',
     visualType: 'oem',
+    image: '/images/hero/slide-1.jpg',
+    mobileImage: '/images/hero/slide-1-mobile.jpg',
   },
   {
     id: 'slide-2',
@@ -30,6 +32,8 @@ export const heroSlides: HeroSlide[] = [
     ctaLabel: 'Explore Products',
     ctaHref: '/products',
     visualType: 'thermostats',
+    image: '/images/hero/slide-2.jpg',
+    mobileImage: '/images/hero/slide-2-mobile.jpg',
   },
   {
     id: 'slide-3',
@@ -39,6 +43,8 @@ export const heroSlides: HeroSlide[] = [
     ctaLabel: 'View Solutions',
     ctaHref: '/solutions',
     visualType: 'smart-hvac',
+    image: '/images/hero/slide-1.jpg',
+    mobileImage: '/images/hero/slide-2-mobile.jpg',
   },
 ];
 
@@ -118,8 +124,15 @@ const pendingSpecs = (categoryLabel: string): [string, string][] => [
   ['Compliance & Certifications', 'No certification files supplied yet; confirm target market'],
 ];
 
+const defaultGallery = (main: string): string[] => [
+  main,
+  '/images/products/prod-detail-1.jpg',
+  '/images/products/prod-detail-2.jpg',
+  '/images/products/prod-detail-3.jpg',
+];
+
 export const products: ProductRecord[] = [
-  // Gas Boiler Thermostats (4 models for 2x2 homepage grid)
+  // Gas Boiler Thermostats (4 models)
   {
     slug: 'gas-boiler-thermostats-concept',
     name: 'WiFi Gas Boiler Thermostat',
@@ -129,6 +142,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-GB-CONCEPT-01',
     visual: 'boiler',
     variantStyle: 'white-square',
+    image: '/images/products/prod-white-1.png',
+    darkImage: '/images/products/dark-1.jpg',
+    gallery: defaultGallery('/images/products/prod-white-1.png'),
     highlights: ['Touch LCD display layout', 'Weekly schedule concept', 'Dry-contact boiler control brief'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -144,6 +160,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-GB-CONCEPT-02',
     visual: 'boiler',
     variantStyle: 'round-dial',
+    image: '/images/products/prod-round-1.png',
+    darkImage: '/images/products/dark-2.jpg',
+    gallery: defaultGallery('/images/products/prod-round-1.png'),
     highlights: ['Desk stand & wall mount option', 'RF receiver pairing architecture', 'Battery / USB power brief'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -159,6 +178,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-GB-CONCEPT-03',
     visual: 'boiler',
     variantStyle: 'black-square',
+    image: '/images/products/prod-black-1.png',
+    darkImage: '/images/products/dark-3.jpg',
+    gallery: defaultGallery('/images/products/prod-black-1.png'),
     highlights: ['Capacitive touch interface', 'Manual / Auto mode switching', 'OEM faceplate customization'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -174,6 +196,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-GB-CONCEPT-04',
     visual: 'boiler',
     variantStyle: 'round-dial',
+    image: '/images/products/prod-knob-1.png',
+    darkImage: '/images/products/dark-4.jpg',
+    gallery: defaultGallery('/images/products/prod-knob-1.png'),
     highlights: ['Precision rotary temperature dial', 'High-contrast LED readout', 'App & voice ecosystem brief'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -191,6 +216,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-EUH-CONCEPT-01',
     visual: 'electric',
     variantStyle: 'white-square',
+    image: '/images/products/prod-white-2.png',
+    darkImage: '/images/products/dark-5.jpg',
+    gallery: defaultGallery('/images/products/prod-white-2.png'),
     highlights: ['Air + floor NTC sensor support brief', 'High-load electric heating concept', 'Weekly 7-day programming'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -206,6 +234,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-EUH-CONCEPT-02',
     visual: 'electric',
     variantStyle: 'black-square',
+    image: '/images/products/prod-black-2.png',
+    darkImage: '/images/products/dark-6.jpg',
+    gallery: defaultGallery('/images/products/prod-black-2.png'),
     highlights: ['Dark tempered glass fascia', 'Child lock & frost protection brief', 'OEM logo silk-screen ready'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -221,6 +252,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-EUH-CONCEPT-03',
     visual: 'electric',
     variantStyle: 'round-dial',
+    image: '/images/products/prod-knob-1.png',
+    darkImage: '/images/products/dark-7.jpg',
+    gallery: defaultGallery('/images/products/prod-knob-1.png'),
     highlights: ['Ergonomic rotary encoder', 'Dual-sensor protection logic', 'Custom UI color options'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -236,6 +270,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-EUH-CONCEPT-04',
     visual: 'electric',
     variantStyle: 'white-square',
+    image: '/images/products/prod-prog-1.png',
+    darkImage: '/images/products/dark-8.jpg',
+    gallery: defaultGallery('/images/products/prod-prog-1.png'),
     highlights: ['Large backlit LCD display', 'Multi-period daily scheduling', 'Installer-friendly terminals'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -253,6 +290,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-WH-CONCEPT-01',
     visual: 'water',
     variantStyle: 'white-square',
+    image: '/images/products/prod-white-1.png',
+    darkImage: '/images/products/dark-9.jpg',
+    gallery: defaultGallery('/images/products/prod-white-1.png'),
     highlights: ['Actuator valve drive concept', 'Remote app scheduling brief', 'Multi-zone room control'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -268,6 +308,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-WH-CONCEPT-02',
     visual: 'water',
     variantStyle: 'black-square',
+    image: '/images/products/prod-black-1.png',
+    darkImage: '/images/products/dark-10.jpg',
+    gallery: defaultGallery('/images/products/prod-black-1.png'),
     highlights: ['Capacitive touch buttons', 'Weekly energy-saving schedule', 'Compatible with wiring centres'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -283,6 +326,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-WH-CONCEPT-03',
     visual: 'water',
     variantStyle: 'round-dial',
+    image: '/images/products/prod-round-1.png',
+    darkImage: '/images/products/dark-4.jpg',
+    gallery: defaultGallery('/images/products/prod-round-1.png'),
     highlights: ['No wall-chase wiring needed', 'Pairs with RF wiring centre', 'Low-battery alert concept'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -298,6 +344,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-WH-CONCEPT-04',
     visual: 'water',
     variantStyle: 'white-square',
+    image: '/images/products/prod-oem-1.png',
+    darkImage: '/images/products/dark-1.jpg',
+    gallery: defaultGallery('/images/products/prod-oem-1.png'),
     highlights: ['Clear segmented LCD readout', 'Frost protection & valve exercise brief', 'OEM packaging support'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -315,6 +364,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-TRV-CONCEPT-01',
     visual: 'trv',
     variantStyle: 'valve',
+    image: '/images/products/prod-trv-1.jpg',
+    darkImage: '/images/products/dark-2.jpg',
+    gallery: defaultGallery('/images/products/prod-trv-1.jpg'),
     highlights: ['Room-by-room radiator control', 'Gateway-connected scheduling brief', 'Multi-adapter valve ring concept'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -330,6 +382,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-TRV-CONCEPT-02',
     visual: 'trv',
     variantStyle: 'valve',
+    image: '/images/products/prod-trv-2.png',
+    darkImage: '/images/products/dark-3.jpg',
+    gallery: defaultGallery('/images/products/prod-trv-2.png'),
     highlights: ['Rotary top cap & LED readout', 'Open-window detection concept', 'Child lock & boost mode brief'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -347,6 +402,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-ACT-CONCEPT-01',
     visual: 'actuator',
     variantStyle: 'actuator',
+    image: '/images/products/prod-trv-2.png',
+    darkImage: '/images/products/dark-5.jpg',
+    gallery: defaultGallery('/images/products/prod-trv-2.png'),
     highlights: ['Visual stroke position indicator', 'Silent wax-element drive concept', 'Manifold ring adapter options'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -362,6 +420,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-ACT-CONCEPT-02',
     visual: 'actuator',
     variantStyle: 'actuator',
+    image: '/images/products/prod-trv-1.jpg',
+    darkImage: '/images/products/dark-6.jpg',
+    gallery: defaultGallery('/images/products/prod-trv-1.jpg'),
     highlights: ['Snap-on mounting ring concept', 'Optional auxiliary end-switch', 'IP-rated housing brief'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -379,6 +440,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-WC-CONCEPT-01',
     visual: 'wiring',
     variantStyle: 'hub',
+    image: '/images/products/prod-hub-1.png',
+    darkImage: '/images/products/dark-7.jpg',
+    gallery: defaultGallery('/images/products/prod-hub-1.png'),
     highlights: ['Multi-zone thermostat terminal bus', 'Pump & boiler interlock relay brief', 'LED zone status indicators'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -394,6 +458,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-WC-CONCEPT-02',
     visual: 'wiring',
     variantStyle: 'hub',
+    image: '/images/products/prod-switch-1.png',
+    darkImage: '/images/products/dark-8.jpg',
+    gallery: defaultGallery('/images/products/prod-switch-1.png'),
     highlights: ['Pairs with wireless room thermostats', 'External antenna option brief', 'Time-delay pump protection concept'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -411,6 +478,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-SHC-CONCEPT-01',
     visual: 'controller',
     variantStyle: 'hub',
+    image: '/images/products/prod-hub-1.png',
+    darkImage: '/images/products/dark-9.jpg',
+    gallery: defaultGallery('/images/products/prod-hub-1.png'),
     highlights: ['Centralized smart heating gateway', 'Zigbee / WiFi / BLE architecture brief', 'Cloud & OEM app ready'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -426,6 +496,9 @@ export const products: ProductRecord[] = [
     reference: 'BEOK-SHC-CONCEPT-02',
     visual: 'controller',
     variantStyle: 'black-square',
+    image: '/images/products/prod-switch-2.png',
+    darkImage: '/images/products/dark-10.jpg',
+    gallery: defaultGallery('/images/products/prod-switch-2.png'),
     highlights: ['RS485 / Modbus protocol option brief', 'Multi-stage heating/cooling logic', 'Hotel & office keycard concept'],
     status: 'Concept placeholder — commercial model code and verified technical datasheet pending brand approval',
     description:
@@ -442,6 +515,7 @@ export const services: ServiceRecord[] = [
     description:
       'Integrate your thermostat and heating control lineup with leading smart home ecosystems, wireless protocols and voice platforms while maintaining reliable local heating logic.',
     icon: 'home',
+    image: '/images/services/smart-home.jpg',
     deliverables: [
       'Protocol architecture selection (WiFi, Zigbee, RF433/868, RS485)',
       'Cloud platform & voice assistant integration planning',
@@ -449,9 +523,9 @@ export const services: ServiceRecord[] = [
       'OTA firmware lifecycle and commissioning workflow design',
     ],
     odmExamples: [
-      { slug: 'connected-gas-boiler-control-platform', title: 'Connected Gas Boiler Control Platform', subtitle: 'WiFi + RF Receiver Ecosystem', variant: 'round-dial' },
-      { slug: 'zigbee-multi-zone-hydronic-kit', title: 'Zigbee Multi-Zone Hydronic Kit', subtitle: 'Gateway + Room Thermostats + TRV', variant: 'hub' },
-      { slug: 'touch-glass-smart-home-thermostat', title: 'Touch Glass Smart Home Thermostat', subtitle: 'App & Voice Integration Concept', variant: 'black-square' },
+      { slug: 'connected-gas-boiler-control-platform', title: 'Connected Gas Boiler Control Platform', subtitle: 'WiFi + RF Receiver Ecosystem', variant: 'round-dial', image: '/images/services/odm-1.png' },
+      { slug: 'zigbee-multi-zone-hydronic-kit', title: 'Zigbee Multi-Zone Hydronic Kit', subtitle: 'Gateway + Room Thermostats + TRV', variant: 'hub', image: '/images/services/odm-2.png' },
+      { slug: 'touch-glass-smart-home-thermostat', title: 'Touch Glass Smart Home Thermostat', subtitle: 'App & Voice Integration Concept', variant: 'black-square', image: '/images/services/odm-3.png' },
     ],
   },
   {
@@ -461,6 +535,7 @@ export const services: ServiceRecord[] = [
     description:
       'Develop tailored hardware mainboards covering power supply topologies, relay/triac outputs, dual NTC sensing, wireless RF layouts and low-power battery circuits.',
     icon: 'cpu',
+    image: '/images/services/pcb.jpg',
     deliverables: [
       'Schematic capture & multi-layer PCB layout for regional safety clearances',
       'Relay, dry-contact, 0-10V or Modbus hardware interface customization',
@@ -468,9 +543,9 @@ export const services: ServiceRecord[] = [
       'Prototype bring-up, thermal profiling and reliability verification planning',
     ],
     odmExamples: [
-      { slug: 'dual-sensor-electric-floor-mainboard', title: 'Dual-Sensor Electric Floor Mainboard', subtitle: 'High-Load Relay & Floor Limit Circuit', variant: 'white-square' },
-      { slug: 'ultra-low-power-battery-rf-pcb', title: 'Ultra-Low-Power Battery RF PCB', subtitle: 'Boiler Thermostat Hardware Platform', variant: 'round-dial' },
-      { slug: 'eight-zone-wiring-centre-control-board', title: '8-Zone Wiring Centre Control Board', subtitle: 'Actuator & Pump Interlock Architecture', variant: 'hub' },
+      { slug: 'dual-sensor-electric-floor-mainboard', title: 'Dual-Sensor Electric Floor Mainboard', subtitle: 'High-Load Relay & Floor Limit Circuit', variant: 'white-square', image: '/images/services/odm-4.png' },
+      { slug: 'ultra-low-power-battery-rf-pcb', title: 'Ultra-Low-Power Battery RF PCB', subtitle: 'Boiler Thermostat Hardware Platform', variant: 'round-dial', image: '/images/services/odm-5.png' },
+      { slug: 'eight-zone-wiring-centre-control-board', title: '8-Zone Wiring Centre Control Board', subtitle: 'Actuator & Pump Interlock Architecture', variant: 'hub', image: '/images/services/odm-6.png' },
     ],
   },
   {
@@ -480,6 +555,7 @@ export const services: ServiceRecord[] = [
     description:
       'Deliver cohesive mobile and web user experiences tailored to your brand identity — from quick device onboarding and weekly heating schedules to multi-property management.',
     icon: 'smartphone',
+    image: '/images/services/app.jpg',
     deliverables: [
       'White-label or custom mobile app UI/UX design for heating workflows',
       'Multi-room zoning, holiday mode and energy-usage views',
@@ -487,9 +563,9 @@ export const services: ServiceRecord[] = [
       'Localization framework and ongoing OS compatibility planning',
     ],
     odmExamples: [
-      { slug: 'branded-smart-thermostat-mobile-app', title: 'Branded Smart Thermostat Mobile App', subtitle: 'iOS & Android Custom UI Skin', variant: 'white-square' },
-      { slug: 'commercial-multi-site-heating-dashboard', title: 'Commercial Multi-Site Heating Dashboard', subtitle: 'Centralized Zone Management', variant: 'black-square' },
-      { slug: 'quick-pair-installer-commissioning-flow', title: 'Quick-Pair Installer Commissioning Flow', subtitle: 'Bluetooth + WiFi Onboarding UX', variant: 'valve' },
+      { slug: 'branded-smart-thermostat-mobile-app', title: 'Branded Smart Thermostat Mobile App', subtitle: 'iOS & Android Custom UI Skin', variant: 'white-square', image: '/images/services/odm-7.png' },
+      { slug: 'commercial-multi-site-heating-dashboard', title: 'Commercial Multi-Site Heating Dashboard', subtitle: 'Centralized Zone Management', variant: 'black-square', image: '/images/services/odm-8.png' },
+      { slug: 'quick-pair-installer-commissioning-flow', title: 'Quick-Pair Installer Commissioning Flow', subtitle: 'Bluetooth + WiFi Onboarding UX', variant: 'valve', image: '/images/services/odm-9.png' },
     ],
   },
   {
@@ -499,6 +575,7 @@ export const services: ServiceRecord[] = [
     description:
       'Create distinctive physical enclosures engineered for regional installation boxes (EU 86mm, UK, US/North America), accurate ambient sensing airflow and efficient mass assembly.',
     icon: 'layers',
+    image: '/images/services/structural.jpg',
     deliverables: [
       'Industrial design concepts, CMF finishes and faceplate graphics',
       '3D mechanical CAD for snap-fit / screw-mount enclosures and rotary dials',
@@ -506,9 +583,9 @@ export const services: ServiceRecord[] = [
       'DFM review, rapid CNC/SLA prototypes and mold-flow preparation',
     ],
     odmExamples: [
-      { slug: 'rotary-multi-color-smart-thermostat-id', title: 'Rotary Multi-Color Smart Thermostat ID', subtitle: 'Precision Encoder & Bezel CAD', variant: 'round-dial' },
-      { slug: 'ultra-slim-flush-glass-wall-enclosure', title: 'Ultra-Slim Flush Glass Wall Enclosure', subtitle: 'EU / UK Back-Box Mechanical Fit', variant: 'black-square' },
-      { slug: 'ergonomic-trv-valve-housing', title: 'Ergonomic TRV Valve Housing', subtitle: 'Multi-Adapter Mechanical Collar', variant: 'valve' },
+      { slug: 'rotary-multi-color-smart-thermostat-id', title: 'Rotary Multi-Color Smart Thermostat ID', subtitle: 'Precision Encoder & Bezel CAD', variant: 'round-dial', image: '/images/services/odm-10.png' },
+      { slug: 'ultra-slim-flush-glass-wall-enclosure', title: 'Ultra-Slim Flush Glass Wall Enclosure', subtitle: 'EU / UK Back-Box Mechanical Fit', variant: 'black-square', image: '/images/services/odm-11.png' },
+      { slug: 'ergonomic-trv-valve-housing', title: 'Ergonomic TRV Valve Housing', subtitle: 'Multi-Adapter Mechanical Collar', variant: 'valve', image: '/images/services/odm-12.png' },
     ],
   },
 ];
@@ -521,6 +598,7 @@ export const odmCases: OdmCaseRecord[] = services.flatMap((svc) =>
     serviceSlug: svc.slug,
     serviceName: svc.name,
     variant: ex.variant,
+    image: ex.image,
     summary: `Concept ODM engineering case under BEOK Controls ${svc.name}: ${ex.subtitle}. Commercial electrical ratings, mechanical drawings and compliance test scope are defined against your signed project specification.`,
     scopePoints: [
       {
@@ -552,6 +630,7 @@ export const solutions: SolutionRecord[] = [
     description:
       'Design balanced underfloor heating control systems across residential apartments, villas and renovations. Combine room thermostats, floor-limit sensors, manifold thermal actuators and centralized wiring centres tailored to your market.',
     icon: 'grid',
+    image: '/images/solutions/underfloor.jpg',
     requirements: [
       'Distinguish electric mat/cable loads versus hydronic manifold loops',
       'Confirm air + floor dual-sensor limiting for engineered wood or tile floors',
@@ -568,6 +647,7 @@ export const solutions: SolutionRecord[] = [
     description:
       'Standardize room comfort and reduce energy waste across hospitality, office and multi-unit commercial buildings using lockable interfaces, occupancy schedules and BMS-ready control options.',
     icon: 'building',
+    image: '/images/solutions/commercial.jpg',
     requirements: [
       'Define centralized monitoring protocol (Modbus / RS485 / cloud gateway)',
       'Specify setpoint limits, keypad/PIN lock and occupancy setback logic',
@@ -584,6 +664,7 @@ export const solutions: SolutionRecord[] = [
     description:
       'Pair wall-hung gas boilers with responsive wired or wireless RF room thermostats to prevent short-cycling, optimize daily comfort periods and simplify retrofit upgrades.',
     icon: 'flame',
+    image: '/images/solutions/boiler.jpg',
     requirements: [
       'Confirm dry-contact (volt-free) or modulating boiler control interface',
       'Choose wired wall-mounted thermostat or portable wireless RF + receiver set',
@@ -600,6 +681,7 @@ export const solutions: SolutionRecord[] = [
     description:
       'Help residential and commercial users lower heating demand through room-by-room zoning, weekly scheduling, eco setback modes and connected radiator valve regulation.',
     icon: 'leaf',
+    image: '/images/solutions/energy-saving.jpg',
     requirements: [
       'Map room-by-room heating zones and independent schedule profiles',
       'Evaluate smart TRVs and wireless thermostats for unzoned legacy buildings',
@@ -616,6 +698,7 @@ export const solutions: SolutionRecord[] = [
     description:
       'Unify heating, cooling and multi-room zoning into a cohesive smart home experience with intuitive wall interfaces, mobile control and gateway automation.',
     icon: 'home',
+    image: '/images/solutions/smart-home.jpg',
     requirements: [
       'Select wireless ecosystem (WiFi, Zigbee gateway or multi-protocol hub)',
       'Define mobile app branding, scene triggers and multi-user permissions',
@@ -632,6 +715,7 @@ export const solutions: SolutionRecord[] = [
     description:
       'Partner with BEOK Controls to build private-label or fully bespoke heating control products from initial specification brief through engineering validation and commercial launch.',
     icon: 'wrench',
+    image: '/images/solutions/oem-odm.png',
     requirements: [
       'Clarify OEM private-label customization vs. full ODM hardware/tooling scope',
       'Share target market compliance needs, target unit volume and launch timeline',
@@ -655,6 +739,7 @@ export const articles: ArticleRecord[] = [
     title: 'How to Plan a Smart Thermostat OEM/ODM Project for Global Markets',
     category: 'OEM/ODM Insights',
     date: '2026.10.16',
+    image: '/images/blog/art-1.jpg',
     excerpt:
       'Start with the heating system architecture, target market installation standards and branding scope to define realistic hardware, firmware and enclosure milestones.',
     tags: ['OEM/ODM', 'Thermostat Development', 'B2B Sourcing'],
@@ -669,6 +754,7 @@ export const articles: ArticleRecord[] = [
     title: 'B2B Smart Thermostat Buying Guide: Technical Compatibility Checklist',
     category: 'Buying Guides',
     date: '2026.10.15',
+    image: '/images/blog/art-2.jpg',
     excerpt:
       'Verify power supply, relay ratings, NTC floor sensors, wall-box dimensions and certification scope before finalizing a wholesale or distributor order.',
     tags: ['Buying Guide', 'HVAC Compatibility', 'Distributors'],
@@ -683,6 +769,7 @@ export const articles: ArticleRecord[] = [
     title: 'WiFi vs. Zigbee vs. RF: Choosing Connectivity for Smart Heating Systems',
     category: 'Smart Home & HVAC',
     date: '2026.10.14',
+    image: '/images/blog/art-3.jpg',
     excerpt:
       'Compare direct WiFi thermostats, Zigbee gateway networks and RF wireless boiler receivers across residential retrofits and multi-zone commercial deployments.',
     tags: ['WiFi Thermostat', 'Zigbee', 'Smart Home HVAC'],
@@ -697,6 +784,7 @@ export const articles: ArticleRecord[] = [
     title: 'Hydronic Underfloor Heating Zone Planning: Thermostats, Actuators & Wiring Centres',
     category: 'Heating Knowledge',
     date: '2026.09.22',
+    image: '/images/blog/art-4.jpg',
     excerpt:
       'How room thermostats, electro-thermal manifold actuators and 8-zone wiring centres coordinate to deliver balanced multi-room hydronic heating.',
     tags: ['Underfloor Heating', 'Wiring Centre', 'Thermal Actuator'],
@@ -711,6 +799,7 @@ export const articles: ArticleRecord[] = [
     title: 'Thermostat Structural Design: Sensor Airflow, Thermal Isolation & Wall-Box Fit',
     category: 'OEM/ODM Insights',
     date: '2026.09.08',
+    image: '/images/blog/art-5.jpg',
     excerpt:
       'Why internal heat dissipation from relays and backlights makes mechanical enclosure design critical for accurate ambient room temperature sensing.',
     tags: ['Structural Design', 'Industrial Design', 'ODM'],
@@ -725,6 +814,7 @@ export const articles: ArticleRecord[] = [
     title: 'Private-Label Thermostat Sourcing: What Documentation to Confirm Before Ordering',
     category: 'Buying Guides',
     date: '2026.08.25',
+    image: '/images/blog/art-6.jpg',
     excerpt:
       'A practical pre-order checklist covering datasheets, wiring diagrams, regional manuals, artwork proofs and pre-shipment inspection criteria.',
     tags: ['Private Label', 'Documentation', 'Quality Control'],
@@ -739,6 +829,7 @@ export const articles: ArticleRecord[] = [
     title: 'Smart Radiator Valves (TRVs) Explained: Room-by-Room Retrofit Heating Control',
     category: 'Heating Knowledge',
     date: '2026.08.11',
+    image: '/images/blog/art-7.jpg',
     excerpt:
       'Understanding how thermostatic radiator valves upgrade existing wet radiator systems with scheduled room control and gateway automation.',
     tags: ['Smart Radiator Valve', 'TRV', 'Energy Saving'],
@@ -753,6 +844,7 @@ export const articles: ArticleRecord[] = [
     title: 'Specifying Smart Thermostats for Hotels, Offices and Commercial Heating Projects',
     category: 'Smart Home & HVAC',
     date: '2026.07.29',
+    image: '/images/blog/art-8.jpg',
     excerpt:
       'Key considerations for multi-unit deployments: keypad locks, setpoint limits, centralized scheduling and BMS integration.',
     tags: ['Commercial HVAC', 'Modbus', 'Energy Management'],
@@ -767,6 +859,7 @@ export const articles: ArticleRecord[] = [
     title: 'PCB Engineering & Reliability Validation for Heating Control Hardware',
     category: 'OEM/ODM Insights',
     date: '2026.07.14',
+    image: '/images/blog/art-9.jpg',
     excerpt:
       'Reviewing relay endurance, thermal cycling and electrical safety clearance practices in modern thermostat hardware development.',
     tags: ['PCB Development', 'Quality Assurance', 'Hardware'],
@@ -886,57 +979,65 @@ export const videos: VideoItem[] = [
     id: 'vid-boiler-overview',
     title: 'WiFi Gas Boiler Thermostat — Hardware Overview',
     category: 'Product Showcase',
-    duration: 'Pending media',
+    duration: '01:45',
     visual: 'boiler',
+    image: '/images/support/vid-1.jpg',
   },
   {
     id: 'vid-floor-overview',
     title: 'Electric Underfloor Heating Thermostat — UI & Display Walk-Through',
     category: 'Product Showcase',
-    duration: 'Pending media',
+    duration: '02:10',
     visual: 'electric',
+    image: '/images/support/vid-2.jpg',
   },
   {
     id: 'vid-trv-unboxing',
     title: 'Smart Radiator Valve (TRV) — Mechanical Adapters Overview',
     category: 'Product Showcase',
-    duration: 'Pending media',
+    duration: '01:30',
     visual: 'trv',
+    image: '/images/support/vid-3.png',
   },
   {
     id: 'vid-wiring-centre',
     title: '8-Zone Hydronic Wiring Centre — Terminal & Actuator Layout',
     category: 'Installation & Wiring',
-    duration: 'Pending media',
+    duration: '02:40',
     visual: 'wiring',
+    image: '/images/support/vid-4.jpg',
   },
   {
     id: 'vid-rf-pairing',
     title: 'Wireless Boiler Thermostat & Receiver — Pairing Guide',
     category: 'Installation & Wiring',
-    duration: 'Pending media',
+    duration: '02:05',
     visual: 'boiler',
+    image: '/images/support/vid-5.jpg',
   },
   {
     id: 'vid-floor-sensor',
     title: 'Floor NTC Sensor Installation & Temperature Limit Configuration',
     category: 'Installation & Wiring',
-    duration: 'Pending media',
+    duration: '01:55',
     visual: 'electric',
+    image: '/images/support/vid-6.jpg',
   },
   {
     id: 'vid-app-setup',
     title: 'Smart Heating Mobile App — Onboarding & Weekly Scheduling',
     category: 'Technical Guides',
-    duration: 'Pending media',
+    duration: '03:12',
     visual: 'controller',
+    image: '/images/support/vid-7.jpg',
   },
   {
     id: 'vid-oem-workflow',
     title: 'OEM/ODM Thermostat Customization Workflow Overview',
     category: 'Technical Guides',
-    duration: 'Pending media',
+    duration: '02:30',
     visual: 'water',
+    image: '/images/support/vid-8.jpg',
   },
 ];
 

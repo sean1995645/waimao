@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import { products } from '@/data/catalog';
 import type { ProductRecord } from '@/types/content';
-import { ProductDeviceVisual } from './BrandVisual';
 import { InquiryForm } from './InquiryForm';
 import { Container, SectionTitle } from './LayoutPrimitives';
 import { ProductCard } from './ProductsCatalog';
@@ -26,15 +25,16 @@ import { FAQAccordion } from './SupportSections';
 
 export function ProductGallery({
   name,
-  variant,
+  images,
 }: {
   name: string;
-  variant: ProductRecord['variantStyle'];
+  images: string[];
 }) {
   const [viewIndex, setViewIndex] = useState(0);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const views = ['Front', 'Back', 'Dimensions', 'Wiring'];
+  const currentImg = images[viewIndex] || images[0] || '/images/products/prod-white-1.png';
 
   return (
     <div className="gallery">
@@ -47,7 +47,8 @@ export function ProductGallery({
         onClick={() => dialogRef.current?.showModal()}
       >
         <div className="gallery-main-frame">
-          <ProductDeviceVisual variant={variant} theme="light" view={viewIndex} label={name} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={currentImg} alt={`${name} — ${views[viewIndex]}`} className="img-contain" />
         </div>
         <span className="sr-only">{['PRODUCT IMAGE', 'REAR VIEW', 'DIMENSION DRAWING', 'WIRING DIAGRAM'][viewIndex]}</span>
         <span className="zoom-icon" aria-hidden="true">
@@ -105,11 +106,9 @@ export function ProductGallery({
           </button>
         </div>
         <div style={{ aspectRatio: '4 / 3', width: '100%' }}>
-          <ProductDeviceVisual variant={variant} theme="light" view={viewIndex} label={name} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={currentImg} alt={`${name} — ${views[viewIndex]}`} className="img-contain" />
         </div>
-        <p style={{ fontSize: 13, color: '#666', marginTop: 12 }}>
-          Illustrative BEOK Controls placeholder. Approved commercial photography and mechanical drawings pending.
-        </p>
       </dialog>
     </div>
   );
@@ -190,7 +189,7 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
               </div>
             </div>
 
-            <ProductGallery name={product.name} variant={product.variantStyle} />
+            <ProductGallery name={product.name} images={product.gallery} />
           </div>
         </Container>
       </section>

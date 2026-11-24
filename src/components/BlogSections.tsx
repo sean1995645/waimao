@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { Calendar, ChevronRight } from 'lucide-react';
 import { articleCategories, articles } from '@/data/catalog';
 import type { ArticleRecord } from '@/types/content';
-import { DarkSectionBackdrop } from './BrandVisual';
 import { Container, Pagination, SectionTitle } from './LayoutPrimitives';
 
 export function ArticleCard({ article }: { article: ArticleRecord }) {
   return (
     <article className="article-card">
       <Link href={`/blog/${article.slug}`} className="article-card-media">
-        <DarkSectionBackdrop theme="news" label={article.title} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={article.image} alt={article.title} className="img-cover" loading="lazy" />
       </Link>
       <div className="article-card-body">
         <h3>
@@ -91,7 +91,8 @@ export function BlogDetailView({ article }: { article: ArticleRecord }) {
             </div>
 
             <div style={{ aspectRatio: '16 / 9', marginBottom: 28, overflow: 'hidden' }}>
-              <DarkSectionBackdrop theme="news" label={article.title} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={article.image} alt={article.title} className="img-cover" />
             </div>
 
             {article.body.map((para, i) => (

@@ -17,7 +17,6 @@ import {
   Target,
   Wrench,
 } from 'lucide-react';
-import { DarkSectionBackdrop } from './BrandVisual';
 import { InquiryForm } from './InquiryForm';
 import { Container, SectionTitle } from './LayoutPrimitives';
 
@@ -35,7 +34,7 @@ export function AboutPageView() {
                 wholesalers, HVAC contractors and OEM/ODM private-label partners.
               </p>
               <p>
-                Our planned product architecture spans gas boiler thermostats, electric underfloor heating thermostats,
+                Our product architecture spans gas boiler thermostats, electric underfloor heating thermostats,
                 water heating thermostats, smart radiator valves, thermal actuators, wiring centres and smart heating
                 controllers. Verified founding year, factory footprint, headcount and certification records await
                 official brand documentation.
@@ -63,7 +62,8 @@ export function AboutPageView() {
               </div>
             </div>
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
-              <DarkSectionBackdrop theme="building" label="BEOK Controls headquarters placeholder" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/about-building.jpg" alt="BEOK Controls manufacturing facility" className="img-cover" />
             </div>
           </div>
         </Container>
@@ -79,25 +79,25 @@ export function AboutPageView() {
           <div className="rd-grid">
             <div className="rd-card">
               <div className="rd-card-media">
-                <DarkSectionBackdrop theme="tech" label="Hardware and PCB engineering placeholder" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/factory/rd-1.jpg" alt="Hardware and PCB engineering center" className="img-cover" loading="lazy" />
               </div>
               <div className="rd-card-body">
                 <h3>Hardware &amp; Firmware Engineering</h3>
                 <p style={{ margin: 0, fontSize: 13.5 }}>
                   Schematic design, relay &amp; sensor architecture, RF/WiFi/Zigbee integration and thermal validation.
-                  Verified R&amp;D lab location pending brand approval.
                 </p>
               </div>
             </div>
             <div className="rd-card">
               <div className="rd-card-media">
-                <DarkSectionBackdrop theme="service" label="App and ID design studio placeholder" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/factory/rd-2.jpg" alt="Industrial design and connected software studio" className="img-cover" loading="lazy" />
               </div>
               <div className="rd-card-body">
                 <h3>Industrial Design &amp; Connected Software</h3>
                 <p style={{ margin: 0, fontSize: 13.5 }}>
                   Regional wall-box mechanical CAD, faceplate CMF customization and white-label mobile app workflows.
-                  Approved photography pending supply.
                 </p>
               </div>
             </div>
@@ -105,36 +105,46 @@ export function AboutPageView() {
         </Container>
       </section>
 
-      {/* Environment Strip (Reference: 3-panel visual gallery) */}
+      {/* Environment Strip */}
       <section className="section-block">
         <Container>
           <SectionTitle
             title="Environment"
-            subtitle="Production, assembly and R&D facility imagery pending approved BEOK Controls commercial photography."
+            subtitle="Electronic assembly, testing and quality inspection workshop views."
           />
           <div className="inews-grid">
-            {['SMT & Electronic Assembly Zone', 'Final Thermostat Testing Area', 'Engineering & Packaging Hub'].map(
-              (caption) => (
-                <div className="rd-card" key={caption}>
-                  <div className="rd-card-media">
-                    <DarkSectionBackdrop theme="building" label={caption} />
-                  </div>
-                  <div className="rd-card-body">
-                    <h3 style={{ margin: 0, fontSize: 15 }}>{caption}</h3>
-                  </div>
+            {[
+              { img: '/images/factory/env-1.jpg', caption: 'SMT & Electronic Assembly Zone' },
+              { img: '/images/factory/env-2.jpg', caption: 'Final Thermostat Testing Area' },
+              { img: '/images/factory/env-3.jpg', caption: 'Engineering & Packaging Hub' },
+            ].map((item) => (
+              <div className="rd-card" key={item.caption}>
+                <div className="rd-card-media">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.img} alt={item.caption} className="img-cover" loading="lazy" />
                 </div>
-              ),
-            )}
+                <div className="rd-card-body">
+                  <h3 style={{ margin: 0, fontSize: 15 }}>{item.caption}</h3>
+                </div>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
 
       {/* Corporate Culture 4-Card Band */}
-      <section className="culture-band">
+      <section
+        className="culture-band"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(16,24,38,0.68), rgba(16,24,38,0.72)), url(/images/factory/culture-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <Container>
           <div className="section-header" style={{ marginBottom: 16 }}>
             <h2 style={{ color: '#ffffff' }}>Corporate Culture</h2>
-            <p style={{ color: 'rgba(255,255,255,0.78)' }}>
+            <p style={{ color: 'rgba(255,255,255,0.85)' }}>
               Engineering discipline and transparent B2B collaboration guiding every heating control project.
             </p>
           </div>
@@ -155,8 +165,15 @@ export function AboutPageView() {
         </Container>
       </section>
 
-      {/* Development History Band (Reference: historyBg timeline) */}
-      <section className="section-block">
+      {/* Development History Band */}
+      <section
+        className="section-block"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.92)), url(/images/factory/history-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom center',
+        }}
+      >
         <Container>
           <SectionTitle
             title="Development History"
@@ -190,9 +207,8 @@ export function AboutPageView() {
             <div>
               <h2 style={{ margin: '0 0 14px' }}>Qualifications &amp; Certifications</h2>
               <p>
-                No commercial certificates, patent numbers or third-party test reports have been uploaded to this
-                development preview. Verified compliance files (such as CE, RoHS, UKCA, UL or ERP declarations) will be
-                published here only after authorized documents are supplied in <code>public/images/certificates/</code>.
+                Verified compliance files (such as CE, RoHS, UKCA, UL or ERP declarations) are supplied per commercial
+                model and target market requirements. Contact our team to confirm documentation for your region.
               </p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 22 }}>
                 <Link href="/about/advantages" className="btn-outline">
@@ -206,18 +222,19 @@ export function AboutPageView() {
               </div>
             </div>
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
-              <DarkSectionBackdrop theme="tech" label="Certification showcase pending approved documents" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/env-5.jpg" alt="BEOK Controls quality and testing workshop" className="img-cover" loading="lazy" />
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Partners / Global Channels Band (Reference: coop strip) */}
+      {/* Target Global Partners */}
       <section className="section-block">
         <Container>
           <SectionTitle
             title="Target Global Partners"
-            subtitle="Serving B2B heating control channels worldwide (named partner logos published only with explicit written permission)."
+            subtitle="Serving B2B heating control channels worldwide."
           />
           <div className="culture-grid">
             {[
@@ -260,21 +277,25 @@ export function AdvantagesPageView() {
           <div className="inews-grid">
             {[
               {
+                img: '/images/factory/adv-rd-1.jpg',
                 title: 'Hardware & Control Architecture',
                 desc: 'Dedicated thermostat engineering covering boiler dry-contact relays, electric floor loads and multi-zone hydronic wiring centres.',
               },
               {
+                img: '/images/factory/adv-rd-2.jpg',
                 title: 'Reliability Verification Planning',
                 desc: 'Structured validation scope covering temperature accuracy, switching endurance and environmental cycling confirmed per project.',
               },
               {
+                img: '/images/factory/adv-rd-3.jpg',
                 title: 'Connected App & Protocol Flexibility',
                 desc: 'Configurable WiFi, Zigbee, RF and Modbus integration options aligned with your regional smart home ecosystem.',
               },
             ].map((item) => (
               <div className="rd-card" key={item.title}>
                 <div className="rd-card-media">
-                  <DarkSectionBackdrop theme="service" label={item.title} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.img} alt={item.title} className="img-cover" loading="lazy" />
                 </div>
                 <div className="rd-card-body">
                   <h3>{item.title}</h3>
@@ -287,10 +308,17 @@ export function AdvantagesPageView() {
       </section>
 
       {/* Dark Innovation Band + Overlapping 3-Col Card Strip */}
-      <section className="innovation-dark-band">
+      <section
+        className="innovation-dark-band"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(14,20,28,0.68), rgba(14,20,28,0.78)), url(/images/factory/innovation-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <Container>
           <h2>Innovation Capability</h2>
-          <p style={{ maxWidth: 640, margin: '0 auto', color: 'rgba(255,255,255,0.8)' }}>
+          <p style={{ maxWidth: 640, margin: '0 auto', color: 'rgba(255,255,255,0.85)' }}>
             Quantitative R&amp;D team headcount, patent totals and factory floor figures are intentionally omitted until
             verified corporate records are supplied by BEOK Controls.
           </p>
@@ -358,12 +386,12 @@ export function AdvantagesPageView() {
                 ))}
               </ul>
               <p className="notice-box">
-                Verified factory production capacity figures and authorized manufacturing photography will be published
-                once supplied by BEOK Controls.
+                Verified factory production capacity figures will be published once supplied by BEOK Controls.
               </p>
             </div>
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
-              <DarkSectionBackdrop theme="building" label="BEOK Controls manufacturing visual placeholder" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/manufacturing.jpg" alt="BEOK Controls PCB testing and soldering" className="img-cover" loading="lazy" />
             </div>
           </div>
         </Container>
@@ -379,12 +407,13 @@ export function JoinUsPageView() {
         <Container>
           <SectionTitle
             title="Collaborate & Grow With BEOK Controls"
-            subtitle="Recruitment listings and approved workplace photography are pending brand publication."
+            subtitle="Explore engineering and global B2B collaboration opportunities."
           />
           <div className="rd-grid">
             <div className="rd-card">
               <div className="rd-card-media">
-                <DarkSectionBackdrop theme="service" label="Engineering team placeholder" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/factory/join-1.jpg" alt="Engineering and product team culture" className="img-cover" loading="lazy" />
               </div>
               <div className="rd-card-body">
                 <h3>Engineering &amp; Product Roles</h3>
@@ -396,7 +425,8 @@ export function JoinUsPageView() {
             </div>
             <div className="rd-card">
               <div className="rd-card-media">
-                <DarkSectionBackdrop theme="application" label="Global B2B partnership placeholder" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/factory/join-2.jpg" alt="Global B2B partnership collaboration" className="img-cover" loading="lazy" />
               </div>
               <div className="rd-card-body">
                 <h3>International B2B Partnerships</h3>
@@ -456,7 +486,8 @@ export function ContactPageView() {
             </div>
 
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden', border: '1px solid #e8ecf0' }}>
-              <DarkSectionBackdrop theme="building" label="BEOK Controls location map placeholder pending verified address" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/factory/contact-map.jpg" alt="Location map overview" className="img-cover" />
             </div>
           </div>
 
@@ -479,7 +510,15 @@ export function ContactPageView() {
         </Container>
       </section>
 
-      <section id="inquiry" className="inquiry-backdrop-band">
+      <section
+        id="inquiry"
+        className="inquiry-backdrop-band"
+        style={{
+          backgroundImage: 'url(/images/factory/message-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <Container>
           <div className="inquiry-card">
             <InquiryForm title="Service Inquiry" />

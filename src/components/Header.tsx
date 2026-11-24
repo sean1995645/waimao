@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronRight, Globe, Menu, Search, X } from 'lucide-react';
-import { categories, navigation, products } from '@/data/catalog';
-import { DarkSectionBackdrop, ProductDeviceVisual, variantStyleFromIcon } from './BrandVisual';
+import { categories, navigation, products, services, solutions } from '@/data/catalog';
 
 export function LanguageSwitcher() {
   return (
@@ -248,11 +247,13 @@ export function Header() {
                         <div className="mega-col-divider mega-preview">
                           <p className="mega-preview-title">{previewProduct.name}</p>
                           <p className="mega-preview-desc">{previewProduct.highlights.join(' · ')}</p>
-                          <div className="mega-preview-visual">
-                            <ProductDeviceVisual
-                              variant={previewProduct.variantStyle}
-                              theme="light"
-                              label={previewProduct.name}
+                          <div className="mega-preview-visual" style={{ padding: 10 }}>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={previewProduct.image}
+                              alt={previewProduct.name}
+                              className="img-contain"
+                              loading="lazy"
                             />
                           </div>
                         </div>
@@ -291,15 +292,23 @@ export function Header() {
                             {selectedChild?.summary || item.previewSummary}
                           </p>
                           <div className="mega-preview-visual">
-                            {item.name === 'Tailor-Made Solution' ? (
-                              <ProductDeviceVisual
-                                variant={variantStyleFromIcon('boiler')}
-                                theme="light"
-                                label={selectedChild?.name || item.name}
-                              />
-                            ) : (
-                              <DarkSectionBackdrop theme="tech" label={selectedChild?.name || item.name} />
-                            )}
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={
+                                item.name === 'Tailor-Made Solution'
+                                  ? services.find((s) => s.slug === selectedChild?.slug)?.image || '/images/services/structural.jpg'
+                                  : item.name === 'Solutions'
+                                    ? solutions.find((s) => s.slug === selectedChild?.slug)?.image || '/images/solutions/boiler.jpg'
+                                    : item.name === 'Blog'
+                                      ? '/images/blog/art-1.jpg'
+                                      : item.name === 'Service & Support'
+                                        ? '/images/support/banner.jpg'
+                                        : '/images/factory/about-building.jpg'
+                              }
+                              alt={selectedChild?.name || item.name}
+                              className="img-cover"
+                              loading="lazy"
+                            />
                           </div>
                         </div>
                       </div>

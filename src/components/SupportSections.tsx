@@ -5,7 +5,6 @@ import { useRef, useState } from 'react';
 import { ChevronDown, ChevronRight, Download, FileText, HelpCircle, Play, ShieldCheck, Video, X } from 'lucide-react';
 import { categories, downloads, faqs, videos } from '@/data/catalog';
 import type { VideoItem } from '@/types/content';
-import { ProductDeviceVisual, variantStyleFromIcon } from './BrandVisual';
 import { Container, SectionTitle } from './LayoutPrimitives';
 
 export function FAQAccordion({ limit, showTabs = true }: { limit?: number; showTabs?: boolean }) {
@@ -165,11 +164,8 @@ export function VideosLibrary() {
                     }}
                   >
                     <div className="video-thumb">
-                      <ProductDeviceVisual
-                        variant={variantStyleFromIcon(vid.visual)}
-                        theme="light"
-                        label={vid.title}
-                      />
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={vid.image} alt={vid.title} className="img-cover" loading="lazy" />
                       <span className="video-play-badge" aria-hidden="true">
                         <Play size={18} />
                       </span>
