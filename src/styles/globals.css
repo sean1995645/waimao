@@ -840,118 +840,159 @@ main {
 }
 
 /* ============================================================
-   HOME SECTION 1: TAILOR-MADE SOLUTION (Full-bleed 4 strips)
+   HOME SECTION 1: TAILOR-MADE SOLUTION (Full-bleed 4-strip horizontal accordion)
    ============================================================ */
 .iservice {
   padding-top: var(--section-space);
   padding-bottom: 0;
+  overflow: hidden;
 }
 
 .iservice-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  background: rgba(255, 255, 255, 0.25);
+  display: flex;
   width: 100%;
+  gap: 1px;
+  background: var(--color-white);
 }
 
-.iservice-card {
+a.iservice-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: clamp(360px, 31vw, 560px);
+  display: block;
+  flex: 1 1 0%;
+  min-width: 0;
+  height: clamp(380px, 33.8542vw, 650px);
   background: #1b222c;
   color: var(--color-white);
   overflow: hidden;
-  padding: clamp(24px, 2.2vw, 40px) clamp(18px, 1.8vw, 32px);
-  text-align: center;
+  transition: flex 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.06s;
+}
+
+a.iservice-card:hover,
+a.iservice-card:focus-visible {
+  flex: 1 1 42.9%;
 }
 
 .iservice-card-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  transition: transform 500ms ease;
 }
 
-.iservice-card:hover .iservice-card-bg {
-  transform: scale(1.04);
-}
-
-.iservice-card-content {
-  position: relative;
+.iservice-card-rest {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(36px, 5.2vw, 96px);
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: clamp(12px, 1.25vw, 22px);
+  padding: 0 14px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+a.iservice-card:hover .iservice-card-rest,
+a.iservice-card:focus-visible .iservice-card-rest {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .iservice-icon-ring {
-  width: 52px;
-  height: 52px;
+  width: clamp(50px, 4.16667vw, 76px);
+  height: clamp(50px, 4.16667vw, 76px);
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  border: 1.5px solid rgba(255, 255, 255, 0.88);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--color-white);
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.16);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
 }
 
-.iservice-card:hover .iservice-icon-ring {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.iservice-card h3 {
+.iservice-card-rest h3 {
   color: var(--color-white);
-  font-size: clamp(18px, 1.55vw, 28px);
+  font-size: clamp(16px, 1.5625vw, 28px);
   font-weight: 500;
+  line-height: 1.28;
   margin: 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 .iservice-card-hover {
+  position: absolute;
+  z-index: 3;
+  left: clamp(24px, 4.8vw, 92px);
+  bottom: -40px;
+  width: min(360px, calc(100% - 48px));
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  max-height: 0;
+  align-items: flex-start;
+  text-align: left;
+  visibility: hidden;
   opacity: 0;
-  overflow: hidden;
-  transition: max-height var(--transition), opacity var(--transition);
+  transition: bottom 0.3s ease, opacity 0.25s ease, visibility 0s linear 0.3s;
 }
 
-.iservice-card:hover .iservice-card-hover,
-.iservice-card:focus-visible .iservice-card-hover {
-  max-height: 180px;
+a.iservice-card:hover .iservice-card-hover,
+a.iservice-card:focus-visible .iservice-card-hover {
+  bottom: clamp(28px, 2.8vw, 52px);
+  visibility: visible;
   opacity: 1;
+  transition: bottom 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.32s, opacity 0.65s ease 0.35s, visibility 0s linear 0.3s;
 }
 
-.iservice-card p {
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 13px;
+.iservice-hover-icon {
+  display: inline-flex;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+.iservice-hover-title {
+  color: var(--color-white);
+  font-size: clamp(20px, 1.5625vw, 30px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.iservice-card-hover p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(12.5px, 0.85vw, 15px);
   line-height: 1.55;
-  margin: 0;
-  max-width: 30ch;
+  margin: 0 0 22px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
 }
 
 .iservice-more {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
+  gap: 6px;
+  min-width: 112px;
+  height: 36px;
+  padding: 0 18px;
   font-size: 12.5px;
   font-weight: 600;
-  color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.48);
-  padding: 6px 14px;
-  margin-top: 2px;
+  color: var(--color-primary);
+  background: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 3px;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-.iservice-card:hover .iservice-more {
+.iservice-more:hover {
   background: var(--color-primary);
   border-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .mobile-carousel-dots {
@@ -2880,17 +2921,32 @@ table.spec-table th {
     background: transparent;
   }
 
-  .iservice-card {
-    min-height: 400px;
+  a.iservice-card,
+  a.iservice-card:hover,
+  a.iservice-card:focus-visible {
+    flex: none;
+    height: 400px;
+    transition: none;
   }
 
-  .iservice-card:not(.is-slide-active) {
+  a.iservice-card:not(.is-slide-active) {
     display: none;
   }
 
-  .iservice-card-hover {
-    max-height: 200px;
+  .iservice-card-rest {
+    display: none;
+  }
+
+  .iservice-card-hover,
+  a.iservice-card:hover .iservice-card-hover,
+  a.iservice-card:focus-visible .iservice-card-hover {
+    left: 24px;
+    right: 24px;
+    width: auto;
+    bottom: 28px;
+    visibility: visible;
     opacity: 1;
+    transition: none;
   }
 
   .iproducts-showcase-grid {

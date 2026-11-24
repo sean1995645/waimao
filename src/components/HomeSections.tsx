@@ -94,18 +94,22 @@ export function HomePageView() {
                   <img src={svc.image} alt="" className="img-cover" loading="lazy" />
                 </div>
                 <div className="iservice-photo-scrim" aria-hidden="true" />
-                <div className="iservice-card-content">
+                <div className="iservice-card-rest">
                   <span className="iservice-icon-ring">
                     <ServiceIcon icon={svc.icon} />
                   </span>
                   <h3>{svc.name}</h3>
-                  <div className="iservice-card-hover">
-                    <p>{svc.shortDesc}</p>
-                    <span className="iservice-more">
-                      <span>Read More</span>
-                      <ChevronRight size={13} aria-hidden="true" />
-                    </span>
-                  </div>
+                </div>
+                <div className="iservice-card-hover">
+                  <span className="iservice-hover-icon" aria-hidden="true">
+                    <ServiceIcon icon={svc.icon} />
+                  </span>
+                  <div className="iservice-hover-title">{svc.name}</div>
+                  <p>{svc.shortDesc}</p>
+                  <span className="iservice-more">
+                    <span>Read More</span>
+                    <ChevronRight size={13} aria-hidden="true" />
+                  </span>
                 </div>
               </Link>
             ))}
