@@ -17,6 +17,7 @@
 - [x] Round 1: Capture local production screenshots across all 6 viewports + interactions; identify 5 real P0/P1 defects (mobile select overflow, reveal opacity trap, smooth-scroll reset offset, clipped corner watermark, modal Tab focus escape).
 - [x] Apply fixes in CSS/components and rebuild cleanly.
 - [x] Round 2: Re-capture all 52 local full-page views + 4 interactive states (`reference/comparison/local-round-2/` & `geometry-round-2.json`) and verify pixel/geometry parity (0px header delta on 1920/1440/768/390, zero horizontal overflow).
+- [x] Round 3 (Strict UI Acceptance on `http://localhost:3000/`): Fix 10 additional P0/P1/P2 visual diffs (mobile/tablet carousels with dots for Tailor-Made/Applications/News bringing 390px home height to `5999px` vs ref `6059px` (-0.99%), pure transparent desktop top header `rgba(0,0,0,0)`, unclipped mobile product detail `follow-nav-bar`, desktop Tailor-Made hover-reveal cards, About Us `Environment`/`Development History`/`Target Global Partners` bands, compact 1024px header, mobile sidebar placement, balanced 7-tab layout). Re-captured all 56 views + 4 interactive states in `reference/comparison/local-round-3/`.
 - [x] Publish `docs/visual-diff-report.md`.
 
 ## Phase 8–9: SEO, Automated Playwright Testing & Production Build (Completed)
@@ -31,4 +32,4 @@
 - [ ] Supply verified commercial model codes, technical datasheets, legal entity disclosures and contact credentials.
 - [ ] Connect live email/CRM backend to `POST /api/inquiry` and set production `NEXT_PUBLIC_SITE_URL` / `INDEX_SITE=true`.
 - [ ] Supply verified non-English translations to enable additional locales in `LanguageSwitcher`.
-- [ ] Create scoped Git commits once `.git/index.lock` host permission allows Git writes.
+- [x] Create scoped Git commit (`prod 15895e9`) preserving all unrelated user-deleted files outside scope.

@@ -60,7 +60,10 @@ function ServiceIcon({ icon }: { icon: 'home' | 'cpu' | 'smartphone' | 'layers' 
 
 export function HomePageView() {
   const [activeCat, setActiveCat] = useState(categories[0].slug);
+  const [serviceSlide, setServiceSlide] = useState(0);
+  const [appSlide, setAppSlide] = useState(0);
   const [newsPage, setNewsPage] = useState(0);
+  const [mobileNewsSlide, setMobileNewsSlide] = useState(0);
 
   const visibleProducts = products.filter((p) => p.category === activeCat).slice(0, 4);
   const totalNewsSlides = Math.max(1, Math.ceil(articles.length / 3));
@@ -70,7 +73,7 @@ export function HomePageView() {
     <>
       <HomeHeroBanner />
 
-      {/* Section 1: Tailor-Made Solution (Full-width 4-strip grid) */}
+      {/* Section 1: Tailor-Made Solution (Full-width 4-strip grid on desktop / 1-slide carousel <992px) */}
       <section className="iservice" aria-labelledby="home-tailor-heading">
         <Reveal>
           <div className="section-header">
@@ -81,8 +84,12 @@ export function HomePageView() {
             </p>
           </div>
           <div className="iservice-grid">
-            {services.map((svc) => (
-              <Link href={`/tailor-made-solution/${svc.slug}`} key={svc.slug} className="iservice-card">
+            {services.map((svc, idx) => (
+              <Link
+                href={`/tailor-made-solution/${svc.slug}`}
+                key={svc.slug}
+                className={`iservice-card ${serviceSlide === idx ? 'is-slide-active' : ''}`}
+              >
                 <div className="iservice-card-bg" aria-hidden="true">
                   <DarkSectionBackdrop theme="service" label={svc.name} />
                 </div>
@@ -91,13 +98,27 @@ export function HomePageView() {
                     <ServiceIcon icon={svc.icon} />
                   </span>
                   <h3>{svc.name}</h3>
-                  <p>{svc.shortDesc}</p>
-                  <span className="iservice-more">
-                    <span>Read More</span>
-                    <ChevronRight size={13} aria-hidden="true" />
-                  </span>
+                  <div className="iservice-card-hover">
+                    <p>{svc.shortDesc}</p>
+                    <span className="iservice-more">
+                      <span>Read More</span>
+                      <ChevronRight size={13} aria-hidden="true" />
+                    </span>
+                  </div>
                 </div>
               </Link>
+            ))}
+          </div>
+          <div className="mobile-carousel-dots" role="group" aria-label="Tailor-Made Solution slides">
+            {services.map((svc, idx) => (
+              <button
+                type="button"
+                key={svc.slug}
+                className={`mobile-carousel-dot ${serviceSlide === idx ? 'is-active' : ''}`}
+                aria-label={`Show ${svc.name}`}
+                aria-pressed={serviceSlide === idx}
+                onClick={() => setServiceSlide(idx)}
+              />
             ))}
           </div>
         </Reveal>
@@ -175,8 +196,12 @@ export function HomePageView() {
             </div>
 
             <div className="iapply-grid">
-              {solutions.map((sol) => (
-                <Link href={`/solutions/${sol.slug}`} key={sol.slug} className="iapply-card">
+              {solutions.map((sol, idx) => (
+                <Link
+                  href={`/solutions/${sol.slug}`}
+                  key={sol.slug}
+                  className={`iapply-card ${appSlide === idx ? 'is-slide-active' : ''}`}
+                >
                   <div className="iapply-card-bg" aria-hidden="true">
                     <DarkSectionBackdrop theme="application" label={sol.name} />
                   </div>
@@ -185,6 +210,18 @@ export function HomePageView() {
                     <p>{sol.summary}</p>
                   </div>
                 </Link>
+              ))}
+            </div>
+            <div className="mobile-carousel-dots" role="group" aria-label="Application slides">
+              {solutions.map((sol, idx) => (
+                <button
+                  type="button"
+                  key={sol.slug}
+                  className={`mobile-carousel-dot ${appSlide === idx ? 'is-active' : ''}`}
+                  aria-label={`Show ${sol.name}`}
+                  aria-pressed={appSlide === idx}
+                  onClick={() => setAppSlide(idx)}
+                />
               ))}
             </div>
           </Container>
@@ -255,9 +292,12 @@ export function HomePageView() {
               <p>Technical buying guides, HVAC heating control knowledge and OEM/ODM insights from BEOK Controls.</p>
             </div>
 
-            <div className="inews-grid">
-              {shownArticles.map((art) => (
-                <article className="article-card" key={art.slug}>
+            <div className="inews-grid home-news-grid">
+              {shownArticles.map((art, idx) => (
+                <article
+                  className={`article-card ${mobileNewsSlide % shownArticles.length === idx ? 'is-slide-active' : ''}`}
+                  key={art.slug}
+                >
                   <Link href={`/blog/${art.slug}`} className="article-card-media">
                     <DarkSectionBackdrop theme="news" label={art.title} />
                   </Link>
@@ -282,7 +322,10 @@ export function HomePageView() {
                   className={`inews-dot ${newsPage === idx ? 'is-active' : ''}`}
                   aria-label={`Show news group ${idx + 1}`}
                   aria-pressed={newsPage === idx}
-                  onClick={() => setNewsPage(idx)}
+                  onClick={() => {
+                    setNewsPage(idx);
+                    setMobileNewsSlide(idx);
+                  }}
                 />
               ))}
             </div>

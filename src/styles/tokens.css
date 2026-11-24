@@ -51,10 +51,10 @@
 @media (max-width: 1199px) {
   :root {
     --container: 90vw;
-    --header-height-top: 64px;
-    --header-height: 56px;
-    --section-space: 64px;
-    --inner-banner-height: 340px;
+    --header-height-top: 58px;
+    --header-height: 48px;
+    --section-space: 58px;
+    --inner-banner-height: 330px;
   }
 }
 

@@ -1,7 +1,7 @@
 # Automated Verification & Test Report — BEOK Controls
 
 Date: **2026-11-24**
-Target Server: Production build (`pnpm build` → `next start` on `http://127.0.0.1:3005`)
+Target Server: Production build (`pnpm build` → `next start` on `http://localhost:3000`)
 
 ## 1. Static Analysis & Production Build
 
@@ -13,7 +13,7 @@ Target Server: Production build (`pnpm build` → `next start` on `http://127.0.
 
 ## 2. Playwright End-to-End & HTTP Verification Suite
 
-Command: `BASE_URL=http://127.0.0.1:3005 pnpm test`
+Command: `pnpm test` (`http://localhost:3000`)
 Browsers / Projects: `desktop` (`1440×900`), `tablet` (`768×1024`), `mobile` (`390×844`) — Chromium
 Result: **30 / 30 PASSED (0 failed, 0 skipped)** covering all **76 application routes** (including `/odm` and all 12 `/odm/[slug]` routes) — raw JSON archived at `reference/comparison/test-results.json`.
 

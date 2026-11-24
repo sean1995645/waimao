@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { pages } from '../src/data/pages';
 
-const baseOrigin = process.env.BASE_URL || 'http://127.0.0.1:3005';
+const baseOrigin = process.env.BASE_URL || 'http://localhost:3000';
 
 test('all page routes and SEO metadata respond', async ({ request }) => {
   for (const page of pages) {

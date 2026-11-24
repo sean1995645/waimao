@@ -105,6 +105,30 @@ export function AboutPageView() {
         </Container>
       </section>
 
+      {/* Environment Strip (Reference: 3-panel visual gallery) */}
+      <section className="section-block">
+        <Container>
+          <SectionTitle
+            title="Environment"
+            subtitle="Production, assembly and R&D facility imagery pending approved BEOK Controls commercial photography."
+          />
+          <div className="inews-grid">
+            {['SMT & Electronic Assembly Zone', 'Final Thermostat Testing Area', 'Engineering & Packaging Hub'].map(
+              (caption) => (
+                <div className="rd-card" key={caption}>
+                  <div className="rd-card-media">
+                    <DarkSectionBackdrop theme="building" label={caption} />
+                  </div>
+                  <div className="rd-card-body">
+                    <h3 style={{ margin: 0, fontSize: 15 }}>{caption}</h3>
+                  </div>
+                </div>
+              ),
+            )}
+          </div>
+        </Container>
+      </section>
+
       {/* Corporate Culture 4-Card Band */}
       <section className="culture-band">
         <Container>
@@ -125,6 +149,34 @@ export function AboutPageView() {
                 <Icon size={24} color="#0067e7" aria-hidden="true" />
                 <h3>{title}</h3>
                 <p>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Development History Band (Reference: historyBg timeline) */}
+      <section className="section-block">
+        <Container>
+          <SectionTitle
+            title="Development History"
+            subtitle="Verified chronological company milestones will replace these structural placeholders once approved corporate records are supplied."
+          />
+          <div className="qa-grid">
+            {[
+              ['Stage 01', 'Heating Control Product Foundation', 'Core thermostat and heating control hardware architecture scoped for international HVAC markets.'],
+              ['Stage 02', 'Multi-Zone Hydronic & Boiler Expansion', 'Portfolio structured across gas boiler, underfloor, TRV, actuator and wiring centre categories.'],
+              ['Stage 03', 'Connected Smart Home Integration', 'WiFi, Zigbee and RF wireless control pathways structured for OEM/ODM partners.'],
+              ['Stage 04', 'Global B2B Documentation & Compliance', 'Ongoing verification of regional datasheets, wiring diagrams and certification files.'],
+            ].map(([stage, heading, text]) => (
+              <div className="qa-card" key={stage}>
+                <span className="setup-step-num" style={{ fontSize: 18 }}>
+                  {stage}
+                </span>
+                <div>
+                  <h3>{heading}</h3>
+                  <p>{text}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -156,6 +208,39 @@ export function AboutPageView() {
             <div style={{ aspectRatio: '16 / 10', overflow: 'hidden' }}>
               <DarkSectionBackdrop theme="tech" label="Certification showcase pending approved documents" />
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Partners / Global Channels Band (Reference: coop strip) */}
+      <section className="section-block">
+        <Container>
+          <SectionTitle
+            title="Target Global Partners"
+            subtitle="Serving B2B heating control channels worldwide (named partner logos published only with explicit written permission)."
+          />
+          <div className="culture-grid">
+            {[
+              'European HVAC Distributors',
+              'Smart Home Brand Partners',
+              'Underfloor Heating Contractors',
+              'Commercial Building Integrators',
+            ].map((channel) => (
+              <div
+                key={channel}
+                style={{
+                  background: '#f5f6f8',
+                  border: '1px solid #e8ecf0',
+                  padding: '26px 20px',
+                  textAlign: 'center',
+                  fontWeight: 700,
+                  fontSize: 14,
+                  color: '#272727',
+                }}
+              >
+                {channel}
+              </div>
+            ))}
           </div>
         </Container>
       </section>

@@ -28,6 +28,18 @@ The BEOK Controls B2B smart thermostat website has been rebuilt from the ground 
 - Visually inspected `odm-index-1440x900.png` and `odm-detail-1440x900.png` (`59px` desktop header, `60px` mobile header, `overflow: false`).
 - Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (**86/86** build outputs), and `pnpm test` (**30/30 passed** across `desktop`, `tablet`, and `mobile` covering all 76 routes).
 
+## Strict UI High-Fidelity Acceptance (Round 3 on `http://localhost:3000/`)
+- Audited Round 2 captures across desktop, tablet, and mobile against `https://smartthermostatmanufacturer.com/`, establishing a strict 10-item P0/P1/P2 visual diff checklist (`docs/visual-diff-report.md`).
+- Implemented all 10 code fixes without altering the core design system tokens:
+  - Converted `< 992px` Homepage `Tailor-Made Solution` & `Applications` and `< 768px` Homepage `News` to 1-slide interactive carousels with pagination dots (`390×844` home height converged from `8887px` to **`5999px`** vs reference `6059px`, **-0.99% delta**).
+  - Set desktop homepage top `.header` to pure `rgba(0, 0, 0, 0)` transparent (matching reference computed value exactly).
+  - Fixed `390×844` Product Detail `follow-nav-bar` clipping so all 4 tabs (`Overview`, `Specifications`, `Downloads`, `Inquiry`) fit cleanly.
+  - Made desktop `Tailor-Made Solution` cards reveal description + `Read More >` smoothly on hover/focus matching reference resting state.
+  - Added `Environment`, `Development History`, and `Target Global Partners` structural bands to `About Us` (`1440×900` height converged from `3195px` to **`4641px`** vs reference `4856px`, **-4.4% delta**; `1280×800` **`4331px`** vs `4320px`, **+0.25% delta**).
+  - Adjusted `1024×768` header height (`58px/48px`), mobile floating sidebar placement, 7-tab tablet/mobile symmetry, and contact inquiry padding.
+- Rebuilt (`pnpm build`: 86/86 outputs, 0 TS/ESLint errors), deployed fresh production server directly on `http://localhost:3000/`, captured all 56 views + 4 interactions in Round 3 (`reference/comparison/local-round-3/` & `geometry-round-3.json`), and passed **30 / 30 Playwright tests** across `desktop`, `tablet`, and `mobile`.
+
 ## Active Local Server & Remaining External Blockers
-- Fresh production server verified on `http://127.0.0.1:3005`.
+- Scoped Git commits created on branch `prod`, preserving all unrelated deletions outside the new implementation scope.
+- Fresh production server live on `http://localhost:3000/`.
 - Remaining items are strictly commercial inputs (approved photography, verified datasheets/PDFs/videos, live inquiry backend credentials, legal copy, human translations) documented in `docs/required-materials.md`.
