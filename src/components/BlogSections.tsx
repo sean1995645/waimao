@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
-import { Calendar, ChevronRight } from 'lucide-react';
+import { Calendar, ChevronRight, Clock } from 'lucide-react';
 import { articleCategories, articles } from '@/data/catalog';
 import type { ArticleRecord } from '@/types/content';
+import { B2BCtaBand } from './B2BSections';
 import { Container, Pagination, SectionTitle } from './LayoutPrimitives';
 
 export function ArticleCard({ article }: { article: ArticleRecord }) {
@@ -20,6 +21,7 @@ export function ArticleCard({ article }: { article: ArticleRecord }) {
         <h3>
           <Link href={`/blog/${article.slug}`}>{article.title}</Link>
         </h3>
+        <p className="article-card-excerpt">{article.excerpt}</p>
         <div className="article-meta">
           <Calendar size={14} aria-hidden="true" />
           <span>{article.date}</span>
@@ -86,23 +88,31 @@ export function BlogIndexView({
   currentPath: string;
 }) {
   return (
-    <Suspense
-      fallback={
-        <section className="section-block">
-          <Container>
-            <div className="inews-grid" style={{ marginTop: 28 }}>
-              {(activeCategory ? articles.filter((a) => a.category === activeCategory) : articles)
-                .slice(0, 6)
-                .map((art) => (
-                  <ArticleCard key={art.slug} article={art} />
-                ))}
-            </div>
-          </Container>
-        </section>
-      }
-    >
-      <BlogIndexInner activeCategory={activeCategory} currentPath={currentPath} />
-    </Suspense>
+    <>
+      <Suspense
+        fallback={
+          <section className="section-block">
+            <Container>
+              <div className="inews-grid" style={{ marginTop: 28 }}>
+                {(activeCategory ? articles.filter((a) => a.category === activeCategory) : articles)
+                  .slice(0, 6)
+                  .map((art) => (
+                    <ArticleCard key={art.slug} article={art} />
+                  ))}
+              </div>
+            </Container>
+          </section>
+        }
+      >
+        <BlogIndexInner activeCategory={activeCategory} currentPath={currentPath} />
+      </Suspense>
+
+      <B2BCtaBand
+        kicker="HVAC TECHNICAL SOURCING"
+        title="Have Specific Heating Interface or OEM Questions?"
+        description="Speak directly with our applications engineering team to align thermostat specifications with your regional boiler or underfloor systems."
+      />
+    </>
   );
 }
 
@@ -110,20 +120,29 @@ export function BlogDetailView({ article }: { article: ArticleRecord }) {
   const idx = articles.findIndex((a) => a.slug === article.slug);
   const nextArticle = articles[(idx + 1) % articles.length];
   const related = articles.filter((a) => a.slug !== article.slug).slice(0, 3);
+  const wordCount = article.body.join(' ').split(/\s+/).length;
+  const readMins = Math.max(2, Math.ceil(wordCount / 160));
 
   return (
     <>
       <section className="section-block">
         <Container>
           <article className="prose">
+            <span className="article-tag" style={{ marginBottom: 12 }}>
+              {article.category}
+            </span>
             <h2 style={{ marginTop: 0 }}>{article.title}</h2>
-            <div style={{ display: 'flex', gap: 16, fontSize: 13, color: '#666', paddingBottom: 18, borderBottom: '1px solid #e8ecf0', marginBottom: 24 }}>
-              <span>{article.date}</span>
-              <span>Heatnexis Editorial</span>
-              <span>{article.category}</span>
+            <div className="article-detail-meta">
+              <span>
+                <Calendar size={14} aria-hidden="true" /> {article.date}
+              </span>
+              <span>Heatnexis Engineering Editorial</span>
+              <span>
+                <Clock size={14} aria-hidden="true" /> {readMins} min technical read
+              </span>
             </div>
 
-            <div style={{ aspectRatio: '16 / 9', marginBottom: 28, overflow: 'hidden' }}>
+            <div className="article-detail-hero-img">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={article.image} alt={article.title} className="img-cover" />
             </div>
@@ -132,28 +151,36 @@ export function BlogDetailView({ article }: { article: ArticleRecord }) {
               <p key={i}>{para}</p>
             ))}
 
-            <h3>Prepare a Clear B2B Project Brief</h3>
-            <p>
-              Document the heating system type, power supply, installation back-box standard, wireless protocol needs and
-              required regional compliance documentation before finalizing samples or tooling.
-            </p>
-            <p style={{ marginTop: 14 }}>
-              <Link href="/contact" className="text-link">
-                <span>Planning a wholesale or OEM/ODM thermostat order? Request a B2B Quote</span>
-                <ChevronRight size={15} aria-hidden="true" />
-              </Link>
-            </p>
+            <div className="article-inline-cta-box">
+              <span className="mono-label" style={{ color: 'var(--color-primary)' }}>
+                B2B PROJECT BRIEF CHECKLIST
+              </span>
+              <h3 style={{ marginTop: 6 }}>Prepare a Clear B2B Project Brief</h3>
+              <p>
+                Document the heating system type, power supply, installation back-box standard, wireless protocol needs
+                and required regional compliance documentation before finalizing samples or tooling.
+              </p>
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 14 }}>
+                <Link href="/contact#inquiry" className="btn-primary">
+                  <span>Request a B2B Quote</span>
+                  <ChevronRight size={15} aria-hidden="true" />
+                </Link>
+                <Link href="/products" className="btn-outline">
+                  <span>Browse Thermostat Lineup</span>
+                </Link>
+              </div>
+            </div>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 28, paddingTop: 20, borderTop: '1px solid #e8ecf0' }}>
-              <strong style={{ fontSize: 13, marginRight: 6 }}>Tags:</strong>
+            <div className="article-tags-row">
+              <strong>Tags:</strong>
               {article.tags.map((tag) => (
-                <span key={tag} style={{ fontSize: 12.5, padding: '4px 12px', background: '#f5f6f8', border: '1px solid #e8ecf0' }}>
+                <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="article-tag-pill">
                   {tag}
-                </span>
+                </Link>
               ))}
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16, marginTop: 28, paddingTop: 20, borderTop: '1px solid #e8ecf0' }}>
+            <div className="article-detail-nav">
               <Link href={`/blog/${nextArticle.slug}`} className="text-link">
                 <span>Next: {nextArticle.title}</span>
                 <ChevronRight size={15} aria-hidden="true" />

@@ -22,6 +22,8 @@ import {
 } from 'lucide-react';
 import { articles, categories, products, services, solutions } from '@/data/catalog';
 import type { VisualVariant } from '@/types/content';
+import { B2BCollaborationMatrix, B2BCtaBand } from './B2BSections';
+import { BackgroundVideo } from './BackgroundVideo';
 import { HomeHeroBanner } from './HeroBanner';
 import { Container, Reveal, SectionTitle } from './LayoutPrimitives';
 
@@ -175,7 +177,9 @@ export function HomePageView() {
                 />
                 <div className="iproducts-showcase-scrim" aria-hidden="true" />
                 <div className="iproducts-showcase-head">
-                  <span className="iproducts-showcase-eyebrow">{prod.eyebrow}</span>
+                  <span className="iproducts-showcase-eyebrow">
+                    {prod.reference} · {prod.eyebrow}
+                  </span>
                   <h3>{prod.name}</h3>
                   <span className="iproducts-showcase-link">
                     <span>Learn More</span>
@@ -194,6 +198,9 @@ export function HomePageView() {
           </div>
         </Reveal>
       </section>
+
+      {/* Section 2B: 3-Tier B2B Collaboration Matrix (Wholesale / OEM / ODM) */}
+      <B2BCollaborationMatrix />
 
       {/* Section 3: Applications (content1600 3x2 Visual Overlay Grid) */}
       <section className="section-block" aria-labelledby="home-applications-heading">
@@ -253,8 +260,7 @@ export function HomePageView() {
 
           <div className="iaboutus-band">
             <div className="iaboutus-bg" aria-hidden="true">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/factory/home-about.jpg" alt="" className="img-cover" loading="lazy" />
+              <BackgroundVideo videoSrc="/videos/bg/factory-smt.mp4" posterSrc="/images/factory/home-about.jpg" />
             </div>
             <div className="iaboutus-photo-scrim" aria-hidden="true" />
 
@@ -354,30 +360,7 @@ export function HomePageView() {
       </section>
 
       {/* Section 6: Pre-Footer B2B Conversion Callout Band */}
-      <section className="cta-band" aria-labelledby="home-cta-heading">
-        <Container>
-          <div className="cta-band-inner">
-            <div className="cta-band-copy">
-              <span className="detail-banner-kicker">B2B SOURCING &amp; OEM / ODM DESK</span>
-              <h2 id="home-cta-heading">Ready to Source or Customize Your Next Thermostat Line?</h2>
-              <p>
-                Share your heating system type, target market standards and project volume for a structured B2B
-                quotation, sample evaluation or custom ODM engineering brief.
-              </p>
-            </div>
-            <div className="cta-band-actions">
-              <Link href="/contact" className="btn-primary">
-                <span>Request B2B Quote</span>
-                <ChevronRight size={15} aria-hidden="true" />
-              </Link>
-              <Link href="/tailor-made-solution" className="btn-ghost-white">
-                <span>Explore OEM/ODM</span>
-                <ChevronRight size={15} aria-hidden="true" />
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <B2BCtaBand />
     </>
   );
 }

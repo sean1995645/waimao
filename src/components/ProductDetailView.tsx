@@ -4,10 +4,14 @@ import Link from 'next/link';
 import { useRef, useState } from 'react';
 import {
   CalendarClock,
+  Check,
   ChevronRight,
   Download,
+  GitCompareArrows,
   Lock,
+  MessageSquare,
   Mic,
+  Plus,
   ShieldCheck,
   Smartphone,
   Snowflake,
@@ -16,8 +20,10 @@ import {
   X,
   ZoomIn,
 } from 'lucide-react';
+import { site } from '@/config/site';
 import { products } from '@/data/catalog';
 import type { ProductRecord } from '@/types/content';
+import { useB2BShortlist } from './B2BShortlist';
 import { InquiryForm } from './InquiryForm';
 import { Container, SectionTitle } from './LayoutPrimitives';
 import { ProductCard } from './ProductsCatalog';
@@ -134,14 +140,17 @@ export function ProductDownload({ productName }: { productName?: string }) {
   return (
     <div className="download-rows">
       {[
-        { title: `${productName || 'Product'} — Technical Datasheet (PDF)`, desc: 'Full electrical specs & dimensions supplied via B2B desk' },
-        { title: `${productName || 'Product'} — Installation & Wiring Manual (PDF)`, desc: 'Model-matched wiring schematic & installer guide' },
-        { title: `${productName || 'Product'} — Compliance & Declaration Pack`, desc: 'Target-market compliance documents supplied on request' },
+        { badge: 'DATASHEET', title: `${productName || 'Product'} — Technical Datasheet (PDF)`, desc: 'Full electrical specs & dimensions supplied via B2B desk' },
+        { badge: 'WIRING GUIDE', title: `${productName || 'Product'} — Installation & Wiring Manual (PDF)`, desc: 'Model-matched wiring schematic & installer guide' },
+        { badge: 'COMPLIANCE', title: `${productName || 'Product'} — Compliance & Declaration Pack`, desc: 'Target-market compliance documents supplied on request' },
       ].map((doc) => (
         <div className="download-row" key={doc.title}>
-          <h3>{doc.title}</h3>
+          <div>
+            <span className="download-type-badge">{doc.badge}</span>
+            <h3>{doc.title}</h3>
+          </div>
           <p>{doc.desc}</p>
-          <Link href="/contact" className="btn-dark">
+          <Link href="/contact#inquiry" className="btn-dark">
             <Download size={14} aria-hidden="true" />
             <span>Request File</span>
           </Link>
@@ -155,6 +164,13 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
   const [activeTab, setActiveTab] = useState<'Overview' | 'Specifications' | 'Downloads'>('Overview');
   const tabs: ('Overview' | 'Specifications' | 'Downloads')[] = ['Overview', 'Specifications', 'Downloads'];
   const related = products.filter((x) => x.slug !== product.slug).slice(0, 3);
+  const { isShortlisted, isCompared, toggleShortlist, toggleCompare } = useB2BShortlist();
+  const inRfq = isShortlisted(product.slug);
+  const inCompare = isCompared(product.slug);
+
+  const whatsappConsultUrl = `${site.contact.whatsappUrl}?text=${encodeURIComponent(
+    `Hello Heatnexis B2B Desk, I would like specs/pricing for ${product.name} (${product.reference}).`,
+  )}`;
 
   const featureIcons = [
     { icon: Smartphone, label: 'Mobile App Control' },
@@ -169,23 +185,76 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
 
   return (
     <>
-      {/* Product Detail Banner (Measured 412px @ 1440, 2-col Intro + Gallery) */}
+      {/* Product Detail Banner */}
       <section className="product-detail-hero">
         <Container>
           <div className="product-intro">
             <div className="product-intro-copy">
-              <span className="article-tag" style={{ marginBottom: 12 }}>{product.reference} · {product.application}</span>
+              <span className="article-tag" style={{ marginBottom: 12 }}>
+                {product.reference} · {product.application}
+              </span>
               <h1>{product.name}</h1>
               <p>{product.description}</p>
+
+              <div className="product-specifier-strip" aria-label="B2B engineering summary">
+                <div className="product-specifier-tile">
+                  <span className="mono-label">SERIES CODE</span>
+                  <strong>{product.reference}</strong>
+                </div>
+                <div className="product-specifier-tile">
+                  <span className="mono-label">APPLICATION</span>
+                  <strong>{product.application}</strong>
+                </div>
+                <div className="product-specifier-tile">
+                  <span className="mono-label">MOUNTING</span>
+                  <strong>EU / UK / US Options</strong>
+                </div>
+                <div className="product-specifier-tile">
+                  <span className="mono-label">CUSTOMIZATION</span>
+                  <strong>Logo · CMF · PCB · App</strong>
+                </div>
+              </div>
+
               <p className="notice-box">{product.status}</p>
+
               <div className="product-intro-actions">
+                <a href="#inquiry" className="btn-primary">
+                  <span>Request B2B Quote</span>
+                  <ChevronRight size={14} aria-hidden="true" />
+                </a>
                 <a href="#inquiry" className="btn-outline">
                   <span>Request Sample</span>
                   <ChevronRight size={14} aria-hidden="true" />
                 </a>
-                <a href="#inquiry" className="btn-primary">
-                  <span>Request B2B Quote</span>
-                  <ChevronRight size={14} aria-hidden="true" />
+                <button
+                  type="button"
+                  className={`btn-outline ${inRfq ? 'is-shortlisted-btn' : ''}`}
+                  aria-pressed={inRfq}
+                  onClick={() => toggleShortlist(product.slug)}
+                >
+                  {inRfq ? <Check size={15} aria-hidden="true" /> : <Plus size={15} aria-hidden="true" />}
+                  <span>{inRfq ? 'In RFQ List' : 'Add to RFQ List'}</span>
+                </button>
+                <button
+                  type="button"
+                  className={`btn-outline ${inCompare ? 'is-compared-btn' : ''}`}
+                  aria-pressed={inCompare}
+                  onClick={() => toggleCompare(product.slug)}
+                >
+                  <GitCompareArrows size={15} aria-hidden="true" />
+                  <span>{inCompare ? 'Comparing' : 'Compare'}</span>
+                </button>
+              </div>
+
+              <div className="product-direct-desk">
+                <a
+                  href={whatsappConsultUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-link"
+                >
+                  <MessageSquare size={15} aria-hidden="true" />
+                  <span>Instant WhatsApp Consult with Engineering Desk ({site.contact.whatsapp})</span>
                 </a>
               </div>
             </div>
@@ -195,37 +264,47 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
         </Container>
       </section>
 
-      {/* Sticky Follow Nav (Measured 52px bar) */}
+      {/* Sticky Follow Nav */}
       <div className="follow-nav-bar">
         <Container>
-          <div className="follow-nav-inner" role="tablist" aria-label="Product information">
-            {tabs.map((tab) => (
-              <button
-                type="button"
-                key={tab}
-                role="tab"
-                id={`tab-${tab}`}
-                className="follow-nav-tab"
-                aria-selected={activeTab === tab}
-                aria-controls="product-panel"
-                tabIndex={activeTab === tab ? 0 : -1}
-                onKeyDown={(e) => {
-                  const idx = tabs.indexOf(tab);
-                  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    const nextTab = tabs[(idx + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
-                    setActiveTab(nextTab);
-                    document.getElementById(`tab-${nextTab}`)?.focus();
-                  }
-                }}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab}
-              </button>
-            ))}
-            <a href="#inquiry" className="follow-nav-tab">
-              Inquiry
-            </a>
+          <div className="follow-nav-row">
+            <div className="follow-nav-inner" role="tablist" aria-label="Product information">
+              {tabs.map((tab) => (
+                <button
+                  type="button"
+                  key={tab}
+                  role="tab"
+                  id={`tab-${tab}`}
+                  className="follow-nav-tab"
+                  aria-selected={activeTab === tab}
+                  aria-controls="product-panel"
+                  tabIndex={activeTab === tab ? 0 : -1}
+                  onKeyDown={(e) => {
+                    const idx = tabs.indexOf(tab);
+                    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                      e.preventDefault();
+                      const nextTab = tabs[(idx + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+                      setActiveTab(nextTab);
+                      document.getElementById(`tab-${nextTab}`)?.focus();
+                    }
+                  }}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </button>
+              ))}
+              <a href="#inquiry" className="follow-nav-tab">
+                Inquiry
+              </a>
+            </div>
+
+            <div className="follow-nav-cta">
+              <span className="mono-label">{product.reference}</span>
+              <a href="#inquiry" className="header-cta-btn">
+                <span>Get Quote</span>
+                <ChevronRight size={13} aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </Container>
       </div>
@@ -320,7 +399,7 @@ export function ProductDetailView({ product }: { product: ProductRecord }) {
       <section id="inquiry" className="inquiry-backdrop-band">
         <Container>
           <div className="inquiry-card">
-            <InquiryForm product={product.name} title="Product Inquiry" />
+            <InquiryForm product={`${product.name} (${product.reference})`} title="Product Inquiry" />
           </div>
         </Container>
       </section>

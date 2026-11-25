@@ -22,6 +22,8 @@ const MIME = {
   '.ico': 'image/x-icon',
   '.woff2': 'font/woff2',
   '.woff': 'font/woff',
+  '.mp4': 'video/mp4',
+  '.webm': 'video/webm',
 };
 
 function resolveFile(urlPath) {
@@ -63,7 +65,33 @@ const server = http.createServer((req, res) => {
   const file = resolveFile(url.pathname);
   if (file) {
     const ext = path.extname(file).toLowerCase();
-    res.writeHead(200, { 'content-type': MIME[ext] || 'application/octet-stream' });
+    const contentType = MIME[ext] || 'application/octet-stream';
+    const stat = fs.statSync(file);
+    const range = req.headers.range;
+
+    if (range) {
+      const match = /bytes=(\d*)-(\d*)/.exec(range);
+      if (match) {
+        const start = match[1] ? Number(match[1]) : 0;
+        const end = match[2] ? Math.min(Number(match[2]), stat.size - 1) : stat.size - 1;
+        if (start >= 0 && start <= end && start < stat.size) {
+          res.writeHead(206, {
+            'Content-Range': `bytes ${start}-${end}/${stat.size}`,
+            'Accept-Ranges': 'bytes',
+            'Content-Length': String(end - start + 1),
+            'Content-Type': contentType,
+          });
+          fs.createReadStream(file, { start, end }).pipe(res);
+          return;
+        }
+      }
+    }
+
+    res.writeHead(200, {
+      'Accept-Ranges': 'bytes',
+      'Content-Length': String(stat.size),
+      'Content-Type': contentType,
+    });
     fs.createReadStream(file).pipe(res);
     return;
   }

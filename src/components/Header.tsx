@@ -3,8 +3,10 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { ChevronDown, ChevronRight, Globe, Menu, Search, X } from 'lucide-react';
-import { categories, navigation, products, services, solutions } from '@/data/catalog';
+import { ChevronDown, ChevronRight, Globe, Menu, MessageSquare, Search, X } from 'lucide-react';
+import { site } from '@/config/site';
+import { categories, navigation, odmCases, products, services, solutions } from '@/data/catalog';
+import { HeaderShortlistBadge } from './B2BShortlist';
 
 export function LanguageSwitcher() {
   return (
@@ -29,6 +31,7 @@ export function Header() {
   const [mobile, setMobile] = useState(false);
   const [desktopDrawer, setDesktopDrawer] = useState(false);
   const [search, setSearch] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const [open, setOpen] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
@@ -84,6 +87,20 @@ export function Header() {
 
   const catProducts = products.filter((p) => p.category === activeProdCat);
   const previewProduct = catProducts.find((p) => p.slug === activeProdSlug) || catProducts[0] || products[0];
+
+  const trimmedQuery = searchQuery.trim().toLowerCase();
+  const instantProducts = trimmedQuery
+    ? products
+        .filter((p) =>
+          `${p.name} ${p.reference} ${p.application} ${p.highlights.join(' ')}`.toLowerCase().includes(trimmedQuery),
+        )
+        .slice(0, 4)
+    : [];
+  const instantOdm = trimmedQuery
+    ? odmCases.filter((c) => `${c.title} ${c.subtitle} ${c.serviceName}`.toLowerCase().includes(trimmedQuery)).slice(0, 2)
+    : [];
+
+  const quickSearchKeywords = ['Gas Boiler', 'Underfloor', 'Radiator Valve', 'Wiring Centre', 'Modbus', 'OEM/ODM'];
 
   return (
     <>
@@ -242,6 +259,9 @@ export function Header() {
                         </div>
 
                         <div className="mega-col-divider mega-preview">
+                          <span className="mono-label" style={{ color: 'var(--color-primary)' }}>
+                            {previewProduct.reference}
+                          </span>
                           <p className="mega-preview-title">{previewProduct.name}</p>
                           <p className="mega-preview-desc">{previewProduct.highlights.join(' · ')}</p>
                           <div className="mega-preview-visual" style={{ padding: 10 }}>
@@ -315,13 +335,33 @@ export function Header() {
                   </div>
                 );
               })}
+
+              <div className="mobile-drawer-cta">
+                <Link href="/contact#inquiry" className="btn-primary" style={{ width: '100%' }} onClick={closeNavigation}>
+                  <span>Request B2B Quote</span>
+                  <ChevronRight size={15} aria-hidden="true" />
+                </Link>
+                <a
+                  href={site.contact.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline"
+                  style={{ width: '100%' }}
+                  onClick={closeNavigation}
+                >
+                  <MessageSquare size={15} aria-hidden="true" />
+                  <span>WhatsApp: {site.contact.whatsapp}</span>
+                </a>
+              </div>
             </nav>
 
             <div className="header-tools">
-              <Link href="/contact" className="header-cta-btn" onClick={closeNavigation}>
+              <Link href="/contact#inquiry" className="header-cta-btn" onClick={closeNavigation}>
                 <span>Get Quote</span>
                 <ChevronRight size={14} aria-hidden="true" />
               </Link>
+
+              <HeaderShortlistBadge onNavigate={closeNavigation} />
 
               <button
                 type="button"
@@ -387,7 +427,9 @@ export function Header() {
                   id="header-search"
                   name="q"
                   type="search"
-                  placeholder="Search thermostats, solutions, OEM services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search thermostats, SKU codes (HN-GB), solutions, OEM services..."
                   required
                 />
                 <button className="search-submit-btn" type="submit" aria-label="Search">
@@ -402,6 +444,63 @@ export function Header() {
                   <X size={18} />
                 </button>
               </div>
+
+              <div className="search-quick-bar">
+                <span className="mono-label">POPULAR B2B:</span>
+                {quickSearchKeywords.map((kw) => (
+                  <Link
+                    key={kw}
+                    href={`/search?q=${encodeURIComponent(kw)}`}
+                    className="search-quick-chip"
+                    onClick={() => setSearch(false)}
+                  >
+                    {kw}
+                  </Link>
+                ))}
+              </div>
+
+              {trimmedQuery && (instantProducts.length > 0 || instantOdm.length > 0) && (
+                <div className="search-live-results" aria-label="Instant search matches">
+                  {instantProducts.map((prod) => (
+                    <Link
+                      key={prod.slug}
+                      href={`/products/${prod.category}/${prod.slug}`}
+                      className="search-live-item"
+                      onClick={() => setSearch(false)}
+                    >
+                      <span className="search-live-thumb">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={prod.image} alt="" width={36} height={36} />
+                      </span>
+                      <div>
+                        <strong>{prod.name}</strong>
+                        <span>
+                          {prod.reference} · {prod.application}
+                        </span>
+                      </div>
+                      <ChevronRight size={14} aria-hidden="true" />
+                    </Link>
+                  ))}
+                  {instantOdm.map((odm) => (
+                    <Link
+                      key={odm.slug}
+                      href={`/odm/${odm.slug}`}
+                      className="search-live-item"
+                      onClick={() => setSearch(false)}
+                    >
+                      <span className="search-live-thumb">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={odm.image} alt="" width={36} height={36} />
+                      </span>
+                      <div>
+                        <strong>{odm.title}</strong>
+                        <span>ODM Case · {odm.serviceName}</span>
+                      </div>
+                      <ChevronRight size={14} aria-hidden="true" />
+                    </Link>
+                  ))}
+                </div>
+              )}
             </form>
           </div>
         )}

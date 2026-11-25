@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Building2, ChevronRight, Flame, Grid3X3, Home, Leaf, Wrench } from 'lucide-react';
 import { products, solutions } from '@/data/catalog';
 import type { SolutionRecord } from '@/types/content';
+import { B2BCtaBand } from './B2BSections';
 import { InquiryForm } from './InquiryForm';
 import { Container, SectionTitle } from './LayoutPrimitives';
 import { ProductCard } from './ProductsCatalog';
@@ -25,29 +26,43 @@ function SolutionIcon({ icon }: { icon: SolutionRecord['icon'] }) {
 
 export function SolutionsIndexView() {
   return (
-    <section className="section-block">
-      <Container>
-        {solutions.map((sol, idx) => (
-          <div className={`solution-alt-row ${idx % 2 === 1 ? 'is-reversed' : ''}`} key={sol.slug}>
-            <Link href={`/solutions/${sol.slug}`} className="solution-alt-media">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={sol.image} alt={sol.name} className="img-cover" loading="lazy" />
-            </Link>
-            <div className="solution-alt-copy">
-              <SolutionIcon icon={sol.icon} />
-              <h2>
-                <Link href={`/solutions/${sol.slug}`}>{sol.name}</Link>
-              </h2>
-              <p>{sol.summary}</p>
-              <Link href={`/solutions/${sol.slug}`} className="text-link">
-                <span>View More</span>
-                <ChevronRight size={15} aria-hidden="true" />
+    <>
+      <section className="section-block">
+        <Container>
+          {solutions.map((sol, idx) => (
+            <div className={`solution-alt-row ${idx % 2 === 1 ? 'is-reversed' : ''}`} key={sol.slug}>
+              <Link href={`/solutions/${sol.slug}`} className="solution-alt-media">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={sol.image} alt={sol.name} className="img-cover" loading="lazy" />
               </Link>
+              <div className="solution-alt-copy">
+                <SolutionIcon icon={sol.icon} />
+                <h2>
+                  <Link href={`/solutions/${sol.slug}`}>{sol.name}</Link>
+                </h2>
+                <p>{sol.summary}</p>
+                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
+                  <Link href={`/solutions/${sol.slug}`} className="btn-outline" style={{ minHeight: 40, padding: '8px 18px' }}>
+                    <span>View System Guide</span>
+                    <ChevronRight size={15} aria-hidden="true" />
+                  </Link>
+                  <Link href="/contact#inquiry" className="text-link">
+                    <span>Request Solution Quote</span>
+                    <ChevronRight size={14} aria-hidden="true" />
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
-      </Container>
-    </section>
+          ))}
+        </Container>
+      </section>
+
+      <B2BCtaBand
+        kicker="APPLICATIONS ENGINEERING"
+        title="Planning a Boiler, Underfloor or Multi-Zone Heating Project?"
+        description="Send our applications engineering desk your heat source, manifold layout and zone count for matched Heatnexis product recommendations."
+      />
+    </>
   );
 }
 

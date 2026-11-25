@@ -17,6 +17,7 @@ import {
   Target,
   Wrench,
 } from 'lucide-react';
+import { B2BCtaBand } from './B2BSections';
 import { InquiryForm } from './InquiryForm';
 import { Container, SectionTitle } from './LayoutPrimitives';
 
@@ -261,6 +262,8 @@ export function AboutPageView() {
           </div>
         </Container>
       </section>
+
+      <B2BCtaBand />
     </>
   );
 }
@@ -397,6 +400,8 @@ export function AdvantagesPageView() {
           </div>
         </Container>
       </section>
+
+      <B2BCtaBand />
     </>
   );
 }
@@ -445,10 +450,16 @@ export function JoinUsPageView() {
         <Container>
           <div className="notice-box" style={{ maxWidth: 820, marginInline: 'auto' }}>
             Interested in regional distribution partnerships, OEM/ODM agency collaboration, or future engineering roles?
-            Reach our B2B desk via <Link href="/contact" className="text-link">Contact Us →</Link>
+            Reach our B2B desk via <Link href="/contact#inquiry" className="text-link">Contact Us →</Link>
           </div>
         </Container>
       </section>
+
+      <B2BCtaBand
+        kicker="GLOBAL CHANNEL PARTNERSHIPS"
+        title="Become an Authorized Heatnexis Distributor or OEM Partner"
+        description="Connect with our Shanghai international B2B desk to discuss regional wholesale territories, sample evaluation or private-label programs."
+      />
     </>
   );
 }

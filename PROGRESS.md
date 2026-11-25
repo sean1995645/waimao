@@ -92,6 +92,21 @@ The BEOK Controls B2B smart thermostat website has been rebuilt from the ground 
 - Added local Cloudflare-parity preview server `scripts/serve-out.mjs` (`pnpm start`) and verified `pnpm build` (`88/88` static outputs), `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), and **30 / 30 Playwright tests** directly against `out/`.
 - Committed and pushed to `origin/prod` to trigger the Cloudflare Workers build.
 
+## B2B Specifier & Conversion Optimization Suite (`ui-ux-pro-max`)
+- Benchmarked global industrial HVAC B2B UX patterns and executed `ui-ux-pro-max` checks to upgrade buyer discovery, technical evaluation, and RFQ handoff across all 76 routes without fabricating credentials or altering truthful HTTP 503 inquiry behavior:
+  - **Multi-Model RFQ Shortlist & Side-by-Side Comparison (`src/components/B2BShortlist.tsx`)**: Buyers can shortlist up to 12 models (`+ RFQ`) and compare up to 4 models side-by-side (`Compare`) in a modal matrix with a **Highlight Differences** toggle, header counter badge, and floating sourcing dock.
+  - **3-Tier B2B Collaboration Matrix (`src/components/B2BSections.tsx`)**: Added transparent `Wholesale & Distribution`, `OEM Brand Customization`, and `Custom ODM Development` comparison cards on Homepage and `/tailor-made-solution`.
+  - **Parametric Catalog & Specifier Detail (`ProductsCatalog.tsx`, `ProductDetailView.tsx`)**: Added SKU badges on cards, Form-Factor interface filter chips (`Touch Panel`, `Rotary Dial`, `Radiator TRV`, `Actuator & Hub`), category model counts, above-the-fold 4-tile Specifier Summary Strip, WhatsApp engineering consult link, and sticky nav quick-quote CTA.
+  - **4-Channel Truthful RFQ Draft Handoff (`InquiryForm.tsx`)**: Auto-attaches shortlisted models + URL tier presets, adds `Order Scope` & `Target Regional Standard` selectors, keeps truthful HTTP 503 notice, and adds 1-click **Send Draft via WhatsApp**, **Open in Email Client**, **Copy RFQ Brief**, and **Download `.txt`**.
+  - **Predictive SKU Search & Universal Conversion (`Header.tsx`, `SearchView.tsx`, `SupportSections.tsx`, `BlogSections.tsx`)**: Added instant product/ODM search preview in Header, expanded `/search` across SKUs/FAQs/Downloads with anchor jump IDs, added mobile drawer B2B CTA buttons, and added `<B2BCtaBand />` across all inner hub pages.
+- Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (`88/88` static outputs), and **33 / 33 Playwright E2E + HTTP tests** across `desktop`, `tablet`, and `mobile`.
+
+## Seamless Looping Background Videos (`public/videos/bg/*.mp4`)
+- Evaluated Google Gemini Veo (`NOT_FOUND`, retired 2026-10-22) and Gemini Omni Interactions API (`gemini-omni-1.2-flash` / `1.1-flash` / `flash-preview`, returned `RESOURCE_EXHAUSTED` due to project billing/quota limits); per user choice, synthesized **5 seamless-looping 1280×720 30fps silent H.264 MP4 background videos** directly from the existing HD reference photos using vectorized 2.5D depth parallax & scene-matched optical lighting (`hero-thermostats.mp4`, `hero-rd-lab.mp4`, `hero-smart-home.mp4`, `factory-smt.mp4`, `engineering-pcb.mp4`, `622 KB`–`1.0 MB` each, `7.0s`).
+- Created `<BackgroundVideo />` (`src/components/BackgroundVideo.tsx`) with layered static `<picture>` poster + `<video autoPlay muted loop playsInline>`, CSS `prefers-reduced-motion` fallback (`src/styles/globals.css`), and Pause/Play control in `HomeHeroBanner` (`HeroBanner.tsx`).
+- Wired background videos across Homepage Hero slides (`src/data/catalog.ts`), Homepage Company Introduction factory band (`HomeSections.tsx`), and all Inner Page Hero Banners (`HeroBanner.tsx`), and upgraded `scripts/serve-out.mjs` with `video/mp4` MIME + HTTP `206 Partial Content` byte-range streaming.
+- Verified `pnpm typecheck` (0 errors), `pnpm lint` (0 warnings), `pnpm build` (`88/88` outputs with `out/videos/bg/*.mp4`), live HTTP `206` Range responses, and **36 / 36 Playwright E2E + HTTP tests** across `desktop`, `tablet`, and `mobile`.
+
 ## Active Local Server & Remaining External Blockers
 - Scoped Git commits created on branch `prod`, preserving all unrelated deletions outside the new implementation scope.
 - Fresh production server live on `http://localhost:3000/`.

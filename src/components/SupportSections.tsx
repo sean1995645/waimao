@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 import { ChevronDown, ChevronRight, Download, FileText, HelpCircle, Play, ShieldCheck, Video, X } from 'lucide-react';
 import { categories, downloads, faqs, videos } from '@/data/catalog';
 import type { VideoItem } from '@/types/content';
+import { B2BCtaBand } from './B2BSections';
 import { Container, SectionTitle } from './LayoutPrimitives';
 
 export function FAQAccordion({ limit, showTabs = true }: { limit?: number; showTabs?: boolean }) {
@@ -35,20 +36,23 @@ export function FAQAccordion({ limit, showTabs = true }: { limit?: number; showT
       )}
 
       <div className="faq-list">
-        {items.map((item) => (
-          <details key={item.question}>
-            <summary>
-              <span className="faq-q-left">
-                <span className="faq-q-badge" aria-hidden="true">
-                  Q
+        {items.map((item) => {
+          const globalIndex = faqs.indexOf(item) + 1;
+          return (
+            <details key={item.question} id={`faq-${globalIndex}`}>
+              <summary>
+                <span className="faq-q-left">
+                  <span className="faq-q-badge" aria-hidden="true">
+                    Q
+                  </span>
+                  <span>{item.question}</span>
                 </span>
-                <span>{item.question}</span>
-              </span>
-              <ChevronDown size={18} className="faq-chevron" aria-hidden="true" />
-            </summary>
-            <p className="faq-answer">{item.answer}</p>
-          </details>
-        ))}
+                <ChevronDown size={18} className="faq-chevron" aria-hidden="true" />
+              </summary>
+              <p className="faq-answer">{item.answer}</p>
+            </details>
+          );
+        })}
       </div>
     </div>
   );
@@ -63,54 +67,68 @@ export function DownloadsDirectory() {
   );
 
   return (
-    <section className="section-block">
-      <Container>
-        <div style={{ marginBottom: 24 }}>
-          <h2 style={{ margin: '0 0 8px' }}>Technical Documentation &amp; Downloads</h2>
-          <p style={{ margin: 0, color: '#666' }}>
-            Filter by Heatnexis product category and document type to request model-matched user manuals, technical
-            datasheets and wiring schematics from our B2B engineering desk.
-          </p>
-        </div>
+    <>
+      <section className="section-block">
+        <Container>
+          <div style={{ marginBottom: 24 }}>
+            <span className="section-eyebrow">ENGINEERING SUBMITTALS</span>
+            <h2 style={{ margin: '0 0 8px' }}>Technical Documentation &amp; Downloads</h2>
+            <p style={{ margin: 0, color: 'var(--color-text-muted)' }}>
+              Filter by Heatnexis product category and document type to request model-matched user manuals, technical
+              datasheets and wiring schematics from our B2B engineering desk.
+            </p>
+          </div>
 
-        <div className="download-filters">
-          <label className="sr-only" htmlFor="dl-cat">
-            Filter by product category
-          </label>
-          <select id="dl-cat" value={catFilter} onChange={(e) => setCatFilter(e.target.value)}>
-            <option value="all">All Product Categories</option>
-            {categories.map((c) => (
-              <option key={c.slug} value={c.name}>
-                {c.name}
-              </option>
+          <div className="download-filters">
+            <label className="sr-only" htmlFor="dl-cat">
+              Filter by product category
+            </label>
+            <select id="dl-cat" value={catFilter} onChange={(e) => setCatFilter(e.target.value)}>
+              <option value="all">All Product Categories</option>
+              {categories.map((c) => (
+                <option key={c.slug} value={c.name}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
+
+            <label className="sr-only" htmlFor="dl-type">
+              Filter by document type
+            </label>
+            <select id="dl-type" value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
+              <option value="all">All Document Types</option>
+              <option value="Manual">User Manual</option>
+              <option value="Datasheet">Technical Datasheet</option>
+              <option value="Wiring Guide">Wiring Guide</option>
+            </select>
+          </div>
+
+          <div className="download-rows">
+            {filtered.map((item) => (
+              <div className="download-row" key={item.id} id={`doc-${item.id}`}>
+                <div>
+                  <span className="download-type-badge">{item.type}</span>
+                  <h3>{item.title}</h3>
+                </div>
+                <p>
+                  <strong>{item.category}</strong> · {item.languages}
+                </p>
+                <Link href="/contact?type=sample#inquiry" className="btn-dark">
+                  <span>Request Verified PDF</span>
+                  <Download size={14} aria-hidden="true" />
+                </Link>
+              </div>
             ))}
-          </select>
+          </div>
+        </Container>
+      </section>
 
-          <label className="sr-only" htmlFor="dl-type">
-            Filter by document type
-          </label>
-          <select id="dl-type" value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
-            <option value="all">All Document Types</option>
-            <option value="Manual">User Manual</option>
-            <option value="Datasheet">Technical Datasheet</option>
-            <option value="Wiring Guide">Wiring Guide</option>
-          </select>
-        </div>
-
-        <div className="download-rows">
-          {filtered.map((item) => (
-            <div className="download-row" key={item.id}>
-              <h3>{item.title}</h3>
-              <p>{item.languages}</p>
-              <Link href="/contact" className="btn-dark">
-                <span>Request Verified PDF</span>
-                <Download size={14} aria-hidden="true" />
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
+      <B2BCtaBand
+        kicker="TECHNICAL DOCUMENTATION DESK"
+        title="Need Regional Compliance Packs, CAD Drawings or OEM Manuals?"
+        description="Contact our engineering support desk with your target market and model series for verified submittal documentation."
+      />
+    </>
   );
 }
 
@@ -126,88 +144,93 @@ export function VideosLibrary() {
       : [activeTab];
 
   return (
-    <section className="section-block">
-      <Container>
-        <SectionTitle
-          title="Videos"
-          subtitle="Product hardware overviews, installation wiring guides and OEM/ODM workflow walkthroughs for B2B partners."
-        />
+    <>
+      <section className="section-block">
+        <Container>
+          <SectionTitle
+            eyebrow="VIDEO WALKTHROUGHS"
+            title="Videos"
+            subtitle="Product hardware overviews, installation wiring guides and OEM/ODM workflow walkthroughs for B2B partners."
+          />
 
-        <div className="pill-tab-bar" role="group" aria-label="Video categories">
-          {tabs.map((tab) => (
-            <button
-              type="button"
-              key={tab}
-              className="pill-tab-btn"
-              aria-pressed={activeTab === tab}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+          <div className="pill-tab-bar" role="group" aria-label="Video categories">
+            {tabs.map((tab) => (
+              <button
+                type="button"
+                key={tab}
+                className="pill-tab-btn"
+                aria-pressed={activeTab === tab}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
 
-        {groups.map((group) => {
-          const items = videos.filter((v) => v.category === group);
-          return (
-            <div key={group} style={{ marginTop: 36 }}>
-              <h3 style={{ fontSize: 20, margin: '0 0 18px' }}>{group}</h3>
-              <div className="video-grid">
-                {items.map((vid) => (
-                  <button
-                    type="button"
-                    key={vid.id}
-                    className="video-card"
-                    onClick={() => {
-                      setSelectedVideo(vid);
-                      dialogRef.current?.showModal();
-                    }}
-                  >
-                    <div className="video-thumb">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={vid.image} alt={vid.title} className="img-cover" loading="lazy" />
-                      <span className="video-play-badge" aria-hidden="true">
-                        <Play size={18} />
-                      </span>
-                    </div>
-                    <div className="video-card-body">
-                      <h3>{vid.title}</h3>
-                      <span>{vid.duration}</span>
-                    </div>
-                  </button>
-                ))}
+          {groups.map((group) => {
+            const items = videos.filter((v) => v.category === group);
+            return (
+              <div key={group} style={{ marginTop: 36 }}>
+                <h3 style={{ fontSize: 20, margin: '0 0 18px' }}>{group}</h3>
+                <div className="video-grid">
+                  {items.map((vid) => (
+                    <button
+                      type="button"
+                      key={vid.id}
+                      className="video-card"
+                      onClick={() => {
+                        setSelectedVideo(vid);
+                        dialogRef.current?.showModal();
+                      }}
+                    >
+                      <div className="video-thumb">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={vid.image} alt={vid.title} className="img-cover" loading="lazy" />
+                        <span className="video-play-badge" aria-hidden="true">
+                          <Play size={18} />
+                        </span>
+                      </div>
+                      <div className="video-card-body">
+                        <h3>{vid.title}</h3>
+                        <span>{vid.duration}</span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
 
-        <dialog
-          ref={dialogRef}
-          className="image-dialog"
-          aria-label="Video preview status"
-          onClose={() => setSelectedVideo(null)}
-        >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-            <strong>{selectedVideo?.title || 'Heatnexis Video'}</strong>
-            <button
-              type="button"
-              autoFocus
-              className="image-dialog-close"
-              aria-label="Close video dialog"
-              onClick={() => dialogRef.current?.close()}
-            >
-              <X size={20} />
-            </button>
-          </div>
-          <div className="notice-box" style={{ marginBottom: 16 }}>
-            On-demand video playback for this model is supplied directly by our B2B technical desk upon request.
-          </div>
-          <Link href="/contact" className="btn-primary" onClick={() => dialogRef.current?.close()}>
-            Request Live Demo or Video File →
-          </Link>
-        </dialog>
-      </Container>
-    </section>
+          <dialog
+            ref={dialogRef}
+            className="image-dialog"
+            aria-label="Video preview status"
+            onClose={() => setSelectedVideo(null)}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+              <strong>{selectedVideo?.title || 'Heatnexis Video'}</strong>
+              <button
+                type="button"
+                autoFocus
+                className="image-dialog-close"
+                aria-label="Close video dialog"
+                onClick={() => dialogRef.current?.close()}
+              >
+                <X size={20} />
+              </button>
+            </div>
+            <div className="notice-box" style={{ marginBottom: 16 }}>
+              On-demand video playback for this model is supplied directly by our B2B technical desk upon request.
+            </div>
+            <Link href="/contact#inquiry" className="btn-primary" onClick={() => dialogRef.current?.close()}>
+              Request Live Demo or Video File →
+            </Link>
+          </dialog>
+        </Container>
+      </section>
+
+      <B2BCtaBand />
+    </>
   );
 }
 
@@ -244,6 +267,7 @@ export function SupportOverviewView() {
       <section className="section-block">
         <Container>
           <SectionTitle
+            eyebrow="PRE-SALES & INSTALLER ENABLEMENT"
             title="Technical Support & Documentation Hub"
             subtitle="Structured after-sales and pre-sales engineering resources for Heatnexis distributors and HVAC installers."
           />
@@ -293,6 +317,8 @@ export function SupportOverviewView() {
           </div>
         </Container>
       </section>
+
+      <B2BCtaBand />
     </>
   );
 }

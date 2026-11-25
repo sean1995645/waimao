@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { B2BShortlistProvider } from '@/components/B2BShortlist';
 import { FloatingContact } from '@/components/FloatingContact';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
@@ -23,13 +24,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <a className="skip-link" href="#main">
-          Skip to content
-        </a>
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
-        <FloatingContact />
+        <B2BShortlistProvider>
+          <a className="skip-link" href="#main">
+            Skip to content
+          </a>
+          <Header />
+          <main id="main">{children}</main>
+          <Footer />
+          <FloatingContact />
+        </B2BShortlistProvider>
       </body>
     </html>
   );

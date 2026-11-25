@@ -2,23 +2,25 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight, Cpu, Factory, Globe2, ShieldCheck } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Cpu, Factory, Globe2, Pause, Play, ShieldCheck } from 'lucide-react';
 import { heroSlides } from '@/data/catalog';
 import type { PageRecord } from '@/data/pages';
+import { BackgroundVideo } from './BackgroundVideo';
 import { Container } from './LayoutPrimitives';
 
 export function HomeHeroBanner() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [videoPaused, setVideoPaused] = useState(false);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || videoPaused) return;
     if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const timer = window.setInterval(() => {
       setIndex((i) => (i + 1) % heroSlides.length);
-    }, 6500);
+    }, 8000);
     return () => window.clearInterval(timer);
-  }, [paused]);
+  }, [paused, videoPaused]);
 
   const slide = heroSlides[index];
   const prev = () => setIndex((i) => (i - 1 + heroSlides.length) % heroSlides.length);
@@ -32,10 +34,12 @@ export function HomeHeroBanner() {
       onMouseLeave={() => setPaused(false)}
     >
       <div className="home-banner-bg" aria-hidden="true">
-        <picture>
-          <source media="(max-width: 767px)" srcSet={slide.mobileImage} />
-          <img src={slide.image} alt="" className="img-cover" />
-        </picture>
+        <BackgroundVideo
+          videoSrc={slide.video}
+          posterSrc={slide.image}
+          mobilePosterSrc={slide.mobileImage}
+          paused={videoPaused}
+        />
       </div>
       <div className="banner-photo-scrim" aria-hidden="true" />
 
@@ -75,6 +79,15 @@ export function HomeHeroBanner() {
           <button type="button" className="banner-nav-btn" onClick={next} aria-label="Next slide">
             <span>NEXT</span>
             <ChevronRight size={14} aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            className="banner-nav-btn"
+            onClick={() => setVideoPaused((v) => !v)}
+            aria-label={videoPaused ? 'Play background video' : 'Pause background video'}
+            aria-pressed={videoPaused}
+          >
+            {videoPaused ? <Play size={13} aria-hidden="true" /> : <Pause size={13} aria-hidden="true" />}
           </button>
         </div>
 
@@ -131,27 +144,26 @@ export function HomeHeroBanner() {
   );
 }
 
-function resolveInnerBannerImage(kind: PageRecord['kind']): string {
+function resolveInnerBannerMedia(kind: PageRecord['kind']): { poster: string; video: string } {
   switch (kind) {
     case 'services':
     case 'service':
-      return '/images/services/banner.jpg';
+      return { poster: '/images/services/banner.jpg', video: '/videos/bg/engineering-pcb.mp4' };
     case 'odm-index':
     case 'odm-detail':
-      return '/images/services/odm-banner.jpg';
+      return { poster: '/images/services/odm-banner.jpg', video: '/videos/bg/engineering-pcb.mp4' };
     case 'solutions':
     case 'solution':
-      return '/images/solutions/banner.jpg';
     case 'blog':
     case 'article':
-      return '/images/blog/banner.jpg';
+      return { poster: '/images/solutions/smart-home.jpg', video: '/videos/bg/hero-smart-home.mp4' };
     case 'support':
     case 'faq':
     case 'downloads':
     case 'videos':
-      return '/images/support/banner.jpg';
+      return { poster: '/images/hero/slide-2.jpg', video: '/videos/bg/hero-rd-lab.mp4' };
     default:
-      return '/images/factory/about-banner.jpg';
+      return { poster: '/images/factory/home-about.jpg', video: '/videos/bg/factory-smt.mp4' };
   }
 }
 
@@ -189,11 +201,12 @@ export function HeroBanner({ page }: { page: PageRecord }) {
     );
   }
 
+  const media = resolveInnerBannerMedia(page.kind);
+
   return (
     <section className="detail-banner">
       <div className="detail-banner-bg" aria-hidden="true">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={resolveInnerBannerImage(page.kind)} alt="" className="img-cover" />
+        <BackgroundVideo videoSrc={media.video} posterSrc={media.poster} />
       </div>
       <div className="banner-photo-scrim" aria-hidden="true" />
       <div className="detail-banner-inner">

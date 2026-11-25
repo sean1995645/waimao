@@ -68,6 +68,48 @@ test('FAQ accordion, downloads filter and truthful inquiry validation', async ({
   await page.getByRole('checkbox').check();
   await page.getByRole('button', { name: 'Prepare Inquiry' }).click();
   await expect(page.getByRole('status')).toContainText('It has not been sent');
+  await expect(page.getByRole('link', { name: 'Send Draft via WhatsApp' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Open in Email Client' })).toBeVisible();
+});
+
+test('B2B multi-model RFQ shortlist, side-by-side comparison matrix and parametric filters work', async ({ page }) => {
+  await page.goto('/products');
+  await page.getByRole('button', { name: 'Rotary Dial', exact: true }).click();
+  await expect(page.locator('.product-card').first()).toContainText('HN-GB-CONCEPT-02');
+  await page.getByRole('button', { name: 'All Interfaces', exact: true }).click();
+
+  const cards = page.locator('.product-card');
+  await cards.nth(0).getByRole('button', { name: /Compare / }).click();
+  await cards.nth(1).getByRole('button', { name: /Compare / }).click();
+  await cards.nth(0).getByRole('button', { name: /RFQ shortlist/ }).click();
+
+  const bar = page.getByRole('complementary', { name: 'B2B RFQ shortlist and model comparison' });
+  await expect(bar).toBeVisible();
+  await bar.getByRole('button', { name: /Compare \(2\)/ }).click();
+
+  const dialog = page.getByRole('dialog', { name: 'Side-by-side thermostat model comparison' });
+  await expect(dialog).toBeVisible();
+  await dialog.getByRole('button', { name: 'Highlight Differences' }).click();
+  await dialog.getByRole('button', { name: /Inquire All/ }).click();
+
+  await expect(page).toHaveURL(/\/contact#inquiry/);
+  await expect(page.locator('.inquiry-shortlist-chip')).toHaveCount(2);
+});
+
+test('background videos render across home hero, factory band and inner banners with pause toggle', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.home-banner .bg-video-el')).toHaveAttribute('src', /\/videos\/bg\/.*\.mp4/);
+  await expect(page.locator('.iaboutus-bg .bg-video-el')).toHaveAttribute('src', '/videos/bg/factory-smt.mp4');
+
+  const pauseBtn = page.getByRole('button', { name: 'Pause background video', exact: true });
+  await pauseBtn.click();
+  await expect(page.getByRole('button', { name: 'Play background video', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  expect(
+    await page.locator('.home-banner .bg-video-el').evaluate((v: HTMLVideoElement) => v.paused),
+  ).toBe(true);
+
+  await page.goto('/tailor-made-solution');
+  await expect(page.locator('.detail-banner .bg-video-el')).toHaveAttribute('src', '/videos/bg/engineering-pcb.mp4');
 });
 
 test('keyboard menu closes while its trigger remains focused', async ({ page, viewport }) => {

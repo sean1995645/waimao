@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { odmCases, services } from '@/data/catalog';
 import type { OdmCaseRecord, ServiceRecord } from '@/types/content';
+import { B2BCollaborationMatrix } from './B2BSections';
 import { InquiryForm } from './InquiryForm';
 import { Container, SectionTitle } from './LayoutPrimitives';
 import { ProductGallery } from './ProductDetailView';
@@ -49,8 +50,8 @@ export function TailorMadeIndexView() {
                 deliverable is scoped transparently against your target market requirements.
               </p>
               <div style={{ marginTop: 22 }}>
-                <a href="#inquiry" className="text-link">
-                  <span>Get in Touch</span>
+                <a href="#inquiry" className="btn-primary">
+                  <span>Start OEM / ODM Brief</span>
                   <ChevronRight size={15} aria-hidden="true" />
                 </a>
               </div>
@@ -62,6 +63,8 @@ export function TailorMadeIndexView() {
           </div>
         </Container>
       </section>
+
+      <B2BCollaborationMatrix compact />
 
       {/* 4-Tab Interactive Tailor-Made Showcase */}
       <section className="section-block">
@@ -97,7 +100,7 @@ export function TailorMadeIndexView() {
                 </div>
                 <div className="product-card-body">
                   <h3>{ex.title}</h3>
-                  <p style={{ margin: 0, fontSize: 13, color: '#666' }}>{ex.subtitle}</p>
+                  <p style={{ margin: 0, fontSize: 13.5, color: 'var(--color-text-muted)' }}>{ex.subtitle}</p>
                 </div>
               </Link>
             ))}
@@ -300,7 +303,7 @@ export function ServiceDetailView({ service }: { service: ServiceRecord }) {
                 </div>
                 <div className="product-card-body">
                   <h3>{ex.title}</h3>
-                  <p style={{ margin: 0, fontSize: 13, color: '#666' }}>{ex.subtitle}</p>
+                  <p style={{ margin: 0, fontSize: 13.5, color: 'var(--color-text-muted)' }}>{ex.subtitle}</p>
                 </div>
               </Link>
             ))}
@@ -530,7 +533,7 @@ export function OdmDetailView({ odmCase }: { odmCase: OdmCaseRecord }) {
                 </div>
                 <div className="product-card-body">
                   <h3>{item.title}</h3>
-                  <p style={{ margin: 0, fontSize: 13, color: '#666' }}>{item.subtitle}</p>
+                  <p style={{ margin: 0, fontSize: 13.5, color: 'var(--color-text-muted)' }}>{item.subtitle}</p>
                 </div>
               </Link>
             ))}

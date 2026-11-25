@@ -46,9 +46,10 @@ test('all rendered internal links and fragments resolve', async ({ request }) =>
   }
 });
 
-test('all rendered stylesheets, scripts and images load', async ({ request }) => {
+test('all rendered stylesheets, scripts, images and background videos load', async ({ request }) => {
   const assets = new Set<string>();
   const images = new Set<string>();
+  const videos = new Set<string>();
   for (const page of pages) {
     const response = await request.get(page.path);
     const html = await response.text();
@@ -57,6 +58,7 @@ test('all rendered stylesheets, scripts and images load', async ({ request }) =>
     styles.forEach((style) => assets.add(style));
     for (const match of html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)) assets.add(match[1]);
     for (const match of html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)) images.add(match[1]);
+    for (const match of html.matchAll(/<video\b[^>]*\bsrc="([^"]+)"/g)) videos.add(match[1]);
   }
   for (const asset of assets) {
     const response = await request.get(asset.replaceAll('&amp;', '&'));
@@ -75,6 +77,16 @@ test('all rendered stylesheets, scripts and images load', async ({ request }) =>
     const response = await request.get(img.replaceAll('&amp;', '&'));
     expect(response.status(), img).toBe(200);
     expect(response.headers()['content-type'], img).toMatch(/^image\//);
+  }
+  expect(videos.size).toBeGreaterThan(0);
+  for (const vid of videos) {
+    const clean = vid.replaceAll('&amp;', '&');
+    const fullRes = await request.get(clean);
+    expect(fullRes.status(), clean).toBe(200);
+    expect(fullRes.headers()['content-type'], clean).toContain('video/mp4');
+    const rangeRes = await request.get(clean, { headers: { Range: 'bytes=0-1023' } });
+    expect(rangeRes.status(), `${clean} range`).toBe(206);
+    expect(rangeRes.headers()['content-type'], clean).toContain('video/mp4');
   }
 });
 

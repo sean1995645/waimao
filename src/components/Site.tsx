@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { articles, categories, odmCases, products, services, solutions } from '@/data/catalog';
 import { type PageRecord } from '@/data/pages';
+import { B2BCtaBand } from './B2BSections';
 import { BlogDetailView, BlogIndexView } from './BlogSections';
 import { AboutPageView, AdvantagesPageView, ContactPageView, JoinUsPageView } from './CompanySections';
 import { Footer } from './Footer';
@@ -66,11 +67,14 @@ export function PageBody({ page }: { page: PageRecord }) {
 
     case 'faq':
       return (
-        <section className="section-block">
-          <Container>
-            <FAQAccordion />
-          </Container>
-        </section>
+        <>
+          <section className="section-block">
+            <Container>
+              <FAQAccordion />
+            </Container>
+          </section>
+          <B2BCtaBand />
+        </>
       );
 
     case 'downloads':

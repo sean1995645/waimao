@@ -23,6 +23,7 @@ export const heroSlides: HeroSlide[] = [
     visualType: 'oem',
     image: '/images/hero/slide-1.jpg',
     mobileImage: '/images/hero/slide-1-mobile.jpg',
+    video: '/videos/bg/hero-thermostats.mp4',
   },
   {
     id: 'slide-2',
@@ -34,6 +35,7 @@ export const heroSlides: HeroSlide[] = [
     visualType: 'thermostats',
     image: '/images/hero/slide-2.jpg',
     mobileImage: '/images/hero/slide-2-mobile.jpg',
+    video: '/videos/bg/hero-rd-lab.mp4',
   },
   {
     id: 'slide-3',
@@ -43,8 +45,9 @@ export const heroSlides: HeroSlide[] = [
     ctaLabel: 'View Solutions',
     ctaHref: '/solutions',
     visualType: 'smart-hvac',
-    image: '/images/hero/slide-1.jpg',
-    mobileImage: '/images/hero/slide-2-mobile.jpg',
+    image: '/images/solutions/smart-home.jpg',
+    mobileImage: '/images/solutions/smart-home.jpg',
+    video: '/videos/bg/hero-smart-home.mp4',
   },
 ];
 

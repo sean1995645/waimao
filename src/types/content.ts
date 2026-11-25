@@ -94,6 +94,7 @@ export interface HeroSlide {
   visualType: 'oem' | 'thermostats' | 'smart-hvac';
   image: string;
   mobileImage: string;
+  video: string;
 }
 
 export interface FaqItem {
